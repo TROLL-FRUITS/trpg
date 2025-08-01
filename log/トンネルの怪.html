@@ -1,0 +1,1494 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>トンネルの怪</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_0{}
+.tab_0.selected{display: none;}
+.tab_1{}
+.tab_1.selected{display: none;}
+.tab_2{}
+.tab_2.selected{display: none;}
+.tab_3{}
+.tab_3.selected{display: none;}
+.tab_4{}
+.tab_4.selected{display: none;}
+.tab_5{}
+.tab_5.selected{display: none;}
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_0"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_0">成長</label><label for="tab_1"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_1">PLメモ</label><label for="tab_2"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_2">情報</label><label for="tab_3"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_3">秘匿(おしるこ。,こりん)</label><label for="tab_4"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_4">秘匿(こりん,トロル)</label><label for="tab_5"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_5">秘匿(こりん,奈尚)</label>
+</header>
+<div class="wrapper">
+<h1>トンネルの怪</h1>
+<h2 id="day1">トンネルの怪</h2>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こーーんばーーんわーー！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    こんばんははは   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    なんかみんなでかくね？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    前回これくらいだったかなって   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 60 → 59   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    スマホで見るちょうどいいサイズ、PCで見ると大きい奴だ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんかでっかい人居たから……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    KPが二人いる…！？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    初手SAN減少してる人いて草   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    にせものだ！？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    別卓の弊害   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    PCにヘッドホン繋いだら鼓膜しんじゃった   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    トロルちゃんの鼓膜ー！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    よっし準備でけた   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    あざかさん、キャラは名前の横から選べるよ（知ってると思うけど）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    そうでした   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ずっとKPだった   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    オレンジとかでいいか……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    僕はそれをオレンジとは認めん   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ディスプレイのコントラストを下げに下げているのがバレる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    準備できましたら導入から始めますわよ   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    いーわよ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    わーい！おっけーです！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    かかってこいや   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はーーい   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    PL久々すぎて死にそう   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    死ぬのはPLかなPCかな！   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    PLが死んでPCがロストするよ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    死屍累々   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなた達は町はずれの山奥に存在している、 心霊スポット『明城トンネル』という名の廃トンネルにやって来ました。<br>そこは通った人物が行方不明になるという噂が出回っており、 警察も立ち入り禁止の旨を呼びかけていました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    行方不明者に関しては警察がトンネルを調べた結果、 トンネルでは痕跡は一切見つからなかったようで、今は放置状態になっています。<br>ネットでは有名な心霊スポットで入ったら出てこれない、 振り返ってはいけないと大層噂になっていますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちなみに皆さんはどんな理由でこの場所に来たのでしょうか？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    特に制限がなければ肝試し、かな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    制限はないよー<br>お好きな理由で   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    思いつかなければ「友人が行方不明になってしまったため、自身で調べに行った」とかでも。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    調査依頼で来ました～！　本当は今休業中なんだけどずっと妹任せなのもアレなので大分養生したしそろそろ稼ごうってことで   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    PL的にはなんでこの仕事にしたん？って疑問なんですけどこれしかなかったんだよ（都合）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    雪足は、セラピーを受けていた若い患者さんからこのトンネルの噂を聞いて来ました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    その子があまりに怖がるから、なら噂を確かめてくる、って感じで。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    話題になってるのが気になったのでフラッと遊びに来ました()   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    PCのきーぼーどなので入力遅いとおもうがゆるして（あと誤爆もする）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむふむなるほど。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    雪足は噂をあまり信じていなくて、ただのデマだってわかればみんな安心するかなって   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    哀しいね   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    全然遅くないですよー   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    やったぜ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    今回のメンツ変わった苗字ばっかでみんな辞書登録した   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それではあなたたちは各々の理由で明城トンネルにやってきました。<br>自分以外にも2人、トンネルの前に人がいますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    てことで現在探索者3人がトンネルの前に立っているね。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ところでBGM初っ端からクライマックス感ない？   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ある   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてここは陰気な空気が漂っていますね。<br>トンネルにはフェンスがかかっており、立ち入り禁止の立て札が立っています。<br>しかし酷く落書きされているところを見ると、どうやらその規約は守られてはいないようだとあなた達はわかります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    探索開始でーす   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    変えるか   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    3人とも同じ位置なんだよね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    まぁ大体は。<br>一緒に来たわけではないし立ち位置はバラバラじゃないかな。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    あね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「どーも！ふたりも肝試しっすか？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（まったくひどい有り様だなぁ……。危険な場所だって聞いたけど、こんなんじゃ肝試しに来る子供も後を絶たないだろうな……）」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    当たり前のように駆け寄ってきて声かけますね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「おっと、さっそく一人……（小声）」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あら。他にも人がいたなんて」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「こんにちは」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ホッとした顔で会釈しています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんにちは～！　まったく同じタイミングで三人も揃うなんて、偶然もあったものですね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今こんにちはの時間か？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    今って昼？？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あ、夜です()   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    そうか、しまった汗   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    業界では一日中おはようございますだから（こんにちはは？）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    面白いから修正しないどくわ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    えー（）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    天然なんだよ(？)   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「やっぱあれだけ話題だと気になるっすよね～、オカルト好きとしては！」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    かわいいね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ～、やっぱり……？」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    もしかしなくてもくゆりが一番若い?   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ということは、ここがどういう場所か知って来てるんだよね？」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    うん   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ですねですね   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    なんかみんな名前平仮名だな   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「他に肝試しに来た人にそっと忍び寄って後ろから肩ポンする場所っす」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    僕も平仮名にすればよかったな（？）   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それは君の目的じゃない？？？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「まあ！そんなことされたらひっくり返っちゃいそう」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（ひっくり返ったら後ろ見えちゃうじゃん！）」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そう。でもきっと、そういう些細なことが噂の原因なんじゃないかと思うんだけど」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「私の周りでもすごく噂になっているんです。怖がっている人も多くて」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「むしろもっとオカルトな何かであってほしいんすけどね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「気軽に来ようって思うような内容の噂じゃなかったと思うんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    まあ他に人がいてよかったよね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ところで皆懐中電灯持ってるよな？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    夜に来るんだし持ってそう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    きっと   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ここ、相当危険だって聞くよ？　もし行方不明の件が本当だったら……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「わくわくするっすよね……！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ダメだこいつ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ウン……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「って、そうじゃなくてさ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ふふ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ふたり見てにこにこしています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「折角会ったんだし、万が一ってこともあるし、良ければ一緒に行動しないかい？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「もちろんっすよ！肝試しはやっぱり複数人の方が楽しいっすから！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「すてき。実はここに来たら妙に心細くなっちゃって」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（この子なんで一人で来たんだろう……。陽キャラに見えて意外と友達いないのかな……）」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「誰かが一緒にいてくれたら心強いです」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    他の人は普通に警察の指示に従って来なかったんだよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    当たり前だよなあ？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    友達いい子だった   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    なるほど？！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「私、寂堂くゆりっす！よろ～！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ハイタッチの構えをしてます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕は大倉 太陽っていいます。今日はよろしく、二人とも！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「雪足です。雪足ひなげし」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「よろしく」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そのハイタッチ、跳躍必要じゃない？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    流石に草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    届く距離でハイタッチしような   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「うぇ～い！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ほら、ひなちゃんも！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    陽キャだ……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あ、はーい」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    さしだされた手をぎゅってしますね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「うぇ～……なんか違う！？……けどまぁいいや！よろしくっす！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ふふ、ひなちゃん、なんて嬉しい」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    この間に立て札見てるけど落書きってDQNがしたようなやつ？   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    太陽くんのいい感じのあだ名募集   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「職場だと、ひげちゃん、とかで、誰もひなちゃんなんて呼んでくれなくて」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    サンシャイン   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    池崎じゃん   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    なんと笑   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「クリスマスに人気になりそうなあだ名っすね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな感じです。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    サンシャイン大倉　ザビ―教の洗礼名かな？   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ザビー教で草   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ちょっとありそう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（いかにもって感じ。紀仁くん（友達）なら呼べば来たかもしれないな……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さて……そろそろ行こうと思うんだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    女子組の方戻ります   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。フェンスがあるのが気になるけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    フェンスくらい乗り越えられるよなあ？   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    情報タブってKP以外書き込んだら怒られる？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「入ってみなきゃ始まらないものね」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    誰も怒らないよ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    PLメモ作るか   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    わーい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    乗り越えられませんよ？？？？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「いよいよっすね～」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    な、なんだってー！？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    乗り越える気満々のくゆり   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「人が来た形跡はあるんだけどねえ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    懐中電灯でフェンスの先を照らしてみます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どっかに抜け穴があったり……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんは目星どうぞ。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=79　【目星】 (1D100&lt;=79) ボーナス・ペナルティダイス[0] ＞ 67 ＞ 67 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    目星♡   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    一切使われていないはずなのにトンネルの中は電灯がついている事に気づけるね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれ……　ここって廃トンネルだよね？」   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    心霊スポット『明城トンネル』<br>通った人が行方不明になるらしい<br>行方不明者は痕跡すら残さないらしい<br>振り返り厳禁   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ええ。もう全く使われていないって聞いているけれど」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「って聞いてるっすね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「灯りついてるように見えるんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目凝らしすぎて険しい顔になってます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あのちなみになんですけど   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    来た理由<br>　太陽：探偵としての調査依頼<br>　ひな：セラピー患者の安心のため<br>　くゆ：肝試しに来た   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    は、はい……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    フェンス調べるっていう宣言は誰もしてないよね？？？(見逃しが怖い)   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    フェンス自体はまだだね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    んじゃあ乗り越えようとするので流れで調べます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    立て札とフェンスの先を太陽が見ただけ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「灯りがついているなんて変ね。まだ電気がきているのかしら」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    フェンスはさび付いていて、長らく整備されていないことが伺えます。<br> 進入用の扉もいたずらのためか、南京錠は壊されて自由に立ち入りできる状態です。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やったー入れるぜ！   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    【明城トンネル】<br>　・フェンス<br>　　┗サビていて整備されていないらしい<br>　　┗扉の南京錠は破壊されている<br><br>　・立ち入り禁止看板<br>　　┗DQNっぽいラクガキがある<br><br>　・トンネル内部<br>　　┗使われてないのに電灯……？<br>　　　┗ラクガキ無くて割と綺麗<br>　　┗軽自動車程度の広さしかない<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    だから乗り越えなくてもいいのよ！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「それじゃあ早速……って、あれ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どうかした？」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    メモ改行したら見辛すぎて泣いた   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃんの方照らします　ピカーーッ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「南京錠が壊れてるっすね、ほらここ」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草　気になるならなおしな！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    扉をキィキィ言わせながら開閉します   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわほんとだぁ……」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    これでよし   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（フェンスがあって入れませんでした！で済ませようかとも思ったけどそれじゃお金貰えないしなぁ……）」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    メモとても助かる   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「不用心ね」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「通れるのはありがたいけれど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「というか、壊されたのかな……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「誰かが壊したみたいっすね、多分いたずらっすよ」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    スッと中に入ります   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（怖いなあ……　若い子の本気）」   </dd></dl>
+<dl style="color:#607d8b" class="group tab_2"><dt>KP</dt><dd>    ○目星(トンネル外から中へ)<br>一切使われていないはずなのにトンネルの中は電灯がついている事に気づける。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ああ、待って！　僕も行くよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    続きます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    雪足もふたりに続いて入ります   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「お化けとか出るといいっすね～」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「わかる～」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    真顔です   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    かわいい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではトンネルの中へと。   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    二人のコンビ感   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    精神分析はまかせた（遺言）   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    くゆりもこれでそこまでメンタル強くないので任せた（遺言）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    なんと   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さてトンネル内です。<br>車の通行は考えられていなかったのだろう、 軽自動車が一台やっと通れるだろうかといった広さです。<br>照明はついており、明かりに不自由することはなさそうです。 外の落書きと比べると中は思ったよりもきれいだと感じる事でしょう。   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    まかされ……て大丈夫かな？（）   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ひなちゃんが発狂したらこのパーティは崩壊します   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「むぅ……意外と綺麗なんすね、内側……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ちょっと残念そう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「本当ね。てっきりここも荒らされているかなって思ったけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「狭いなあ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    一応調査なので、壁とかつぶさに見ながら進むよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「振り返っちゃダメなんだっけ？　ここ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それってもう始まってる？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「振り返ってみれば分かるっすよ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「確かに～！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    頑として振り返りません   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    くゆりは当たり前のように振り返ろうとするので誰か止めてあげてください   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    位置による   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    先頭の人～！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    はーい！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ヨシ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    二番目です   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    じゃあ太陽くん任せました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    というかくゆりちゃんの後ろを二人で歩いてそう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    率先しそうなの彼女くらいだし   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    急に立ち止まったと思ったら踵を返し始めます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわぁ！？　ちょ、何してるの！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「た、確かめようと……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「くゆりさん、大胆ね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    止めます（）   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    こんなにKPのふむに恐怖を感じたことがあっただろうか(自業自得)   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    止められるかはDEXで(？)   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=55　【DEX】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 79 ＞ 79 ＞ 失敗  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さよなら、くゆり   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    さよなら……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    なんと   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなげしちゃんも振ろう！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    雪足も助太刀（？）します   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうぞ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>       </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    DEXを｛｝（半角）で閉じるんやで   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=70 【DEX】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 92 ＞ 92 ＞ 失敗  </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    教えてもらっていたのに汗   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    くるっ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあ2人ともくゆりちゃんを止められませんでした！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ああ！ｗ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    確かめようと……(振り返り済)   </dd></dl>
+<dl style="color:#607d8b" class="group tab_3"><dt>KP</dt><dd>    テステス   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    なんと……   </dd></dl>
+<dl style="color:#f44336" class="group tab_3"><dt>寂堂 くゆり</dt><dd>    テステス   </dd></dl>
+<dl style="color:#607d8b" class="group tab_3"><dt>KP</dt><dd>    先に情報渡しまーす！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ひなげしちゃんの大胆ねって反応、噂信じてないんやろな～ってカンジ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    入力し間違えるから……汗   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    （たんぱくなかんじが）   </dd></dl>
+<dl style="color:#607d8b" class="group tab_3"><dt>KP</dt><dd>    振り返ったくゆりちゃんは目撃してしまうね。<br>黒いマネキン、それが10体ほど居ました。それもあなたたちが入って来た入り口の前に並んで立っています。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まさかKPも振り返るやつがいると思ってなかった説   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ありそう   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    骨は拾ってくれ……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    陽キャってこえ～！   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    くゆりは宝箱を落としていった！<br>サイドテールが入っていた！   </dd></dl>
+<dl style="color:#607d8b" class="group tab_3"><dt>KP</dt><dd>    突然現れた黒いマネキンへの恐怖、そして退路が立たれたことに気づき、このまま進まなければいけないことに絶望することだろう。 SAN チェック 1/1d6   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    遺品　くゆりのサイドテール   </dd></dl>
+<dl style="color:#f44336" class="group tab_3"><dt>寂堂 くゆり</dt><dd>    CC&lt;=59 【SAN値チェック】 (1D100&lt;=59) ボーナス・ペナルティダイス[0] ＞ 18 ＞ 18 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ありがたく使わせてもらうわ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    太陽くんの帽子からサイドテールが……？   </dd></dl>
+<dl style="color:#607d8b" class="group tab_3"><dt>KP</dt><dd>    あとはとりあえず悲鳴上げるなり他2人に伝わるように何かしら行動してほしいな！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「おあ"っ…………」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    汚い悲鳴を上げます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「く、くゆりさん？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だ、大丈夫なの……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    後ろを振り返っていたくゆりちゃんが何やら汚い悲鳴を上げていますね。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「おーるおっけーっすおーるおっけー」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    冷や汗ダラダラですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    明らかに後ろを見てから様子がおかしいね。<br>どうしたんでしょう？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「尋常じゃなく汗かいてるけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、まさか　後ろに何かあるのかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    絶対振り向かん   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「…………あるっすよ！是非見てほしいっす！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    太陽くんの頭を引っ掴んで振り向かせようとします   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「後ろ、って、でも入ってきたばかりじゃ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    不安げな顔をしています。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん。じゃあ後で見るから写ｓオ゛ア゛ーーッ！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    抵抗します　STRで   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=60 【STR】 (1D100&lt;=60) ボーナス・ペナルティダイス[0] ＞ 43 ＞ 43 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    振りな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=45　【STR】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 56 ＞ 56 ＞ 失敗  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    しゃおらー！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    勝ったな（現実逃避）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんは振り返っちゃいました。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そのはずなんすけどね……塞がってるんすよ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そっすよね、くらりん」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……えっ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だれ！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「大倉の倉っすよ！」   </dd></dl>
+<dl style="color:#607d8b" class="group tab_4"><dt>KP</dt><dd>    太陽くんは目撃してしまうね。<br>黒いマネキン、それが10体ほど居ました。それもあなたたちが入って来た入り口の前に並んで立っています。<br><br>突然現れた黒いマネキンへの恐怖、そして退路が立たれたことに気づき、このまま進まなければいけないことに絶望することだろう。 SAN チェック 1/1d6   </dd></dl>
+<dl style="color:#2e8b57" class="group tab_4"><dt>大倉 太陽</dt><dd>    泣いちゃった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=55　【SANC】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 38 ＞ 38 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 55 → 54   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 59 → 58   </dd></dl>
+<dl style="color:#607d8b" class="group tab_4"><dt>KP</dt><dd>    悲鳴あげるなり何か反応しといてね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あぁ……　そ、そう、あだ名……　あだ名ね……　僕はてっきり、“アレ“以外にも何か、いや、誰かいるのかと……　ととと……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「た、太陽さんまですごい顔色……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    後ろ見たままじりじり前進します。今にも駆け出しそう！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おろおろしています。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「えっ、後ろに何かいるの……？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「逃がさないっすよ、ここまできたら運命共同体っす」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    肩をがっつり掴んどきます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃん…… 後ろ、見ない？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    運命共同体……？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あわわわわやっぱり一人で来るんだった！！　というか君に声かけたのが運の尽きだった！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ジタバタしてます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    振り返っちゃおうか！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    まさかねえ？　噂なんてね？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ふたりのこの様子だと自然と見ちゃいそう   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい^ ^   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「両手に花なんだから喜べ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「一体そんな、何が」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それではひなちゃんは2人の様子がおかしい事もあり、つい振り返ってしまうね。<br>そこには黒いマネキン、それが10体ほど居ました。それもあなたたちが入って来た入り口の前に並んで立っています。<br><br>突然現れた黒いマネキンへの恐怖、そして退路が立たれたことに気づき、このまま進まなければいけないことに絶望することだろう。 <br>ひなちゃんのみSAN チェック 1/1d6   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    うわァ……   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ごめーん！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「利口な子ならよかったさ！」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ゴミ出し忘れてたのでちょっと出してきます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=65 【SAN値チェック】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 6 ＞ 6 ＞ イクストリーム成功  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    BYE   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    いってらっしゃいー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 65 → 64   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え……な、なに、あれ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ぶるぶるっと身震いします   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「これでみんな同じっすね……！！」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    こんな時だけ1けた出るのずるい（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「い、いや、僕達が気づいてなかっただけで最初からあったかもしれないよ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「入口のとこなんて特に、視界も悪かったし……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ほいほい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「で、でも、太陽さん最初に中を覗き込んで」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「灯りがついている、って教えてくれたけれど」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「その時には、マネキンなんて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そ……　そうだったっけな……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「逃げても現実は変わらないっすよ」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    帰宅   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、まあ！　振り返るなって聞いてた時点で元々先へ進むしかなかったわけだし！」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    おかえりえり   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おかかか   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「これ、振り返らずにそっと後ろ歩きしたらどうなったんすかね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「べ別に変わらないんじゃないかな！？　マネキンも襲ってくるわけじゃないんだし……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「次来るときは試してみるか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えぇ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    また来ようとして草   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    もう次回の話している   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ところでまさか寂堂ちゃん、あのマネキン調べるとか言わないよね」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ダメっすか……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いいけど君一人で行ってよね！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「分かったっす！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃんを警戒してひなげしちゃんに寄ってます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「毒を喰らわば皿までっす……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ギャルこわ……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    恐る恐る近づいてみます<br>目星とかで何か分かったりとか   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    10体って数まで説明してるからこいつらは襲ってくる　間違いない   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    リンチされるいつかのあざ卓のように   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ただの黒いマネキンだなぁって感じです。<br>目星情報などは特にございません。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    動きそうにはない？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ガタガタ……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    誰か男くん呼んできて   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ただ少々気味が悪いのであまり見てたくないかもね……<br>動きそうにもないです。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ふむふむ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    じゃあテコテコ戻ってきます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どうだった？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「普通のマネキンだったっす……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    何故か残念そう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    メモ帳取り出してます　それを聞いてないないしましたが   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃあ先に進むしかないね……。そうだ、こんなところ一刻も早く出るに限る」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「よかった。動き回ったり生きているわけじゃないのね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そりゃマネキンだからね～！」   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    　・振り返っちゃった！ｗ<br>　　┗黒いマネキンがたくさんでSANC<br>　　　動きそうにもない普通のマネキン<br>　　　なんで出現したんすかね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「（でもじゃあ、どうやって出てきたのかしら……）」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「誰が置いたんすかね～？　あっ！もしかして、床が開いて生えてきたとか！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    言いながら奥に進みます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ありそ～（本当にそうだったら考えたやつを張り倒してやりたい）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    続くよ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    続きますー   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    うぃうぃうぃ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではあなた達は先へ進んでいきますが、あなた達を追いかけて来ているような足音が後ろから聞こえて来ますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    (^^;   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……きっと、気のせいだと思うんだけど」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「何かがついてくるような音が、聞こえるような……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「いいっすね……ゾワゾワするっすね……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だよねぇ……　雪足ちゃんの足音じゃないよねぇ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    一度足を止めてみます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くんにならって立ち止まります   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ええ。私の足音じゃない」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ぴたっ……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「トンネルに反響している、って感じでもなさそう、よね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    皆止まったけど足音は止まないかな？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうですね。止まりました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「反響してたんじゃないかな！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ひなちゃん、もう1回振り返ってみないっすか？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ええっ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、まってまって」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    スマホカメラ起動して振り返らずに背後を撮ってみます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    若干ハイでヤケになってる感じがします   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「た、確かに後ろは気になるけど……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くんの動作を見守ります   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむふむふむ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「実際、本当に第三者の悪戯って可能性もあるからね……」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    今、本当に後ろ振り返っちゃったのは私です（）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    壁がありました   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それではスマホカメラで背後を撮り、それを確認してみるとそこにいたのは先ほどの黒いマネキンでした。   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    本棚かもしれない   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    しかし、先ほどよりも数が増えていることが分かるでしょう。<br>先程は10体ほどでしたが、今確認してみると20体ほどに増えています。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    見た人は1/1d3のSANチェックです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（過呼吸）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=54　【SANC】 (1D100&lt;=54) ボーナス・ペナルティダイス[0] ＞ 44 ＞ 44 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    うん、平気！ｗ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 54 → 53   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「振り向かずに撮って確認するのはかしこっすね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お褒めいただいて光栄だけど……　ちょっと、いやかなり、後悔してる」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「た、太陽さんまた顔色が……呼吸も」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「…………ちらっ？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    スマホを覗き込みます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くんの背中さすります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふ、増えてる……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    うわぁ！マネキンがいる！しかも増えてる！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANチェックです   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=58 【SAN値チェック】 (1D100&lt;=58) ボーナス・ペナルティダイス[0] ＞ 57 ＞ 57 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 58 → 57   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｽｳﾊｱｽｳﾊｱ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    みんな成功するなぁ…   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ひぃ…………」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    雪足も一緒に覗き込みますね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=64 【SAN値チェック】 (1D100&lt;=64) ボーナス・ペナルティダイス[0] ＞ 56 ＞ 56 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 64 → 63   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    心強くな〜い？？？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    皆が確認したら太陽は駆け足で進みます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あっ！待てこらー！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    追いかけます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ま、待って。私も一緒に」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    全力で走ります   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    走ったらマネキンも走るのかな   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    そしたら今回こそ運動会のテーマだな   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    なんと笑　草競馬かな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い！それではみんな走って進んでいくね。   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    流石に草   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    クシコスポストです（大好き）   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    テステス   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    クシコスポスト好き   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    （流し始めた顔）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなた達は前へ前へと走っていきます。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    見えてますかな   </dd></dl>
+<dl style="color:#ffc107" class="group tab_5"><dt>雪足 ひなげし</dt><dd>    見えていますよー   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    よかったよかった   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    これはKPからのお願いなのですが、太陽くんのことをメインの方で呼んでもらってもいいですか？セリフで   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    　・洞窟を進んでみた<br>　　┗マネキン量産工場<br>　　┗クシコスポストを流した<br>　　　┗あざかの真剣さが3下がった   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    普通に名前を呼ぶだけで！特に意味はないです！   </dd></dl>
+<dl style="color:#ffc107" class="group tab_5"><dt>雪足 ひなげし</dt><dd>    ほむ、了解です   </dd></dl>
+<dl style="color:#ffc107" class="group tab_5"><dt>雪足 ひなげし</dt><dd>    呼ぶだけでいいんですね   </dd></dl>
+<dl style="color:#607d8b" class="group tab_5"><dt>KP</dt><dd>    ですです   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あ、太陽さん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    太陽くんそろそろ体力尽きない？   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    CON的に   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    走るのに必死なのと振り返りたくないのとで、ちょっと斜めを向いて返事代わりにします   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむちょいまち   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ぴょこぴょこしている   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    走ってるので   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    全力疾走ではないから（適当）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    かわいい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな感じの返事をされたひなちゃんですが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃんは太陽くんがなぜそのような行動をしているのか、不思議に思うでしょう。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こわいんだけど（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    実際には、ひなちゃんは太陽くんのことを呼んでいません。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    (^^;   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃんの声は、太陽くんとくゆりちゃんには聞こえてましたが、ひなちゃんにだけは聞こえていません。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ひぇ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ずっと待ってるのに話の続きが来ないんだが！ｗ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はぁ……っ　雪足ちゃん、何……！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    痺れ切らして聞き返しますね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……え？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    きょとんとしています   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「私、何も……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「てっきり、太陽さんが何か合図してくれたのかなって……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えっ、じゃなくて　今僕を呼んで……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え゛っ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いやいや……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「えっ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「よ、呼んでません！　呼んでないです」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「冗談きついって……　ねえ、寂堂ちゃん！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「私にも聞こえたっすよー……！　嘘はよくないっすひなちゃん……！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「う、嘘じゃないですよっ！　私、ふたりを追いかけるのに必死で」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃあ誰が僕を呼んだんだよぉ！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「私には何も聞こえなかったです……呼び声なんて」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「いったい、何がどうなって……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うーん……　うーーん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    まぁそんな感じでわちゃわちゃしてますとね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなげしちゃんを信じられない（信じたくない）様子   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    走ってる途中で、非常用の『電話』がトンネルの左手側面に設置されていることが確認できました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    罠だ！（ＧＩＳＩＡＮ）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    使いたいけど使いたくないやつ！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=81 【目星】 (1D100&lt;=81) ボーナス・ペナルティダイス[0] ＞ 79 ＞ 79 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    あ～気づいちゃった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あそこに非常電話……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「警察呼ぶっすよ！走るの疲れたっす！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    電話に向かいます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    急に目星振るなよぉ！（）<br>   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、ええっ！　ちょっと……！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「で、電話？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    言いながら一緒にそっち行くよ　息苦し～！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    クシコスポストで真剣さ下がってて草   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    続きますフラフラ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ダイヤル式の黒電話ですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    黒電話ってだけで怖いもん   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あー……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    と、大倉は思っている   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「これどうやるんすかね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うええ……」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    バレた   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ず、随分とレトロな電話ね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「う、うーー……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……警察にかければいいんだっけ……？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「自衛隊でもいいっすよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    とりあえず黒電話使って警察にかけてみようとします   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    黒電話って110番かかるのかな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふんふん   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    さあ？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くん心配して背中にくっついています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんにはバイブレーション機能が搭載されていることがわかります   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では太陽くんが番号を入力し、警察にかけようと試みますが……掛かりませんね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「か、かからないよ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「えっ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「壊れている……のかしら」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんたけしじゃん(今更)   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ、ここ廃トンネルだしね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お、おいもう帰ろうぜ……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「電話線繋がってないんすね～……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    なんだよビビよう、たいってんのか？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    語呂悪すぎて草   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ところで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    他の番号も試してみますか？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあ自宅！ｗ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「もう走るのやめない？正直疲れた……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じ、じつは僕も……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんなに走ったの久しぶりだよ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。とっても息苦しい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    走ったことで足音との距離を離せた感はあるのかな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむふむ。では家の番号を入力……ｶﾞﾀｶﾞﾀ…… 飛陽ちゃんは出てくれるかな……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ぴったりついて来てそう   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    …………   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    やだー   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    うわ～ん！　あすえも～～ん！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    掛からねえ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あすえもんは来てくれませんでした。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちっくしょーー！（コウメ太夫）   </dd></dl>
+<dl style="color:#f44336" class="group tab_1"><dt>寂堂 くゆり</dt><dd>    　・洞窟の途中に黒電話<br>　　┗かけてみたけどダメ！<br>　　　┗警察<br>　　　┗大倉宅<br>　　┗走るのをやめた<br>　　　┗あざかの真剣さが3上がった<br>　　　┗あざかのテンションが3下がった   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    先程呼んだ呼んでないのわちゃわちゃがあったのでその時は気づきませんでしたが   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ダメだ……　やっぱりどこも掛からない……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    足音はいつの間にか聞こえなくなっていたね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    う、うん   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そこにいるのでは？？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「じゃ、先いくっすよ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    実はすぐ後ろに……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ……　そうだね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ていうか、足音しないし……　結構引き離せたんじゃないかな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    先行くかあ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。きっと、かなり走ったし」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「足遅いんすね～」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ほほいほい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「行きましょう。進まなきゃ出られないものね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そもそもマネキンは走らないんだよ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では電話をかけることを諦め、先へと進んでいこう前に進んだあなた達ですが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    後方から、電話が鳴ります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ひぃッ！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    音の出どころは先ほどの黒電話でしょうね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「きゃっ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    びくっとします   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「わぉ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    完全に油断していたので跳ね上がりました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「壊れて……いるんじゃ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「で、電波が悪かったのかな～……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    走るか～……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    出ないんですか！？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    流石のくゆりもそろそろ躊躇するが？？？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    電話は鳴り続けていますが、どうしましょう？<br>無視して進みますか？出てみますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちなみに電話は"後方"にあります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うぐ……　この音、頭おかしくなりそう……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    先へ進みます（MAGAO）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    耳塞ぎながらね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「太陽さん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はーい   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「やめて！　そんな目で見ないで！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    勝手に哀れまれてると思っています（）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ご、ごめんなさい。心配で」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、そ、そう……？　こっちこそごめんよ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなた達は電話を無視して先に進んでいきますね。<br>電話の音はいつしか聞こえなくなるでしょう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ううん、無理ないです。私もどうかなっちゃいそうで」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    諦めてくれた！　ヨシ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そのまま進んでいると、先が少しカ ーブになっていて、見えなくなっていることが分かります。加えて、先は暗くなっています。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ってか、このトンネル長くね……？どこに繋がってるんだか……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「……って、あ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちょ、まさか電灯ここまで……？　それとも出口？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そりゃもちろん出口っしょ、急に電灯が終わるとかないない」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    懐中電灯取り出してます   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    スマホでメモしながらやってるのでたまにレス遅いけど許してや   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「本当にぃ……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    先が見えない上に暗くなっている。あなた達は少し不安になるかもしれませんね。<br>そしてそんなあなた達に畳み掛けるかのように、前方からドスン......ドスン......という何かが明らかに迫ってきているかのような音が聞こえてきます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……まって、この音なに？」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    すぐ長考し始めるけど許して（便乗）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あー……ゾウさん？」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    私は許そう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「なんだか、お腹に響く音が……」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    だがKPが許すかな！？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんなところにゾウがいてたまるか！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「別の意味で怖いよ！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「じゃあキリンさんっすね！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ゾウさんだったら仲良くなれるのにな、なんて考えて現実逃避しています   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    許すよ   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    許された   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    やっちゃー   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    やったー   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    キリンさんでもいいな、という顔   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんな狭いのにあの長い首でぇ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもいっそその方がいいかもしれないね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんは思考タイムに入っています   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「トンネルを進むと、そこには首をぐにゃぐにゃに捻じ曲げて、明らかに生きていられないような体勢で強引にこちらに向かってくるキリンの姿が…………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さて突然ですがここで   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「気味悪いこと言わないで！　って、なんだキリンの話か……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなた達が持っている懐中電灯など、明かりにしてるものが消えてしまいますね。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あや」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ひゃっ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    明かりが完全に失われました。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    懐中電灯のスイッチをカチカチしてます   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    くゆりちゃんのやつ前だけ読んだらなんかそういう怪異の話みたいでPLがびびった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あああああああああ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ちょ、ちょっとどうしたの！？」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｶﾁｶﾁ……<br>付かない……壊れた？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ちょ、くらりんうるさいっす！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ここ狭いんすから、両手広げたら大丈夫っすよ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「絶対嘘だ！　懐中電灯がいっせいに壊れるもんかー！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ということで壁を探します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おもろい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「大丈夫！大丈夫よ、きっとすぐにつくから」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふんふん。まぁ壁はすぐ見つかるでしょう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    カチカチ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「死ぬときは一緒だ……ZE☆」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    コッ☆   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「最悪だあ……　依頼料ふんだくってやる……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｶﾁｶﾁ……<br>付かない……どうしよう……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「まぁ進むしかないっすねぇ～……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    バイブレーションしながら壁にピタッ……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ひなちゃんも大丈夫？壁、見つけた？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え、ええ。なんとか」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「大丈夫……　この先にはきっと何もないさ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    空いている方の手で壁にもたれています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だって思い出してみてよ……　今までの現象の全てが、僕らを振り返らせることを目的としたような内容だったじゃないか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「つまり！　ここは何も考えずに進むのが吉！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「っす！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    壁伝いに進みます　ｻｻｻｻｻｻｻ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そ、そうよ。そうね」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あと7キロで～出口で～す～」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    歌いだします   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はぁ〜い   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「長いよ！！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「歩いたら2時間くらいかかるっすね～……」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まあこいつらもう最初っから振り返ってるんだけどな   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    トンネル/aiko feat.寂堂くゆり   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ほんとだよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではあなた達は暗闇の中、進んでいきますね。<br>大きな音が聞こえてくる前へと……   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    初っ端も初っ端でしたね   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    誰だよ速攻で振り返ったやつ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    おめーだyo！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さて今日はここまで！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    な、なんだってー！？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    お、なんと   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    進行度いい感じ。<br>明日には終わるでしょう！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    いつの間にいい時間   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はやいなあ   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    喋りすぎたか……？となっている   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    とっても今、背中がぞわぞわしている（）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    もっと喋ろ♡   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ですです   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ふたりの会話よくてによによしてしまう   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    女子組のイチャコラ期待してるおじさんなんで   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    明日もよろしくお願いします   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最初はちょっと想定より遅れ気味かも……って感じでしたが、後半はRPしながらもサクサク進んでいったので良い感じでした。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    いえーい   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    よかった   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    私ももっと喋ってもっとイチャイチャする（？）   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    タイピング速度の勝負始まる？？？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    その意気やで！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    次回もたくさんRPしてくれな〜！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    おつかれさんした～   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    おつおつ～   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    おつかれですです。楽しかったー   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつおつ解散です！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こ　ん　ば　ん　は   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ごめん   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ちょっと序盤反応鈍いかも   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おやすみなさい   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    許さない   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    許した   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    (´;ω;｀)   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    なんと   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    準備よければ始めます   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    いーわよ！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    いいシーンで反応なかったら失神扱いにしよう   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    私も！おっけーです   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    いいよ～   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ではいきます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなた達が壁伝いに進んでいくこと数分、先程まで付かなかった懐中電灯が突然パッと点きますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして、あの大きな音も聞こえなくなりました。<br>前から何かが迫って来ているような影も無いですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、ついた……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    出口は～？？？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「さっきまであんなにウンともスンともいわなかったのに」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    まだまだトンネルは続いてるようです。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「不思議ね。あの変な気配も、いつの間にか……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    胸に手を当ててホッとしています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん。だけど、どうやらまだ出口ってわけではなさそうだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    げんなりしてます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ほんとに長いトンネルっすね～……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……これ、ちゃんと終わりはあるんだろうね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「一度入れば出られないとか、不穏な噂があった気がするけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「う、噂は噂だもんね～」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そ、そう！　ただの噂ですよ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「だってトンネルですもの。ただのトンネル……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    誰かさんが走ったせいでもうみんな歩くのも嫌になってそう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「もう少し、頑張って出口を目指しましょう！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ふたりににっこりしてみせます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうだね……。とにかく、先に進もう。後ろは振り返らずに、ね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=80　【演技】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 48 ＞ 48 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    スマイル返しました   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「このまま延々とトンネル暮らしは嫌っすからね～……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    分かりやすく疲れている   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    今更取り繕っても騒いだ過去は消えないんだよなあ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そろそろ心身ともに疲れてきたあなた方ですが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    前の方から誰かが歩いて来ている事に気がつけます。<br>トンネルの先から、あなた達の進行方向とは逆方向に進んでいますね。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「おっ……？　おぉ～！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「人っす！！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    前から迫ってきている影あるやんけ！（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いやいや、おかしいでしょ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ええ、でも、そうね。人が……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    フードを深く被っているため顔はよく見えませんが、体格からして男性かなって感じです。<br>そんな人間が前から歩いてきてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「このトンネルを逆行してくる人間なんているかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いるなあ……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「いるっすねぇ～」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    女子組の後ろに下がりました（）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「つまり、やっぱり普通に出口があるのよ！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そういうことっす！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうかなあ……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「お～い！そこの人～！！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    駆け寄ります()   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さよなら、くゆり   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    さすがくゆりちゃん   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。くゆりちゃんはその男に駆け寄りますが、無視されますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    可哀想   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    相手にせずそのまま歩いて逆方向に進んでいきますね。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ところでひなげしちゃんだと長いから今後僕もひなちゃんって呼びますね（謎宣言）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    わーい   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「えぇ～……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「無視されたっす……愛嬌には自信があったのに……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    振り向きたくなる衝動を抑えてしょんぼりしている   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こりん宅の雛子ちゃんはヒナちゃんなので表記で差別化図るわ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    かわいい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あら、ら」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    男の塩反応に首をかしげています   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃんの太陽くんは特に何もしないかな？<br>特に行動がなければこのまま男はどっかいきます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「寂堂ちゃんみたいなタイプは苦手だったのかも……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「だとしても一瞥くらいしてくれてもいいのに……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    陽キャだから怖かったんだよ(しらんけど)   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「雪足ちゃん、僕達も声掛ける……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃんの陰からおずおずと   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。出口までの距離とか、教えてもらいたいし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ところで男に足はありますか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    確実に男の視界に入るように前へ進み出ます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    足がなかったら泣いてしまう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    慌ててついて行きます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    人間だな！　ヨシ！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あの、こんばんはー」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    男の前でカバディしよう   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふんふん   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「突然話しかけてごめんなさい。ちょっと教えていただきたいことがあって……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではひなちゃんはくゆりちゃんと同じように男に声をかけますが、やはり無視されてしまいますね。ﾋﾄﾞｰｲ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ﾋﾄﾞｲ!!   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    異性と素直におしゃべりできないタイプ？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんはとうせんぼしてるん？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おけー   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お、おーい。聞こえてるよね？　無視はひどいんじゃない？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「一回だけならまだしも二回となったらわざとだよね？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら男を先に進ませないように太陽くんは男の前に立ちはだかりますが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    男はあなたのことを気にも留めず、そのまま前進してきます。<br>ぶつかる……と思いきや、男はあなたの体をすり抜けていってしまいました。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    知ってた   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ふえぇ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    知ってた   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SAN チェック　1/1d4   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=53　【SANC】 (1D100&lt;=53) ボーナス・ペナルティダイス[0] ＞ 80 ＞ 80 ＞ 失敗  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    可哀想   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d4 (1D4) ＞ 1  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 53 → 52   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    幽霊ダァー！？ってかんじ。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「………………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    多分みんな振り返ってないから太陽くんしか知らんの可哀想   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    冷や汗を滝のように流している   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、ああぁ……　あぁああぁ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「変な人ね。こんなに話しかけても無視するなんて」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……太陽さん？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=80h　【演技】 (1D100&lt;=40) ボーナス・ペナルティダイス[0] ＞ 6 ＞ 6 ＞ 成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    逃げ出すには至らなかった   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くん強い   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほ、ほら……　だから言ったじゃない……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんなところに！　通りすがる人なんているわけないんだって！　ば！！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    頭抱えてヘドバンしてます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「た、太陽さん？　どうしたんです？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「なんかあったん？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「さっきの人に何かされたとか……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    背中なでなでしにいきます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いいかい！　今通ったのは人間じゃない！　だって僕の体をすり抜けたんだ！　こう、スゥ～ッと……　うげぇぇ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    男がすり抜けたあたりを掻いてます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「えっ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    背中をなでなで……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃん、振り返りました？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「マジ！？ガチ幽霊じゃん！！うわぁ～、触っとけばよかったぁ～～！！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ムーンウォークしたかもしれない   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ……うん、これは振り返ると思う   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いや待ってよ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    くゆりちゃんちょっと先の方で前向きながら喋ってると思うと笑ってしまう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕らはあっちに気づいてて、あっちは僕らに無反応だったんだ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    振り返りましたか。なるほど。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「すり抜けたのはあの男じゃなくて僕らで、僕らはもう死んでいるって可能性も……！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    パニックになって迷推理してます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃんは太陽くんを落ち着かせるために背中を撫でに行こうとしますが、その時に後ろの光景が目に入ってしまうね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    後ろにはあの黒いマネキンが20体…… いえ、30体ほどまでに増えていて、あなた達のことを今まで追いかけて来ていたということに気づいてしまいました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    また増えているー！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    俺は増えるぜ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANチェックです。　1/1d3   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=63 【SAN値チェック】 (1D100&lt;=63) ボーナス・ペナルティダイス[0] ＞ 71 ＞ 71 ＞ 失敗  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    1d3 (1D3) ＞ 3  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おふっ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 63 → 60   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    減り始めて来たわね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やっと効いたね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「っ……ひッ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ひゅっと喉の奥で悲鳴をあげます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え゛っ、な、なに……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    さっきの男はもういない感じです？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ふたりとも何してるんすか……？？　見えないとこで面白いことしないで欲しいんすけど……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「や、やだ……み、見ちゃった、見ちゃった……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いないね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「だ、だめです。絶対にふたりとも、振り返っちゃだめ！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あ、あんなに一杯……さっきよりも一杯なんて……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そういわれると……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    くるっ☆   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    油切れのロボットみたいになってます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんはすべてを察しました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ああ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    くゆりちゃーん！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    黒いマネキンが30体いるー！？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANチェック！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=57 【SAN値チェック】 (1D100&lt;=57) ボーナス・ペナルティダイス[0] ＞ 95 ＞ 95 ＞ 失敗  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    1d3 (1D3) ＞ 3  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    マネキンめっちゃきもいんやろなあ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 57 → 54   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    今日みんな失敗するわね！(* 'ᵕ' )   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    もうしませんっ☆   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「振り向きたくなるのが人情……うひぃ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なんかいろんなポーズ取ってるんじゃないかな   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    後悔した顔してますね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    それは草   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    サタデーナイトフィーバーしてるかもしれない   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    全員で   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「やっぱり無理だぁ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さ、走りま～す！（）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ポピィを連れてくるんだった……あの子がいればこんなところ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おいてかないでェ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんがいってしまいました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    と言っても体力も底を尽きかけてるのでよたよた……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「すぐ走るんすから～！！ちょっと待て～～！！！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    追いかけます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あ、私も……ま、待って……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    後に続きます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではみんな走り出すということで。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    逃げるんだよォ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    走り出してからしばらく、あなた達は足を止める事になりますね。<br>なぜなら進行方向にコンクリートの壁があり、進むことができなくなっているから。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そーれーとー   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1d3 (1D3) ＞ 2  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ここで太陽くんの携帯電話が鳴りますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    いじめられています！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわぁっ！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんだ携帯電話か……って、こんなところで着信とか嫌な予感しかしないんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    壁と電話どっちに絶望すりゃいいんだよ！　とりあえず携帯電話取り出します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。では取り出してみるとどうやらメールが受信されていたみたいです。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「携帯も良いっすけど、行き止まりっすよここ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それなんだよ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そんな、行き止まりなんて。じゃあ出口は……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも引き返すわけにはいかないし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そう、だからきっとこの壁は乗り越えられるはず……。根拠はないけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    メールの送り主確認します   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    コンクリートぺたぺたしながら   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そ、そうね。どこかに抜け道とか……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    コンクリートの壁を懐中電灯でぺかぺか照らしてみます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    確認しようとしますが、メールアドレスが文字化けしていて差出人が分からなくなっていますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    捨てていい？（）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    いいよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「文字化けしてる…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんか気味悪いし開きたくないな……　ねえ、抜け道はあった？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    先に壁調べるんだよォ～！<br>   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ちょっと待つっす～」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    壁目星とかなんかあったり   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    調べる場合は目星どうぞ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    調べますます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=81 【目星】 (1D100&lt;=81) ボーナス・ペナルティダイス[0] ＞ 97 ＞ 97 ＞ 失敗  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    は？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=70 【目星】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 30 ＞ 30 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    まぁファンブルじゃないんでね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    あ、ごめんなさい早すぎた……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ハウスルール発動！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    やめろぉ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ハウスルール書いてないから今回はファンブルじゃなくて良いか〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    (´;ω;｀)   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    やったぜ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではひなちゃんが壁を調べていると、突如として赤い字で「ふりかえれ」と書かれた字が現れますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    WANADA!!!!   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    誘われている……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……あら、これは」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「文字？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    次は40体でスリラーかな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「文字……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひなちゃんがそう言った瞬間ですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    照明が点滅し始めます。それと同時に「ふりかえれ」という文字が増えていきます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    泣いちゃうぞ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ひえぇ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    泣いて良いよ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「わお……ホラーゲームで見たやつぅ……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    あっ、まって反応しちゃったけどこれ見えてるよね？？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    みんな見えてるよ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    よかった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    どれだけ醜態晒しても実は中学生なんですぅで言いくるめ振って勝つるから   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ひッ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    思わず一歩後ずさります   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「振り返るな振り返るな振り返るな……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    最終的には壁の中央に大きく「フリカエレ」と書かれて終わりますね。<br>SAN チェック 1/1d6   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=52　【SANC】 (1D100&lt;=52) ボーナス・ペナルティダイス[0] ＞ 22 ＞ 22 ＞ ハード成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 52 → 51   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=54 【SAN値チェック】 (1D100&lt;=54) ボーナス・ペナルティダイス[0] ＞ 16 ＞ 16 ＞ ハード成功  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=60 【SAN値チェック】 (1D100&lt;=60) ボーナス・ペナルティダイス[0] ＞ 95 ＞ 95 ＞ 失敗  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 54 → 53   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃーーん！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おっっっっ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    1d6 (1D6) ＞ 3  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 60 → 57   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    減るねぇ〜！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    藁にも縋る思いでメール開きます　突破口はここに……あります！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    SAN値の減る音が聞こえる……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「振り返っちゃダメ……そんなの絶対ダメ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではメールを開くと、本文に「暗闇にこそ、真実が映る」とだけ書いてあります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「振り返ったらマネキンが50体くらいいるんだ、知ってるんだからな……！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「合体してでっかいマネキンになってるかもしれないっすね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「な、何これ　“暗闇にこそ、真実が映る”……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そ、想像しちゃった。イヤよ。そんなの絶対イヤ……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    巨大マネキンが脳裏をよぎる雪足です   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ねえ、君達。さっき来たメールに意味深なことが書かれてるんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんでも、暗闇に真実が映るとかなんとか……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「消してみるっすか？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    懐中電灯をプラプラ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……え？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今って懐中電灯つけてるもんね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ですねですね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    電灯は？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ついてるね。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    消してみてダメだったら投擲で壊そう()   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「懐中電灯を消したところで、電灯がついたままだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「た、試してみよう。損はないはずだし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    懐中電灯消します   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そっすね～」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    消しま～   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「う、うう～……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    消えました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ためらってから、思いきってスイッチ切ります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（電灯のおかげで完全な暗闇ではないのは救いだけど……いいのかな）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    全員が懐中電灯を消しますが、トンネルの照明がついてるため暗闇にはなってないですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    デスヨネー   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあ何も起こらない感じね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ん～……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    見る限り何も起こっていないね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「やっぱり電灯も消さなきゃダメかい……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それは流石に損なんだけど……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「それか、そもそも考え方が違うか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「と言うと？　目を閉じるとか？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「それは分からん！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「う、う～ん……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ま、壊してから考えてみよ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「やることが大胆だなぁ、もう！　最近の若い子は！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そも電灯壊す手段あるかね？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    懐中電灯投擲くらいしか思いつかない()   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    それか肩車   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    懐中電灯は犠牲になったのだ……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「さっきの電話みたいに、照明を消すスイッチがどこかにあったり……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    前方や横の壁を見てみます。特に何もない感じかな。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    何もないですね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    やはり壊すしか   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    電灯は肩車で届く距離ですか～？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    届かないですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やはり投擲   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれを壊すって言うと、何か投げつけるのかい？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「肩車とかは……届きそうにないっすね～」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ほい、任せた男子よ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    位置的に電灯壊すには振り返る必要ある？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    くゆりの懐中電灯を渡しておく   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふええ僕非力な子供だよう」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    必要ありますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ばーか！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    なんと   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ってダメだ！　よく考えなくても電灯があるのは後ろの方じゃないか！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    もしここで照明壊したとしても、壊した照明の少し先にまた別の照明あるから完全な暗闇にはならないでしょう。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ムーンウォークも考えたけどマネキンに当たりそう   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「むぅ……じゃあどうするんすかぁ～……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃあ……さっき僕が言ったの、一度試してみないかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ただ目を閉じてみるだけなんだけど」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。確かに目を閉じれば、暗闇になる……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「と、いいんだけどなぁ……。ちょっと誰か僕に掴まっててくれない？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「？　私で、よければ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「こんな感じ？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    太陽くんの肩に手を置きます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうそう……。じゃ、目閉じてみるから……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ということで目を閉じてみます。おやすみなさい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目を閉じました。ﾜｧ真っ暗   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そして……！？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    暗いだけだなぁ。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    すやぴこ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お先真っ暗……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    開眼します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ( ✧Д✧) ｶｯ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ど、どうだった……かな？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    覚醒した……！<br>   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さっき言った通り、お先真っ暗だよ。真実なんてな～んにも見えやしない……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「詰みっすね！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、肩ありがとうね。もう平気……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    座り込みます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「かくなるうえは……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「振り向いちゃうっす！　……とはならないんだね、流石に……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そりゃそうっすよ～……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちょっと声真似入ってました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こうして悩んでいられる時間も有限だろうさ……。困ったな……」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    声真似かわいい   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    やたら似てそう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ま、まだ何か手はあるはず……何か……」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    太陽くんは多くの声帯を持っているので　極端に低い声は出ないけど   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    思いつかない時はアイデア振ってもいいですよよよ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    変声器いらず   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    喉に蝶ネクタイが詰まってそう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    電灯点滅してたからそろそろ消えるんじゃね？（）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    正直懐中電灯消したら点滅で消えたタイミングだけ何か見えると思ってた   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今懐中電灯消してるけど壁にも変化はないんよね？   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「なんかあるっすかね～」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    アイデア振りま～～   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    変化ないね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あ、懐中電灯はくゆりちゃんに返しますね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうぞ〜   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=80 【アイデア】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 73 ＞ 73 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    INTたけぇ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    発想力だけはピカイチ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    「暗闇にこそ、真実が映る」<br>懐中電灯を消してもトンネル内の電灯がついてるため暗闇にはならず、電灯を壊そうにも振り返らなければそれは不可能であり、1つだけ壊したところで暗闇にはならず意味はないように思える。<br>そのため唯一暗闇を感じることが出来る、目を閉じるという発想自体は合っているように思います。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    しかし目を閉じるだけでは何も起こらない、実際太陽くんにそうでしたね。<br>そのため、目を閉じて何か行動をすることで状況は変わるのではないか？と思いました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    進むに1票   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    なんかわかった人～()   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    メタ思考になるけど正直それしかなさそう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    振り返るのか？と思ってしまった人。でも進むのいいと思います   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    壁なんてなかったんや！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    鼻ぶつけたらそれはそれで面白いし（）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ふ～ん……うむむ…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「何か思いつきそう？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    徐に立ち上がるくゆり   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目で追ってます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「分からんっす！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    といいつつ目を瞑って進んでみる   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    頬に手を当てた考え事姿勢のままくゆりちゃんの方を見ています   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「目を閉じるって方向性はあってると思ったけどなぁ……うーん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむふむ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではくゆりちゃんを目を瞑り壁の方へと進み始めますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    前に壁があったはずですが、ぶつかるということはなくそのまま前へ前へと進むことができるでしょう。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「お？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    うわあ！　くゆりが壁に！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    残された2人はくゆりちゃんが壁の中を通り抜けていったように見えちゃうね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「！？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「えっ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    目をぱちくりさせています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちょ、寂堂ちゃん！？　チートはよくないぞ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    壁を叩いてます（）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「く、くゆりさんが壁を……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ゲームの裏技みたい……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    声は届いてないようだ……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    目を瞑ったままムーンウォークして戻ってきます()   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあ戻ってきました   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    1d2 (1D2) ＞ 2  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわあ！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    壁の中から出てきてひなちゃんにぶつかりました()   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ひゃっ」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「どういう仕組みなんすかねこれ……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    抱きとめます   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あっ、ごめんひなちゃん！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｲｹﾒﾝ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「う、ううん大丈夫」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「君、何したんだい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    うたがいのまなこ   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「まずは目を閉じます」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    くゆりちゃんが透き通っていないか触って確かめます（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、まってまって」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そして心の中で呪文wあひゅん」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    触られてあひゅんってなりました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    なんかいかがわしいな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d2 (1D2) ＞ 2  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    それはあなたの心がいかがわしい証拠だよ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ちゃんと普通のくゆりさんよね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    泣いちゃった   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    いたって真剣です（）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あの、ひなちゃん？？ぺたぺたするのやめて？？帰ったら触って良いから。ね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃんの腕をガッチリホールドしてから目を閉じます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いいよ！　次は！？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「あ、ご、ごめんなさい。つい」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    急に草生やしたのかと思っちゃった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    わかる   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「心の中でくゆりちゃん大好き！と唱えろ～！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「そして進む！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目を開けます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃんから離れます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    くゆりちゃん大好き！w   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃんにくっついて目を閉じます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さ、進もっか。いつでもいいよ雪足ちゃん」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「なんで抱き着くのやめたんすか！！！！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    って言いながら壁の中に吸い込まれていきます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃん引っ張って進むかな　目閉じてね～～   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃん大好きを唱えてもいいよ（？）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「くゆりちゃん大好き、くゆりちゃん大好き……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くそｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    唱えながら目を閉じています   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    あぁ！純粋な心を弄んでしまった！！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    とっても真剣です（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（本当に唱えてるぅ！）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    天然か〜！？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ひなちゃんかわえ   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    かわE   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではみんな目を瞑り、壁の方へと進んでいくね。壁にぶつかる事はなく、先へ進むことができます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    進み始めてからしばらく、風の吹く音が聞こえてきます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    外だ～！<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気が付けば、トンネルから出ていましたね。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「お？おぉぉ～？？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おぉ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれ、外……？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「外だぁ！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「くゆりちゃん大好き、くゆりちゃん大す……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……え？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    まだ言ってて草   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ずっと唱えていました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「外！　外に出たの！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ひなちゃんめっちゃ良い子じゃん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃんから離れてトンネルからも距離取るね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「今度タピりに行こうね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「寂堂ちゃんも見習いなよ」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「くらりんは野菜スティックね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「野菜はもういいよぉ！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「で～……ここどこ？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    周囲を見渡し   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ここはどこだろうと周囲を見渡しているとですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    トンネル内で見かけたフードの男があなた達に拍手していました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    なんだあ……？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    幽霊だ！？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわぁ！?」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    前にいるの？？？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いますね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「さ、さっきの！」   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「おめでとう！君達は選ばれし者だ。まぁ、もう意味はないんだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    絶対幽霊じゃん   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「い、いや、意味がわからないんだけど？」   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「うん。だからもう帰っていいよ。これ、頑張ったからご褒美ね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はあ……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と言って男は『黄金の蜂蜜酒』を渡してきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1人ずつね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    飲　む　の　二　回　目   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ぽかんとしながら受け取ります。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「なんすかこれ、マヌカハニー？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    瓶ごと渡されました。ﾜｰｲ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（なんかどっかで見たような……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ていうか僕、お酒飲みたくても飲めないからあんまり嬉しくないんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    文句垂れてます   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「あぁ、じゃあ誰かにあげても良いよ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ご褒美って一体……それにあなた、確か反対方向に歩いていったはずじゃ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うーん……。じゃあ、まあ友人にでも……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「って、そうだよ。大体君、何者なの？」   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「んー……あー……」   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「まぁそれは君達は知らなくても良いことだね」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    はぐらかされた！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「奇遇だね。僕も聞いておきながら知りたくないなって思ってたよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもじゃあこれだけは聞かせて欲しい。君は今まで行方不明になってた人達と関係がある？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今になって調査で来たこと思い出した   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    アキネイター始まった？   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「行方不明になってた人達ぃ〜……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いや、あくまでも噂なんだけどね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目逸らし   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「ま、関係あるんじゃないかなぁ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ、悪戯も程々にして欲しいな……」   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    多分そう/部分的にそう（アキネイター）   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「ははは、元はと言えば入ってきたのが悪いのさ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「言えてる～」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃ、僕達帰るんで」   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    勝手に入ってきたのが悪いと思う？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そそくさと立ち去ろうとしている！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ちょちょちょ、帰り道分かるん！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    慌てて着いていく   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    いいえ！ｗ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さあ……道なりに行けばどっかに出るんじゃない？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え、えっと……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おろおろしながらついていきます   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    ですよねよね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「それもそっか……喫茶店とかあるとこが良いな～」   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「あぁ、帰りに困っているなら送っていくけど」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「マジっすか！！！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    ぎゅるん！って踵を返す   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちょちょちょ、知らない人だよ！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そのうえ怪しい人だよ！？」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「む……確かに……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    振り返るとそこには羽の生えた化け物が3体いました。   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    草   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    だろうと思ったよ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    そも人じゃなかった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「女の子なんだからさ。もうすこ……し……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANチェックをしな！   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=53 【SAN値チェック】 (1D100&lt;=53) ボーナス・ペナルティダイス[0] ＞ 43 ＞ 43 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    はいおゆ～   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「てか君たち帰り道わからないでしょ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くゆりちゃんにツッコミついでに振り返ったので見ます！ｗ   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>       </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=51　【SANC】 (1D100&lt;=51) ボーナス・ペナルティダイス[0] ＞ 40 ＞ 40 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 53 → 52   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「うわきっしょ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 51 → 50   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANc(1/1d6)    </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    くゆりちゃんの反応を見て振り返らない事を決意した雪足です   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あれ……　今一瞬、花畑が……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんなんじゃ帰り着く前に力尽きそう……　もうなんでもいいや……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    すべてを諦めました   </dd></dl>
+<dl style="color:#ffeb3b" class="main"><dt>フードの男</dt><dd>    「こいつに乗っていけば家まであっという間さ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「ふ、ふたりともまた顔色が……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ひなちゃんも見なきゃね＾＾   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ちょっとキショいだけだから大丈夫だよ！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「え、ええ……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    もう見て送ってもらうか！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうしな！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    おっかなびっくり振り返りますね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=57 【SAN値チェック】 (1D100&lt;=57) ボーナス・ペナルティダイス[0] ＞ 84 ＞ 84 ＞ 失敗  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ああ！ｗ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    だいぶ心労が   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    これは……？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ここにきて……？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    1d6 (1D6) ＞ 1  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    はい   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 57 → 56   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    残念   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    そうでもなかった（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    メンタルつよつよ軍団でした   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「……ひゃぅ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「もう寝たいし早く帰ろ～！」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    変なため息みたいな声が出ました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ヤケになってます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちょっとデカめのコウモリに見えたんだよね   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「あ！ふたりちょいまち！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    スマホを取り出します   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんだよぉ！」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ちょっと経験あんだよね～こういうの……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ほい連絡先！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「肝試しは控えなよ……」   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    交換しとこ？？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、う～ん……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「まあ、ありがとう。ええと私のは……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    交換、交換   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……まあいっか！　据え膳食わぬは男の恥って言うし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    交換しよう   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    「ぃよ～し帰ろう！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほんと一時はどうなるかと思ったよ……。疲れた疲れた……（化け物から目を逸らし）」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「帰ったらあの子になんて説明しよう……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    来る発端になった患者さんのことを思って首をかしげています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、振り返っても害はなかったし。何より出られたし。噂は噂だったってことで」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「報告はそれでいっか……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そうね。こうしてちゃんと出られたんだから」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帰りの姿勢   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    「そう言っておけば万事オッケー、ね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（飛陽ちゃんには悪いけど、やっぱりもう暫く休業しよ……）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さ、みんな帰るかな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帰るよ～   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    うむ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    ですねですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はーい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではエンディング。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ところでスマホで撮ったマネキンって残ってるん？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    出鼻くじいちゃった   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その後あなた達はあの男が用意した羽の生えた化け物に乗り、自宅へ帰宅することができました。<br><br>あなた達がトンネルに入ってから後日、あのトンネルは行方不明者を出さなくなったようでした。一安心ですね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あのトンネルで見た光景はなんだったのか、あなた達はそれを知る事はないでしょう…………が   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんはふとトンネル内で撮ったマネキンの写真が気になり見てみると、そこにはマネキンは写っておらず、それどころか真っ暗な写真しかありませんでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    謎は深まるばかり。<br>とんでもない出来事だったなぁと思いながらもあなた達は日常に戻っていくのでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シナリオクリアです！<br>お疲れ様でした！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お疲れ様でした～～   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    おつおっつ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    クリアー！ドキドキした……！   </dd></dl>
+<dl style="color:#607d8b" class="group tab_2"><dt>KP</dt><dd>    ・シナリオ背景<br>トンネル内では、ハスターがそこを通る者から自身の化身として相応しいものを選定していた。 しかし、探索者達がトンネルに着く頃には新しい身体はもう見つかっていて、 ハスターはすでに撤収しようと決めていた時に探索者達が来た。 念のため品定めを始めるのだった。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    おつつつつ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    おつおつですです   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    あざかさん、成功技能がひとつもないなんて……   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    まず振ってない   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    フードってハスターかい！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    目星で97出して終わったね   </dd></dl>
+<dl style="color:#607d8b" class="group tab_2"><dt>KP</dt><dd>    ◆ギミック等 &lt;トンネルを通して共通の設定&gt;<br>・トンネル全体:見えている景色が偽物で、 目を閉じた時に映る景色が本物である。<br> →&lt;真っ暗&gt;がこのトンネルの真の状態であり、 目をつぶって&lt;真っ暗&gt;にすることが五感の支配を解く方法である。 あえて恐怖に対し自ら視界をなくしたまま前に進み続けるという勇気を試す試練だと、 ハスターは考えていた。   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    目を閉じるの気づいたのすごい（浮かびもしなかった顔）   </dd></dl>
+<dl style="color:#607d8b" class="group tab_2"><dt>KP</dt><dd>    ●登場キャラ詳細<br><br>□フードの男性(ハスターの化身) <br> 試練を達成してハスターの化身となった男性 ボクサー志望のため体つきはよく、知恵もあったため魅入られ化身となってしまった。 意識は完全にハスターのものとなっている。<br><br>□ビヤーキー<br>トンネル内では、幻覚として現れ倒しても何度でも現れる。<br>トンネル外には実体が待機していて、 探索者達をハスターが見届けるとそれに乗って帰る。 ついでに探索者も送り帰してくれる。<br><br>□黒いマネキン<br>ハスターによって生み出された、探索者達が引き返せぬように立ちふさがる実体。<br>動いてる様は捉えることができず、 瞬きやライトの明滅によってコマ送り状にしか確認できない。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    探偵だから（？）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ボクサー志望でなんか笑っちゃった   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おわった〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    何箇所か目星逃してはいるけどまぁあんま情報ないシナリオだからね。   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    GMおつかれさまでした。楽しかった   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    マネキン、目を逸らした一瞬で殺しに来そうな説明文   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クリア報酬<br><br>・SAN値回復<br>クリア報酬+1d10<br><br>・黄金の蜂蜜酒<br>今回のシナリオの内のみで黄金の蜂蜜酒は、単体で効果があります。<br> CON対抗をし失敗した場合 SAN 値+1d8としてもいいでしょう。 酔って嫌なことは忘れた。という感じです。   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    「だるまさんが転んだ」に強そう（？）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    酒飲みてぇ～～！！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d10 (1D10) ＞ 4  </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    完全にいなみちゃん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 50 → 54   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    1d10 (1D10) ＞ 6  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    1d10 (1D10) ＞ 3  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 雪足 ひなげし ] SAN : 56 → 62   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いなみちゃんほど凶暴ではないから安心して   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    遊びすぎて赤字   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    赤字だから酒飲もうかな（理由）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 寂堂 くゆり ] SAN : 52 → 55   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今回のみだから飲んだ方がお得   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    失敗したらだけどな！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    なんなら皆で酌み交わそう   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    かんぱーい！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    仕事も休みだしちょっとくらい飲みすぎても平気平気   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    俺達は蜂蜜酒で乾杯したのさ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=20　【CON】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 29 ＞ 29 ＞ 失敗  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d8 (1D8) ＞ 1  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    なんでだよ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ワロタ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 大倉 太陽 ] SAN : 54 → 55   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    CC&lt;=70 【CONロール】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 32 ＞ 32 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    このオルゴールほんと好き　あとでおしえて（遺言）   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    CC&lt;=65 【CONロール】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 27 ＞ 27 ＞ ハード成功  </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    はい！ｗ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ええよ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    何か質問等ございますか！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    お酒に強すぎた   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    上手く酔えなかったね……   </dd></dl>
+<dl style="color:#f44336" class="main"><dt>寂堂 くゆり</dt><dd>    くゆりは結構飲む方   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    BGMよきよきですです   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ないどす！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    私も大丈夫ですー   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    背景で大方解消した   </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    ドス！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はぁい！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    では解散しましょう！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    悪酔いして具合悪くなるので介抱してください　ありがとうございました   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ウィ～   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    付き合ってくれてありがとうございました！<br>おつおつ！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>雪足 ひなげし</dt><dd>    名残惜しいけど……またいつかー   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    おつかれさんした！　RP楽しかったです   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>雪足 ひなげし</dt><dd>    背中さすさすしますね（何度もやる）   </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    CC&lt;=79　【目星】 (1D100&lt;=79) ボーナス・ペナルティダイス[0] ＞ 45 ＞ 45 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#f44336" class="zatsudan"><dt>寂堂 くゆり</dt><dd>    おつおっつ！   </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    kusyogayo   </dd></dl>
+<dl style="color:#f44336" class="group tab_0"><dt>寂堂 くゆり</dt><dd>    哀しいね   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
