@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>おいで、おいで。</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_0{}
+.tab_0.selected{display: none;}
+.tab_1{}
+.tab_1.selected{display: none;}
+.tab_2{}
+.tab_2.selected{display: none;}
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_0"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_0">めも</label><label for="tab_1"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_1">情報</label><label for="tab_2"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_2">成長</label>
+</header>
+<div class="wrapper">
+<h1>おいで、おいで。</h1>
+<h2 id="day1">おいで、おいで。</h2>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>私だ。 </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt></dt><dd>あと画像だけ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>誰だお前！ </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>BGMすきだなぁ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>やべ全然聞いてなかった </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>流れてなくね？？？ </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>さっきまで流れてたよ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>ぴえん </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>え </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>流しっぱにしてた説 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>てか名前の色変えよ。探索者に合わせるか。 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>かえといて〜 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>どうもよろしくお願いします。 </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>これ、カラーコードで指定できるの凄い </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>それね（カラーコード調べるのめんどい顔） </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>ふふw </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>よし </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>準備できたらアイコン出しといて〜 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>駒サイズいくら？ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>6でいっか </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>アインコは用意できませんでした（う～んこの） </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>なんかいい感じなサイズで(？) </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>偉いので完成させてきた </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>えらい </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>始めていいかな？ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>いいよー </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>おっけ </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>はーい </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>じゃあメインで導入から始めまーす </dd></dl>
+<dl style="color:#888888" class="main"><dt>導入</dt><dd>目が覚めると知らない部屋のいた。<br>見渡すとおもちゃが散らかる子供部屋のようだ。  </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>「美味しいご飯、美味しいご飯、早く早く食べたいな！」  </dd></dl>
+<dl style="color:#888888" class="main"><dt>導入2</dt><dd>どこからか声が聞こえてきて思わず声のする方向を見やる。そこにいたのはピエロの人形。まるで首つりのように紐にぶら下がっている。 <br> </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>ピエロ人形</dt><dd>「美味しい食材をより美味しくする最高のスパイス、それは恐怖！」  </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>なんもながれてないよね？（） </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>多分（自信ねえ顔） </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>よ、よし。。。 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>テキストが流れてないのかと思った </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>それは流れてる </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>ばっちり </dd></dl>
+<dl style="color:#888888" class="main"><dt>導入</dt><dd>きゃきゃきゃ！とピエロ人形が笑うとロープが切れて床に落ちた。 <br>不気味なピエロと不可思議な出来事に、探索者は恐怖を覚えるだろう。〈SANC　0/1〉  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=54 【SANC】 (1D100&lt;=54) ＞ 81 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 若王子 宏美 ] SAN : 54 → 53 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>1d100&lt;=65　【SANC】 (1D100&lt;=65) ＞ 13 ＞ 成功</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CCB&lt;=55 【SAN値チェック】 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CCB&lt;=55 【SAN値チェック】 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>泣いた </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>CCBダメでしたっけ……？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>部屋情報</dt><dd>部屋の形は正方形で、扉が１つ、窓が２つある。ピエロ人形は部屋の中心に落ちており、異様な雰囲気を放っている。おもちゃの木馬、おままごとセット、ベッド、ボールプール、本棚がある。全体的にものが小さく、壁紙が星柄なことから子供部屋だと推測できる。  </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>そいやなちゅりん　SANはちゃんと設定してれば左のアイコンのとこから減らせるよ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>まあ減ってないけど </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>ほんほん！了解でーす </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ダイスbot違うとか？　知らんけど </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>CCBとかってこっちで設定するもの？？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=55 【SAN値チェック】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 17 ＞ 17 ＞ ハード成功</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CCだったか～（チャパレ書き直ししてくる） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>CCならいけるのか </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>SANCが終わったところで探索開始です〜 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 55 → 54 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 54 → 55 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ぎゃーー！　食われるッッ！？」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>ダイスボットの設定かな、ココフォリアがCCB対応だったかは忘れてしまった </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「お、俺は美味くねーぞ！　肉も鍛えてっから柔らかくねーから！　だからホントマジで勘弁してください！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>SANC失敗したんで騒いでおきます </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>わがんね </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ここは一体…？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え、どこココ……　幻覚かな……」 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>ダイスは新クトゥルフ神話TRPGで設定してあるよ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ちょっと怖いけどこれもデザインの参考になりそう」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「薬の影響かもなぁ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、冷静すぎん？　俺も冷静になっちゃうんだけど」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>といって寝入ります。おやすみ（クソ） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ね、寝るなーー！　寝たら死ぬぞ！！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「なんなんだろ…この人たち」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>胸ぐら掴んでガックガックします。彼はパニックになっています。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あぇ～……　だって、オレ部屋で寝たし……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、じゃあこれもしかして夢なん？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「夢…なら見覚えのない場所にいるのもおかしくないのかな」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「知らないよぉ～……　オレなんかが知るわけないじゃんね……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>夢と思ったら急に強気になったので探索を始めるか〜！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>無抵抗で揺さぶられてるの面白いな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「夢か〜。つかここ何？　子供部屋？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ピエロの人形拾い上げて調べます。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「みたい、沢山おもちゃが散らばってるね」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ピエロ人形調べる場合は目星をどうぞ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「趣味悪いなぁ……　って言ったら自分にブーメラン刺さって死にたくなってきた」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「おままごとセットがあるってことは女の子の部屋かもな。なんだよ〜、俺夢の中で女の子の部屋に招待されちゃったぜ〜！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=70 【目星】 (1D100&lt;=70) ＞ 3 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ひっくいわ。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>はしゃぐな。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>窓が開くか確認しようかな～ン </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「すごくネガティブな人とポジティブな人が混在してる…」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>じゃあ扉見に行こ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ピエロ人形の背中にチャックがあることに気が付きます。 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>一瞬ホラーで草 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>一瞬ホラーは草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>窓にはカーテンがかかっています。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「でもこのピエロ人形は流石に趣味悪くね？　泣く人は泣くじゃんこんなん。俺も泣きそうだったわ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ、趣味悪いって言っちゃった。お兄さんのことじゃねーから！　死ななくていーからね！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>でかい声で騒ぎながらチャック開けます。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ドアノブが付いている、なんの変哲もない扉。<br>鍵が閉まっていて開きません。扉に「口の中」と書かれたプレートがぶら下がっている。  </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>確かCCコマンドだとCCx&lt;=50　のxのところに数字いれるとペナルティダイスとかボーナスダイスとかが使えた気がする </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>チャックを開けてみるとそこには鍵が入っています。  </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>-1でペナルティダイスが一個ってコマンドで、+2でﾎﾞｰﾅｽダイスが二個みたいな </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「開かない…口の中って何…？」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>あと、:SAN-5みたいに入力するとその数値文勝手に数値あっちから減らしてくれるよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「口の中？」 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>ｽｹﾞｪ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>ハイテク </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ほら、これ<br>プレートがかかってる」 </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>へ～すごい </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>落ち込みながらカーテン開くぞ～（ガン無視） </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>すげ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>千尋ちゃんが教えてくれたのでプレート確認しましょ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「うわマジじゃん！」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>あとは㏄&gt;=50hみたいにhとかつけると、ハード成功とかクリティカル成功とか色々勝手に処理してくれるよ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「なんか雰囲気も相まってちょっと気味が悪いね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「でもつまりここはまだ口の中じゃないんだよな？　じゃあ俺らまだ食われてねーってことか！　セーフセーフ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>カーテンを開くと外の景色見える。<br>それは目だった。不気味な目があなたを捕える。<br>あなたが思わず窓枠に手をつくと、窓枠がぐにゃりと歪んだ。それと同時に目がスッと細くなる。まるであなたをあざ笑うかのようだ...。不気味な目を見たあなたは〈SANC　1/1ｄ1 0〉  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ん〜、気味が悪いのはそうだなぁ〜。夢の中とはいえ」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>hだとハード、rだとレギュラー、eでイクス、cでクリ </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>ココフォリアってすごい </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>でかいな </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ここのSANCめちゃめちゃでかいな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「まあここには俺がいるから平気っすよ、お嬢さん（イケヴォ）　あ、ちなみに俺、若王子 宏美って言うんだけど。お嬢さん名前なんてゆーの？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=55 【SAN値チェック】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 84 ＞ 84 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>つ、つごもりーーーー！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>やばいぞ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>1d10 (1D10) ＞ 6</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>あーあ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>つごもりーーーー！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ワァ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 55 → 49 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=60 【アイデア】 (1D100&lt;=60) ボーナス・ペナルティダイス[0] ＞ 58 ＞ 58 ＞ レギュラー成功</dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、頼もしいね<br>私は汐崎 千尋です、よろしくね」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>はい。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>期待を裏切らない </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>3足りない </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「千尋ちゃんか〜〜！　可愛い名前っすね、君によく似合ってる〜！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>1Ｄ10ふってくれ〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>1d10 (1D10) ＞ 7</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ、そうだ。そっちの人は？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「…………」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>晦くん気にしときます。精神分析は拳しかないですが。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>こーれーはー </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>カーテン握って外を見たまま動きが止まっている！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>パニックかな </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>うーんこの </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あれ？　生きてる？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>お、ええやん。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「大丈夫…？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>晦くんの近くまで行きます。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>発狂RPするにもちょっと描写ほしいかも～ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>あなたはパニックになり、可能な限り遠くへ逃げ出さずにはいられなくなります。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>って言ったら来たわ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「おーい、聞いてる？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ヒ……ッ！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>肩をつんつんと。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「うおっ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ここはやばい……！どんな手段を使ってでも逃げないと…！みたいな感じです。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>振り返ってその手を振り払って、急いで扉のほうに走るわ～ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>扉ガチャガチャ！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ちょっ、どした〜！？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「どうしたの！？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ｶﾞﾁｬｶﾞﾁｬ<br>開かないですね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、なになになに。俺またなんかやっちゃいました？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「に、逃げないと……！！　ああ、あああ……　僕を見て笑ってる！　笑ってる！！！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>精神異常者じゃん </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「…窓の方に何かあったのかな」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そうだよ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>そうでした </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、ま、窓……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>背後に窓！　振り返るか、振り返らないか…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>雑魚なので後ろ手にカーテン閉めようと頑張ります。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>恐る恐る見に行くか～ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>勇者やん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>頼りになるのはお前や </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「うわああ、早く逃げなきゃ……逃げなきゃ……逃げ……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>お、窓見に行く？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ちょ待てよ！　そっちは口の中だぞ！」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>見に行きます～なんでそうなったか原因気になるだろうしね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「オレのことを見て笑ってるのは誰だ？あいつか？それともお前か！？　それとも……　開かない！　なんで！！扉は開くものだろ！！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふんふん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あれ開かないの？？？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>扉は開くもの（混乱） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>扉は開くのが仕事だろ！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「開かない；；」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「あ、そこね、鍵がかかってたよ」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ガチャガチャガチャガチャ！！！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ、鍵ならさっき俺が──（いや待てよ、これ渡しちゃまずいか……？）」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>千尋ちゃんが見に行くと、そこにはフツーの窓があるだけでした。窓は真っ暗で向こう側が確認できないです。あなたの顔が窓に映ってるだけですね。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ナンデモナイデース」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「って、千尋ちゃん！？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「さてはお前……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「さてはお前が元凶だな！！！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>びっくりして宏美ちゃんも振り向きます。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ｶﾞﾁｬｶﾞﾁｬｶﾞﾁｬｶﾞﾁｬ!!!ｱｶﾅｲ!!! </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「……何もない？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃんがみても普通？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>普通ですね。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>おう、晦が精神異常者なの露呈しちまったna! </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺は無実です！！！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「返せオレの安息！！！！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「てかなんもねーじゃん！　なにそんなビビってんだよお兄さんは」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「知らんわ！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あるってば！！！！　目がオレをみて笑って……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「笑って……　窓枠が……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「目？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「どこにあんだよ？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「もっかい見てみろって、ほら」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「やっぱりオレのことハメようとしてるんだ！！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「してないわよ！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「嘘だーー！！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ギャグかな？？？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>子供の駄々レベル </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「お、落ち着いて？<br>敵か味方かは私もまだ分からないけど、少なくとも害意はないから…！！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>精神分析持ちがいない場合、精神分析(物理)に成功したら狂気状態から回復しても良いわよ。ただしダメージロールはしてもらいますー </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ！　ちなみに俺は、世の女の子の味方です☆」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「やっぱり信用ならない！！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんでだよ！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>嘘でも男の子の味方って言ってあげないと </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「あはは……うーん」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>一時だしな〜という気持ち。殴るほどでも……ある？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「とにかく……出ないと……　おうち帰る……帰る……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>名残惜しく扉ひっかいとくね（無害） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>可愛いね </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>殴れと言われたら殴るけど自主的には殴らんかな… </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>狂気状態でも探索してもらえるように言いくるめよう( ？) </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「そっちが家かは分からないけど…やっぱり帰りたいよね、うん」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「夢なら覚めるんじゃねーの？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「てか本当に夢？？？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ほっぺつねってみる？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「お願いします！！！！」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>宏美くんのほっぺつねります </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>いい夢だなあ（？） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>あ、時間決めるのでもう一度1Ｄ10振っといてね </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ほっぺがいてぇだけです。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いてててててて」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「夢じゃねえ！！！！！！！！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん…これはちゃんと出口探さないといけないのかな」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ちなみに扉には鍵開けが振れるけどあまりお勧めはしません </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「や、やべえ！　これ夢じゃねえ！　ってことは俺達この後食われるのか！？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「それはやだな…」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「おいお兄さんやっぱりその先行くのはナシ！　てか出口探そーぜ！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>鍵開けないから体当たりでもしてるか </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>晦くんとこまで駆けて行って往復ビンタします。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>体痛めそう </dd></dl>
+<dl style="color:#a596c7" class="group tab_0"><dt>ぽん</dt><dd>部屋の形は正方形で、扉が１つ、窓が２つある。ピエロ人形は部屋の中心に落ちており、異様な雰囲気を放っている。おもちゃの木馬、おままごとセット、ベッド、ボールプール、本棚がある。全体的にものが小さく、壁紙が星柄なことから子供部屋だと推測できる </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>木馬見に行こかな～ </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>メモ</dt><dd>ドアノブが付いている、なんの変哲もない扉。<br>鍵が閉まっていて開きません。扉に「口の中」と書かれたプレートがぶら下がっている。  </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>痛そう </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>おもちゃの木馬です。<br>足の部分に「Chaval　en　bois」と刻まれている。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=60 【格闘】 (1D100&lt;=60) ＞ 31 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d3+1d4 (1D3+1D4) ＞ 1[1]+2[2] ＞ 3</dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「せっかくだし出口探すついでにインスピレーションが欲しいな…」 </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>木馬</dt><dd>おもちゃの木馬です。<br>足の部分に「Chaval　en　bois」と刻まれている。<br>
+<br>日本語で「主の名は仏では示さない」とも刻まれている。 
+</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>あとですね、日本語で「主の名は仏では示さない」とも刻まれています。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>晦くんはこれで目を覚ましてください（3ダメ往復ビンタ） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>千尋ちゃんは知識を振ってね！ </dd></dl>
+<dl style="color:#888888" class="main"><dt>木馬</dt><dd>:HP-3 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>木馬！？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>木馬喋らせちゃったわｗｗｗｗ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>勝手に処理したけどまあ物理やっていいって言ってたし問題ないでしょう。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd> </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>いいよ〜〜晦くんは正気に戻りました </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] HP : 10 → 7 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>痛そう………… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>バシバシバシ！ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【知識】 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「痛い……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【知識】 (1D100&lt;=65) ＞ 27 ＞ 成功</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふむ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そのドアは一旦いーから！　窓からもなんも見てねーから！　出口出口出口出口！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ﾊﾞｼﾊﾞｼｶﾞｯｸｶﾞｯｸ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「これが生きる痛み……　僕は生きるのに疲れたよ、パトラッシュ……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>「Chaval　en　bois」<br>千尋ちゃんはこれはフランス語であることが分かりますね。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>頭がｶﾞｸｶﾞｸｶﾞｸ…… </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「生きるのを諦めて欲しくないな……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「Chaval en bois……フランス語みたい」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ハッ、俺としたことが　探索を千尋ちゃんに任せっきりにしちまった……！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「だってあんな怖い目見て、誰だって正気保てｎ……　いや、待てよ。なかったってことは、幻覚……？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>全く探索してない人間いるから安心して </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そーだぞ、なかったぞ。なーんにもだぞ」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「もしかしたら私達が見た時にはどっかにいっただけだったりして」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「だから最悪窓から出ることも考えて、出口探してさっさと逃げようぜ！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「エッ」 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>BGM流れてる？ </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>うん </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「現実的に、そんなん有り得る？」 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>うーむ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ、有り得ないっしょ……　知らんけど……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「私は見てないから分からないけれど……見てないからって絶対ないって決めつけるのも違うでしょ？」 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>こっちだとちょくちょく止まっちゃうみたいなので、ちょくちょくかけ直すけど許して </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>また一瞬ホラーだったじゃん </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>ふふw </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いたもん、ひとえみたもん。トトロ……じゃなかった、目、いたもん」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>お漏らしホラー </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>すまねぇ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「君ひとえくんって言うのね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺宏美ちゃん」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うん、信じるよ<br>だから窓から逃げるのは最終手段にしよ？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「よろしくね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ま、その方が安全か…………」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「晦 ひとえ……　あれ、名乗ってなかったっけ……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>俺宏美ちゃんでちょっと笑っちゃった </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「聞こうとしたらなんかパニクってたからさぁ」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「一応落ち着いたみたいで良かった」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>女の子っぽい名前ってのは本人も自覚してそう。まあ郷ひろみとかいますが。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ごめんね宏美ちゃんと、貴方……えーと」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「あ、私の名前も聞いてなかったよね<br>私は汐崎千尋です、よろしくね晦くん」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>俺郷ひろみちゃん。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>タイミング悪い発狂だったせいで自己紹介パート2になってら </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「汐崎さんね……　わかった」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「んでんでんで、千尋ちゃんなんかフランス語がどうとか言ってた？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ボンジュール」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「そうそう、なんか文字が書いてあったの<br>Chaval　en　boisって<br>でもその下に主の名は仏では示さないって書いてるからよく分かんないなぁ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺もそんくらいしか知らねーからボンジュール取らないでもらえる？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お前本当にEDU80？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「先手必勝よ」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、私も英語ならちょっとはいけるけどフランス語はダメだなぁ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「多言語使いになったらモテっかな〜〜。勉強しよ（言うだけ）」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「見ての通り、学なし男なんで……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「学ありそうな見た目してっけどな〜」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>おままごとセット調べます。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「社畜です。警備員ですね」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>本棚ってしらべたっけ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「警備員さんなんだ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>おままごとセットです。<br>マジックテープでくっつくタイプの野菜(ニンジン、ピーマン、トマト、トウモロコシ)、プラスチックでできた包丁、まな板があります。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>まだだね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「社畜が先に来ちゃってんじゃん。俺社畜の気持ちわかんねーけど、だからひとえくんあんな疲れてたんだネ…………」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ベッド調べよ </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>窓</dt><dd><br>カーテンを開くと外の景色見える。<br>それは目だった。不気味な目があなたを捕える。<br>あなたが思わず窓枠に手をつくと、窓枠がぐにゃりと歪んだ。それと同時に目がスッと細くなる。まるであなたをあざ笑うかのようだ...。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「おままごとセット……　普通の女の子の部屋だったら普通に可愛かったんだけどなぁ……　ここ絶対さぁ……　普通じゃねーしさぁ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「まあ……　アハハ……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>おままごとセットには目星がふれます </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>気を取り直して本棚調べるか…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「おままごと…………うぐ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「気晴らしにおままごとでもする？？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=70 【目星】 (1D100&lt;=70) ＞ 19 ＞ 成功</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>綺麗なベッドです。布団の中に何かあるのか、膨らんでいます。<br>こちらにはアイデア(INT)がふれますね。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「なんか涙腺崩壊しそうだから、今は遠慮しとこうかな…………」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ホラーテイストの服のデザインには役立ちそうだけどな……あんまりそういう系は作ったことないからね……勉強しなきゃ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そっか…………　元気出せよ…………」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「千尋ちゃん服作れんの！？　すげー！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、これでも一応デザイナーしてるの」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ううん……　眩しい……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>絵本がいくつかあるだけの本棚です。<br>ここで〈聞き耳〉もしくは〈アイデア　1/2〉に成功することである事に気がつくことができます。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>刺激が強いわ…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>聞き耳～にしますわ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>で、目星。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>聞き耳どーうぞ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 50 ＞ 50 ＞ レギュラー成功</dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【アイデア】 (1D100&lt;=65) ＞ 31 ＞ 成功</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>せっかくだし、情報の方に貼っておこうか<br> </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>流れちゃうから助かる〜。 </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>〈目星〉おままごとセット<br>おもちゃのトウモロコシを２つに割ると、中に「部屋の主が鍵になる」と書かれている。  </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ちょっと今の時間にお薬吸わないとならないから一瞬離席していい？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>いいよ〜〜その間に情報貼っておくので後で確認しとくれ~〜 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>てらてら </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>はあい </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんかトウモロコシの中になんか書いてある」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なんかを2回言うあたりすげー馬鹿っぽい </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>〈聞き耳〉本棚<br>絵本の中の一冊から柑橘系の香りがすることに気付く。  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「“部屋の主が鍵になる”？　どゆこと？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「部屋の主……そこのピエロとか？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「確かにそこのピエロに鍵入ってたけど」 </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>〈アイデア〉ベッド<br>ここは子供部屋のように見えるが、子供が使うにしてはこのベッドは大きすぎると違和感を覚える。  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、そういう解釈でいいの？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん……けど今のところそれ以外に思い当たるのはないなぁ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんだ、じゃあもうこれは用済みじゃん」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>トウモロコシﾎﾟｲ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>さよならもろこし </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「まぁ、もしかしたら他の意味も無いとは言いきれないよね」 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>もどりまんた </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>おかえり </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>おままごとセット</dt><dd>マジックテープでくっつくタイプの野菜(ニンジン、ピーマン、トマト、トウモロコシ)、プラスチックでできた包丁、まな板がある。<br><br>おもちゃのトウモロコシを２つに割ると、中に「部屋の主が鍵になる」と書かれている。  </dd></dl>
+<dl style="color:#009688" class="zatsudan"><dt>なちゅ</dt><dd>おかえり〜 </dd></dl>
+<dl style="color:#9c27b0" class="zatsudan"><dt>KP</dt><dd>おかえり〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「実は俺もそう思ってたんだわ〜」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>トウモロコシは拾われました </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>柑橘臭のする絵本を手に取って、首を傾げてます。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>トウモロコシ… </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「こっちはね、ベッド見てたんだけど……これ子供用にしては大きすぎないかなって」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「えー、どう見ても部屋は子供部屋っぽいけどなぁ〜」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「兄弟とか？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>布団の中膨らんでるとか書いてたよな〜何か確かめてみるか〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「犯人はままごとが趣味の大人のラインもありますかね」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「それは怖いな……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>表紙を見た感じ普通ですが、その絵本の中身は真っ白で何も書かれていませんね。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あれ……　この絵本、何も書かれてないや」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そういう趣味の人間も少なからずいそうだけど、俺達拉致って食おうとしてるって時点でサイコじゃん……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>炙り出しかな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「柑橘系の香りがするから、なんかに匂いつきの仕掛けがある本か、それかオレンジジュースでもぶちこぼしたのかなって思ったのにな……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>柑橘って言うと </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>そんな気がするよね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>そーね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「柑橘かぁ…………」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「お腹すいてきちゃったな」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんか前にテレビでなんか……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ま、ボールプール調べましょうかね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「とりあえずなんか……　最悪火種になりそうだしもっとこう……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「放火は犯罪だぞ！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「火種にするんだ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あ、もしかして焚き火？　それならごめんじゃん」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「拉致のが犯罪レベル高いから正当防衛だよ」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「確かに」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ほんとか？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ボールプールです。ボールが沢山入ってますね。<br>こちらには目星がふれます。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>絵本をズボンの後ろ辺りにIN! </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=70 【目星】 (1D100&lt;=70) ＞ 44 ＞ 成功</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>INできました </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>調子いいわね </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふむふむ </dd></dl>
+<dl style="color:#a596c7" class="group tab_2"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>聞き耳 </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>〈目星〉ボールプール<br>１枚のメモを発見する。<br><br>［メモ］<br>王冠の右を左に入れ替えろ。それがこの部屋の主だ。  </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>成長タブありがて〜〜<br>僕も使わせてもらお </dd></dl>
+<dl style="color:#ffc107" class="group tab_2"><dt>若王子 宏美</dt><dd>目星 </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>どんどんふやせ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>そういやベッドの中のもの何か見たいﾅｧって </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>あ！ごめんね見落としてた </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ベッドの布団を捲ってみると、人が、いや、人だったものが寝かされていた。<br>体はカラカラに干からびて、見るも無残な姿。一目見てそれが死んでいると理解した。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ミイラを見たあなたは〈SANC　1/1ｄ8〉  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>あーあ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【SANC】 (1D100&lt;=65) ＞ 96 ＞ 失敗</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>うわぁ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ああ〜〜！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ﾌｧﾝﾎﾞｳ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ファンブルでも普通に振ってね〜<br>最大値固定とかではないので </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>あちゃ～ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d8 (1D8) ＞ 1</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>つよつよか？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>？？？？？？？？ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 汐崎 千尋 ] SAN : 65 → 64 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>これよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>鋼鉄じゃん </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「っ……！？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>布団さっとかけ直します </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「千尋ちゃん？　どした？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>かけ直せました </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「み、見ない方がいいよ……ううっ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「えっ、えっ」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>口押さえてベッドから離れてる </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「顔色悪いけど大丈夫……？　飴舐める？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>荷物は多分無いが何も知らない宏美ちゃんは荷物を探ろうとします。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「し、心配かけちゃってごめんね<br>ありがとう」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ハッ、目が寝てたとか……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>荷物はありません！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「それはシンプルにキショい」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「目ではなかったかな……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>怖いもの＝目みたいな認識やめろ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「って、ああ！　荷物無え！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え"」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「くっそ、いつも持ち歩いてんのにいちごミルク飴〜！　ごめんな千尋ちゃん……！」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>自分も荷物探ってあれぇってしてよ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ああっ！！　たばこが……　やすらぎが……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>顔の前で手合わせてる。ボールプールの情報出たっけ！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「精神薬が……　写真が……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「（なんかやばそう）」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「そっか……ううん！仕方ないよ<br>その心遣いだけで凄く嬉しい」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>生きる活力が失われていく音がする――！ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「荷物、家に帰ったらちゃんと置いてるといいな……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「天使ぢゃん」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「早く見つけて帰らんと……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「禁断症状が……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「やべえ」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「心配だな……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>KP……　死んだか……？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>情報タブにあったわ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ごめん言っておけばよかった </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>こっちに貼ったりもしてたから両方スタイルでいくのかなって思ってメインばっか見ちゃった　すまそ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>あとはどこ調べてないっけね。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そういやメモみたいなのあったぜ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>これから技能情報は情報タブに貼るわね </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「メモ？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「メモすか」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「“王冠の右を左に入れ替えろ。それがこの部屋の主だ。”……だってさ」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>めぼしいとこは全部調べたんじゃないかな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>メモひらひら </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ちょっと意味が分からんですね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>と思われる </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>そか～ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺もわかんね〜！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あ、本みます？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「何も書かれてねーって言ってなかったっけ？？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いやあ、自分の目が信用ならんので……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そ、そか……　じゃあ確認してあげんよ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>渡すわ～ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>貸して貸してってしてます </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>借りました </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>どれどれふむふむ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>さっきの窓のことがあるから…（） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>なにもかいてなぁい </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なるほどｗｗｗｗｗｗ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>かわいいな…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なーんもナシ。ひとえくんの見た通りっしょ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ほい」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ぽいっと投げて返します。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「よかった、見た通りだったわ」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>キャッチ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「じゃあ、ここで得られるものはもうない感じ……かな？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ま、まさかあの扉の先に行くの……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いやまあ、あと使えそうなのって言ったら、俺のこの鍵くらいだけどさ……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「不安だけどずっとここにいる訳にもいかないからね……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「鍵持ってたんだ！？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「やべっ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「だ、だってさぁ！　あの時ひとえくん絶対フツーじゃなかったっしょ！　渡したらどうなるかわかんねーなって怖くて！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いやあ、こんな甲斐性なさそうな自信０のメンヘラ男に信用なくて当たり前ですよ……うん……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「わわ、落ち込まないで」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ま、まあほら。今は比較的冷静だし、皆一緒に行きゃ大丈夫……　大丈夫だよな？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いえ……お気遣いありがとうございます…… 泣いた……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「まあ、それはそうと鍵があるなら使ってみちゃえばいいんじゃないですかね。ここにいてもしょうがないと思いますし」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>切り替えが早いメンヘラ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「何かあってもひとりじゃないから気持ち安心だよね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「急にめっちゃ流暢に喋るじゃん」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いやあ……早く出たいじゃないすか……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>扉に鍵試してみます！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「わかるぜ」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あっ、決して皆さんが嫌だとか嫌いだとかそういう次元の話ではなくて、この空間から抜け出したいとかそういう意味なんで（早口）」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふむ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「わーってるって！　多分！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、気にしてないよ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>扉に鍵を試す前に、全員アイデアを振ってね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=60 【アイデア】 (1D100&lt;=60) ボーナス・ペナルティダイス[0] ＞ 87 ＞ 87 ＞ 失敗</dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【アイデア】 (1D100&lt;=65) ＞ 6 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>陽キャなんで晦くんの肩に腕回してます </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ﾋｴｴｴてしてそう（コナミ） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=55 【INT】 (1D100&lt;=55) ＞ 95 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ばーかばーか </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>陽キャつよいなぁ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>なるほどね </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>千尋ちゃんは思います。<br>この部屋のものは全て調べた。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>……いや、一つだけ調べてないものがある。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>それはさっき自分が………… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ですよね。。。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>以上です。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>死体だな（名推理） </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>やっぱあれかぁ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>一般人が死体なんて調べようとするわけないでしょ！ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「……ちょっと、ちょっとだけ待って<br>心残りというか……やり残しがあって」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「やり残し？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「は、はぁ。なんでしょう」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なら俺も一緒いるぜ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ﾊﾊ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ついてくお気持ちです </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「いいの？……優しいね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「へへ、そう〜！？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「あれ、なんだけど……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ベッド指さし〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ベッドか〜」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あ、目が寝てたっていう……　あ、違うか……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ちょっと腰引けながら近づき〜 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ビビりながらもう1回布団を捲ります </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「大丈夫？　俺が見る？　あっ（遅かった顔）」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>SANチェックこいやーー！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>はい。そこにはミイラがあります。<br>千尋ちゃん以外の2人はSANCを受けてね！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=53 【SANC】 (1D100&lt;=53) ＞ 42 ＞ 成功</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=49 【SAN値チェック】 (1D100&lt;=49) ボーナス・ペナルティダイス[0] ＞ 15 ＞ 15 ＞ ハード成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>いくつか忘れた！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>〈SANC　1/1ｄ8〉です </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 若王子 宏美 ] SAN : 53 → 52 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 49 → 48 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「な、なんこれ……　ミイラ……？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>よく見るか〜 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>みんなミイラは1しか減ってねぇ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ニセモノじゃねーよな……？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd> </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「……うん、多分本物みたい」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「な、なんでそんなもんがここにあんだよ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あ、ミイラ展にあったやつと似てる……って、ミイラなんだから当然か……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「てか、千尋ちゃん。やり残しってまさかこれ調べんの？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「こわ……え、こわ……　え、こわ…………」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「………………えっ、こわッ！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うん、本当は正直あんまりちゃんと見たくないんだけれど……見なきゃいけないような気がするの」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「怖くなるまでが遅くない？？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「語彙がなくなっちゃってる……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>はい。ミイラを調べる場合、〈医学〉もしくは〈POWの半分〉に成功する必要があります。<br>失敗する度〈SANC　0/1〉の判定が入りますが、ここは何回でも振り直しができます。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「や、流石にこれは女の子に調べさせらんねーって……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え、じわじわ来る怖さ。こわ！　なんでこんな子供部屋！みたいな部屋になんかめっちゃミイラになっちゃってる人いるんです？？？　え、こわっ……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>POWの半分30か〜医学ないのでPOW振ります </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>勇敢すぎるわこの子 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>どうぞ〜 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ううん、私が見つけたんだもの<br>頑張って調べてみる」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>まあ失敗したら次振るか </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>まぁ失敗しても何回でも振れるからね </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=30 (1D100&lt;=30) ＞ 48 ＞ 失敗</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>うーん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>怖いねえ…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>触るのためらっちゃうね。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃんもPOW振りたいな！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>失敗したらSANCがはいるわよ〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「だ、大丈夫かよ〜……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「……やっぱりだめかも」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=64 【SANC】 (1D100&lt;=64) ＞ 98 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「だろ！？　無理しないでいいって」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>すんごいビビってる </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>こわいねえ～＾＾ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>こわいねぇ〜！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>なんでサンチェの度ファンブル出るんだろなぁ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>晦くん♡　一緒に振ろ♡ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>千尋ちゃんは1減少です </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>いいよ♡ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「お役に立てなくてごめんね……」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 汐崎 千尋 ] SAN : 64 → 63 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>調べる場合どうぞ〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いやいや！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=25 【POW】 (1D100&lt;=25) ＞ 84 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>POW50しかないの！w </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ｺﾜｲ! </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=55r (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 28 ＞ 28 ＞ 成功</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>さすが </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>さすが </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「……………………」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>犯罪者だからな。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>冷や汗がﾀﾞﾗﾀﾞﾗ…… </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>ミイラ</dt><dd>ミイラを調べる場合、〈医学〉もしくは〈POWの半分〉に成功する必要がある。<br>失敗する度〈SANC　0/1〉の判定が入るが、何回でも振り直しができる。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=52 【SANC】 (1D100&lt;=52) ＞ 5 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>さっき出せ！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>その間黙々と調べてる晦 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「（くそ〜！　直視できねえ……！　こういう時こそ男を見せないとだろ、若王子 宏美……！）」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃんは無力でした！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ま、滅多刺し死体に比べたらミイラは綺麗だよな（適当） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>晦くんはミイラの喉に何か挟まっていることに気がつくね。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>そうなあ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>餅？ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>死因か？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「（ミイラか……ミイラ……血肉に比べたら、まあ……）」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「……あ、喉に何か挟まってる……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「の、喉！？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「何かあった……？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>のどってつまり口に手突っ込めってこと？？？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>普通に調べてることに驚きだよ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>喉から引っこ抜けるよ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あ、まあ…… ちょっと取るので、待っててくださいね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ま、マジで……？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>のどから引っこ抜きます（躊躇０） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>はい。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「すごいね……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>引き抜いてみると、それはライターと紙切れでした。ライターにはまだオイルが残っているため使うことができそうです。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いえ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お、来た </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>紙切れ見てみよ </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>〈POWの半分〉ミイラ<br>喉に何か挟まっていることに気付く。引き抜いてみると、ライターと紙切れだった。ライターはまだオイルが残っているため使うことができる。  </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>すごいとか言われたせいでぜったい照れてるよね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>可愛いじゃん </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>かわいいなぁ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>紙切れはどうやら本を破いたもののようです。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>内容とかは…… </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>情報タブにのせます~ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ライターと紙きれ食べてたみたいですね……　そりゃ死ぬよね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「これ死因なの！？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「て、てか用ないならもう布団かぶせておこーぜ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え、違うんですか！？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>死体を隠します </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「餓死寸前だったのなら……まぁ？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「い、いやあ知らんけど……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>グッバイミイラ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「2人ともありがとう、私の代わりに調べてくれて」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺なら紙よりおままごとセットの方が食べたくなるけど　いやならんけど」 </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>【紙切れ】<br>門の創造<br>この呪文は使う者を別の場所、別の次元、別の世界へ行かせてくれる重要な呪文だ。床にペンキで魔法陣を書きPOWを消費し完成させる。門を通って向こう側に行くには消費したPOWと同じだけのMPとSANを1消費しなければならない。もしMPが足りない場合は足りない分の数値POWがマイナスされる。  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「や、俺全然ダメだったわ。ひとえくんサンキューな」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「カッコよかったぜ！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「いえ……このくらいしか取り柄ないので……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「卑屈！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>こちらの呪文は〈INTの半分〉に成功すれば呪文を習得できます。チャンスは１人1回。<br>メモを見ながらであれば、習得しなくても使用可能です。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「えへへ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>承認欲求満たされてる </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>INTチャレンジしたいから見〜せて♡ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ほ〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「なんだろ……なんだこれ、なんだ、なにこれ……　黒魔術？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>見てた紙切れを皆に見せるよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>わーい！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「オカルト？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「黒魔術？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>取得したらSAN減少あるのでお気をつけて </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なんのその </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=27 【INT】 (1D100&lt;=27) ＞ 52 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>普通に失敗しました！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>残念賞 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんこれ？　意味わかんね！」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>半分って割り切れない場合繰り上げ？繰り下げ？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>繰り上げでいいよ〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=60h 【INT】 (1D100&lt;=30) ボーナス・ペナルティダイス[0] ＞ 70 ＞ 70 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>繰り下げてたけど繰り上げかなって感じ<br>さっきひとえくん繰り上げの数値でピタリしてたから繰り上げにしないと（？） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>そうそう </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そもそも繰り上げでした </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>なんもわからん！ｗ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>最悪誰も理解しない </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあ理解しなくても使えるし……（多分） </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>理解しなくてもつかえるから！ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=33 【INT】 (1D100&lt;=33) ＞ 13 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>っょぃ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>いけたわ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>取得できちゃった〜！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>おめでとう！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>SANCでファンブル消費してたから…… </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>では千尋ちゃんは〈門の創造〉の呪文を取得できました。<br>SANCなしでSANを1Ｄ6減少させてね。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>1d6 (1D6) ＞ 4</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 汐崎 千尋 ] SAN : 63 → 59 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「よくわかんねーけど、これマジで効いたらワンチャン家帰れる？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「いけちゃうような気がする……！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「効くわけｗｗｗ」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「効いたらどうしよう……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「どうすんの？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、何事も試してみなきゃわかんないよ」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「土下座でもする……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「でもペンキねーしなー」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「誰に？？？？？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え、じゃあ宏美ちゃん……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「じゃあって」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「汐崎さんにもしとく……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「別にいーよ！　俺も半信半疑なとこあるし！　てか千尋ちゃんもそうっしょ？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ま、要はやってみなきゃわかんねーってこと！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「そうだね、とりあえず試すにも試せないし今は置いとこっか」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「んだな〜」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そのライターはなんか使えそうか？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「うーん……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>炙り出しってリアルINTなんかな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>思いついたならやっていいんでないの </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>そうだよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃんはテレビでなんか……ってくらいしか引っかかってないから晦くんよろ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>はい。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「………………あ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「い？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「そういえば、この間見たスパイ映画で、あぶり出しやってたな……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「う？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「炙り出し？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「どうやるんだっけ、まるごと燃やすんだっけ……？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>なにわからん〜って詰むようだったらアイデア振ってもらうようにしてる〜 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「炙り出し……！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>絵本取り出し～の </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>スパイ映画で炙り出しって言うとスパイを炙り出すって方で解釈しちゃうわね　草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ズボンの後ろに突っ込んでた絵本を取り出せますね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>人間まるごと燃やすことになるやんけ！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そういやそんなとこにあったな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ミイラ、火葬するか。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>焼死が一番苦痛なんだぞ！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>もう死んでるしな…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>せやな（ｽﾝ） </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ええと……　紙の炙り出し……みたいな……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「……あっ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「それだ！！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「あれだろ！　なんか柑橘を紙になんかやって火当ててブワーッてなるやつ！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあそりゃ思い出さんわなっていう </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「アバウトだね」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「燃えるわね……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>適当なページ開いて試してみます </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>はいー </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「前テレビでやってたんだよ！　喉まで出かかってたんだ、ホントに！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>では試してみますと、文章が浮かび上がりますね。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>『部屋の主は自分の顔を見たことがない』 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「あ、何か文字出てきた……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「すげーー！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、そういうことあるよね」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「本当に出てくるんだ……！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「『部屋の主は自分の顔を見たことがない』」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「顔disですかね……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「やたらと出てくるな、そのワード」 </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>【絵本】<br>あぶり出しを試してみると、文章が浮かび上がる。<br><br>『部屋の主は自分の顔を見たことがない』 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そういうことなん？？？？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「部屋の主が重要なのかな」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>他のページとか試してもなに～もなさそう？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>他はなにもないですね〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>じゃあうっかり本の端っこに火つけちゃったので、急いで本を閉じました。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>火事よー！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ｳﾜｰｰｰ!ﾓｴﾙｰｰｰ! </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>閉じれました </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「部屋の主ってなんなんだ〜〜？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「………………ｱﾌﾞﾈｰ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「さあ……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「仏では示さなくて、鍵になって、顔を見たことがなくて……？？？？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そんで王冠の右を左に入れ替えたら、それが部屋の主とかも書いてあるぜ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「王冠ってなんだ？」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「そもそもここに王冠とかあったかな……先の部屋にあるのかな？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>頭文字のことかな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「なんもわからん……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>いや流石にないか…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「……あ、謎解きってやつですか、これ……。暇だなあ……閉じ込めた人……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>KP、本棚にフランス語の辞書とかない？ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん……否定できないかも」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>それか知識では解読できないかな、木馬のやつ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ボンジュールしか知らねえって言った手前解読したら草だが </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「俺頭悪いんだよな〜〜！　自慢じゃねーけど！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>頭ワシワシしてる </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>本棚には絵本しかないかな〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そんで知識は無理？ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「私もこういうのはちょっと弱いかも」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>木馬のフランス語はフランス語技能に成功しないと解読できませんね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「謎解きならこの王冠ってのも多分そのままの意味じゃないと思うんだよな〜。部屋にそれっぽいの無いし」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、口の中行く…………？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え～……」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「行ってみるしかないかな……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「もう少し考える？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「まあ、ペンキとかないですし……　あっちで探すのもアリですかね……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「正直俺もあんま行きたくねーんだよな……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「そかぁ…………」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>とりあえず鍵が合うかだけ確かめましょう </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「王冠、ないですし……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>鍵は合うようです </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「鍵はあってるっぽいわ……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ち、ちょっと見てみるか…………」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>(思考中) </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>後ろから覗いてる </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>少し開けて見てみても？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>本当にいいんですか？ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>なんだろな〜部屋にある何かが鍵なんだよなぁ<br>でも王冠のとこよくわからん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ダメなやつで草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>でもRPしちゃったしなァ〜！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>引き止めるか〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>あら優しい </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「なんか……なんだろう、ちょっとだけ待って欲しい<br>不確かなんだけれど、まだダメな気がするの」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、そ、そうなん？　千尋ちゃんがそう言うなら今はやめとくけど……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>さ、思考タイムだな〜 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「曖昧な理由で止めちゃってごめんね<br>なんだかもやっとするの……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いや全然！　そういう気持ちなんとなくわかるし」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>知らんけど〜のノリと同じだと思っている </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ふふ、ありがとう」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>なんだろな〜王冠の右と左を入れ替え……冠王？？？みたいな思考になってる </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そういえば窓って2つなかったっけ<br>あれは同一の処理？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>全体的に物が小さいのにベッドだけがでかい部屋、ベッドクソ目立つじゃん </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>確かに </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>もう片方も調べられるよ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>晦は永遠に窓に近寄らんので後はよろしく </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>じゃあもう窓から出っかな〜って気分になったので調べに行きます。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>てかあれかな〜窓2つが両目で扉が口で全体的に顔みたいな感じになってるのかな </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>真っ暗で窓の向こうは何も見えず、探索者の姿を映している。不思議なことに、鍵がないのに開けることができない。  </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>以上です。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>めっちゃ想像力豊かで尊敬する<br>なるほどなあ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>一緒やんけ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>だからなんだって気もするけどやっぱ口の中に入ったら食べられて終わりなんだろな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>窓が鼻……！？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>え〜〜じゃあみんなINTの半分振って〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「（俺割とイケメンだと思うんだけど……　なんでモテないんだろ……）」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>思考スライドしてるぞ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=33 【INT】 (1D100&lt;=33) ＞ 87 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=28 【INT】 (1D100&lt;=28) ＞ 85 ＞ 失敗</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>CC&lt;=60h 【INT】 (1D100&lt;=30) ボーナス・ペナルティダイス[0] ＞ 34 ＞ 34 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>姿がうつったからさ！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ダイス「自分で考えろ」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>この部屋の主は仏では示さなくて……王冠の右を左に入れ替えれば出てくる……<br>でも王冠には右なんて……変える場所なんて…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そもそも王冠is何ってとこからだが！w </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>あまりにも繋がり見い出せなくて情報取りこぼしてる気がしてならないんだけど多分そんなことはないんやろな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「う〜〜〜〜〜〜ん？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ん〜〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃんは唸りながら部屋をぐるぐる歩き回ってます。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd> </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「難しいなあ……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ぶっちゃけると調べてないところはあるね。<br>王冠には関係ないけど </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>床とか……調べられたりしません？？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふむ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>壁紙の描写があるから壁かもしれん（？） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「これ正解したら賞金貰えたり……　しねーか……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>そういえば足元がふかふかしていて、絨毯が敷かれているな〜ということに気がつきます。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ほう </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>絨毯だ〜捲れたりします？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>捲れますね </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>下には何か……？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>絨毯を捲ってみると、そこには魔法陣のような何かが描かれていました。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「あ！！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>子供部屋に似つかわしくない、異様な存在を放つ魔法陣を見たあなたは〈SANC　0/1〉  </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=59 【SANC】 (1D100&lt;=59) ＞ 58 ＞ 成功</dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>てかめっちゃ時間過ぎてる……めっちゃごめん…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「え？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>門の創造使えそうだな〜〜 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>全然いいのよ……普通に起きてる時間だしね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ただあれやね。解けなかった時の救済措置っぽい。知らんけど </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「これ！見て！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「んあ？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>見まーす </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>魔法陣見たらSANCしてな！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>あ！w </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「わあ……魔法陣……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=52 【SANC】 (1D100&lt;=52) ＞ 7 ＞ 成功</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=48【SAN値チェック】 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=48 【SAN値チェック】 (1D100&lt;=48) ボーナス・ペナルティダイス[0] ＞ 82 ＞ 82 ＞ 失敗</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「うわ…………　ハ●レンじゃん…………」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「持ってかれそう……」 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 48 → 47 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「それ言われると使いたくなくなるな……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ごめんって！　てか多分あれだよな！　さっきのアレ！　あのー、アレ！！！」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ね、さっきのやつ」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「え、じゃあもうこれ出れるんじゃね？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>王冠〜〜、王冠〜〜〜〜！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「んな、都合よくいきますかね」 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「できるかどうかは分からないけど試してみよう？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「行かねーかな……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「試す？　今？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>王冠なんなんだろな…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>王冠が鍵…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>部屋の主がカギになるならもう鍵が部屋の主でいいよ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「もうちょっと後でもいいけれど……まだよく分からない所もあるしね」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なんかあっちから食いに来る様子もねーし、もう少し悩んでみっかなーって。答えわかんねーとモヤモヤするし……」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>部屋の主＝部屋自身って考えから他の思いつかないので私はもうだめ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「それは確かに……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いやでも嫌になったらすぐ言ってな！　無理させてまで長居することねーし！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>部屋、room。。。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「ううん、気が済むまで悩んでみよう？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「超優し〜〜〜〜」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>moor!w </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>新しい言葉を作っている </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>部屋の主は自分の顔を見たことがない、って書いてるので顔があるものであるのは前提なのかな……とか思ったり </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「難題だあ……」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>一人で悩んでるけど思いつかないな～ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>仏で示さないなら仏語書いてる意味がわかんねーのよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なんか意味あると思うんだけどな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>Chaval　en　boisを入れ替えるとか？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>って思ったんだけど </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあ意味わかんなかったよね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>仏語じゃなくしたらいいわけでしょ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>できう？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>う～～～ん　色々ためしてみるか～？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>王冠がわかんねーな…… </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ん〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>その仏語と王冠の関連性見い出せてないから、関係ないかもしれんし　解読できないのでもっとわがんね </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>30分で区切るべきだったかも知れん！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>どうせ悩み倒して終わるからこのままでいいよ（僕は） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>時間流石にやばくなったら言ってちょ…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>区切ったとしても次回も悩み倒すんだろな（） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>王冠、何〜〜〜〜！？ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ほほい </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>仏語解読する必要あったらそもそも仏語持ってないと解読できない状態にするわけないんだよなっていうメタ思考 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>だから本当に意味が無いのか…………？　えぇ……？ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>主の名前は仏では示さない＝フランス語書いてる木馬は除外みたいな……？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>木馬の存在意義、皆無！w </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>それな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあそういうこともないわけではなさそうだが（？） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあわかんない木馬は一旦置いとくか…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>部屋の主が鍵になるってのはまんまの意味かな。主特定したら門の創造以外のルートで帰れそう。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>かもしれない </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>仕方ねぇ！誰か1人！INTチャレンジ！代表で！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そう、門の創造ってPOW失うから……　代用できるAFとか無きゃ普通はあんまり使いたくはないよね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>sounaa </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>う～～～ん </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>一番高い子が振るといい！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>誰が高いかな〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>君だよ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ｴｴｯ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>怖いな〜振ります </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ベッドもう少し調べられたりしないかな〜〜 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=65 【INT】 (1D100&lt;=65) ＞ 18 ＞ 成功</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>いけましたわ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>実はベッドがキングサイズベッドで枕が2つあってそれ入れ替えると主がいないいないばあして来たりしない？（脳死） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>では。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>主の名は仏では示さない。じゃあ木馬に書かれているフランス語はあまり関係ないのでは？と思います。<br>『王冠の右を左に入れ替えろ。それがこの部屋の主だ』<br>フランス語では表さない。日本語で入れ替えても意味はなく……じゃあ……？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>右を左に入れ替えて、意味のある言葉になるのは……？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>以上です。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ト　マ　ト </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>入れ替えて意味のあるワードを見つける感じか </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>右を左に入れ替えて意味のある言葉になるもの </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>とりあえず共有して〜 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うーん……主の名は仏では示さないって書いてるからやっぱり木馬に書いてた文字はあまり関係ないのかも」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「やっぱそうかぁ〜」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「そんなもの、ありますかね～……？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>さっきね〜〜少し惜しいところまで行ってた人がいるんですよ。ｱｯ!ｿｯﾁｼﾞｬﾅｲ！ｳｵｵｵｵｵってなってた。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>トマトだな！？ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「右を左に入れ替えて……何か意味のある言葉になるもの……」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>それはない(断言) </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>キレそう </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「この部屋の中で……？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>右を左にだから、左を右にでも通用しちゃダメなんだよな </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>つまりトマトはナシ！w </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>うぐぐうｇ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>王冠の右を左に、ってそもそも王冠という言葉の中には左右自体ないよね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>clown…… </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>つまり3文字以上 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ベット！？　ミイラ！？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>どっからそうなった？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>三文字以上っていうから。。。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なるほどｗｗｗｗｗｗ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>今さ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>bed……　deb……　みたいな脳死思考してたんだけど </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>このdebって文字 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なんかめっちゃ笑顔の人が横向きながら両手の親指立ててるように見えない？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>めっちゃ途中まで考察してるんかと </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ごめんｗｗｗｗｗｗ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>思考阻害やめてもろて </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>www </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ミイラの右を先頭に持ってきたらラミイになる </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>犯人はラミイ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>誰だよ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>新しいNPCじゃん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>入れ替えるだから単純に移動させるわけじゃなさそうなんだよな〜　知らんけど </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>いやでもそれだったら別に右でも左でも良くね？ってなるか </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>右を左に入れ替えるがよくわかんなくなってきた </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>どっかに右関係の文字ある？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ふぅ（なんもわからん顔） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>自分のメモ見ながらやってるけど割と流れ早かったからなんか書き忘れてる気がしてならないわね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>多分ないけど </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>LとRを変えるとか。。？ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>なるほど </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>その場合右を左にだからRを全部Lにする感じだね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>右と左をじゃなくて右を左にだから、右がどっかにあるんだよなぁ…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>もしかして右手に寄生してる？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>crownが王冠でclownはピエロ……？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>それか！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>これは来たんでは？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>共有して〜！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ていうか全員が全員英語技能持ってると思うなよ！（ピエロの英語知らんかった顔） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>※謎解きはそういうもんです </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「右を左に……crown……もしかして……<br>clown……ピエロのこと？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ピエロってピエロが英語じゃないの！？！？！？」 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>LとRがでかい </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「なるほど……」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>宏美ちゃん絶対EDU80じゃないよな。下げていい？ </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「多分だけどね？私もまだまだ英語は勉強中だから」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>逆になんの勉強したの？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>モテるための勉強 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>それEDU上がるんかｗｗｗｗｗｗ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ピエロってことはこの人形か。最初調べたし、こいつに鍵が入ってたんだけどな〜」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>拾い上げて改めて調べてみます </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ただのピエロ人形です。<br>新たに入手する情報はないですね。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「他に変わったとこは無さそうだけどなー」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ピエロを窓とか扉とかに擦りつけまくってみます。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふむ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>では宏美ちゃんがピエロ人形を窓に擦り付けたところでですね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>窓！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そういえば顔が見た事ないとか言ってたけど窓で顔見えちゃったねえ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ほんとだ〜 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>こと切れていたピエロ人形が急に笑い出します。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「（俺やっぱイケメンだよなぁ……）」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「ぎゃーーーーーー！？」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ぶん投げます </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「うわっ！？」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「えっ、それしゃべるおもちゃだったんだ！？」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>宏美ちゃんがぶん投げる前に </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「いやチャック開けてもそんなん入ってなかったって！　多分！！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>ピエロ人形</dt><dd>「きゃきゃきゃ！きゃきゃきゃ！出てっちゃえ！出てっちゃえ！」  </dd></dl>
+<dl style="color:#a596c7" class="zatsudan"><dt>ぽん</dt><dd>卓は終わりかけだが仕上がった（ぼちぼち縫ってた） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>ピエロ人形</dt><dd>そう笑って窓のガラスを叩きます。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「なになになになになに！！！　無理！！」 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>「ひぇ……え、怖い怖い怖い！　なになに！？」 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>えらい </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ガシャン、とガラスが割れると部屋が崩れだした。ぐにゃりと歪んで、黒くくすんで、溶けていく。 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>「わ、割れちゃう？？」 </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>トロル</dt><dd>そしてかわいい </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「や、やべーー！」 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>「もうここから出るしかないんじゃね！？　窓から！！」 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>そして貴方達は真っ黒な空間に投げ飛ばされてしまいます。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ﾎﾟ-ｲ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ｳﾜｰ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ふと、横を見ると大きく、奇妙な化け物がこちらを見ていることに気付く。  </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ｷﾞｬｰ </dd></dl>
+<dl style="color:#888888" class="main"><dt>化け物</dt><dd>「あぁ...逃げちゃったか...。まあいいや、メインディッシュはまた今度」  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>誰だ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まさか、ラミイ……？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>ラミイだよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>いや草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ここで伏線回収か </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>化け物は舌なめずりをして、残念そうに呟いた。あなたの本能が騒ぐ。この化け物は本気で自分たちをを食らおうとしていた、危険な存在だ...と。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>と、いうわけで。この化け物をみた貴方達は〈SANC　0/1ｄ10〉 </dd></dl>
+<dl style="color:#51b39e" class="main"><dt>汐崎 千尋</dt><dd>1d100&lt;=59 【SANC】 (1D100&lt;=59) ＞ 15 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>殺生な！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=52 【SANC】 (1D100&lt;=52) ＞ 83 ＞ 失敗</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>CC&lt;={47} 【SAN値チェック】 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d10 (1D10) ＞ 6</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>サンチェ今日強いわ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>CC&lt;=47 【SAN値チェック】 (1D100&lt;=47) ボーナス・ペナルティダイス[0] ＞ 57 ＞ 57 ＞ 失敗</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 若王子 宏美 ] SAN : 52 → 46 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>1d10 (1D10) ＞ 4</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>いや強くはなかったわ </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 47 → 43 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ファンブル……2回……☺️ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>不定はｶｲﾋ！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>一応宏美ちゃんはアイデア振っといて〜 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>若王子 宏美</dt><dd>1d100&lt;=55 【INT】 (1D100&lt;=55) ＞ 29 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>では化け物を見た宏美ちゃんは恐怖で気絶しました。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>初発狂は神話が貰えるって！？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>a? </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>不定じゃね？ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>キレそう　おやすみ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>初期54だよ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>継続なの〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>晦が </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>おめーかい </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>草 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>44だよね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>あーあ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>じゃあ晦くんも気絶してください。<br>不定処理は最後に。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>不定じゃん </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>晦くんメンタル大変だな…… </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>次会うのが楽しみだな </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>より死にたくなっちゃうじゃん　不定は自殺癖にして♡ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>それは死ぬのでは？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>で、千尋ちゃん。さっきまで一緒にいた2人が気絶してしまった後、貴方もだんだんと意識が遠のいでいきます。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>それには抗えずあなたも意識を手放してしまうことでしょう。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ｽﾔ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>投薬治療してるから（知らんけど） </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>そして目を覚ますと、元々眠っていた場所にいました。自分のベッドで眠ってた人はベッドの上でなど、人それぞれかな。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>ぐっしょりと寝汗をかいて、なんだか気持ちが悪いですね。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>シャワーでも浴びよう、あの出来事は夢だったんだ。そう思いこもうとするあなた達の耳に声が響く。  </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>ピエロ人形</dt><dd>「また、おいで」  </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>いやどす。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>それはあのピエロ人形の声だった。姿はない。しかしあなたは思う。 <br><br>きっとこれからも奇妙な体験をするのだろう、と。 <br>  </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>と、いうわけで。 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>シナリオクリアになります！ｵﾒﾃﾞﾄｳ!ｵﾂｶﾚｻﾏ!!! </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お疲れ様でした〜〜 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>お疲れ様でした！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>おつかれさまでした～～～～～ん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>むずかったです（知識/Zero） </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>謎が解けたので満足です </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>スッキリしたねぇ〜〜 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>もやっとしたまま終わらなくて良かった〜！！ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>がんばった（なにもしてないが？） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>てか帰り道が拓けて千尋ちゃんを褒めるつもりだったのにボッシュートされて泣いた　君がMVPだ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>wwwww </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>シナリオクリア　SAN+1ｄ10 <br>ツァトゥグァを見た　クトゥルフ神話技能+2  </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>いやぽんが一回さ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>clown……って言ったからさ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>それだよ！！！！！ってなってた </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>なるほどオレ掠ってたわ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>最初誤字かな？って思った </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>あ、最後の化け物はツァトゥグァです。報酬に書いてある通り。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>clownを弄るのかなって思ったんだけど英語力が壊滅的にダメ。 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>1d10 (1D10) ＞ 9</dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>1d10 (1D10) ＞ 2</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>お前めっちゃ回復するじゃん。。。。 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 汐崎 千尋 ] SAN : 59 → 61 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>1d10 (1D10) ＞ 4</dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd>【真相】 <br>無形の落とし子でできた部屋に探索者を閉じ込めた。しかし、ただ待っているのもつまらない。せっかくなら希望を与えて絶望した探索者を食べてやろう。きまぐれではらぺこなツァトゥグァはワクワクしながら食材(探索者)を観察するのだ。  </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 43 → 52 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>千尋ちゃん一番頑張ったのに可哀想 </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 若王子 宏美 ] SAN : 46 → 50 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>クッソ減ってるの晦。。。 </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>出目が悲しい </dd></dl>
+<dl style="color:#9c27b0" class="group tab_1"><dt>KP</dt><dd><br>【登場する超自然の存在】 <br>■ミイラ <br>元々人間で、探索者より少し前にこの部屋に連れてこられた。門の創造の呪文が書かれた紙を持っていたため門を作成しようとしたが、ツァトゥグァが怒り魂を貪り食ってミイラにされてしまった。ライターと紙切れを口の中に入れたのは最後の抵抗。 <br>ペンキは無形の落とし子が捨てた。 <br>門自体は完成しているのでMPとSANを消費すれば使える。 <br> <br>■無形の落とし子 <br>部屋をかたどっていた正体。窓を覗いた時にあった目は無形の落とし子のもの。部屋を必要以上に攻撃したり傷つけると変形して探索者を驚かせる。 <br><br>■ツァトゥグァ <br>食材(探索者)を楽しみに待つグルメな神格。扉から出て来たなら食べちゃおう。それ以外で脱出したら見逃してあげようと思っていた。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>4赤字〜！　まあヨシ！<br>SANは低いほど楽しいので </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>晦くんは不定の処理だっけね </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>門完成してんかい </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>王冠を英語に〜っといった発言がなかったので直接的なヒントは渡せなかったよね… </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>ミイラくん………… </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>右を左にが文字の場所を入れ替えるのかなぁってなっててわけわかんなくなってたんだよね </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>不定で～す </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>とりま不定が継続するか否かだけ判定しちゃっていいか？ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>口の中言ってたら最悪宏美ちゃんは死んでました。<br>でもPLもPCもまさか開けただけで終わるだろうとは思ってないだろうなぁ……って思ったんで脅しました。 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>まあ思ってたけどね </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>いいよ〜ん<br>継続するようだったら不定処理しよう </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>でも先っちょだけならいいかな！って </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>思ってたならやめとこ？(めちゃくちゃ焦ってた) </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>死んだら死んだで草！って感じだったけど止めてくれたので生きました </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>先っちょもあかん </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>自宅療養（通院）です </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>好奇心はなんとやら…… </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>1d100 (1D100) ＞ 63</dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>1d3 (1D3) ＞ 3</dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>[ 晦 ひとえ（つごもり　ひとえ） ] SAN : 52 → 55 </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>なおった？ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>晦 ひとえ（つごもり　ひとえ）</dt><dd>CC&lt;=55 【SAN値チェック】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 53 ＞ 53 ＞ レギュラー成功</dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>お </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>アアアアアア治っちゃった!!!! </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>成功で治るんだっけ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>ちょっと残念じゃん </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>そそ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>草 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>また卓連れてって減らさなくちゃ（使命感） </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>草 </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>自殺癖なれなかったね〜 </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>セルフ自殺癖あるからセーフセーフ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>さ、時間ないので質問がないようでしたら各自解散としましょう！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>は〜い </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>はーい </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>おつ～ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>楽しかったです<br>なちゅりんとも久々卓囲めて満足！ </dd></dl>
+<dl style="color:#009688" class="main"><dt>なちゅ</dt><dd>お疲れ様でした〜！楽しかった！ </dd></dl>
+<dl style="color:#9c27b0" class="main"><dt>KP</dt><dd>おつおつです！<br>来てくれてありがとう！！ </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>トロル</dt><dd>アイコンが絶望的に気に入らねえのだけが心残りです<br>おつおつ！ </dd></dl>
+<dl style="color:#ffc107" class="group tab_2"><dt>若王子 宏美</dt><dd>1d100&lt;=70 【目星】 (1D100&lt;=70) ＞ 70 ＞ 成功</dd></dl>
+<dl style="color:#ffc107" class="group tab_2"><dt>トロル</dt><dd>……ｽｿﾞ </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd><br> </dd></dl>
+<dl style="color:#a596c7" class="main"><dt>ぽん</dt><dd>CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 72 ＞ 72 ＞ レギュラー成功</dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
