@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>相席居酒屋ナイア</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_0{}
+.tab_0.selected{display: none;}
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_0"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_0">成長</label>
+</header>
+<div class="wrapper">
+<h1>相席居酒屋ナイア</h1>
+<h2 id="day1">相席居酒屋ナイア</h2>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こんちは（現地集合）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    今日ちょっとネットの調子良くないかもしれん   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    こにちわ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    陽気なBGMだな〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さっきまで頑張ってBGM探ししてました   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ジャズ流そう（ジャズが好きなだけ）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うーん、ない！w   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さて……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はい   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    導入をね……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    かかってこい   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やりま〜す   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    もしあれだったら僕が手持ちのジャズ流すので……（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    時刻は19時過ぎ、太陽くんが仕事帰りによく通る道を歩いてると、見慣れない電飾看板が目に入る。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    看板には可愛らしい文字で『相席居酒屋ナイア』と書かれていました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんはなんとなくこのお店が気になり、せっかくだし入ってみようかな？とそんな気分になります。きっとお腹が空いていたんでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はいw   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（飛陽ちゃん今日も遅いだろうしたまにはいっか！）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    入りま〜す   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    そういえば家にブランデー入りのケーキあったので折角だし食べます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さっそく店に入ってみると、店内はカウンター席以外は全て個室になっているようで、扉の前には偶数で靴が置かれている。ワイワイと賑やかな話声が聞こえてくる事だろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>店員</dt><dd>    「こちらのお店は初めてでしょうか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    小麦肌に艶やかな黒髪をした美しい容姿の店員が貴方にそう声をかける。<br>男性か女性か、曖昧な容姿の店員の名札には『布袋 風(ほてい ふう)』と書かれている。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、こんばんは。そうですね、初めてです。相席居酒屋とのことですし、二人連れの方が良かったですかね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（綺麗な人だな〜。居酒屋よりはバーにいそうな）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「いえいえ、そんなことないですよ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「お客様と同じようにこのお店にいらっしゃった他のお客様と相席、と言う意味ですので……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ああ、なるほど……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「はい！ですので見知らぬ方とお酒や食事を楽しみましょう！というコンセプトでございます」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「斬新なシステムですね。いや、僕が知らないだけで意外とあるのかな？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（なんというか、そういう出会いを求める人達が集まるような場所だったか……）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「当店は30分で1500円の呑み食べ放題です。こちらはお時間を過ぎてもお声掛けはしておりません。時間を過ぎた場合は延長とさせていただきますので、そちらはお気を付けください」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「さて、説明は以上になりますが……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（30分という短い時間の中で料理を提供できるのか……？　お通し詐欺じゃないだろうな……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、はい」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「ご不明点がないようでしたら、お部屋にご案内いたしますが……よろしいですか？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（まあ、面白いシステムだしたまにはいいか。話し相手もいるならそれなりに有意義な時間になりそうだし、最悪食事は一品でも腹に入れば……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ええ、お願いします」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ニコッ！と笑います　身分証は出さなくていい？（）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草　大丈夫でした   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やったぜ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「承知いたしました！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って店員は貴方を連れて個室へと向かいます。<br>自分はどんな人と相席になるんだろう。貴方はそう思いながら、店員に案内されるまま個室へと入ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    相席相手は先に部屋にいるようで、どんな人だろうと相手に目を向けてみると、そこには貴方の良く知る『杠葉 和希』が座っていました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いやー！偶然だね！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    こんな偶然もあるんだなあ〜！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……あれ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目をぱちくりさせてます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希も個室の扉が開かれたことに反応し、こちらに目を向けていますね。和希も目をぱちくりさせてます。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……え」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    数秒の沈黙が流れ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、こんな場所で会うなんて凄い偶然だね！　ということは君が同席の相手なのかな？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕はてっきり初対面の相手と語らうことになるんだろうと思ってたんだけど……まさかの知人なんてね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの顔色をうかがっています   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はずっと驚いた表情をしていますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ま、まぁそういうことなんだろうけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんとなく気になって入ってみたけど、こんな偶然……あるんだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふーん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんもしかして、出会いが欲しくて入って来たクチだったりする？　もしそうだったら相手が僕でごめんよ！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んなわけないでしょーが！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「出会いとかそういうのじゃなくて、本当にただなんとなく入っただけ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え〜？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あとほら……何も知らない人にだからこそ愚痴れることとかあるでしょ。だからそういう目的」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、それは一理あるな」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ蓋を開けたら知人だったんですけど」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「まぁそれはそれで……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……で？大倉さんは？そっちこそ出会い目的なんじゃないの？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まさかあ！　僕がそんな奴に見えるかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「出会い目的だったらうちはSSRよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ、杠葉ちゃんがそう言うならそうなんだろうね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目を伏せながら言われました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そろそろ席につきます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「微妙な反応やめて？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    席につけました！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「オブラートに包んだのさ。ほら、人間誰しも好みってあるだろう？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    内装は柔らかい床の上にふかふかの2人掛けの座椅子が対面するようにテーブルを挟み２つ。<br>テーブルにはおしぼりと電子タブレット、箸と調味料等、ティッシュ等が置かれている。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「やったータブレットだ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    フードメニューとドリンクメニューもあるようだ。<br>貴方が席に座ると、店員が白と黒のシンプルな小物入れを２つテーブルに置く。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ここまでのやりとり店員の横でやってたと思うと草   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや、そうだけどね？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「はぁーまったく……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希が喋り終えると、店員が2人を見ながら話し始めますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「この相席居酒屋は初対面を想定して経営しております。ですので、話題作りにこのようなものをご用意しております」<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って、太陽くんの目の前に白、和希の前には黒の小物入れを置く。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「こちらは話題クジとなっております。内容は白黒どちらも同じものですのでご安心を……！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「引いて出たものに従い是非親睦を深めてくださいませ！また……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そういって店員はニッコリ微笑むと、ショッキングピンクのチケットを2枚差し出してきます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……これは？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「相席居酒屋ナイアにて頒布しております、ラブホテル『ラブホテップ』のチケットです！こちらは当店のお向かえにございます！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へー……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「こちらのチケットを使用すると、70%OFFで宿泊する事が出来るんです！親睦が深まりましたら是非ご使用くださいませ！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員はニッコニコで話していますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だってさ、杠葉ちゃん」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は宇宙猫になってます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え？……え？？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「飲み過ぎてベロベロになりでもしたら有難く利用させてもらおう！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は宇宙猫になってますが、店員は気にせず話し続けますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「また、当店は他の店とは違いお二人のお時間を邪魔しないよう、このような仕組みを設けさせて頂いておりますー！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員が電子タブレットを操作し何かを注文すると、途端テーブルの真ん中にある四角い切れ込みが穴を空けるように沈んでいく。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして、沈んでいった部分に何かをのせてカシャンと元のテーブルへ姿を戻す。<br>その上には可愛らしい花で彩られたお酒が２つ乗っていた。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「す、凄い技術ですね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「最新式を取り入れておりますので！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「こちらはサービスです。それでは、そろそろ失礼いたしますね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>布袋 風</dt><dd>    「相席居酒屋ナイアをお楽しみください～！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員は説明を終えると個室の扉をピシリと閉めて行ってしまいますね。<br>テーブルには話題クジが２つと、ドリンクメニュー、フードメニュー、サービスのお酒が2つ置いてある。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さぁ、楽しい相席居酒屋の始まりです！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ドンドンパフパフ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さて……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「とりあえず食べる物注文していいかい？　僕お腹空いてて……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え？あ、あぁ……うん。どうぞ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ありがと！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    宇宙からは帰ってきたようですが、先程の店員の口から出てきた言葉が衝撃的だったようで、なんだかぎこちないですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    タブレットぽちぽちし始めます　フードメニューは何があるかな〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ★フードメニュー<br>生ハムのシーザーサラダ<br>本日の鮮魚(おさしみ)<br>たこわさ<br>さっぱりカットトマト<br>枝豆<br>串焼き(ねぎま、砂肝、ささみ、せせり、つくね)<br>牛タン塩焼き<br>ほっけの開き<br>子持ちししゃも<br>ぶり大根<br>鶏のから揚げ<br>ポテトサラダ<br>揚げ出し豆腐<br>チーズフライ<br>ピザ(マルゲリータ、ペパロニ、シーフード、ツナコーン)<br>お菓子盛り合わせ(ポテチ、ポッキー、チョコレート)   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわ、色々ある。迷うな〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕あんまり居酒屋来ないんだ。そういえば、杠葉ちゃんとは前にも一緒に居酒屋行ったことあったね。あの時は雪永くんもいたっけ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あー……あの時ね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうそう。依頼人に怒られてやってらんねー！ってなって飲みに行った時」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は梅酒飲んでましたね　CONちょっと高いので結構飲んでたかも   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うーん、串焼きが無難かな」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あれねぇ、こちとら本気でやってあの結論に辿り着いたんだから、そんな怒んなくてもさぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    串焼き全種類注文しておきます　串盛りかもしれない   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ああいうことあった日は飲むに限るってワケ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「信じられない気持ちはわかるけどね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも一日中調べ回ったのに報酬金減額するのは酷いよね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    注文できました！料理はすぐやってくるよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわ、早い！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（詐欺られなくてよかった！）」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「全くよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「てかさっきも思ってたけどこのシステム本当凄いな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ね。この下ってどうなってるんだろ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    串焼きを見ながら言ってますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、杠葉ちゃんも好きに食べていいよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ね。最新式とか言ってたけど……　あ、ありがと」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    手袋外しておしぼりで手拭いてからねぎまを食います   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「前に飲みに行った時は僕アルコール飲まなかったけど、今日は飲もうと思ってるんだ。サービスの分もあるしね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「と言っても僕酔いやすいから……本当はあまり飲まない方がいいんだけど。ホテルのチケットも貰ったし、最悪帰れない事態になっても寝床に困ることはないさ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あぁ、うん……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「まぁたまにはいいんじゃない？ちょっとクラクラしてきたらやめとけば……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「てかホテルのチケット渡してくるとかおかしいでしょこの店……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ぶつぶつ文句を言ってますね。<br>ねぎまはおいしいです！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「太っ腹だよねえ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そして味も申し分ない」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、もしかしてラブホテルって言われて身構えてるのかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    食べ終わった串を皿の端っこに置いて2本目を食べ始めます   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    こいつら全然話題クジ引かねえなって感じだけどちゃんと後で引きます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「い、いや身構えてるとかじゃなくて……なんというか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんというか……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「とんでもない店だな……って」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あはは！　それはそうかも」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんかそう思うと相手が大倉さんで良かったって思う。知らん相手だったら凄い空気になってそうだし」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら和希も串焼きを食べ始めますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えー、それってどういうこと？　僕が相手じゃそういう気にもならないって？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃん砂肝食って欲しい（？）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いやそうじゃなくて……　いや、どうだ……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「と、とにかく！相手が知り合いで良かったってそのままの意味。そしたらお互い変な気起きないでしょ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それにほら、大倉さんうちみたいな人タイプじゃないんでしょ？なら大丈夫じゃん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……ま、そうだね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「よかったね、相手が汚いおじさんじゃなくて僕みたいな紳士で！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    このあたりでサービスのお酒手に取ってみます　なんのお酒かな？   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「汚いおじさんて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕とは対照的な存在だろう？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希の2本目は砂肝です。<br>お酒には知識をどうぞ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=75　【知識/EDU】 (1D100&lt;=75) ボーナス・ペナルティダイス[0] ＞ 39 ＞ 39 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    キールという白ワインに少量のカシスリキュールを加えたカクテルである事がわかりますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ホテルが安くなるのは普通に有難いよね。ラブホテルだからってすることしなきゃいけないわけじゃないし、普通に宿泊だけして帰ることもできる」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だから帰るの面倒だったら杠葉ちゃんも利用するといいよ。若干の気まずさはあるだろうけどね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「70％OFFならもしかするとタクシーより安いかも？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    カクテルだ！　おしゃれ〜！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……考えとく」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら和希もサービスドリンクを手に取りますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちなみに目星もふれるよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    振りまーす   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=79　【目星】 (1D100&lt;=79) ボーナス・ペナルティダイス[0] ＞ 39 ＞ 39 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    39が好きらしい   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんの誕生日じゃん！（3月9日）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そりゃ39好きよな！   </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    目星　   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    よく見るとグラスの乗っているタンブラーに文字が書かれている事に気が付きます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、なんか書いてある。なになに……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    読みます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    『こちらはサービスドリンクのキールになります。<br>　カクテル言葉：最高の巡り合い』   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と、書いてありました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「カクテル言葉は“最高の巡り合い”だって。乙だね〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「折角だし乾杯しとく？　杠葉ちゃん今日って仕事帰りかな」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うん、仕事帰り。大倉さんも？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうだよ。じゃあ、お互いお疲れ様ってことで……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    グラスを和希ちゃんの方に差し出します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希も同じように差し出しますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……乾杯！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｶﾂﾝ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さ、飲むかあ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「かんぱーい！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｶﾂﾝ! ｺﾞｸｺﾞｸｺﾞｸ!   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うっま〜〜！仕事帰りはやっぱこれよ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d10 (1D10) ＞ 4  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕カクテルなんて初めて飲むかも」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「飲んでみ飲んでみ〜ちょびちょびでいいから」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん。僕はかなりスローペースになると思うけど、杠葉ちゃんは僕に合わせなくてもいいからね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちびちび飲みます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さっぱりとした味わいの甘めのカクテルですね！飲みやすくて美味しいです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、甘くて美味しい……。結構好きな味かもしれない」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    アルコール度数も比較的低いらしいです（調べた）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあぐびぐび飲めるな！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ゆっくり飲んでいます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「この調子ならすぐには酔わなそう……かな？　飲み慣れてないから、難しいな……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「慣れてないうちはゆっくり自分のペースで飲むのがヨシ。うちは成人したその日に飲み過ぎて動悸が止まらなくなった」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわあ、経験談は説得力が違うな。お酒怖い……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、そうだ。折角用意して貰ったしこれ使ってみる？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    食べ飲みするのによけてた小物入れをｽｽｽとスライドさせてきます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あぁ、それ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「話題くじだし……使ってみてもいいかもね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「話題クジなんて、アドリブ力が試されるね！　面白い話あるかな？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さて、どっちからやる？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んー……　じゃ、言い出しっぺの大倉さんからどうぞ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「OK〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    小物入れに手突っ込んで適当に一枚抜きます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1Ｄ20をふってね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d20 (1D20) ＞ 19  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    小物入れに19ダメージ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    小物入れは木っ端微塵になりました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お疲れ様でした   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    小物入れから一枚くじを抜き取れます。<br>内容は……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    19:くすぐる事でボディータッチ！相手の笑顔を見てみようー！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    です。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    話題　#とは   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「“くすぐる事でボディータッチ、相手の笑顔を見てみよう”……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……これって話題なのかな？　口より先に手が出てない？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……は？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、話題くじって言ってたよね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……話題でもなんでもないんだけど？セクハラなんだけど？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「セクハラだねえ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽はおもむろに立ち上がった……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ど、どしたの立ち上がって……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ、ほら」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さっき杠葉ちゃん言ってたけど、僕らって変な気起こすような間柄じゃないだろう？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それにゲームだし、やるって決めたからにはね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの横まで移動して来ます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……本気でいってる？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「本気で言ってるとも！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれ、恥ずかしいのかい？　もしかしてエッチなこと考えてる？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    隣に座ります   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ばっ、エッ！！！？？？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    座ったまま壁際まで逃げてますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「逃げないでよ。ちょ〜っとくすぐるだけじゃないか」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや無理無理無理！！おかしいから！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えー、じゃあやめるかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「やめよう！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、杠葉ちゃんが嫌なら仕方ないか」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほら、そんな壁際行ってないで戻っておいで。いじめてごめんよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ま、全く……焦らせないでよね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｽｽｽｯ……って戻ってきました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……それ、今だ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    戻ってきたところをくすぐります！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    やると思ってました！！（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    素直に戻ってきてくれてありがと♡   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では油断し切ってた和希は逃げられるわけもなくくすぐられます！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    脇腹のあたりをね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    知ってる？　脇腹がくすぐったいのって性感帯だからなんだよ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「わっ、ちょっ……ば……！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふ、ふはっ……！まっ、て……ふ、ふふ……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    めちゃめちゃくすぐったそうにしてますね！くすぐったさで身を捩らせてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    可愛い＾〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それそれ、ここが弱いんだな〜？　うんうん、いい笑顔！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ご満悦です　性格が悪い　そして手を止めない   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「だめだめ……ほん……っとに……！は、ははは……！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は止めようと太陽くんの手を掴もうとしますがくすぐったくて思うように出来ないようだ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どう？　そろそろやめて欲しいかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「苦しくなったらギブアップって言ってね！　そしたらやめてあげる……かもしれない！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ぎ、ぎぶ！ギブアップ……！だからやめ……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えーどうしようかなー」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    性格が悪い！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こんなに笑ってる杠葉ちゃん滅多に見れないしなあ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｺｼｮｺｼｮ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「こ、この……痴漢め……！ここを出たら訴えて……ふ、ははは……！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    その後5秒くらいくすぐってやめてあげました　優しい！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    優しいか？？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さ、杠葉ちゃんが酸欠起こしたら大変だからね。このくらいにしておこう」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    優しい！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はクタクタですね。。。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「はぁー……はぁー……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「大丈夫かい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「こうした張本人が……何言ってる……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    睨まれちゃったよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわあ、幼気な僕をそんな怖い顔で睨まないでっ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    飛びかかられる前に自分の席に退散します   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「くぅぅぅ…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあまあ、落ち着きたまえ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕は全力でやった。つまり杠葉ちゃんも全力でやり返していいってことさ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「目の前のクジを引いて僕と同じものを当てれば、そっくりそのまま仕返しできるだろう？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「悔しかったら杠葉ちゃんも一枚引いてみなよ。次は普通に話題が出るかもしれないけどね！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「な、なるほどねぇ……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふ、ふふ……じゃあ全く同じやつを出してやんよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ゲームなんだから、楽しまないと損だよ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（同じの出ませんように）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は深呼吸して息を整えると、くじを一枚引きますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d20 (1D20) ＞ 13  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    残念！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は引いたくじの内容を確認していますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    が……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そのまま固まって動きませんね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どしたの、杠葉ちゃん。“杠葉タイキック”とか書いてた？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんはせせり串食ってます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや………………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「これは……流石にない…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「初めての反応だな……。ラブホテルとくすぐり以上に有り得ない内容が書いてあるのか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「勿体ぶらないで見せてよ。もしくは聞かせて」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はスッ……とくじを太陽くんに差し出しますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    串置いて覗き込みます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    13:ドキドキ☆お酒の口移しにチャレンジしてみよう♪   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と、書いてありました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    wow   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ドキドキ、お酒の口移……し……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「“口移し”……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「口移し」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それってつまり……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、杠葉ちゃんが僕に？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そういうこと……だけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、流石にやろう！なんて言わないよね？パスよね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帽子を被り直しています（脱げよ）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    室内だぞ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    脱いだら帽子アクションができないだろ！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……黙らないで？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いや……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    視線を彷徨わせている……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……し」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「してみるかい……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    wow   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………へ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    少しだけ頬を赤らめています<br>まさかもう酔ったのかい？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    凄い間抜けな声が出ました。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大倉さん……もしかしてもう酔っ払ってる……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え？　流石の僕でもそんなすぐには酔わないよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ただ、さっきは杠葉ちゃんの制止も聞かずに容赦ない攻撃を浴びせた手前ね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんがしたいなら拒む権利は僕には無いかなって……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    何故かもじもじしています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………お」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「乙女かァァァ！！！！！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    突然の大声なのでビクッとするかもしれないね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわびっくりした」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「その大声で酔いが覚めそうだよ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そんな風にもじもじすんな！！うちまでなんか恥ずかしくなってきたわ！！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「てかしたいとか言ってないし！！そもそもうちら恋人同士でもないからこんなことするわけないし！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「恥ずかしがらなくていいのに……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ぐっ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は机をドン！！と叩きますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ビクッ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「だ、だから……！変なこと言って動揺させんなって言ってんの！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    よく見たら和希の顔が赤くなってますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、顔赤いよ。そんなに飲んでたっけ？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「飲んでない赤くない！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふふふ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さっきまでの照れ顔とは一転してニッコニコですね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ冗談だよ！　杠葉ちゃんの言う通り、僕達は恋人同士じゃないしね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「常識的にどうなの？っていうのはパスして行こう。嫌なことまでやってちゃただの罰ゲームだからね！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「最初からそう言えってのよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……ごめんね？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    小声で「ばーか」とだけ言われました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    かわい！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（ちょっとからかってみただけのつもりだったけど、予想以上に反応が良くてびっくりしちゃったな）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（でも照れてる杠葉ちゃん、意外と……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ニヤニヤしながらせせり串を食い終えました   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はバツが悪そうにしてます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ところで、太陽くんはお酒まだ残ってる？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    んー、飲み切っておこうかな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    一杯だけじゃ元取れないし（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ほほい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあここで太陽くんは1d10をふってね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d10 (1D10) ＞ 6  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    殺人癖！？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なるほどね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なるほどね！？（表を見て動揺している）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    怖いんですけど   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    殺人癖のが怖いが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    え〜〜っと……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒を飲み切った太陽くんなんですけど〜<br>な〜んだか気分がふわふわしてきます〜〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あ〜〜なんでかな〜〜<br>何故だか杠葉ちゃんに自分の姿を見てほしいな〜〜   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ざわ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒表<br>6:相手に恥ずかしい、又はあられもない姿を見て欲しくなる   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    で、でた〜〜！！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒表、刺激が強いぜ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うぅん……なんか気分良くなってきたかも……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕お酒飲むと具合悪くなることのほうがおおくてさ……こういうの、あんまり……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    若干呂律が怪しい感じがします   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そして唐突に上着を脱ぎ始めます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……んえ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    服の構造的にちゃんとベルトから外してるんだと思うとちょっとおもろいね   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｶﾁｬｶﾁｬ……ﾇｷﾞﾇｷﾞ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……？？？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帽子も脱ぎます……（悲しそうな顔）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はその様子を見ていますね……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ここまでだったらまあ逆になんで着てたんだよってレベルだしな（草）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    しかしそれだけでは終わりません<br>上着の下のタートルネックすら脱ごうと手をかけます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……！？！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    様子を見ていた和希ですが、タートルネックまで脱ごうとしたところで飛んでやってきますね（DEX）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    DEX対抗だ！！！！（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お？やるか？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    折角だしやろう   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    うぃ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=55　【DEX】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 23 ＞ 23 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あ、やべ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    CC&lt;=80 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 60 ＞ 60 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ……太陽くんの勝ち！w   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    脱いじゃったし事故ります！w   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    まあ、上だけなんで……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあ止めにかかった和希ですが、太陽くんが脱ぐ方が早かったようで……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    脱ぎ終わったタイミングで太陽くんは和希に抱きつかれますね（草）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えっ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……あれ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    素肌の感触！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    コミカルBGM豊富で笑う   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「へ、へへ……　止めに来たつもりだったんだけど…………なんか、なんかぁ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「人を抱きしめるって悪くないなぁ…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    思考放棄してて草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ぎゅ〜っとされます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……杠葉ちゃん」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    脱いだ状態で抱きしめてるからとんでもない   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「悪いんだけど、もうちょっと離れておくれよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「この状態だと見えないじゃないか（？）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    たくさん準備してきたんだよ＾＾   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんを剥がそうとしてます　STRは45です   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「もうちょっとだけ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あれ？　酔ってる？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    こちらも45です   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    拮抗！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だ、ダメだって……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ち、ちゃんと見てくれなきゃこまるんだよ……だって、僕は君に見てほしくって……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕は背丈も低いし顔も可愛いけど……でもちゃんと男なんだよっていうのをぉ……杠葉ちゃんに……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    STR対抗だ！！！！！！（振りたがり）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ずっと笑ってる   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=45　【STR】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 89 ＞ 89 ＞ 失敗  </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    CC&lt;=45　【STR】 (1D100&lt;=45) ボーナス・ペナルティダイス[0] ＞ 100 ＞ 100 ＞ ファンブル  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    勝ったァ！！！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    100ファンは草   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ただのギャグシで笑ってる   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希を剥がすことに成功しました！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ファンブルだからついでに押し倒しても？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いいよ！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やったぜ！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    問題のシーンが爆誕した瞬間   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おもろすぎるなこれ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はぁー……はぁー……大人しくしててね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    不審者ですか？（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    はい（）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はファンブルだしたので太陽くんの下で顔を赤くしてるよ（酔）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほら、見えるかい……？　確かに男の中じゃ華奢な方だってのは否めないけど……体つきはちゃんと男の子なんだよぼく……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの手首を掴んで自分の上半身に手で触れるように導きます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ピタ……和希の手が太陽くんの上半身に触れます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「確かに杠葉ちゃんは僕の好みとはズレてるかもしれないけど……うぅ……でも君が女の子で僕が男だってことには変わりないし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そこまで警戒心無くされると流石に心外と言うかぁ……僕は君に男として見て欲しくって…………あれ、そういう話だったっけ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ていうか僕筋肉そんなに無いし上だけ見せても仕方ないか……よし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ズボンに手をかけそうなんですがまだ酔いは覚めませんか？（）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そろそろ覚めていいよ（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあ大事故寸前で終わっておきます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は口をパクパクさせてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「………………あっ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    酔いが覚めた！！　急いで和希ちゃんから退きます！！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんが和希から退くと和希もそそくさと自分の席に戻ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    両手で顔を覆ってますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ……わ…………えっ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「暑……じゃなくて寒ッ！？　ち、ちょっとまって……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    急いでタートルネックを着ました！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「は、早く服着て！？！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    装着！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    きれました！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ご、ごめん……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ごめん…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……や、うちも…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    流石の太陽くんもめちゃくちゃに顔が赤いです<br>これは酔いではなく恥   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「な、なんでか抱きしめたくなって……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あるよねー。人肌恋しくなる時……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そ、そうそう！！そういうこと……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希、大分密着してたし普通に胸当たってたろうな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    素肌に！？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「な、なんだったらやり直すかい……？　な、なんか邪魔しちゃったような気もするし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ハグくらいならね！　恋人じゃなくてもするし……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は服着てたけど……そうかもな……（）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いやっ……！十分抱きしめさせてもらったし……大丈夫……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そ、そうかい……それならよか……よかったのか……？　うん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……………………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちょ、やっぱり一応上着も着ておくね……なんか怖いし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うん…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帽子も被り直してよく見る太陽くんの姿に戻りました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あれ？　気まずいな？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「酒は飲んでも飲まれるな……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いつもは一杯くらいで酔わないのに……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「確かに、前も結構飲んでたもんね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    串焼き食べてます……ﾁｮﾋﾞ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そろそろなくなりそう   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「おっかしいなぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「実は結構強いお酒だったのかな……？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    このシナリオ、終了条件がなくてですね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うぅん、そんなものサービスで出さないよな……いやでもこの店なら……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    KPPLが満足するまで続けることができるシナリオなんですけど……（）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はい   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まだ飲めるよな？   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「変な薬入れてたりしてね……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    一杯じゃたりないよな？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、まさかぁ！　そんな薄い本みたいな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「つ、次はあんまり強くないのを頼もう。ほら、まだ飲み足りないだろう？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「串も無くなっちゃったし……。クジもまだ僕しかやってないしね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（串やらクジやらややこしいな）」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うん……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあ食べ物とお酒頼むかぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんのオススメのお酒教えてくれない？　それに合う肴も選んでくれたら僕嬉しいな〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    タブレット差し出します   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そういえばドリンクメニューって何があるんだろうな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ★ドリンクメニュー<br>ビール<br>日本酒(熱燗、冷酒)<br>焼酎(ロック、水割り、ウーロン割り)<br>梅酒<br>ハイボール<br>ジントニック<br>ウォッカトニック<br>モスコミュール<br>スクリュードライバー<br>ブラッディメアリー<br>ピニャコラーダ<br>マタドール<br>ファジーネーブル<br>カシスオレンジ<br>カシスソーダ<br>カンパリオレンジ<br>ピーチクーラー<br>チェリートニック<br>ギムレット<br>マティーニ<br>マルガリータ<br>カルーアミルク   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ここに書いてあるの全然わからん！w   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    焼酎があるなら梅酒もあるよなあ！？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあ追加しておきます   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やったー（？）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    梅酒結構度数高い！（調べながらやってる）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「オススメのお酒……この中にあるやつならカシオレとか……あとは梅酒。うちが好きなだけだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふむふむ。カシオレなら僕でも飲めるかな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    折角梅酒追加したのに！！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「さっきのお酒みたいに甘めだし、大倉さん好きそうだなって思うけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん、甘いのは結構好きだよ。他のも飲めないわけじゃないけどね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもカルーアミルクだけは却下」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それだけは嫌なんだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だってあれ牛乳割りじゃん……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「牛乳ダメなんだっけ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お腹が弱くてね……味はそこまで嫌いじゃないんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「一応言っておくけど低身長と牛乳嫌いに因果関係はないからね」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ハイハイ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんはどれ飲むの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「やっぱ梅酒かな〜！これが一番好きよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「勿論割るよね？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ソーダ割りが正義」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「よし、じゃあお酒は決まりで〜」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あとはフードメニューだけど〜……そうだなぁ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「お菓子盛り合わせ、チーズフライあたり……？あとから揚げも食べたいな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「食べるねえ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「元取らないと……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それはそう」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大倉さんは？フードメニュー、これは食べたいってやつある？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ん〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「とりあえずは無いかな。杠葉ちゃん食べ切れるかわかんないし、まずは今言ったので注文してしまおう」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「後で頼んでも、きっとすぐ提供されるだろうしね！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「おっけ〜〜」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ﾎﾟﾁﾎﾟﾁ……注文！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希がタブレットを操作して注文すると、やはり秒速で頼んだものがきますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（はっや、レンチンか……？）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（いや電子レンジでもこんな秒で来ないよ）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    カシオレを得ました   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「早過ぎでしょ……助かるけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんかネコ型ロボットでも飼ってるのかな？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希も梅酒を自分の方に置きますね。<br>フードメニューは真ん中に置いてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「今度は羽目外さないように……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    細心の注意を払って……飲む   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ネコ型ロボットのポケットだけ欲しいよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもあのロボットって取扱説明書みたいなものだろう？　うっかり地球滅ぼしちゃうかも」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ま、酔う時は酔うんだけどね！w   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    はい！w   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちはそんなヘマしないって！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え〜？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ん〜、カシオレも美味しいな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「飲み方気をつければ割と美味しく飲めるのかもしれない……。それとも今日がそういう日なだけかな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    まあ羽目外しましたが   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希もゴックゴック梅酒飲んでますね。さっきのこともあるのに大丈夫なんだか……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ゆ、杠葉ちゃんそのペースで大丈夫？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大丈夫だって！梅酒は飲み慣れてるし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そっかぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……で」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そろそろ次のは引かないのかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    （クジの話）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あぁ〜……パスしたもんなぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そそ、ノーカンノーカン」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「別に僕が引いてもいいけどね？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んや、うちが引くよ。……変なの引いたらパスするけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はいは〜い」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    チョコをつまんでいます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はクジを引きますね〜   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d19 (1D19) ＞ 19  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    小物入れに19のダメージだなぁ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    惜しいなぁ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ひとつ減ったから……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    残念！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はクジを確認していますね。ふむふむなるほどなぁ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「『話題はご自由に！ただし、耳元でひそひそ話しあってみよう♪』……だって」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へ、へえ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ひそひそする必要……ある？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「話題はご自由にって話題クジが一番言っちゃダメでは？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあでもひそひそしろってことだし、ひそひそしようじゃないか」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「確かにそうじゃん。何のためのクジ……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なにをひそひそすんのよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんでもいいよ！　聞かれちゃまずい秘密でも……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    考え込んでますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「秘密とかそういうのあんまないし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、凄いな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へそくりとかも無いの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それはある」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃあそれ教えて♡」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、額を言えっての？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「隠し場所に決まってるじゃないか！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「えぇ…………？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「冗談はさておきね、本当になんでもいいよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんでも……なんでも……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………あ、うちの嫌いな人の話でもいい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、いいけど。まさか僕の話じゃないだろうね？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んなワケないじゃん何言ってんの……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「おや、意外と嫌われていない……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、いいよ。聞く聞く」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「嫌いだったらもう帰ってるっての」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんはニコニコしています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……それじゃ、早速うちの嫌いな人間の話をするんだけど……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は太陽くんの横まで移動してきて座りますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ドキドキ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあ、ほら…… 耳貸して」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    横の髪を耳にかけてから、自分からも和希ちゃんに身を寄せます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。では和希も近づき、二人はかなり近い距離です。耳元に息が掛かったりしたらくすぐったいかもしれない。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    いいですね…………（本音）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……うちの大っ嫌いな従兄、南條 桜久はいつもすかしてる奴で本当にムカつくやつだけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「実際顔面だけは良くて、それなりにモテる奴だけど彼女がいたことはないし、うちは遊び人だと思ってる……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あらまぁ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ハイスペックで心底ムカつく奴だけど、そんなアイツにもひとつだけ弱点があることをうちは知ってる……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ざわ……ざわ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それはズバリ…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「カエル…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    親近感湧いちゃった（PLが）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言い終えると、和希は太陽くんから離れますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「カエル……って、あのカエル？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ゲコゲコ鳴いて、跳ねるカエル？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うん。そのカエル」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へえ〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕田舎出身だからカエルが苦手とか考えたこともなかったな。なるほどなるほど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    何故かメモを取っている！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はニコニコしてますね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちなみに従兄って例のATMさんだよね？　南條くんって言うんだ？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そう。南條探偵事務所の一人息子で、アイツ自身も探偵やってる」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へえ、凄いね。家族で探偵か」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    今入手した情報は太陽くんのCSに刻み込みました   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ちなみにうちんとこも家族経営だから皆んな探偵よ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうなの？　なんか楽しそうでいいな」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちんとこの事務所とあっちの事務所、結構近いところにあるからライバルみたいなもんだったんだけど……色々あって今はそれなりに仲良くしてる」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「依頼の奪い合いが日常だから楽しいって言えるのかは分からんけどまぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも、競い合う相手がいれば燃えるじゃない？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「事務所同士は仲良くなったみたいだけど、杠葉ちゃんと南條くんはバチバチなんだね」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちは一番下っ端だし……まあでもいつか追い越してやるー！とは思う」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いいね〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それだけの情熱があれば、きっと杠葉ちゃんは大成するよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふん、いつかアイツのことも蹴っ飛ばしてやる予定だし！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大倉さん、期待しててよね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はいはい、応援してるよ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    満足げに笑うと自分の席の方に戻って行きました！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    張り切る和希ちゃんを微笑ましく見ていました   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「さて……じゃあ次は僕かな」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お酒は着々と飲み進めています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    クジ引くか〜　まだ一巡しかしてないの草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    3時なので今日はこの辺りで止めときましょう！！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はーい   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    終わりどころ、ある？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うーん……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ない！w   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まあ流石に何杯も飲めないでしょうし   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    多分   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    一巡もしてないのに問題のシーンできてて草だよ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    太陽くんが飲めないってなったらおわり……って感じ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    和希ちゃんは酒豪だもんね……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まあいい感じにやります（？）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃ、次回もよろしくお願いします   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はーい　お疲れさんした！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    前回あらすじ！<br>太陽くんが脱いだ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    お湯を沸かしてます   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    上も脱いだんだから次は下も脱がんとな？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なるほど？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    今日ずっと回線調子悪いのか知らんけどあんスタくんを起動できないので今回のイベント、終わりです（モチベが）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃ、また6を引いてもろて   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あんスタくん今回はやらんとなあ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    実際10分の1くらいなら出そうな気がしてしまう   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    期待してます   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    お茶入ったわよ〜　待たせたわね   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    お茶入れたけどバリ寒いので布団に入りま〜す   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はーい   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    それじゃあ太陽くんからのクジからだな   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    せやった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1つ減って1d19だったかな   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d19 (1D19) ＞ 16  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では太陽くんはクジを引き、そのまま内容を見ることでしょう。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ﾁﾗｯ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    これずっと1d20で振った方が表見やすそ〜〜（KPが）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    見てみると、『膝枕をして(されて)みよう♪心の距離が急接近！』という内容でした！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    もし被った時もう一回振ってもらうことになるから……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほう……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    もはや話題ではない。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    もはや何も言うまい   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……どう？大丈夫そうなやつ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「大丈夫そうかと言われると大丈夫なような、グレーゾーンのような……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「えぇ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、僕に膝枕してくれるのとされるのどっちがいい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ひざ……まくら……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれ、知らない？　相手の膝の上に頭を乗せるんだけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや分かるけど！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんかまたそういう……話題でもなんでもない……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんか緩いルールの王様ゲームでもやらされてる気分だね！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「確かにぃ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それでどっちが膝枕をするかって話よね……うーん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は悩んでますね。ｳｰﾝｳｰﾝ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    その様子をじーっと見てます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……大倉さんは？どっちがいいの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「引いたのはそっちだし、大倉さんが決めてもいいんじゃないの？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そりゃあ膝枕なら女の子にされたいに決まってるじゃないか！」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    しってた。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも杠葉ちゃんって思いのほか恥ずかしがり屋さんみたいだから……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いやさっきのはだって……！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあさっきのはね、ちょーっと刺激が強かったよね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんが恥ずかしいなら僕がやるんでも全然構わないよ。男の膝枕って硬そうだけど……僕だし、そこらの男に比べれば多少は柔らかいかも？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    膝をペンペンしてます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふーん……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「まぁでも……やってあげてもいいけど、膝枕……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え！　いいの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「と、特別にね！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    なんだツンデレか……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちの膝枕とか激レアだし？大倉さんは感謝するといいよ！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「わーい、やったー、ありがとー」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふふん……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それで……膝枕ってどうすればいいの？どういう座り方がやりやすい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「床なら正座がメジャーだけどね、杠葉ちゃんの楽な姿勢でいいよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、でもちゃんと僕が頭乗せることも考えてね。胡座はかかない方がいいよ！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ん、じゃあ正座で」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は座り直してますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕の頭の重みで杠葉ちゃんの足が痺れないといいね」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大丈夫でしょ、たぶん」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    CONに失敗したら和希の足は痺れます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「では……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの方にｽｽｽと移動します   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帽子外して、外した帽子を腕に抱えて膝の上にぼすんっ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    わ！膝枕だ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    女の子の足柔らかいな〜〜〜〜〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「わあ〜……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「何してるんだろう僕……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「膝枕されてるんだよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんというか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「女の子の太腿ってやっぱり柔らかいね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さっきより体重がかかりました   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「まぁ男と比べれば……うわなんか重くなった」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「失礼な！　僕の体重を聞いたら女の子は嫉妬するんだぞ〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ誇ることでもなんでもないけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ところで、何かサービスは無いのかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    膝の上から和希ちゃんに熱い視線を送っているよ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、サービス？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希に見下ろされてますね。ローアングル和希。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ローアングルっていいですよね　胸のあたりの凹凸が   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それも当然見えてるでしょうねぇ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「例えばほら。髪を撫でるとか、耳元で何か甘い言葉を囁くだとか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ただ膝枕してるだけっていうのも退屈だぁ〜なぁ〜〜」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「は、はぁ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあ……これで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言うと和希は太陽くんを撫でますね。恐る恐る。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    慣れてないんだろうな〜〜って感じです。当然ですが。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんの髪質は思ったより硬かったよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……杠葉ちゃんてさ、結構無茶ぶりに応えてくれるよね」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「出来なくはないことだし……やって欲しいって言うならやってあげてもいい……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あ、いや。限度はあるけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふ〜ん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ〜ダメダメ。おしまい！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    起き上がりました　むくり   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あ、もういいんだ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1d100 (1D100) ＞ 28  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    足は痺れなかったらしい。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「年下かもしれない女の子に頭撫でさせてる状況が急に複雑に感じてね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「仮に年下でなくても、もう頭とか撫でてもらうような歳じゃなかったよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「急に冷静になるじゃん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    帽子を被り直しました　ｷｭｯｷｭｯ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「冷静になっちゃったの！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「は〜、アルコール足りなかったかな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ｽｽｽ……　席に戻って行きました……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「チーズフライひとつ貰っても？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「どーぞどーぞ。一緒に食べるために頼んだわけだし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ありがと！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「チーズは発酵してるから平気なのさ〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    チーズフライもぐもぐ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は楽な姿勢に戻してから梅酒を飲んでますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チーズフライうめ〜〜   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そりゃよかった〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お酒もちみちみ飲んでいるよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちみちみ……ｵｻｹｵｲｼ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「今更なことを聞くけど……杠葉ちゃんって恋愛経験はあるのかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「急だな……一切ないよ、恋愛経験なんて」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「彼氏欲しい〜とかも特に考えたこともないし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なあんだ。それならよかった！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「膝枕までして貰っておいて実は彼氏いましたなんて言われたらどうしようかと思った」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「この個室に突然見知らぬゴツめの男が現れて「俺の女に何してんだ！」って僕から金銭やら何から何まで奪い取ろうとしてくる最悪のシナリオまで想像しちゃったけど……杞憂だったみたい！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なにその美人局的な……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「失礼しちゃうわ〜〜！いくらお金好きだからってそんなことまでしてないっての」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そういえばこの子がめつ……お金好きなんだった……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    警戒度が上がった（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あーあ！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なによ。お金が好きじゃない人間なんてこの世にいないでしょ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「多分」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お金が無いと生きていけないしね。結局幸福を買うのもお金だし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「お金じゃ買えないものがあるのも確かだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    チーズフライのあとにポッキーを貪っているよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「んじゃはい、次は杠葉ちゃんどーぞ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    話題クジのことです   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ま、そうだけど……あぁうちの番か……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    軽くため息をついてますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「変なのは来ないでよ……本当に……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d18 (1D18) ＞ 18  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は一枚クジを引く……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紙を広げ、内容を読んでいますが……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希の口角がとっても……上がっていますね……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、どうしたの？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんか怖いんだけど……そ、それに胸騒ぎが……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふっふっふっ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は立ち上がる！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あの……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……トイレかな？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして太陽くんの側まで移動してくるね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    逃げます！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    にがさん！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    DEX対抗だ！！（無駄な足掻き）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d100 (1D100) ＞ 37  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    CC&lt;=55　【DEX】 (1D100&lt;=55) ボーナス・ペナルティダイス[0] ＞ 61 ＞ 61 ＞ 失敗  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あばよ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあそうだなあ〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    逃げようとした太陽くんに素早く反応して和希は逃げられないように覆い被さってきます！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うわあ！？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大倉さ〜〜ん……さっきはよくもやってくれたねぇ……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、え、へ、えへへ……な、なんのこと……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「い、一旦落ち着こう！　ほ、ほら、この体勢ちょっと……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ダメ。逃げるでしょ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そ、そんな……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちも大倉さんと同じやつ引いたからさぁ……ちゃんとお返ししてあげたいんだよねぇ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    手をﾜｷﾜｷさせてますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ら、乱暴はよくないよ！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「手の動きがいやらしい！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ジタバタもがいています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「先に手を出したのは大倉さんなんだから諦めなって……！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……おりゃ！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なんとかしようとジタバタもがいてた太陽くんですが、和希は容赦なくくすぐってきますね！脇腹です。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「い、嫌だ！　僕は折角用意された戯れの場だしそういう空気を作るためにわざtああああああああ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ――ッ、ははは！　ちょ、そこはダメだって……！　く、ふふっ……ふふふふ……っ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの下でのたうち回っています   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ＾＾   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ほれほれここが弱いんだろ〜！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｺﾁｮｺﾁｮｺﾁｮ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「よ、弱いっ！　弱いから、手加減してっ……そこばっかりくすぐるのは……っははは！　はぁー、はぁー……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「く、くそッ……！　なんであんなにある中からっ、同じのぉっ……引くかなぁっ！？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「神様はうちの味方ってことよ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんはしばらくの間くすぐられますが、ようやく解放されます。和希は満足げな表情を浮かべてますね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    脱力しきって床に倒れ伏しています   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「う……うぅ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あ〜楽しかった！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いじめだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんもそうやって弱いものいじめをするんだ……ひどい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    産まれたての子鹿のように震えています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なに被害者ぶってんのさ。先にやってきたのは大倉さんでしょーが」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だからってこんなに本気でやり返すことないだろーーッ！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はぁ……はぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「前までの僕だったら呼吸困難で病院送りにされていたかもしれない……人の恨みって怖い……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「これに懲りたらうちをくすぐろうとは考えないことね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕はゲームを成立させただけなのにィ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    三角座りでﾌﾞﾙﾌﾞﾙしてるよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「もう！　あっち行ってよね！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はニッコニコですね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「はいはい〜」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は戻ろうとしますが〜〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうしよう。お酒表振っとく？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ここで！？　いいよ！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うう、まだくすぐられてる感覚が残ってる……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    2巡目終わったしやっとくべきかなって（？）まだ飲みきってないとは思うけど   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やるぜやるぜやるぜ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    やるか〜！1D10どうぞ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d10 (1D10) ＞ 1  </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d10 (1D10) ＞ 8  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さらば、6……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    うわすげえ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    えっと〜〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    このへんでちょっと酒を飲んでいることにしよう   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちびちび……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    先ほどまでくすぐられてた太陽くんなんですけど   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    今度は自分が和希に触れたくなって仕方ないです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    またくすぐるんか？？（違）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    この流れはそうなっちゃうんだよ（違うけど）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「………………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希に触れたい、とても……<br>そんな気分です。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    座席に戻って行く和希ちゃんを目で追ってましたが、おもむろに立ち上がって自分も和希ちゃんの席に行きますよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちゃっかり隣に座ります   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    一緒に着席しました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    一緒に着席ちょっとおもろいな   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は隣に座ってきた太陽くんを不思議そうに見つめてますが……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は太陽くんに体を寄せてきます。なんででしょうね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    〜勝利のBGM〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「相席居酒屋って言うけど……こうやって隣に座る方が話しやすいと思うんだよね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だってほら、テーブル隔てると手が届かないし……。でも隣に座れば、声も近くで聞こえて、触れることだってできる……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの手に自分の手をソッ……と重ねます   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    この場面に合うBGMがない……！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「大人になると、妙に人肌恋しくてさ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こういう時、無条件に僕を受け入れて、抱き締めて、安心させてくれる……人がいれば良かったんだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……いかんせん、僕はこれまで独りよがりに生きて来たからさ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    少ししんみりしているようです   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そっか……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ちょっとまっとくれ〜   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まーつーわ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうだな〜和希は太陽くんに向き合うと空いた手を太陽くんの背中に回します。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちも、寂しくなったりすることあるよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……うち甘え下手だし、かと言って面倒見がいいわけでもないし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「でも……大倉さんがうちでも良いって言うなら……いつでも抱きしめてあげられるし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……今は、うちが甘えたい気分だけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……人肌恋しいなら、もっと触れてもいいんだよ」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    難しいな〜！これ！！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    RPに何分かけとる？ごめんなさい   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    この卓でRPに時間かけなくてどこに時間かけんだよ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    15分くらいかかっちゃった‪( ;ᯅ; )‬   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふ……なあに、それ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕少し驚いてるんだ。会って間もない頃はさ、杠葉ちゃんってもっと自分本位なんだと思ってた」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも関わってみると意外と律儀だったり……　綺麗事とか言うタイプじゃなさそうなのに、今もこうして僕に優しい言葉かけてくれるし……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「と言っても……言葉がたどたどしくて、言い慣れてないの丸わかりなんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そういうとこ……杠葉ちゃんって可愛いよね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……でも僕お兄ちゃんだから。甘えたいって言われたら、僕が甘えてるわけにはいかないよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    重ねた手退かして、和希ちゃんの手も解いて、今度は自分の腕の中に閉じ込めるよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「よ〜しよし、嬉しいこと言って貰ったお礼に好きなだけ甘えるといい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こうしてれば、僕もあったかいからね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ※なんかシリアスな雰囲気が漂っていますが彼らは酔っているだけです   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ほんまやで   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    甘えたいのに甘えてごめん（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    太陽くんが和希を抱きしめ、2人は密着状態ですね……<br>またハグしてる……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希は完全に太陽くんに身を任せてますね。ｱｯﾀｶｲ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    この空気どうしてくれよう（酔ってるだけ）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こうしてると、子供の頃に戻ったみたいだな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、家族は大切にするんだよ。どんな時でも、無条件に君を愛して、受け入れてくれる……一番身近な人が家族なんだから……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「家族と喧嘩した時は僕のところに来てもいいけどね……。あ、それとも……南條くんのところにでも駆け込むかい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    リラックスモードに入ってしまっている　酔いは覚めるのか？？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    だんだんと覚めていくことでしょう……(気まず)   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「アイツだけは絶対ない……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「だから……頼るなら大倉さんかなぁ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「大倉さんに……に……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「………………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    急に黙っちゃいましたね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……あれ、寝た？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    様子を見ようと体を離します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    体を離して様子を見てみますが、全然寝てませんでした。<br>バッチリ目は開いてたし、顔真っ赤だし……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そのまま硬直してますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えっ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ、あれ……もういいの？　っていうか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……ちょっと距離近かったね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    こちらも酔いが覚めて来たので少し離れるけど自分の席には戻りません（必死の抵抗）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……ち、近すぎ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あー……今日なんか凄い酔っちゃってる……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希もちょっと離れました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……本当に酔ってるだけ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なーんて……実際いつもの杠葉ちゃんらしくないし、酔ってるだけだよね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    テーブルに伏せてぐでーってなってます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「酔ってるだけ！　……酔ってるだけよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふーん……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、少し羽目外したからって気にすることないよ。そう、脱いだりさえしなければ…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「流石に脱がないよ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……てか、戻らないの？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    向かい側の席指差してますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「んん……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ〜……戻って欲しいのかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや別に……どっちでも……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃあここにいる〜。クジ引く度に席移動するの手間だろう？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    飲みかけの酒を手繰り寄せてます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「さっきから相手が近くにいないとダメなやつ引いてるし……まぁそれがいっか」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    納得したようです。お隣さんになりました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「にしても僕達結構長い時間飲んでないかい……？　もう延長料金発生してそうだな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちっちぇー口でチーズフライをつまんでいる   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「30分だから仕方ないんじゃない？延長前提のお店でしょ、相席相手と話が盛り上がれば」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いやでも長居しすぎてもな……また酔って変なことしちゃうか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「話が……そうだよ、話……。僕杠葉ちゃんの話が聞きたいんだよ、幼少期の恥ずかしい思い出とか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    若干セルフ酔いが入っています<br>自分の小物入れ引っ張って来て雑に一枚抜きますね<br>まだ帰さないよ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いや話すわけないでしょそんなこと……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    じゃあ一枚引きますね〜<br>1d18どうぞ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんだよ〜〜盛り上がらないな〜〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d18 (1D18) ＞ 5  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    珍しく1桁が出た   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「探偵やってると相手のこととか色々知りたくなるんだよねえ。弱点が少なそうな人の弱み握った瞬間の快感ったらないねえ、南條くん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジの内容<br>『やってしまった失敗や、トラウマについて話してみよう！』   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    俺が話すんかーーい！ww   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さっきから噛み合いすぎて笑ってるよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え〜……“やってしまった失敗や、トラウマについて話してみよう”……え、僕？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あれ、大倉さんが話してくれるの？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えぇ……こんなはずじゃ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「トラウマや失敗なんて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……あり過ぎてどれ話せばいいのかわからないよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    トラウマに引っ張られてシリアスな話しか出てこん（草）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草　ネタ卓だぞ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「えぇ〜？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあそれこそ幼少期の恥ずかしい思い出とかにすれば？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「幼少期か……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いや、幼少期はやめておこう。僕の幼少期は色々と複雑なんだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕が探偵業でまだそこそこ駆け出しだった頃の話でもしよう、そうしよう」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんは家族ぐるみで探偵やってるみたいだけど、僕はこの仕事は自分で始めたから〜……駆け出しって言っても大体20か21くらいの時……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃん、僕って可愛いだろう？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    こいつはなんの話をしているんだ？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ﾊｯ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    どうやら私のココフォは時が止まってたようだ……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    そして時は動き出す――   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    Wi-Fi切ったら一気に表示された　おこ   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>WiFi</dt><dd>    ごめん   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ゆるさない   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それ自分で言う？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……うん！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……男にしては可愛らしい容姿はしてると思うけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「照れるな〜！　そんなに褒めないでおくれよ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「聞かれたから言っただけなんだけど？？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ……前にもやってたから知ってると思うけど、調査を円滑に進めるために変装技術を主に駆使するのが僕のスタイルなんだ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「例えば学生になってみたり、ホームレスになってみたり……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「その一環として女の子のフリをすることも少なくなくて、可愛いめの顔立ちも小さい背丈も有難く有効活用させて貰ってるんだけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも腐っても僕って男だからさ。どんなに見た目を可愛くしたって心は男の子なのさ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「駆け出しの頃は調査に慣れてなかったからそのへんが上手く噛み合わないというか……認識の食い違いが起こることも珍しくなくて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「女子校に潜入したことあるんだよ、女の子の制服着てさ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「へぇ〜…………？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「で、校内にいる関係者に色々話聞いて回ってて。重要参考人から話が聞ける！ってなったんだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあそういう話って大抵、誰かに聞かれたくないデリケートな話題じゃないか」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それで。誰にも聞かれたくないから！って、その相手が話場所に選んだのが女子トイレだったんだよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あの時は焦ったなぁ。トイレって言われて、トイレ！？って急に冷静になっちゃって。自分が女装してることも忘れて大慌てさ。危うく話が聞けないところだった……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    興味津々で聞いてた和希の顔がｽﾝｯと真顔になりました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「他にもあるよ。女装してること忘れて女の子の格好したまま男子トイレに入ったこともあるさ！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ねー、恥ずかしいよねーって。なに、その顔？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なんだか冷たい目で見られている気がする……！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……入ったんだ？女子トイレ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なるほどね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はおもむろに携帯を取り出した……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ストーーップ！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「どこにかけようとしてるのか知らないけど、探偵ってそういうものじゃないか！　調査のためなら何だってするのが探偵！　法律的にグレーなことでもしちゃうのが探偵だろう！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まさかちょーっと女子トイレに入ったからって調査の為だし仕方ない！　何より相手がそこがいいって言ったんだから！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんだって特定の誰かをつけ回したり盗撮したりしてるじゃないか！　その手を下ろしたまえ……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「確かに職業柄仕方ないところはあるけど？でも女子トイレに入ったんだよって女の前で言う？？普通にアウトだよ？？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「確かに……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれぇ……僕は慣れないうちって失敗多いよね！って話をしたかったんだけどな……おかしいぞ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「話しちゃいけないことでしょ今のは……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ホテル前で立ち張りしてたら警察に捕まった話の方が良かったか……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あぁうん多分そっちの方がよかったね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    チョコを口の中に放り込んでもごもごしてます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    生暖かい目で見られてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そうか、杠葉ちゃんは女の子か……どうも同業者っていう認識が強くて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ごめんよっ！」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「通報しようとしたのは冗談だけど……その話他でしちゃだめだからね。今度こそ本当に通報されるかもしれないんだから……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあしないけど……恥ずかしいしね」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それならヨシ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃ、お次杠葉ちゃんどうぞ〜……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    大分顔が赤いです　酔いでね   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ん……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    小物入れの中をガサガサ……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d17 (1D17) ＞ 6  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    一枚取り出した！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え〜っと……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「『当たり！お酒を1杯プレゼント☆ 』……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希が読み上げると机の真ん中からお酒が出現しますね！！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うわっ！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    あーあ音声認識   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんよく飲むねえ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「これはうちの意思じゃないからね？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    何が来たかな、テキーラかな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と言いつつも出てきたお酒を移動させてます。<br>梅酒まだ残ってるけどね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あれ、もしかして今ので終わりかい……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「もう一回引いてもいいよ……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1d21 (1D21) ＞ 7  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒はコースターの上に乗っててそこにモスコミュールと書かれたということにしよう。<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ウオッカとジンジャエールとライムのカクテルっぽい   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「仕方ないなぁ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    へえ〜（知らん）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d16 (1D16) ＞ 12  </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……これはあんまりよろしくないと思う」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジを太陽くんに横流ししますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「カシオレもう少しで飲み終わりそ〜……うん？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    見ます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    『相手を知る事も大切、少し激しいスキンシップを♪性感帯等ニッチな部分を探ってみよう！』   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と言う内容でした。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふむふむ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもさっき脇腹触られたしなあ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「何より、恋愛経験のない杠葉ちゃんにはこれはまだ早いね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    妙に鼻につく笑顔で紙をペイッとしました   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それはそうだけど……なんか腹立つなその顔……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気を取り直してもう一枚引き始めますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d15 (1D15) ＞ 14  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんだけ枚数めっちゃ減ってるのおもろいな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ほんとだよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    えー、和希はクジの内容を確認しますが……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……はぁ？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちょっとキレ気味です。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    2桁はまともな内容でないと相場が決まってる   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まだトイレのこと怒ってるのかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そうじゃなくて……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はクジの内容を太陽くんに見せつけますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    『下ネタで盛り上がろう！仲良くなれるかも？☆』   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「下ネタかぁ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんで！こんなんばっかり！！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「トイレの話した後だと信憑性薄いけど別に僕も下品な話が好きなわけじゃないからな〜……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「特に下ネタって同性間で盛り上がれる話題だからね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    カシオレはこのあたりで飲み終えます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあこれも……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でもずっとお題に背いてばっかりってのもアレかな……なんか話すかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちらで何を話すって……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「じゃ、次行こっか」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジはポイされました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（杠葉ちゃんって意外と純粋なのかな……）」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「今回だけで何枚引くのよこれ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「もうお酒なくなっちゃった」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    純粋だよ（たぶん）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんもおかわりしてるし僕も何か頼もうかな……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d14 (1D14) ＞ 13  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジをチラリ……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    後ろの方だしまたどうせ……（）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……あ、これさっきのやつじゃん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんはカンパリオレンジを注文したよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    「ほら」と言って和希は引いたものを見せますね。<br>どうやら膝枕のクジを引いたようです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ん〜……もう一回するかい？　するなら今度は僕がしてあげるけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「やっと出来そうなやつ引けたし、まぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はいはい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    よいしょ、って座り直します　女の子座りはできないので正座よ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「おいで〜」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んじゃ失礼して……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希はそーっと頭を乗せてきますね。ソワソワしてます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんか……頭乗せられるのって結構くすぐったいね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    モゾモゾしてます<br>硬くはないけど女の子ほど柔らかくもない   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「硬くも柔らかくも……中間くらい……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちなみに膝枕ってどこ向いてる？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    上？　それとも横向き？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    上向きかな〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあ耳は触れないか……残念！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うっかりこのまま寝落ちないでね！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    寝返りうつか（？）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんに膝を貸したまま自分のクジを引きます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「分かってるって〜〜」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら今度は横向きになりました。なんだかんだ楽しんでるみたいです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    結い髪を上にするはずだから耳が露出してるってことだな！！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジ引くなら1d17ですね。<br>和希の方が減り過ぎて分からなくなるぜ。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d17 (1D17) ＞ 1  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちっさ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうですね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんが動く度に太陽くんもソワソワしてるよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クジを引きました！<br>内容は『自己紹介、自分はどういう人間なのかを話してみよう！』……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    今？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    今更では？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「自己紹介だってさ。僕達元々知り合いだし、必要なさそうだね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それともなんか改めて聞きたいこととかある？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    耳にかかってる髪の毛を退かすくらいしか耳に触る動機がねえ……！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「んー……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ので当たり障りなく髪の毛を指で梳かしてます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……年齢とか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    髪サラサラだな〜〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    もはや達成は絶望的かと思われた当初のノルマをここで……！？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちゃんと手入れしてるんだね……☺️   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    やっぱり女の子と男の髪は違うな……と思う太陽くんであった   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「年齢か。確かに、僕の場合それが一番謎かもね」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ちなみに杠葉ちゃんは何歳なの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うち？　23だけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ほほ〜う」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くんはニコニコしている！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「え、なに」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いやあ〜、やっぱりというかなんというか……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕は20代4年目だから、杠葉ちゃんより年上ってことになるね。これからはお兄さんと呼んでくれて構わないよ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「正直24だったか25だったかちょっと曖昧なんだけど、逆算した感じ多分24……だと思う」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「自分の年齢くらいちゃんと覚えときなって……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それにしても……1つ上のお兄さんか……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう呟いて和希はムクリと起き上がりますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あっ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（触り心地のいい髪の毛だったのに……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    ちょっと残念そうです（草）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな残念そうにしてる太陽くんに和希は向き合ってきますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……お兄ちゃん？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「え、」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    目をぱちくりさせています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なによ、お兄さんと呼んでくれて構わないって言ってたじゃん」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ニヨニヨしてますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「いや本当に呼ぶとは思ってなくて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「凄い……なんか変な気持ちになるな……。兄ちゃんなんて呼ばれ慣れてるはずなのに……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも杠葉ちゃんに呼ばれるのはなんか違うような気も……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    うーんってなってます   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ふっ……なんとなく呼んでみただけなのに」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「えっ……あ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「からかったな〜！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    クソ弱台パンします   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あっはは！まさか考え込まれるとは思わなかったわ〜」   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    このBGMめっちゃKONAMI感強ぇ〜　ラブプラスやりたくなる（ときメモではない）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    大変面白がってるようです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「はぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「急に冗談に乗っかられると訳わかんなくなっちゃうんだよ。やめてよね、もう」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    してやられた恥をカンパリオレンジで流し込みます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒うめ〜〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    語彙力が   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    お酒うめ〜……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「えぇ？そう言われるとやめたくないなぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「こーら、調子に乗らない。年上をからかうものじゃないよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕お酒はこれでラストにするからね。このままだと勢いづいた杠葉ちゃんに形勢逆転されそうだし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ほいほい」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「じゃあクジ……もううちの番か……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「杠葉ちゃんはパスが多いからねえ。引いてる数だけなら僕の倍あるんじゃない？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ありそう……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    話しながらクジをガサガサ。一枚抜き取ります。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「終わりも近いし、次のお題は絶対完遂！みたいな特殊ルールでも設けてみるかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「ま、まじで言ってる……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「どうしようこれがとんでもないやつだったら……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d13 (1D13) ＞ 6  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「とんでもないやつはほとんど出し切ったんじゃないかな〜？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    から揚げ美味ぇ〜   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「だといいけど……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「次のお題は……『どちらかが膝に乗って好きな話題を話そう！仲良くなれるかな？☆』……だって」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんか似たようなの出てきたなぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「膝枕の次は膝乗りか〜！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「流石に女の子の膝に乗るのはプライドが傷つくな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    酒パワー（？）で和希ちゃん抱えて膝に乗せるか<br>前向きと後ろ向きどっちがいい？   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    横でもいいよ（忘）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    酒パワー草<br>太陽くんがお好きな方で（？）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    横か向かい合う形がいいな！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d2 (1D2) ＞ 1  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    はい横〜   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「よっ……こらせ！（酒パワー）」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うわぁ！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    膝に乗せられました！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そんな力どこから……？　てかいきなりとかやめてもらってもいい！？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「なんか思いのほか力が出て……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（ていうかこの体勢結構近いな……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあとにかく、あとは杠葉ちゃんが話をするだけだよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    自分でやっといてちょっとドキドキしているよ   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「話をするだけって言ってもそんな話題なんて急に思いつかないし……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なんのための話題クジなんだよ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    アドリブ力を鍛えるのよ   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「恋バナしようにも杠葉ちゃんは恋愛経験皆無だからな〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「勿体ない、杠葉ちゃんって仕事人間なの？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そういうわけじゃないけど……普通に恋愛とは縁がなかっただけ」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「学生の時も惹かれるような人いなかったし、男と話すこともそんな無かったし」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それで卒業後は探偵だもんね。出会いも無いわけだ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「それでこんな……出会い系居酒屋に来ることになるなんて……うっ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    適当な泣き真似をしています   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「出会い目的じゃないって言ったでしょ！」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「飲みたい気分だっただけだもんね〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「まあ、今が楽しいならそれで全然いいと思うけど……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「でも色々経験してみると、人生の見え方っていうのかな……結構変わるんだよねえ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    若干酒のペースが早いです   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    膝に乗せたまま飲んでるので大分邪魔かもしれないけどそこは器用に（？）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「人生の見え方ねぇ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「経験って言ってもなぁ……何をすればいいんだか…… マッチングアプリとかぁ……？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「いやそれはなんか……そういうのはあんま好きくないな……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「しよう！って思ってできるわけじゃないのが恋愛の難しいところだね〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、いいのさ。ただ杠葉ちゃんって思ってたよりずっと良識的でいい子だったから、本当に勿体ないな〜って思っただけ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「そんな子とこういうあまり良くない戯れをしている時に言うことじゃないけどね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    そろそろ下ろすか……といったところです   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うちは赤ん坊の頃からずっと良い子ですぅ〜」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「へ〜、ご飯は好き嫌いせずに食べてたかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「た、食べてたに決まってるじゃん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふふふ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ま、戯れはこのくらいにね。そろそろ下りていいよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「このままだと杠葉ちゃんはお酒飲めないだろうし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「はーい」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「よしよし……そろそろ恥ずかしいお題は引き切ったでしょ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら膝から降りますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ふぅ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「丁度杠葉ちゃんの手番が終わったし、クジはこのくらいにしておくかい？」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「あ、ほんと？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ん……この調子でずっとやってたらいよいよ本当にラブホテルのお世話になっちゃうかも」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕も結構……いやかなり酔いが回って来てるから、また何を変なことしでかすかわからないからねえ、ふふふ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    よいしょ、と立ち上がってお酒持って自分の席に戻ります   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 98  </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「それは困るなぁ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    話しながらゴクゴク酒を飲んでますね。唐揚げもうめ〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    元の席に戻れました。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さ、あとは酒を飲み切るだけですが……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そろそろお酒表の出番だなぁ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（ちょっと早く飲み過ぎちゃったけど、まだ大丈夫……の、はず……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    6来い6来い6来い！（煩悩塊）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちなみに和希なんですけど   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    はい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さっきシークレットダイスで失敗してるのでさっきの酒で酔いが急激に回りました。セルフ酔いです。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    じゃあ酒表2回振りな（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    やらねーよ！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    6を出せよ！　6をよ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なにはともあれ最後の1d10をふりますか……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    本当に出ちゃったら笑うって   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    1d10 (1D10) ＞ 4  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    くそぉ！！！   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    1d10 (1D10) ＞ 3  </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    6「じゃあの」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    次に期待ですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お酒を飲み進める太陽くんですが、お互い今飲んでるものを飲み切ったら解散するんだろうと思うことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    酒で酔っていたこともあり、なんだか色々なことしてしまいました。話すべきことじゃないことも話しました（女子トイレ）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    もうそろそろ解散なら最後に何かやりたいな……と酔いが回ってる頭の中で考えます。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    おいやめとけ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ……あ！そうだ！和希を抱きしめちゃおう！見てたらなんだか抱きしめたくなっちゃったし！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さっきも抱き合ったし、一度も二度も三度も変わらないよね！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    おもろすぎるだろ（発想が）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけで太陽くんは和希を抱きしめたいな〜〜って思います（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「（ああ……ダメだ、気持ちが浮ついて……最後だからってもう少し……ゆっくり飲むべきだったかも……）」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    大分酔いでぼんやりしてます　さようなら、理性……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    一方、和希の方はというと、太陽くんをじーっと見つめてますね。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……なあに？　そんなにじっと見つめて……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「あ〜、名残惜しいのかなぁ……もしかして誘ってる……？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    こちらは抱きしめたいのでジリジリと距離を詰めます（怖すぎ）   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うん〜……ちょっと名残惜しいかも〜……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    へにゃへにゃ〜……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｼﾞﾘ...ｼﾞﾘ...順調に距離を詰めていきますね。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「なんというかぁ……大倉さんって実はちゃんと男だよねぇ……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「やっぱり外見って大切……第一印象ってそれで決まるし……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「うち……さっきまで大倉さんを全然異性として意識してなかったけど……それも変わっちゃったよねぇ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「………………」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「へへへ……酔ってるからかなぁ……？大倉さんがと〜っても素敵な人に見えてきちゃってさぁ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「……うん、そう。僕って意外と普通に男の子なんだよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だから……本当はこういう別れ際の、このタイミングで、そういう煽るようなこと言っていい相手じゃないんだよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「ねえ、杠葉ちゃんさっき言ったよね……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕が寂しい時は、杠葉ちゃんが抱き締めてくれる……だっけ？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「今、寂しいんだけど」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    至近距離まで詰めて和希ちゃんに覆い被さります   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    覆い被されました。<br>和希は驚いた表情をしますが、すぐにへらっ〜と笑顔を浮かべることでしょう。   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「……寂しい？」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「うん」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「だから杠葉ちゃん、ホテル行こうよ」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    「僕が満足するまで、僕のことを抱き締めててよ……」   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    和希ちゃんの肩に顔を埋めて背中に腕を回した……   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「そか……」   </dd></dl>
+<dl style="color:#ffd700" class="main"><dt>杠葉 和希</dt><dd>    「…………仕方ないなぁ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    和希も背中に腕を回すことでしょう……   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    さ、会計するか〜（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    エンディングですねえ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ホテルエンドか〜（）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    抱き枕にされて終わるかもしれないから！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    2人とも寝落ちそう。   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    飲み過ぎよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では会計をしてエンディングへ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    これはエンディング描写に関わるから聞くんだけどおそらく抱き枕にされておわ……？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いやまて   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ぼかすか！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうなったかはご想像に（？）   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    太陽くん的にはしっぽりやってもいい気分ですが最初がそれだと和希ちゃんが可哀想なので（？）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    りょ〜〜〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    寂しいのでBGMかけとこ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    わーい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    会計を済ませると、最初に部屋を案内した店員はニッコリと笑い、2人を見送ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    少し火照ったお互いの指先が触れ合う。<br>どちらがそうしたかもわからない程本能的に手をとり、二人はホテルへと足を進める。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    隣にいる相手の顔は暗い街中だというのに、赤く染まっているのが分かった。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうして二人はチケットを手に、ホテルへと入っていくことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シナリオクリアです！お疲れ様でした！！   </dd></dl>
+<dl style="color:#2e8b57" class="main"><dt>大倉 太陽</dt><dd>    わーい　お疲れさんした！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    朝ですが……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さて、終わりましたが……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    怒涛の展開でした。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    抱きしめるも抱くも同じかなって（？）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あの、なぜあそこまで和希がベロベロになってたか説明をさせていただきたいんですけど   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    よかろう   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あの人ファンブルだしたんだよね。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    シークレットダイス公開したから見に行ったらわかる（）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    見事なファンブルやねえ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    やっぱり飲み過ぎたんとちゃいますのん？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    飲み過ぎたんでしょうねぇ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    太陽くんも酒3杯分のCONロールするか（今？）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いいよ！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    全部失敗したら抱きます   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最後だしやってみようってノリでファンブルおもろ過ぎ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    CC&lt;=20　【CON】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 3 ＞ 3 ＞ イクストリーム成功  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    抱きませんでした   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    踏みとどまった　鋼の意思   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    酔ってねえじゃねえか！！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    なんて？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんて？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    PLが酔ってたかもしれない   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    イクス出たから1回で振るのやめちゃった（草）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    イクスだからね   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    CC&lt;=70　【CON】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 34 ＞ 34 ＞ ハード成功  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    CC&lt;=70　【CON】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 39 ＞ 39 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    これが普通なんだよね   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    太陽くんは飛陽ちゃんに今日帰らんという旨のクソ誤字だらけのLINE（怪文書）を送って和希ちゃんを抱き枕にして寝ましたとさ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    6出したかったけど最後に6出したらそれこそ収拾つかんかったな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    それもうやっちゃったじゃん   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    CONイクス？しらんしらんになってた   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ファンブルまでは空気読めてたのに……ダイスめ……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    飛陽ちゃん可哀想で草　心配で寝れないよ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    CC&lt;=20　【CON】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 35 ＞ 35 ＞ 失敗  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    CC&lt;=20　【CON】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 16 ＞ 16 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    めちゃくちゃに健康体やな！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    強くて草   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    よかったね和希ちゃん、和希ちゃんの貞操は守られたよ   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    普通に飲み過ぎて記憶飛んでそうですが   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    翌朝大変なことになります（確定事項）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    友達への道のりが寧ろ遠のいた気がするなあ！（デジャヴ）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんでいつもこうなるんだあ？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    とにかく酒飲んで酔って羽目外した卓だった   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ちなみに太陽くんはアホみたいに寝坊助なので蹴り起こしてくださいね   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    抱き枕にされてるしがっちりホールドされてたら蹴ります。   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    抱き枕にしてるしがっちりホールドしてたので蹴り落とされました   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    服は無事かあ？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    PLの悪ふざけが過ぎただけでそんなに際どいシナリオじゃなかったな！（パスしたお題から目を逸らし）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    うーん……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    だからこれ本当組み合わせによると思う！！今回は和希の方がなんでもイヤイヤしたので……（抵抗して当然なのもありましたが）   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    まあ実際やってみようぜ！とはならんw   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    服は多分無事だと思うけど暑かったとかなんとかで若干乱れてた方が血の気引きそうで面白いな（？）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    カップルでもドン引きなのあるからね   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    家でやんなさい、家で   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ジャンパースカートだから微妙なんだよな……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    ジャンパースカートのまま寝るんですかぁ？   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    あのエンディングでしっかり着替えて寝てたらそれはそれでおもろいですが   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃあ脱ぎます……（？）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あのままベッドダイブしてそうだもん   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    2人とも一瞬で寝てそう   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    のび太くらいの入眠速度   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    わかる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    一緒に寝てるぅ！？あ、服着てるじゃん。寝に来ただけか……となる   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    健全なシナリオだったな〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    これは健全でした。おめでとうございます。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さて   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    そろそろ寝るか……   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    はい……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつおつ！！   </dd></dl>
+<dl style="color:#2e8b57" class="zatsudan"><dt>大倉 太陽</dt><dd>    おつ〜   </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    CC&lt;=79　【目星】 (1D100&lt;=79) ボーナス・ペナルティダイス[0] ＞ 26 ＞ 26 ＞ ハード成功  </dd></dl>
+<dl style="color:#2e8b57" class="group tab_0"><dt>大倉 太陽</dt><dd>    Bye……   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
