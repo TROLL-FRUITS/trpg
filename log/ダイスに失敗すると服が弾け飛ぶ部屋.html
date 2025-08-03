@@ -1,0 +1,1810 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>ダイスに失敗すると服が弾け飛ぶ部屋</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+.tab_0{}
+.tab_0.selected{display: none;}
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+<label for="tab_0"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="tab_0">情報</label>
+</header>
+<div class="wrapper">
+<h1>ダイスに失敗すると服が弾け飛ぶ部屋</h1>
+<h2 id="day1">ダイスに失敗すると服が弾け飛ぶ部屋</h2>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    20XX年　○月✕日　AM10：12<br><br>幸太郎宅にて。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    突然だが、この世界にコロナなどは存在しない。<br>していたとしても既に終息した未来の世界線だ。<br>だから外出自粛する必要も当然ないのである。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして今日は休日！　空は雲一つない晴天！<br>となると……　外出するっきゃない！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そう思い立ったか、或いはやむを得ない事情があったかであなたは街へ繰り出すことになったのだが……。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    玄関に向けて一歩踏み出した瞬間、視界がぐにゃりと歪む。<br>まっすぐ立つこともままならず、平衡感覚を失った体は傾ぎ、そのまま顔面から床に倒れる……と思ったところで意識が途切れた。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    〜〜〜〜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目を覚ますとあなたは見知らぬ白い部屋にいた。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは椅子に座っているようだが、それだけではない。<br>どうやら座った姿勢のまま縄で椅子に縛り付けられているようだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    自分は出掛けようとしていたはずなのに、一体どうしてこんな事態に？<br>しかしそんな事、いくら考えても見当がつくはずもなく。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    この状況にあなたは混乱しているか、一周回って冷静になっているか、どちらにせよあなたは何となしに横を見ることになるだろう。<br><br>すると、そこには自分と同じように椅子に括り付けられた状態で意識を失っている人間がいることに気づいた。 
+  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    探索開始です。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おや……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「こんな歳にもなって誘拐されたんですかね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「（そして僕と同じ状態の方が一人……）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あのー」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「起きてくださーい<br>寝てるような場合じゃないですよー」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    隣の人に声をかけます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたが声を掛けると、それに反応するように隣の人間の瞼がピクリと動く。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    その人物はゆっくりと瞳を開き、あなたの姿を認めると怪訝そうに目を細めました。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………　え、誰ですか……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    見た感じ高校生くらいの少年ですね。<br>あなたを認識してはいますが、まだ半分夢の中……といった感じです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あぁ、目が覚めたようで」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おはようございます。よく眠れましたか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「はあ……？　え？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年はあなたに一層怪しむような視線を向けると、半目で周囲を見回し始めます。そしてやがて自分の体を縛り付けている縄の存在に気がつきますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……って、なんですかぁこれ！？！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ようやくおっきしたようです。おはよう！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「状況が飲み込めたようで良かったです」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやぁ、なんなんでしょうねこれ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いや飲み込めましたけど！　寝ぼけてた目もバッチリ覚めましたけど！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ていうかあなた冷静すぎません！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年は縄から抜け出そうと暴れているようですが、縄は一向に解ける気配もありませんね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやいや、そんなことないですよ。物凄く困ってます」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    困ったような表情はしてないですね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    てめえ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まぁそんな事言いながらここで辺りを見回します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    はい、あなたは白い部屋を見回しました。<br><br>天井の角にはカメラのようなものがあり、目の前には扉が一つ。<br>そしてその扉の丁度上あたりにモニターがあるようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    モニターよく見てみます<br>なにか気になるところは   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたはモニターを注意深く観察しますね。<br><br>モニターにはどうやら何処かの部屋が映し出されているようです。<br>二脚の椅子が置いてある白い部屋。<br>この部屋と同じように見えますが、見た限りではこの部屋には自分達が括り付けられているもの以外に椅子は見当たらないので別の部屋なのでしょう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして先程から「ｽﾞｿﾞｿﾞ……　ｽﾞｿﾞｿﾞｿﾞ……」という何かを啜るような音がモニター越しに聞こえています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「カメラとモニター、それから扉がありますが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「モニター越しにですが何か音がしますね。なんでしょう……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    刃物どっか落ちてねぇかなーー   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うえぇ……？　まあ……確かに、言われてみれば……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「この変な音、モニターからしてたんですね……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    刃物はないです。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、あなた達が訝しげにモニターを見ていると。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    口で噛み切るしかねぇ(無理)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>モニター音声</dt><dd>    『ｽﾞｿﾞｿﾞ……』   </dd></dl>
+<dl style="color:#888888" class="main"><dt>モニター音声</dt><dd>    『……ん？　あ、起きた？』   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だれだおめぇ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    という声がします。<br>同時に、啜るような音も止みますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして、モニターの画面に映し出された部屋の外側から一人の人物が現れます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年とも少女ともつかないような容貌の人物。<br>やけに珍妙な服を着ているが、コスプレだろうか……？   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「よっこいしょ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ふ〜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    その人物は椅子に腰掛けるとあなた達に向けてにっこりと微笑むだろう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    にっこり返ししてやる   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    手に持っているのは……ラーメン？<br>先程まで聞こえていた何かを啜るような音の正体は恐らくこれだろうと推測できる。<br>もう片方の手にはフォークのようなスプーンのような奇妙な形をした食器を持っている。<br>どこかで見たような……。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「やあやあ、君達が中々目を覚まさないからつい今しがたラーメン食べ始めちゃってね……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「麺が伸びたら嫌だから自己紹介でもしててくれる？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    もちろんチリトマトだよな？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    スガキヤって言ってんでしょ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    言ってないが。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年は絶句しています。<br>まともな奴はいないのか。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    少し考えてから   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「知らない方に名乗るのはちょっと」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    流石にね   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「急な正論！？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    子供じゃないからね   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「まあまあそう言わずにさ！　こうして会ったのも何かの縁……とか言うじゃん？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「頼むから僕にラーメン食べる時間をくれない？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「え〜」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そう話してる合間もモニターの人物はラーメンを啜り続けています。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「いやまあしたくないならいいけどね」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁあなたの名前も教えてくださるのなら全然良いんですけど」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「勿論僕も自己紹介はするよ！　社会人……いや社会神として当然の礼儀だね……！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「でもそれはラーメン食べた後ね。まずは君達同士で自己紹介をしなよ。この後一緒にあくせく頑張るパートナーだろ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ｽﾞｿﾞｿﾞ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「パートナー？そうなんですか？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    何も知らないであろう潮くんに尋ねます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いや僕に聞かれても！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁそうですよね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「その「まあ知ってましたけど」みたいな反応！　だったら聞かないでくださいよ！　さては僕で遊んでますね！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターの人物はあなた達を見てけらけら笑っているようです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いや〜そんなことないですよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「もうやだ僕この人苦手ですおとうさんおかあさん……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年は半泣きですね。可哀想に。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎はずっとにこにこしてますね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    サイコ！　サイコ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……まぁ、自己紹介はしときましょうか。名前がわからないのも不便ですので」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「初めまして、僕は水船 幸太郎といいます。カウンセラーです」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「カウン、セラー……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年は鳩が豆鉄砲を食らったような顔をしています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「え？なにか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「イ、イエ、ナンデモ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぼ、僕も名乗らないといけない流れですよね……？　うぅ、誘拐されて自己紹介させられるって意味わかんないですって……　うえぇ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    可哀想…   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「み、御手洗 潮です……　ヨロシク、オネガイシマス」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    少年はあなたと目を合わせようとしませんね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    自己紹介を終えたところで。<br>モニターを見ると、いつの間にかそこにいた人物はラーメンを片付けて座っていますね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「よくできました！　いやあ、君達はえらいね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「さて、じゃあそろそろ僕の方から……いいかな？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい、どうぞ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ラーメンは片付けられましたが、何故かスプーンのようなフォークのような謎の食器だけは持ち続けているようです。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「よぉし」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「まずはご挨拶だ。僕の暇つぶしに付き合ってくれてありがとう！　……まあ僕が無理矢理連れて来たんだけど」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「僕はナイン、今回の企画の主催者だよ。ナインくんでも、ナインちゃんでも好きなように呼んでくれて構わないさ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「それで、早速今回の企画についての説明をしようと思うんだけど……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ごくり……   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「今回の企画はなんと……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんと……？   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「説明するよりもやってみた方が早いね！　何、君達は二人で協力し合いながらこの場所から脱出すればいいだけさ！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「その為にはまず縄を解かないといけないね。大丈夫大丈夫、そんなにキツく縛ってないはずだから君達に器用さがあれば余裕で抜け出せるよ。力任せに引きちぎることも不可能ではないかも？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「そういうことだから、僕はずっとここで見てるからね。せいぜい頑張ってくれたまえ〜」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    STRゴリラの出番ですか   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そうです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はぁ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは何処から取り出したのか、ポップコーンが入った容器を膝に乗せるとニコニコとあなた達の観察を始めました。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ちょ、雑すぎません……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「勝手に連れて来たんだからそれくらいはちゃんとしてくださいよ！　怠慢！　ばーかばーか！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮が喚いてますが、ナインはどこ吹く風です。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「力任せに……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ここで試しに引きちぎりチャレンジしたいと思う   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    縄を解く場合はDEXもしくはSTR、手さばきの判定になります。幸太郎さんはSTRで判定ですね、どうぞ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=85　【STR】 (1D100&lt;=85) ＞ 9 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「（試してみるか……）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではあなたが精一杯力むと……<br>ブチブチィッ！という悲痛な断末魔と共に、体を縛り付けていた縄はちぎれていきますね。<br>あなたは自由を取り戻します。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………あっ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「なんか引きちぎれちゃいました」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「〜〜〜〜っ！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は声にならない悲鳴を上げました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「案外脆いのかもしれませんね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、な、なるほど……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「じ、じゃあ僕も……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    自由を取り戻したので立ち上がろう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ｽｯ……（立ち上がる音）<br>横では潮もあなたを真似て力み始めますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「頑張ってください」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 3  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では縄はあなたの時と同様に無惨にちぎれ飛びました。どうやら縄が脆かったようです。（ヤケクソ）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おお、やりましたね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「な、なーんだ　本当に縄が脆かったんですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    縄が脆くて良かった〜〜   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「もう、ビックリさせないでくださいよ！　水船さんがとんでもない怪力おばけなのかと思ったじゃないですか……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は胸を撫で下ろしていますね。<br>お前は何も知らなくていいんだよ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインはと言うと、あなた達の様子を見てつまらなそうに体を揺らしています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「怪力おばけだなんてそんな訳……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、双方自由の身になりました。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ないですよねー！　いやほんと、忘れてください」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    キャッキャ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ふふ……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    にこにこしてますね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    改めて部屋の描写を。<br>この白い部屋にはモニター、カメラの他に扉が一つあります。それだけですね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「さて、自由に動けるようになった事ですし……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    扉の方に行こう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮もそれに続きますね。<br>さっきまでの警戒心はどこへやら。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、扉の前まで来ました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    開くか調べようね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    難なく開きそうですね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あ、開くようですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    扉開けまーす   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    オープンセサミ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「脱出が目的なのに鍵とかかかってないんですね……。案外簡単に出られるかも……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「だと良いですが……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉を開くと、その先には今度は一面緑の部屋がありました。<br><br>相変わらず正方形の部屋で、全ての面に扉があります。<br>つまり、今しがた入ってきた扉以外に3つ存在するということですね。<br>ここにも監視カメラとモニターがあり、モニターは正面の扉上に位置しているようです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「目に優しい部屋ですね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターでは相変わらずナインがこちらを観ています。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ホントですね……　あんまり趣味がいいとは言えませんけど……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ていうかやっぱり雑じゃありません？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はキョロキョロと落ち着きがないですね。<br>こういう状況には慣れていないのでしょう。<br>まあ普通慣れてないんですけど。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「内装は凝っておくべきですよね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「緑は確かに落ち着きますけど、全面緑よりはさっきみたいな白い部屋に観葉植物とか置いてる方がまだいいですよね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何の話してんだよ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「本当ですよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ナインくん言われてるぞ   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「うるさいなあもう」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインはぶーたれてますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    右側の扉から行ってみよう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    右の扉ですね。<br>どうやらこの扉は少し開いているようです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「次からはそうしてみるといいですよ、ナインさん」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「そしたら次も来てくれるかい？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    アドバイスしてから扉に聞き耳……って思ったけどこれ危ないんだよね(50%しかない)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    振ってもいいんだよ♡   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いえ、僕は遠慮しときます」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「いやん、いけず。いいもんね、僕には潮くんがいるから〜」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いませんよ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ギャーギャーやっています。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    50%は信用できないのよ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    その様子をニコニコ眺めてます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんは20％だけどな。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ごめん嘘ついた。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    21％/////   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    少し開いてるってことは隙間から覗けるってことで？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そうですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    1%は大きいんだぞ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    では覗こう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    覗いてみると、向こう側には一面真っ赤な部屋が見えます。ここから見える範囲だと、どうやら人が倒れているようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    死んでる…！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……誰か倒れてますね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ええ！？　だ、誰ですか！？（小声）」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「まさか僕達以外にも連れて来られた人が……？　でもあのコスプレの人は僕と水船さんをパートナーって言ってたし……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え、いや本当に誰……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はあなたの後ろに隠れていますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「誰でしょうね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……とりあえず調べてみなければ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うう……　帰りたい……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「急に起きて襲って来たら怖いですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    とか言いつつ扉をそっと開けます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「や、やめてくださいよ！　ゾンビじゃないんですから……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉が開かれました。<br><br>そこは一面赤の部屋。<br>相変わらずの監視カメラと、正面の壁にモニターがあります。<br>その他で目につく物といえば冷蔵庫、スロット台、自動販売機、カーテン付きの窓、絵画など。<br>そして、部屋の中心あたりには白衣の男が倒れていますね。<br>   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    白衣の男に近づくぞぉ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    近づきました。<br>潮があなたの背から恐る恐る顔を出してみたりしてますが、白衣の男が起きて襲ってくる気配はありませんね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だれだおめぇ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    知らない男です。（当たり前）   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    肩ぽんぽんしてみます<br>てか生きてる？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたが肩を叩いても白衣の男は「うーん、うーん」と唸るばかりで目を覚ます気配がありません。悪い夢でも見ているのでしょうか？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    白衣の男には目星が振れますが、どうしましょう？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「よく眠ってらっしゃる……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ふります！w   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 44 ＞ 成功  </dd></dl>
+<dl style="color:#888888" class="group tab_0"><dt>KP</dt><dd>    目星：<br>部屋が赤いせいで気がつかなかったが、男の下に赤い水溜まりが出来ていることに気づく。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これは……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ど、どうかしたんですか……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男の体になんか刺された痕とかそういうのはないので？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    見た感じはないですね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「この方の下に水溜まりが出来ていたので」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「水溜まり……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    言われて、潮もその存在に気がつくことでしょう。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う、うわあッ！！　血ですか、これ！？！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「見た感じ外傷は見当たりませんが……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    トマトジュースかもしれない<br>冷蔵庫見に行こう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何の変哲もない普通の冷蔵庫です。<br>カレンダーが掛けられていますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    冷蔵庫ぱかー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    開けて見ると、スーパーのスイーツが大量に冷やしてありますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れますが、どうしましょう？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ふるぜふるぜ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 78 ＞ 失敗  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あーあ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    メガネが！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では幸太郎さんは1d8を振ってください。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d8 (1D8) ＞ 8  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは冷蔵庫を調べる。<br>結果、得られる物は何も無いと判断することでしょう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    瞬間。<br>パァン！という豪快な破裂音と共にあなたの革靴が弾け飛び、消えます。破片すら残さず。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まさに、“消えた”と言って相違ない現象です。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あぁ！高かったのに！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……は？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「？？？？？？？？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ヒュー！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターから歓声が上がりますね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「想像以上の出来だね、流石は僕！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これは一体どういうことなんでしょうか」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「というわけで、そう！　これが今回の企画の全容だよ！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「要するにだね、君達に課せられた試練は……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「“ダイスロールに失敗する度に身につけているものが一つ弾け飛ぶ部屋からの脱出”……というわけさ！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    流石に幸太郎も困惑してる   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何処からか拍手喝采の音源が流れます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「弾け……飛ぶ……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「身につけている……ものが……？？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「そう言ったね」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやあの身につけているものが弾け飛ぶ……っていうインパクトが強かったので尋ねることが出来なかったのですが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ダイスロール……とは？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「細かいことは気にしなくていいのさ。君達は探索さえしてくれればいい」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「は、はぁ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは笑顔で続けます。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「まあ泣かないで、怒らないでよ。ちゃんと脱出できた時のご褒美も用意してあるから。何かはまだ言えないけど、とびっきりの物だから期待しておいて！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「にしても、革靴かぁ……　ま、最初はこんなもんだね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「良かったねえ、初っ端から大事な布が弾け飛ばなくてさ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そうですね……そうですけれども……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    革靴を失って普通にショック受けてそう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    可哀想。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「あ、ちなみに」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「君達の今の様子はカメラを通して全国のテレビに生中継されてるよ。つまり、展開によっては君達のあられもない姿がお茶の間に晒されてしまうんだ……！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「というわけだから、これは君達の沽券を賭けた戦いだよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    絶句しちゃう   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「当然、犠牲にする物が無くなった場合はゲームオーバー扱いでご褒美もナシになるから」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ただただ生き恥晒したく無ければ心して、全身全霊で挑むように！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「以上！　ガンバ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは静かになりますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    深呼吸しようね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ｽｩﾊｧ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………さ、早くこの部屋から脱出出来るように頑張りましょうか！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「最悪この方から服を剥ぎましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いやいやいやいやいや、順応早すぎでしょ！？　ここ、泣いて喚いて暴れてもいい場面ですよ！？！？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    この方(白衣の男)   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、でもそれはいいかも……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    白衣の男は「うーん、うーん」と唸っています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いや流石に泣いて喚いて暴れるのは大人としてどうかと思いますので……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さんなら許されると思いますよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あーそうですか！　残念ですね！　でも僕は子供ですから！　まだ16ですから！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うわーーーーん！　なんでだよーーー！　なんでいつも僕ばっかりこんな理不尽な目に遭うんだよーーーー！　神様のバカヤローーーーー！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「いやあ、バカでごめんよ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あんたに言ってませんよ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「本当は僕だって泣きたいですよ。あの革靴高かったですし……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はぁ…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「お金より世間の信頼でしょ！？　僕達、社会的に死ぬかもしれないんですよ！？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    内心キレてそうなやつ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あああああ勘弁してくださいよお父さんお母さんこれは違うんです先生方誤解ですああ僕を見ないで誰も見ないで……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は頭を抱えています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「それはそうですけど……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「結局は泣いたり暴れたところで何も解決しません。僕たちは一刻も早くここから出る事が最優先です」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うぅ……　正論……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「僕まだ高校生なのに……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は半べそをかいています。<br>ちなみにご存知かと思いますが潮くんは今回協力NPCのポジションにいますので、お気軽に判定の代打をお頼みください。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「未来ある若者にこんな仕打ちは許されませんね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「水船さんもまだまだお若そうですけどね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そうですか？そう見えるなら何よりです」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ｱ、ﾊｲ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……そろそろ再開しましょうか。早くこんなところからおさらばするために…」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う……　それしか方法が無いなら……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    内心焦ってるからね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    メガネが逝ったら目星に支障が出るもんね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はぁ…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……あっ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……いや、やめときましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「（どうせなら女性が良かったですよね〜とか言って場を和ませようと思いましたが、本当に生中継でもされてたら本当に大変な事になるからやめておきましょう）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    サイテー！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まぁ幸太郎だからね   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    スロット台みにいきまーす   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎さんが第2の性欲魔神に片足を突っ込んだところでスロット台ですね。<br><br>説明書きによると1回100円でできるようです。
+<br>揃った絵柄に応じた報酬（金）を獲得できる仕組みのよう。
+<br>絵柄はニコちゃんマーク、四葉のクローバーのマーク、『7』のマーク、虹色に輝く『9』のマークがあります。 
+  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れますが、どうしましょう？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    潮くん…☺️   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は何かを感じたのか身震いしている……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「スロット台ですが……こんなところにあると言うことは何か意味が……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ちょっと場違いですよね……　それだけに怪しい……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    スロット台を眺めてます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮もそれを見て同様にスロット台を観察し始めますね。代打を頼みますか？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何か気になるところありそうです？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    頼んだ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    脱衣戦争のｶｹﾋｷ。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 9  </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……あ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は何かを見つけたのか、その場にしゃがみこみますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして、何かを拾い上げます。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「100円、落ちてました」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたに手渡して来ますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「100円が……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「つまりこの100円でスロットをしろという……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「必要ありますかね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ないですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「じゃあ別にやらなくてもいいんでは？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そうですね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ～完～   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁそのうち必要になる仕掛けがあるかもしれませんし、この100円は保管しておきましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「僕もそれに賛成です」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    てことで100円は保管しておこうね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    しまわれました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    次は自販機だ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    自動販売機です。<br>しかし売られているのは飲料ではないようですね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    お品書き<br><br>アイスクリーム　100円<br>イカした眼鏡　　300円<br>ギャルのパンツ　500円<br>丈夫な手袋　　　700円<br>最新のゲーム機　5000円   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    燃料ですか？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「アイスクリームしか買えませんね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「押さないでくださいよ。絶対に押さないでくださいよ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「フリですか……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「違いますよッッッ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ははは」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「このイカした眼鏡と丈夫な手袋は残機に使えそうですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「それは確かに……　どうしても必要になったら、スロット台でお金を増やしてって感じですかね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「悪い大人になった気分……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんは多分将来タバコ吸わない。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さんは悪い大人になっては……いやならないでしょうね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「当たり前です！　風紀を大事にしてますから！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい、とても良いと思います」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そうですそうです、ふふん」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    不良校唯一の良心だからね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    優等生だからね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    忘れてたけど自販機にも目星振れますよ。<br>どうしましょう？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ふるわよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 88 ＞ 失敗  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1d7でどうぞ♡   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d7 (1D7) ＞ 1  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では眼鏡が弾け飛びます。<br>中国製だったのカナ？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    眼鏡は消えます。跡形もないです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うわっ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぎゃー！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターに映るナインがゲラゲラと笑っているのが視界の端に見えます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「眼鏡が……あぁ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、あわわ……　目に破片とか入ってません……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    失明の危機に陥るところだった   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    破片は消えたので無傷です。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「入ってないようですが……うぅん……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「眼鏡かけてるってことは、あれですよね……。あんまり視力が……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「こうなってしまっては僕は戦力になりませんね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「目が悪いから眼鏡を掛けているので……まぁ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「だ、ダメですよ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「諦めたらそこで試合終了ですよ！？！？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「眼鏡がなくても大丈夫！　水船さんならできる！　やればできる！　YDK！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「最悪スロット回して眼鏡取ればいいですし！　度が合うかわかりませんけど……（小声）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は何やら必死な様子。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さん…………（必死だなぁ）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁ出来る限りは頑張りますけど……協力はお願いしますね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そ、それは勿論……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    胸を撫で下ろしています。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ｽ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ああ！（雑談タブ使おうとしてた）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まあログ出力は多分全部手入力になるのでなんでもいいです（草）   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    間違って編集しちゃった   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ｽ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    BGM流してっと   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    再開するか〜〜！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    えーとね   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ｳｨ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎さんは眼鏡がお逝きになったから次から目星ペナルティダイスね♡   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ということで再開！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんて厳しい世界なんだ…   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    潮くん、よろしくな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    だからパンツを飛ばしておけと……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    それはほんとだめ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ズボン飛ばなきゃセーフだよ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ズボン飛んだらアウトなんだよ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    次は窓だな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ほほう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    窓は外側から目張りがされているようで外の様子がわかりませんね。カーテンはただのカーテンのようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あ、まって   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まーつーわ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    自販機目星失敗してるから潮くんにも振ってもらいたかったんだった   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    えぇ〜？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    仕方ないなぁ〜   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    頼む〜〜〜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では時が戻ります。<br>あなた達はまだ窓に近づいていません。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんは自動販売機をくまなく調べますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 41  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ｲｴ〜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    彼は再び「あ、」と声を上げます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてしゃがみこみ何かを拾い上げる……。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ここにも100円、落ちてましたね……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ということで所持金が200円になります。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    めっちゃお金落としてるじゃん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    神のお恵みだよ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これはこれは。ラッキーですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ううん……　いいんでしょうか……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「なんて気にしてる場合じゃないですね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    でもやっぱりちょっと複雑そう。<br>拾ったお金は交番に届けるタイプ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これくらい許されますよ。僕たちなんて拉致監禁されてる上にその様子を生中継されてるようですから」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そ、それはそうです！　本当にそうですよ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「許せませんよ！　出たら絶対に訴えましょう！　ていうか警察は動いてるんですかね！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「さぁ……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あう……　何か嫌な事故が起こる前に外に出るなり助けてもらうなりしたいです……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    常識人は大変だなあ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「動いてないならこの国は終わりでしょうね〜」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    生中継されてるかとかはまだ信じ切ってない幸太郎です   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    本当にされてたら激おこプンプン丸   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    激おこプンプン丸で済めば警察いらんのよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほんとだよ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    じゃあ今度こそ窓に行きます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ほほう（take2）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    窓は外側から目張りがされているようで外の様子がわかりませんね。カーテンはただのカーテンのようです。（take2）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    例のごとく目星は振れます。<br>振るか振らないかはあなた次第。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    振りたいけどペナルティいくつ入る？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1つ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1d10を1回振るんだよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    窓では振りたくないナ…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    窓さん「解せぬ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よし(潮くんに頼もう)   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    自然にRPするぞ〜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    なんか「自然にRP」って文面見て草木に話しかけるのかと思っちゃった。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    また幸太郎狂気に陥ってるじゃん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎、それさっちゃんやない。<br>杉の木や！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「目張りがされてて外の景色が見る事が出来ませんね……。一体僕らはどこに居るんでしょう」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    景色って言えばよかったかも   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    修正できるじゃろ？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾖｼ!   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾍﾞﾝﾘ!   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うーん……　何か隙間とか、ありませんかね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「隙間……やはり眼鏡がないとよく見えませんね……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    めっちゃ目を凝らしています   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぼ、僕が探しましょうか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あぁ……お願いしてもいいですか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「水船さんばかりにお願いするわけにもいきませんからね……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    本当は嫌ですけどって顔をしている。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 40  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    君は優秀だな？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    出目がいい！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やっぱりこれ潮くんにお願いしたら上手くいくのでわ？？   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、水船さん。ここに小さい穴が空いてますよ。外の様子が見られるかも」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は目張り板に空いた本当に小さな穴を指し示し、そこを覗くように顔を近づけますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>       </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「外の景色は…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………森？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「森みたいです、ここ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「も、森……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「は、はい。だって、一面緑……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は穴から目を離します。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎も覗かせてもらおう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では、それを聞いた幸太郎さんも穴から外を見ますね。潮の言う通り、外には鬱蒼とした森が広がっているようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    一体どこに連れて来られたんだろうな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「森ですね……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    穴から目を離します   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「別に外がどんなだっていいじゃないか〜。どうせ君達にはここに留まるか外に出るかしかないんだからさ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    な〜んて茶々が飛んできます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    一面緑から一面赤にカムバックしました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    無視しとこう()   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんも無視しましたね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    可哀想   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ハブられナインくん。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    では次は絵画だ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    壁にかけられた絵画を見てみました。<br>様々な色を混ぜ合わせた抽象画のように見えますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    芸術家ならばその価値がわかるのかもしれませんが。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    例のごとく目星が振れます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    芸術家ではないが芸術家(絵画)を50%持ってます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それも振れます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だから振るというわけではないがな！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    50%とか信用できねぇ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    視聴率下がっちゃうよ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    下がれ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    正　論   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まぁ目星振っとくかな……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    怖いわ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 35 ＞ 成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1d10もね！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d10 (1D10) ＞ 5  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では55で成功ですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾖｼ!   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    もうめんどいから情報もこっちに貼るね。（滅茶苦茶）   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    草   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星の結果、あなたは絵画の右端に名前が書いてあることに気づきます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そこには『ナイン♡』と書かれており、この絵画がナインの描いた特に意味の無い絵画なのだと気づかされた……。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    キレそう   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「おっと、サインは外に出てからでお願いね！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そんな声がモニターから聞こえました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あ、結構です」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「素直じゃないんだから」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインはモニター越しに投げキッスをしているようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    モニターから目を離しました🤗   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    冷蔵庫の目星失敗してるけどとりあえず今は大丈夫じゃな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    となると次は〜？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    一通り調べたけど赤い水溜まりがねぇ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    相変わらず唸り続けている白衣の男の下に相変わらず広がっている赤い水溜まりです。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    僕らの方は気の抜けたBGM流れてるけど、探索者側のBGMは今白衣の男の唸り声なんだな。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男ってうつ伏せで倒れてる？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    うつ伏せですね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    だが顔だけ横向いてます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    仰向けに起こしてみても？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    良いでしょう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よし男に近づいて起こすぞ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは白衣の男を仰向けにしました。<br>服の前面に赤いものが大量に付着していますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてあなたは気づくでしょう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    トマト…！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ムムッ、におうぞ……！<br>この香り……！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ケチャップだ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    以上です。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    トマトジュースじゃなかった。。。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あんまりさらさらしてなかった……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これ……ケチャップですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………………………………………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は真顔です。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    そらそうやんな   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………まあ、なんか」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「よかったですね、死んでなくて」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は真顔です。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁ……それはそうですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎も真顔です   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そらあんなうんうん言ってて死んでたらビックリだが。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ついでに白衣剥いどきます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎はケチャップまみれの白衣をゲッツ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「（汚い）」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「（ケチャップくさい）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    白衣身につけますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まだ身につけないで手に持ってます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    はいはい。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「この部屋はこれくらいでしょうか」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そうですね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「今のところスロット台を使う必要もないですしね。別の部屋にも行ってみましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「は、はい」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    部屋から出よう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では緑の部屋に戻って来ました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ここから向かいの部屋に行ってみよう   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    左の部屋だな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    左の部屋へ向かいますね。<br>扉は閉じられており、何やら張り紙がしてあるようです。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そこには『押すか、引くかだ。』と書いています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「押すか引くか……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「どっちがいいですか？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    恋のｶｹﾋｷじゃないよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    潮くんに   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「えぇ……　水船さんの好きな方で……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「では引いてみましょう」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ひきまーーす   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    チッ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    引いてみると、扉は難なく開かれますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やったぜ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    今度は一面青の部屋に出た。<br>相変わらずの監視カメラと、正面の壁にモニターがある。<br>その他で目につく物といえば子供が使うような勉強机と備え付けの椅子、ベッド、洋服棚、背の高い本棚くらいだ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    食欲が…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    食欲減退カラー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    おなかすいてきちゃった。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「子供部屋かなんかですかね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「どうなんですかね……。これも全部あのコスプレの……ナインさん？が用意したんだとしたら、特に意味は無い可能性も……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さっきまでクソ情報続きだったので目が据わっているようです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁ一通り調べた方が良いかと思いますし」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    また意味のないものあるんだろうなぁって思いながら言ってます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    存分に失敗してくれ。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そうですね。あーあ、いつ外に出られるのかな……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まずは勉強机からいこうね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    机の上は散らかっている。<br>何か脱出の手掛かりになるものはあるのだろうか……。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    目星ｺﾜｲﾖｰ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    振ります   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 6 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d10 (1D10) ＞ 9  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ペナルティやめん？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    やめません。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これ眼鏡キャラきつくね？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    浅慮だったな！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では1d7を2回振ってね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾔﾀﾞﾖｰ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ダイスの女神は君の味方さ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d7 (1D7) ＞ 4  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d7 (1D7) ＞ 4  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1d6振って（）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d6 (1D6) ＞ 5  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やばくね？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんかやばい気がするんだけど   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではあなたの下着（上）と靴下が爆発四散しました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あっぶねぇ………   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    KPまでハラハラしてるよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なぁ、やっぱりこれきついって   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そんなこと言っても帰れないよ♡   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    めちゃくちゃ厚着してて眼鏡してない奴で来るんだった……！！！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    誰やねん。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    下着5枚くらい履け   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    机なんて見てる場合じゃありませんでしたね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うっ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うわあまた爆発した！　今度は靴下ですか！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    下着（上）が消えたことには気づいてないっぽい。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いえ……シャツも…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    正直太郎。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎裸足になっちゃった   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「い、一度に二つも……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「それってルール違反では！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さん……僕はもう非常に危険な状態です」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ﾋｴ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「お願いしますね……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    にこにこしたいけどひきつってますね   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ま、まだ諦めないでくださいよぉ！　お願いですからぁ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「で、でもそうですね……。これ以上は放送事故になりかねない……いやもうこの企画自体事故ですけど」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「な、なるべく頑張ります……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    てことで目星頼んだぞ♡   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 46  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やっぱり任せた方がいい(ペナルティないし)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は冷静に机の上を調べます。<br>そして折り畳まれた紙を一枚引き抜きますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「こんなものがありましたよ。メモ紙……？みたいな」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎さんに手渡して来ますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    みるぜみるぜみるぜ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    メモ紙を開いて見てみると、   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    『どうやら奴らは俺のカードキーを狙っているらしい。白衣のポケットなんぞに入れておいたらすれ違いざまに抜かれてしまうかもしれない。そんなことではダメだ。もっと見えない場所に隠さないと……』   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    と書かれていましたね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「カードキー？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「カードキーがあるんですか？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮も覗き込んでいます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    一応白衣のポッケ漁ってみます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何もありませんね。<br>ケチャップが手につきました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    汚い   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    なんだと！　ケチャップにあやまれ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    白衣のケチャップがついてない部分で拭こう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    白衣にケチャップがつきました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    また汚れちゃった…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    こうして広がっていくのね……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい。恐らくですが」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ということは、それが無いと開かない扉があるのかも……。それって、出口の可能性高いですよね！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は元気になりました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そうかもしれません。しかしどこかに隠してるようですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    裏面も確認しとこ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うーん、どこに隠してあるんでしょう。もっと見えない場所……　見えない場所……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    驚きの白さ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    白衣もこの白さを見習いな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    赤衣。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「見えない場所……そのうち見つかるといいですが……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    一応椅子も確認してみよう。<br>椅子の裏にカードキーを貼り付けてるかもしれない(？)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何の変哲もない普通の椅子のように見える。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    裏を調べますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    調べます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    椅子の裏を見ると、テープで紙が貼り付けてあることに気づいた。<br><br>……しかし、あっかんべーをしている猫のような兎のような狐のような耳長の生物の絵が描かれているだけだった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    裏って宣言したから目星省けてよかったね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いぇあ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まあなんの成果も得られてないが。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    剥がしとこう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    剥がされました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ベリィ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    意味はないが折り畳んで持ち物に加えます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    奇妙な生物のどこかムカつくイラストをゲッツ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    わーい   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    次はベッドよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    簡素なパイプベッド。寝心地はあまり良くなさそうだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    毛布とか枕はある？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    無いね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    シーツならあるよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    シーツ剥がそうかな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    難なく剥せるでしょうね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    今度は何もないかなー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れますが。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    くっ……ダイスを振る運命……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    振らなくてもいいんだよ♡   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うーん……何かありそうですか？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ベッドの下とか覗き込みながら言ってます。目星は潮くんｵﾈｶﾞｲｼﾏｽ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「えーと……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 41  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    40台が多いね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮もあなたと同じようにベッドの下を覗き込みますね。ベッドの下はとても暗い、異様なほどに暗い……ですが。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……奥に何かありますね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    おっっっ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「こう、薄い……　雑誌のような……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    えっちな本！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    へんたい！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さいてー！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「薄い雑誌……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    言われたら分かります？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    わかりますね、言われてみれば。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    取れそうかな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    取ろうと思えば。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    取ります   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではあなたはベッドの下の雑誌を引っ張り出しました。<br><br>……ただのゴシップ誌のようです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    えっちな本だったら男の顔に被せたろって思ってた   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パラパラ〜っとめくってみよう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    起きた瞬間鼻血出しちゃうでしょ。<br>あの部屋をどれだけ赤くしたら気が済むんですか。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さらっと見てみると、ゴシップ誌に見えたのは表紙だけで中身は思いっきりグラビア誌でした。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やっぱ被せてもいいね   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「えっちな本かと思ったでしょ？　違ったと思ったでしょ？　えっちな本なんだよねえ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「見かけによらないって、人間もそうだよね。深いと思わない？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そんな声がモニターから聞こえました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おやおや」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「し、しまってくださいよ！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    はははってしてます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「脱出関係ない！　必要ない！　ヨシ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何か挟まってるかもしれないと思ったのですが……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    何か挟んである感じはないよね？   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「と、とか言って……　本当は見たいだけだったり……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    無いですね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁ男ですからね。興味がないというわけではないですし」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    言いやがったぞ。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「き、教育に悪いったら！　助けて、PTA！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁ趣味ではないですけど。こちらの雑誌は先程の男性の元にお供えしときましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「なぜ！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ？嬉しいかなぁと思って」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……………………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    沈黙が流れました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ははは」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    雑誌を閉じました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ﾊﾟﾀﾑ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さて洋服棚   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    洋服棚です。魔法陣はありません。<br>中に服は入っておらず、代わりに棚の壁にいかにも怪しい赤いボタンがあった。<br>ボタンの上には『PUSH！』と赤字で書かれており、そこからボタンに向けて矢印が何本も伸びている。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「押してもいいですよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「嫌ですよ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いかにも怪しいのに！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「な、なんですかその反応……　じゃあ水船さんが押せばいいじゃないですか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いえ……これで身につけてるものが弾け飛んだらちょっと……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「触らぬ神に祟りなしですよ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「とりあえずボタンは置いといて……他に何か……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    洋服棚って両開きの？<br>引き出しとかはあるのかな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    両開きです。<br>引き出しはなさそう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ふむふむ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    この部屋の扉の張り紙の押すか引くか関係ありそう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    なる……ほど……！？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    しらんけど(しらんけど)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    （天下無双）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「小さく見えないような字で何か他に書いてあったりしませんかね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「何かって何です……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いかにも怪しいですし……さっきの椅子の裏にあった落書きとか……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さっきの剥がした紙を広げながら言ってる   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「それ見つけなくてもいいやつ！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これが引っ掛けであればそういうものも見つかるかと思いまして」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星、振らないのかい？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    振ってもらいたいんだ🥺   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    じゃあそう言いな！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「えぇ〜……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は渋々といった感じで洋服棚に目を凝らしますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 67  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてふと、潮は気づく。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「（矢印、一本だけ紫インクだ……。赤のペンのインクが切れたのかな……）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてあなたに向き直ります。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「何も無いですね」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何も無いですか……ではこのボタンは触らないでおいた方が良さそうですね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「今は」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「今は」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そのうち押さないといけない状況になるかもしれませんからね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そんな状況にならないで欲しいんですけど……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そうですねぇ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「緊張感がない……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやいやそんなことないですよ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「身につけてる物が結構弾け飛んでますし……結構余裕ないんですよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これはガチ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「まあもう飛んだらやばい物しか残ってないですからね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いや、でも逆に豪運……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「最初から下着が弾けたらとんでもないですからね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さて本棚よ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    こ●亀が全巻収納されている。<br>どうやら200巻まであるらしい……。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やべぇ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目星が振れますが。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ちなみに振らないという選択肢もあるんやで。（過剰探索には酷な選択）   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    目星を振るのがこんなに怖くなる日が来るなんて   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    本棚は振りたくなってしまう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    じゃあ振っていいよ♡   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    コワイヨー   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ここで赤衣を装備してもいいですか？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いいでしょう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎の防御力が上がりました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾖｼ!   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    じゃ、振るか(死)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    運命のダイスロール！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 56 ＞ 成功  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ﾊｧﾊｧ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d10 (1D10) ＞ 5  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よーーーーーーし   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは何となく本棚の中から1冊抜き取り、中身を流し見してみました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてふと、違和感に気がつきます。<br><br>……これ、カバーが違うだけで全部1巻だ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    1巻大好きかよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あの頃はよかった。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……これ、全部1巻ですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「なぜ？？？？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「1巻しか気に入らなかったのでしょう……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ノンノン」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「全200巻もあるのにタダで読ませるなんて、とんでもない！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「その1巻は最近電子書籍でよく見る試し読みってやつだよ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「続きは買って読んでね！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    とのことです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これはどうでもいい……いいえ特に調べても意味が無いようですね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    こんなに意味の無い本棚初めて見た。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「同意です……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほんとだよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「さてと、この部屋はこのくらいでしょう。ボタンは気になりますが今は良いとして……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あと気になる物といえばカードキーですが……他の部屋で見つかるでしょうか」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あのボタンは押したくない……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    と喋りつつ部屋から出て行こうとする   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    出て行けます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何が起こるか分かりませんからね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    緑の部屋に戻って来ました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    上の扉を調べにいく前にケチャップ男に雑誌をお供えしに行きます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では寄り道感覚でお供えされました。<br>南無阿弥陀仏。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    良さげなページ開いて顔面に置いとこう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    とびきりセクシーなギャルを厳選したよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ついでにさっき椅子から剥がした紙も服に貼っ着けとこう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男で遊ぶな。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    えへへ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男は見事に飾り付けられました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は無の表情で一部始終を見ていました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    飾付けたところで上の扉に向かおうね   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎は満足げです   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    正面の扉は固く閉ざされている。<br>よく見ると扉の横の壁にカードリーダーのような物がついている。<br>どうやらここへ入るにはカードキーが必要らしい。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おっと」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「早速必要みたいですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ここが出口ですか！？！？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「なんだ、じゃああとはカードキーを探すだけですね！　さっさと見つけちゃいましょう！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は元気になりました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「頑張ってくださいね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あんたも探すんですよ！！！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    楽しいなぁ＾＾   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんが一番騒がしい件。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ……はい……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「えぇじゃないの！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「わかってますって」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「本当にわかってます……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「本当ですよ。ほら、僕の目を見てください」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え、なんかやだ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は目を逸らしました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ、そんな」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    私達、もうおしまいなの……？   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いいからカードキー探しますよ！　何処かに見落としがあったか、それともまだ調べてない場所があるか……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「見落とし……そういえば冷蔵庫を調べてるときに靴が弾け飛んでしまったので……そちらに気を取られてしっかり調べられてないような気もしますが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁそんなところにカードキーを隠すなんて馬鹿なことはしないでしょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「冷蔵庫にカードキーが……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ヒントは、“見えない場所”ってワードだと思うんですけど……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「見えない場所なんてたくさんあるからなあ……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    んーー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まっ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    思いつかないようだったら迅速にヒントを出してもいいよ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    INTに成功する必要があるがな！！！！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    見えない場所って言ったら窓！？って思ったけどうーん(正確には見えなくなってる場所だけど)   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まぁそんなわけないと思うのでINTをふります！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    当たって砕けろ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いや振る前にもう一度窓調べてみても？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    また目星を振るんですか？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    別にいいでよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんかこう……カーテンの裏とかに   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    カーテンの裏を調べても何もありませんね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ない！わかんない！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    君達の現在地は赤の部屋になりました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    INT振ります！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ひらめきの神が────！？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【INT】 (1D100&lt;=70) ＞ 52 ＞ 成功  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    降臨します。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    目星じゃないからペナルティがない〜！ｲｪ~!   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎は考えた……。<br><br>“見つかりにくい場所”ではなく、敢えて“見えない場所”と表現したその意図……<br>そして、その見えない場所との比較対象として挙げられたのは白衣だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    つまりは白衣に近しいもので、見えない場所。<br><br>誰からもカードキーを奪われる心配のない、自分だけの領域。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それって、もしかして……？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男が着てる衣服を漁れって？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    試してみる価値はあるんじゃないでしょうか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男のズボンポッケ漁って見るか   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ズボンポッケには何も無さそうです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やはりズボンを下ろすしか…！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ズボンを下ろしますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    下ろしたくなさすぎる   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    でも下ろすしかねーのよ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そらそう（）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では幸太郎は徐に男のズボンを下ろしました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ……どうやら男はブリーフ派のようですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ボクサーじゃないのか…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてブリーフからはみ出ているカードのようなものを発見します。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    本当に最悪   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    このシナリオ、実を言うと男女ペアが最適なんですよね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何がとは言わないけど。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    すっげーーー嫌そうな顔してます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「有り得ない……　え、これ取るんですか……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮もすっげーーーーーー嫌そうです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……手袋、欲しいですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……自動販売機にありましたよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やはり女を連れてくるべきだったか……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    女だったら素手で行ってたんですか！？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……スロット台、やってみましょうか。これは流石に」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男女ペアがいいって言うから！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「まさかこんなところで……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    女だったらズボンも脱がしたくないよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    スロットやるかーー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    1回100円だよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    100円投入します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ところで幸太郎さん、君幸運の値は？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんか66らしい。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    半端すぎん？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんか報酬で幸運貰ったのか……？忘れちゃった   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    コンバートの時に幸運振り直した？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    振り直したんだよね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    んまあいっか！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸運で判定してみましょう。<br>ちなみに潮くんの幸運は45なのでアテにしないでください。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=66　【幸運】 (1D100&lt;=66) ＞ 18 ＞ 成功  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    うぇー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    おお、素晴らしいね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    多分どっかで+1もらったのをそのまま振り直した値に足しちゃったのかもしれん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではクローバーのマークが揃います。<br>500円を獲得できますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やったぜ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    現在の所持金　600円   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これでは足りませんので……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    もういっちょ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    じゃあもう一度幸運ですね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>       </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=66　【幸運】 (1D100&lt;=66) ＞ 15 ＞ 成功  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほい   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    お金増えた🤗   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    再び500円を獲得できました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    所持金は1000円だね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「すごい当たりますね……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これで手袋は買えますね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「や、やったあ……　なんかお任せしてすみません……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「今日は運がいいみたいでよかったです。手袋を買うにはお金は余りますし御手洗さんもやってみてはどうでしょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え、僕もですか……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う、うぅん……　そう言うなら……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「それに元は御手洗さんが見つけてくださったお金でしたしね」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そんな口車に乗せられて潮くんはスロットを回しちゃいます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    拾った分の200円残しとけばいいのよ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 20  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    は？　おもんな   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    最強やん   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    可哀想で草   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではクローバーマークが揃いました。<br>500円を獲得して1400円！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    クローバーの絵しかないのでは？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ヤター！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「やった！　僕も当たりました！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「って、ダメだ……！　この喜びを知ってしまっては……！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は何故か頭を抱えています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「やりましたね。これなら他の物も購入することが出来そうですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「で……でも、お金は計画的に使わないとですよ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ええ、分かっています。今は必要なものだけ購入しましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ふう……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    てことで自販機にGO。手袋買います。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パチンカスにはなっちゃいけないぞ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では丈夫な手袋を購入します。<br>お金を入れてボタンを押すとあの下のなんか口から手袋がボトッと落ちてきました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    とても丈夫そうな厚手の手袋ですね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎は700円を失った……　残り700円。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「よし……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    手袋を装着します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    丈夫な手袋を装着！<br>あらゆる刺激からあなたの手を守ります。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やったぁ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さ、カード回収するか……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    すっげーーーーー嫌そうな顔しながら回収します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男のブリーフから抜き取ったカードキーをゲッツ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    最低な文面だな。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「最悪ですね…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「は、早く使って捨てちゃいましょうよ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ええ……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    足早に正面扉へ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    正面の扉は閉ざされていますね。<br>カードリーダーにカードキーを通しますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    通します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    顔面にはグラビア誌、落書き貼られたシャツにブリーフという姿でケチャップの上に放置されてる男可哀想だな。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    カードをかざすとピピッと音がなり、『承認』という文字が表示されると同時にガラガラと扉が横に開きます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ブリーフにカードキー入れるのが悪い👎   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    その先には、廊下が伸びている。<br>突き当たりには扉があるようだ。<br><br>……しかし、   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それ以上に目を引くのは頭上のガトリング砲だろう。<br>重厚感溢れるそれはしっかりとあなた達に銃口を向けている。<br><br>ただそれだけで、一瞬血の気が引くことでしょうね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あかん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    血の気引かねえのよ。（BGM効果）   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うわぁっ！！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「こ、これは……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は驚いて尻餅をついてしまいますね。<br>どこかからガシャンという音が鳴ります。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんだなんだなんだ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなた達が狼狽していると、モニターから声がしますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ラーメンフォークでも落とした？   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「死にたくなければ慎重に動くことだね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「さっきも言ったけど、これって全国放送されてるんだ。君達がガトリング砲で蜂の巣になる姿なんて流石に子供にはショッキングすぎるよ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それだけ言うとブツッとマイクを切りました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    全国放送されてる中あの姿で放置されてる男   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    既に放送事故。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「は、は、犯罪ですよ　こんなの……！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    BGMに緊張感がねえのよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ガトリング砲からBB弾飛んできそう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、ガトリング砲がありますね。<br>ガトリング砲を過ぎた向こう側には扉が。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「慎重に……と言われましても……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「へ、下手に動いたら　本当に殺されちゃうかも……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「しかし向こうには扉が……。ここをどうにか突破しなければここから出ることは出来ませんね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ううぅ……　もうやだ……　なんで僕がこんな目に……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「本当です……どうしてこんな事に……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ため息つきますね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    可哀想な探索者……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……まずはあれをよく観察した方が良さそうですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    どうしよっかな〜〜   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「“あれ”……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    腰を抜かしてしまっていたらしい潮ですが、壁に手をついてよたよたと立ち上がりますね。<br>どこかからｷｼｷｼと音がする……。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なにしたら動くんだろ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ええ……どのような仕掛けになっているのか分かりませんので…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ガトリング砲のことね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……ん？何か音が……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    そそ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「音？　……あっ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    どこから音するかわかる？聞き耳しないと無理かしら   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「お、音は気にしないでください！　大丈夫ですから…………」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんだ〜？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    今は何も音がしないのでわかりませんね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何か隠してます……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……そ、そんなことは」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はあからさまに目を逸らしますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    疑いの目   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、あはは……　そ、そんな目で見ないでくださいよ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「音のことより今は、そこの物騒なの何とかしないと……でしょ？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    心理学してぇ〜！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    心理学せずとも何か隠していますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    無理矢理吐かせるのか？？？()   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    怖いよぉ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まぁそうですが……現状どうも出来ませんからね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ま、まだ調べてないじゃないですか！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「どうも出来ないって判断するのは、早計かと……　腰を抜かした僕が偉そうに言えたことじゃないですけど……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやぁ、ほら。僕眼鏡が無くなってしまったものですから、あちらがよく見えないんですよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「わかりましたよ。僕が見ればいいんでしょう……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はガトリング砲に視線をやりますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あぁ、ありがとうございます。助かります」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 90  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ここに来ての失敗！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    どこに何を隠しているのかなぁ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あぁ！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d8 (1D8) ＞ 4  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では突如として破裂音が響きますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぎゃあッ！？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「おっ……と」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮の素っ頓狂な悲鳴も同時に上がりますが、見た感じ変化はありません。しかし先程の破裂音はあなたには最早聞き慣れたものでしょうね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    下着か？   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、あぁぁ……　根拠もなく僕は大丈夫なんだって思ってたのに…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「さ、寒い……　スースーする……　ワイシャツが擦れて気持ち悪い……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    どうやら下着（上）が爆発四散した模様。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……まだマシなもので良かったですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ハ、ハハ……　ハ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ちなみにですが。<br>今回はたくさん失敗してもらうことを目的としていますので。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    判定に失敗しても何度でも振り直しが可能になっております。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「で、一体何を隠しているんですか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うぅ……　何も隠してませんからぁ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「まだとぼけるおつもりで？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    こいつ威圧持ってそうなのに持ってないのよな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いい人じゃん（？）   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う、うぅ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「こ、怖いですよ　水船さん……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いや、さっきから……というか最初からずっと怖かったですけど……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    御手洗って名前でトイレが意味のある場所なの面白すぎるな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そんな怖がらせてしまうような事はしていないのですが……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    今更？？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    今更だよ。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「こ、怖いです！　怖いですよ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「だって怒ってるじゃないですか！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「僕知ってます！　静かに怒る人ほど手に負えないんです！　うわああ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ？怒ってませんよ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はもう子鹿のように震えています。<br>ｷｼｷｼ……　ｷｼｷｼ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あぁ、でも……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さんがこの後もずっと隠し事をし続けるのであれば……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「少しだけ、怒ってしまうかもしれませんね？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    また脅してるよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ﾋｮｴ〜〜ッ！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「わ、わわ……　わ……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    温厚だから怒らんけどな！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「わ、わかった！　わかりました！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ええそうですよ！　僕は隠し事をしてます！　で、でも言いたくないから隠してるんです！　当たり前でしょ！？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「しかも今、これ……っ　全国放送されてるじゃないですか！　だったら尚のこと、絶対に言えないです！　言いたくないです！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「でも、僕の隠し事は本っっっっ当に脱出とは何の関係もないんですよ……！　手がかりにすらならないです！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「だから……　い、今は脱出に専念しませんか……？　ね……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    縋るようにあなたを見上げてきますね。<br>いたいけな男子高校生をこれ以上いじめていいのだろうか……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……脱出とは関係ない、本当ですね？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「お、お父さんお母さんに誓います……　あと校長先生と理事長先生にも……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……分かりました。信じましょう」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ほ、本当ですか……！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ぱっと顔を輝かせますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あ、ジュンくんの誕生日終わっちゃったじゃん（急にあんスタくんの話するな）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    くっそ〜！　また走り損ねた〜！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい。このような状況で脱出に関係のあることを隠したがるようなことはないと思いたいですし」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……きっと、他人には言えないような…………おっと」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何はともあれ、僕も多少大人気なかったですね。申し訳ありません」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    クッソ心理学したい   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「わ、わかってくださったならいいんです……　えへへ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    どぞ（）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【心理学】 (1D100&lt;=70) ＞ 76 ＞ 失敗  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    馬鹿野郎！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では1d6をどうぞ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d6 (1D6) ＞ 5  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>       </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではケチャップにまみれた白衣が爆発四散しました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あぶねぇ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ウワーーーーッ！？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「な、なに！？　何したんですか！？　エ！？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮はパニック！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………何も？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    分かりやすい嘘つくな   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「（声にならない悲鳴）」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いつまで仲間割れしてんだ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    潮くん面白すぎる   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だって！潮くんが怪しいから！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ある意味相性がいい（？）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    彼の言葉を信じてあげて……　知らんけど。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ところで   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    お風呂入ってきてもいいですか？？？()   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    くそお！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    もう終わるのにィ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いやまだ終わらんな！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    エ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    終わらんのかい！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    終わりません！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あと1回かぁ〜！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    このシナリオ、なげえ！ｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まだボタンは押してないのに…！？って思った   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    RPノリノリすぎるんだよ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いいことだ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎なのにね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではこりんちゃんは風呂に召されて行きました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よし(証拠隠滅)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではまた次回！<br>3回目まであるの草   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほい！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    おつかれさんした！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    来たわね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    きたわ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    今日で最終回だ〜！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    てことでサクサクやって参りましょうか！（なんで3回もやってんだ？って顔）   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    というわけで、ガトリング砲をどう突破しようかなというところです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    心理学失敗して白衣吹っ飛ばしたのダメージがでかい   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    すぐ人を疑うから！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だって怪しいから！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    扉の先目星するしかねぇ…   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ガトリング砲の方ね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    頑張れ〜！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほうが重なるのめっちゃやだな(どうでもいい)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    漢字違うから許して。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【目星】 (1D100&lt;=70) ＞ 97 ＞ 失敗  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いや草   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いやあの   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あの……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あの……；；；；   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では1d5を2回振ってね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いや、1d5と1d4でいいわ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やばいぞ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    装備が少ないからやばい…   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d5<br>1d4 (1D5) ＞ 4  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d4 (1D4) ＞ 4  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これ死では？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    手袋の意味ー！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あーあ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では幸太郎さんは下着（下）と手袋が爆発四散します。目に見える変化は手袋のみですね。首の皮一枚繋がったね！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あっぶねーーー！！！いやアウトだけどな！！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    とても……スースーする……。<br>今、あなたは下着を1枚も身につけていない……。<br>寒い……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あっっっ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「アッッッッッ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「せ、折角買った手袋が……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………いや手袋はまだいいんですよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、汚いからですね？　それはそうです」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    勝手に納得されてしまいました。<br>どうする、幸せ太郎！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「（黙っておいた方がいいですね……）」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    知られたくないよな？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    折角見えないんだから無かったことにしたようです。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    当たり前だ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「それにしてもあちらの方がよく見えないですね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「見ようとしたら爆発するから……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「御手洗さんもう一度あちらの方を見てもらっても？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、はい。もう爆発しないといいんですけど……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は再びガトリング砲の方へ目を凝らします。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 27  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    もうここからは幸太郎は本当にダイス振れないからな！<br>振るならあの男のズボンを奪って重ね着するしかないのだ…   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あとは自販機で眼鏡買うしかない(ギャルのパンツは流石に買えない幸太郎)   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「む。あそこ、何かぶら下がってる……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「トイレの標識……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ファンブル2回もするから……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    トイレぇ？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は言いながら指し示しますね。<br>潮の言う通り、ガトリング砲にトイレの標識のようなものがぶら下がっているのが見て取れる。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    しかし……　なんだろう。<br>何か、どこかおかしいような……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「トイレの標識……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あの男女のマークのやつですね。<br>しかし何やら違和感を覚えます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    して、ここでINTロールを行えます。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんだその違和感   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    赤が男のマークになってて青が女のマークになってるとか？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いいからINT振れや！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    振りたくないもん！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男のズボン奪うしかないか…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮に代打を任せますか〜！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮のINTは85です。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎より頭いいからそういう意味でも振ってもらった方が絶対いい   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「なにか……違和感ありません……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「僕もそう思ってたんですよね……　うーん……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は思考タイムに入ります。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    1d100 (1D100) ＞ 16  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    低いなぁおい   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    こっちの出目と交換しない？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして何かに気づいたように「あっ」と声を上げますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「水船さん、色です！　あの標識、色が逆になってます！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「本来なら男性が青で女性が赤ですが、あの標識は男性が赤で女性が青になっていますね？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やっぱりそうじゃねーか！！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「どういうことなんでしょう……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    勘のいいPLは嫌いだよ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まあPLには実物見えてるわけじゃないのでリアルアイデアは許しませんが。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「さぁ……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「確かにほとんどの標識がそうなっていますが……色の決まりはないですし……。ここが偶然そういう配色にしたとか……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「でも意味が全くないとは言い切れませんしね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「トランスジェンダーへの理解が浅い現代社会へのささやかなアンチテーゼ……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「……とかではないよ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ﾌﾞﾂ……。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男を青の部屋に移動させるのかぁ？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    でも赤が男になってるなぁ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ボタンがなんか関係してんかな…   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「何か思いつきそうですか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うーん……あの標識と部屋の色が関係してるとか……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「左右の部屋の色は赤と青でしたし……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「確かに……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ギャルのパンツを履けと……！？(？？？)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    もしもしポリスメン？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    履くわけない   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ブリーフ男に履かせるべ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    その為にはブリーフ脱がさないとじゃん。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    上から履かせよう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    入んないよォ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    仮にも“ギャルの”パンツやぞ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「青い部屋に女性、赤い部屋に男性を……と考えましたが女性はいませんからね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いたらもっと大変でしたよ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    遠い目をしている。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「それは……まぁ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「それとも青い部屋にあったあのボタンを押せと……？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    実際今はそうするしかないのかぁ？って考えてる   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あの標識のどこにボタンの要素が……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ボタンを押そうとすると露骨に嫌そうな顔をする潮。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「だってほら……今こうやって考えていますが、何も思いつかないじゃないですか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あのボタンを押す事で何か変わるかもしれませんし……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「引っ掛けでしたらそれまでですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    はははってしてる。<br>笑い事じゃないが   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「簡単に言ってのけないでくださいよぉ！」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「僕にはわかります、水船さんは絶対に元ヤンです。やるなって言われるとやりたくなるタイプなんです……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    震え上がっていますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「えぇ……そんなことないですよ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮くんは嫌がってますがボタンを押すか押さないかはPLの自由なのでガンガン行動してください。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「元ヤンだなんて。喧嘩怖いですよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よし、青い部屋に行くか   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では青い部屋へ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    部屋の様子は特に変わりないようですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    洋服棚おーぷん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ボタンがあります。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「実際のところ、何も思いつきませんし押すしかないと思うんですよ」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「わかってますよ……　僕が何言っても押すんでしょ……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「何も起きませんように何も起きませんように何も起きませんように……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    祈り始めました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    押すしかねぇ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    押します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    はい、ではポチッとな。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    こわいよー！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    直後、頭上で何かが動いた音がします。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎さんはDEXで判定してください。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    お？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    まってそれはだめだ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いや鈍足だと思ったら言うほど鈍足ではなかったけど7割もないわ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    はよ振りな！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=65　【DEX】 (1D100&lt;=65) ＞ 62 ＞ 成功  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あぶねーー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では嫌な予感がした幸太郎さんは素早くその場から飛び退きます。それとほぼ同時、先程まであなたが立っていた場所に向かってタライが落下。それは耳を塞ぎたくなるほどの大きな音を立てて床に打ち付けられました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あと少しでも反応が遅れていたら頭に直撃していましたね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うわぁああぁーっ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は緑の部屋まで逃げて行きました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うわ危なかった……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    危なかったね。（服が）   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほんとだよ(タライ直撃する上に服ﾊﾟｰﾝいくところだった)   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「押したくなるその気持ち、わかるよ……！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「でも残念。それはヒントでも鍵でもなんでもない！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    愉快そうに笑う声が聞こえる……。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はぁ、結局引っ掛けですか……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いっけなーい💦🔪🔪   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「君、もう少し解放的になってもいいと思わない？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いえちょっとこれ以上は」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「でも結構ちゃんと鍛えてるみたいだし、世の中の淑女が君の肉体美の虜になっちゃうかも……！？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「まあでも下は隠してよね！　あはは！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そんなやり取りをしてると潮がそろそろと戻って来ます。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「だ、大丈夫ですか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はい。何も弾け飛んでませんし」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「それは良かったです……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ど、どうしましょうね……　あれ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    チラチラと緑の部屋を振り返っています。<br>ガトリング砲のことを言っているのでしょう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……どうしようもないですね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そんなあ！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    どうしようなーー！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    当然の如くヒントは用意してあるけどINTに成功しないといけないね！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    うおおぉ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ちなみに答えはもう出てます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何事もチャレンジ！　ガンバ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    えぇーー   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ブリーフ男移動させてみようかな   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ほほう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    実はこの部屋は青い部屋ではなく赤い部屋かもしれない…！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ブリーフ男移動させます！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    赤い部屋から青い部屋へ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では赤の部屋のブリーフを青い部屋へ移動させるということで。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    はい！！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    幸太郎さんの筋力なら一人でも難なく運べますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    色々試してみるしかない   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではブリーフが青い部屋に転がされました。<br>ケチャップの赤が目立つなぁ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    こいつ赤いし青い人間を作ればいいのかもしれない   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    んなわけないだろ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    もう答え出てるって言ってるのに新しい道を切り拓こうとするの草。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これで一回ガトリング砲見に行ってみても？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    構いません。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ガトリング砲を確認に行きますが、見た感じは特に変わりありませんね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    今めっちゃマック食べたい。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「うーん……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    じゃあ今度は赤い部屋に行きます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「違うんでしょうか……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では赤い部屋へ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    こちらも特に変わりはありません。<br>床のケチャップは男を運び出したことで伸びて広がってしまったようだ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    うーんうーーーん   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    INTを振っても……いいんだよ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男からズボン奪うんだったわ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いやなんならもう脱がしてあるからそこらへんに放置されてるはず   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    下ろすって言わなかったっけ？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まあんな細けえこたあどうでもいいので、男のズボンは脱がされて赤の部屋に放置されているということにしましょう。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    わーい   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ここで男のSIZを決めます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    2d6+6 (2D6+6) ＞ 3[2,1]+6 ＞ 9  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ちっさ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ちいせーのよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男はSIZ45でした。SIZ表に従うと150〜155cmの男ですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やーいチビが！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    気にしてるかもしれないでしょ！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なぁこれ……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ズボンなくなったらマジで終わりじゃん……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    対策しないとそうですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    はっ、シーツで防御力を…！？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    シーツを腰に巻くのか！？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    KP、幸太郎は青い部屋に行ってシーツを回収します。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    青い部屋に来ました。<br>シーツを回収できますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は不思議そうにあなたの手元を見ています。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「いやぁ、下が弾け飛んでしまったら大変ですからね。対策ですよ」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    シーツを腰に巻きます。まきまき   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あ、なるほど……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「賢いですね！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    せやろ(脳死)   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    腰巻シーツになりました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    賢いから謎解き頑張って♡   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    さて、INTをふろう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    どうぞ〜。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    秒で弾け飛んだら笑っちゃう   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    1d100&lt;=70　【INT】 (1D100&lt;=70) ＞ 57 ＞ 成功  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    よかっちゃー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、どうしたものか。<br>あなたは考えますね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    結果、とあることを考えつきます。<br>確かな根拠も何もありませんが……。<br><br>この企画自体服が肝なので、服に関する事なのではないか……と。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やっぱりパンツなんですかー！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何事もチャレンジです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「もしかしたら……服に関係する事なのかもしれませんね」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ふ、服……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「と、言うと……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「自販機にあるでしょう？女性が身につける物…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮の顔はみるみる青ざめていきますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ま、まさか……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ほ、本気ですか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「なんの根拠もありませんけどね。まぁ試してみる価値はあるかもしれません」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うあぁ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「僕だって好きでやるわけじゃないので……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「大丈夫ですよ、わかってますから……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パンツ買うかー…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    元気ないよ？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    では自動販売機のある赤の部屋に移動しますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パンツ買います！！！！！(元気)   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    やったー！！！！ギャルのパンツ買えるぞおおおおおお！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    500円を払ってギャルのパンツをゲッツ！<br>トンクス！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    所持金は200円になりました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    真顔です   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ギャルのパンツですが、ビビットピンクのドット柄ですね。着古された様子はなく、新品のようです。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そ、れ……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「どうするんですか………………？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………あの男性に履かせるとか？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    なんでやねん。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「あの人に穿かせて仕掛けが動くってよくわかんない原理ですけど……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    嫌がらせ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「冗談ですよ。履かせるなんて気持ちの悪い」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    穿くのはいいんか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    だめだよ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    一回試しでこのパンツ赤い部屋に置いたままにしてガトリング砲見に行っていい？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    見に行きますでいいんだよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    男移動させなくてよかったかも   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    見に行きまーーす   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではパンツを置き去りにガトリング砲の前まで来ました……が、特に変わりはありません。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    じゃあやっぱ逆かなぁー   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パンツ回収して男を赤い部屋に移動させます   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パンツは青い部屋にポイ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ズルズル……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男は赤い部屋に、パンツは青い部屋に転がされましたね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ガトリング砲に変化はありません。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    もうだめだ！！！分かんにゃい！！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    本当にわからないのかな……？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    目を背けているだけじゃないのかな……？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    は？やっぱり履けって？？？？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    えきっっっつ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    このゲームのルールにおけるかなり重大な抜け道に気づけていないのが痛いね……。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    助け舟を出しましょう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは思う。<br>男を動かしてもダメ、男に穿かせるのも恐らく意味が無い。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そうなれば、もう自分が穿くしかないのでは？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    いや、有り得ない。<br>冗談じゃない。そんな辱め、耐えられるはずがない。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    不快感が振り切れて顔を顰めたあなたに、モニターから声がかかってきた。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「随分悩んでるようだね……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「仕方ないさ、人間は理性ある生き物だから……　そんな野生的になんて、動けないよね！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「と、い、う、わ、け、で〜〜」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ナインズヒ〜〜ント！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「君達、なんだかやたら布を服として着ることに拘ってるみたいだけど……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「僕は“身につけているものが弾け飛ぶ”としか言ってないよ？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「わかりやすい例だと……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「包帯とか！　身につけているものには該当するけど、着てるっていうとピンと来ないよね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「まあ要は何が言いたいかっていうと」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「この部屋では“身につけている物”が肝になってるだけだから、別に服を着なくても身につけてればなんでもいいってことさ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「あーあ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「最初に縄を弾け飛ばせておけばよかったのにね……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ﾌﾞﾂｯとマイクが切れます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    長時間席外す時は一言かけてね！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    今めっっっちゃ考えてる   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    着なくても身につけてりゃいいってことだよ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    パンツをどう身につけようかって……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    身体中ならどこでも身になるんだぜ。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    じゃあパンツをなんかこう……細長く巻いて……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    足首に結んでみる……   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これはミサンガです   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ビビットピンクのアンクレットが完成しました。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「これでも充分異様な光景ですね…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これで何か変わります……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「さ、さあ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「ちょっと見に行ってもらってもいいですか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「は、はい」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は扉の方にパタパタと走って行きますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「うーーん…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「目に見える変化は、なさそうです……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「でもこれが違ったら他に方法なんて思いつかないし……。もしかしたら、目に見えない変化があるのかも？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    戻って来ますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    少しでも変化がないと行こうとは思えないよぉ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ありません。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    男は度胸！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    こんなクソ卓でビビるんじゃあない！   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    タライ盾にしていくかぁー？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    別にいいよｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……じゃあ、行ってみます？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「み、水船さんが行くなら…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……行ってみましょうか。このタライ、盾として役に立ちますかね……。一応持っていきましょう……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「備えあれば憂いなし、ですね」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いくぞーーー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮も連れて行きますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ついてきな！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>       </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    これ幸太郎は部屋にいたままがよかった…？？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>       </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>       </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではあなた達は廊下を進みますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    出すならBB弾にしときな！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    タライを盾にしているとは言え、その大きさも全体を守れる程のものではありません。<br>不安が脳裏を過ぎり、緊張から冷たい汗が伝う。<br>
+<br>しかしそれも杞憂だったようで、あなた達は何事もなくガトリング砲を通り過ぎて行くことでしょう。 
+  </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、扉の前まで来ましたね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あえー   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「間違っていなかった……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぼ、僕達　無事ですよ……！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    扉ガチャガチャしてみる   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「よかったぁぁ…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉は開きそうです。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    開けるぞーー   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉を開くと、最初と同じ白い部屋が現れた。<br>ここにも監視カメラとモニターがある。<br>ここのモニターは正面ではなくあなた達が入ってきた扉の上にあるらしい。<br>それらを除けば、正面の扉以外は特に目につく物もない。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「何もない……？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「扉がありますね……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ということは、もう……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    正面の扉まで行ってみよう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何の変哲もない扉ですね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ガチャガチャ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    しようとするとですね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「待って！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターから声がかかります。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「君達、“押すか、引くか”だよ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    最後の扉です。<br>押しますか？　引きますか？   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ええええ   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    1d2 (1D2) ＞ 2  </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    引くかぁ……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなたは扉を引いて開けようとしました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉は開きませんでしたね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    素直に押すんでした   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ではあなたは素直に押して開けることにしました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    でも扉は開きませんでした。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    押しても引いてもダメじゃないかーい！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「は……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    モニターから声がします。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「あ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ごめんごめん、うっかりロックしちゃってたみたい！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そう言ってナインが懐からスイッチのような物を取り出してそれを押すと、ドアノブ付近に緑色のランプが点灯し、ガチャリと鍵が開いたような音がした……。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「“押して”開けてね！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それだけ言い残すと、ﾌﾞﾝ……とモニターの画面が消えました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    本当に押していいのか……？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    不信になってて草。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ナインくん信じて押します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    はい。では、扉が開かれる────。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    扉を抜けた先に広がっていたのは、何の変哲もない森の景色。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そして、目の前には相変わらず貼り付けたような笑みで君達に拍手を送る少年の姿があった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    振り返れば荒れ果てた建造物がぽつんと佇んでいるだけ。<br>そして弾け飛んだはずの服は全て元通りになっている。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    あれぇーー！？   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「脱出おめでと〜〜う！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「簡単だったでしょ？　まあただの暇つぶしだからね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「その割には、時間かかってたみたいだけど……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ニヤニヤとしています。<br>今度は映像ではなく生身のナインがそこにいますね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「外だ……　外……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「やっと終わったんですね……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は緊張の糸が切れたのかその場にへたりこんでいます。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「あれ……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「疲れてるね。もしかして面白くなかった？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは何処かから玩具のマイクを取り出してあなたに寄って来ますね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「さあさ、幸太郎選手！　今のお気持ちをドーゾ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    マイクをあなたの顔の前に押し付けてきます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………疲れたので帰らせて頂いても？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ありがとうございますッッッ！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    いいのかい   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは満足気にマイクをしまいました。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「さて、僕もそろそろ飽きてきたし。この企画もちゃちゃっとしめちゃおっか」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「そういえば、テレビで生中継してるって言ったけど……あれ嘘ね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「いやあ、そう言った方がスリリングになって楽しいかな〜って思って！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    どう森の照れリアクションみたいな動きをしてます。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「でも残念だなあ……。一人くらい半裸……いやほぼ全裸に靴下のみとかになってくれたら面白かったのに！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「嫌ですよ」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「裸が恥ずかしいなんて人間は大変だなあ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「人間は、って……。普通はそうでしょう」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「ふふ、そうだね」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「よかったね、普通の人間で！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「自身の身体を見せつけようとするのはただの露出狂でしょう……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「あぁ、もしかしてあなたにはそういう趣味がおありで……？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「僕は面白ければなんでも好きだよ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ナインは懐から何かを取り出しますね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「はい、これ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    そしてあなた達に向けて一枚の紙切れを差し出してきます。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「はぁ……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    受け取ります   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「脱出のご褒美だよ！　それで二人仲良く休日取り返して来てね！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それはどうやら温泉旅館のペア宿泊券のようだ。<br>聞いたことない旅館だが、宿泊券に二人の名前が印字されてるので譲渡などは出来なさそう……。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「あ〜、楽しかった」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>ナイン</dt><dd>    「じゃ、バーイ！」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    なんてこった   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    それだけ残すとナインはさっさと立ち去ってしまいました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    この場にはあなたと潮の二人だけが残されます。<br>依然として森の中ではありますが、少し先の方に舗装された道が見えているので帰ることはできそうですね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「これ……どうしましょうか」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「う、うーん…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ぼ、僕……　高校生ですし……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「いやでも、水船さんがいれば実質保護者同伴……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    どうやら行きたい気持ちはあるようです。<br>聞いたことない旅館なので普通なら行きたくないだろうに、呑気なのはどっちなのやら。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    行きたいのー！？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    人間は温泉好きなんだよ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「え、行きたいんです？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え、だって温泉ですよ？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「温泉なんて、修学旅行とかじゃないと入れないじゃないですか！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ※潮くんはボンビーボーイ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そんなことはないと思うんですけど……」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    そっかぁぁぁ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「そんなことありますよ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    お金があったら不良校になんか通ってない！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そ、そうですか……はぁ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「……まぁ、そう言う事なら行ってみますか？」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「え、いいんですか！？」   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    幸太郎はてっきり嫌がられると思っていたよ   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「ほ、ほら　よく考えたら怪しい場所かもしれないし……、行くならそれなりの度胸が必要かと思いますけど……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    めっちゃ行きたいくせに別にそんな行きたいわけじゃないけど〜みたいなムーブを始めました。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「行くのか行かないのかはっきりしてください。僕は御手洗さんが行きたいのであれば着いて行きますよ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「僕はてっきり嫌がられるかと思っていましたが……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「じ、実は僕の家、あんまりお金が無くて……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「修学旅行とかは大切な学生時代の思い出作りにって行かせてもらってたんですけど、それ以外で温泉というと記憶になく…………」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    指先をいじいじしてますね。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「だから、その……　いえ、いつも誰よりも頑張ってくれてる両親に文句を言うつもりはないんですけど」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「滅多にない機会だから……、行きたいなあって…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「……み、水船さんが嫌じゃなければ、ですけどね？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「なるほど」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>水船 幸太郎</dt><dd>    「そういうことなら行きましょうか」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「や……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「やったーーーー！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    潮は跳ねて喜んでますね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    かわいいやつめ！   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「じゃあ早く行きましょう！　あ、でもまずはお母さんに電話しないと……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>御手洗 潮</dt><dd>    「へへ……、どんなところだろうなぁ……　個室に露天風呂なんてついてたらどうしよう！　そんなのテレビでしか見たことないですよ！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    何やら勝手に妄想を始めました。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    その様子をにこにこ眺めてます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    さて、では今日は二人で温泉を堪能するということで。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    エンディングだ〜〜！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    まあ、と言っても。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    あなた達は二人仲良く温泉を満喫して家に帰り、翌日からはいつもと変わらぬ穏やかな日常が戻って来ただけですので、特に言うことはないです。<br>室内に露天風呂はありませんでした。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    ダイスに失敗すると服が弾け飛ぶ部屋<br><br>これにて完結！！！！！！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    SAN回復はありません。<br>お疲れ様でした。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    お疲れ様でしたぁ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    その後の話は雑談タブでね。   </dd></dl>
+<dl style="color:#673ab7" class="main"><dt>こりん</dt><dd>    ほい   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    というわけでシナリオクリアですお疲れ様でした！（なんで3日もかかったんだって顔）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    聞きたいことがあればなんでも聞きな！<br>いやないと思うが。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    パンツ飛んじゃった   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ノーシャツノーパンで探索する奴初めて見た。ノーブラになってる奴はいたけど。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    正直最後の押すか引くかでロック掛かってたは救済処置か…？って思った   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    いえ……　あれはシナリオ通りです……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    このシナリオはとにかくPLをイライラさせる為に作りました！！！！！！！   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    幸太郎できちゃいけなかった！！！   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    服が弾け飛んでも笑って流せる奴で来ればよかったね！　誰だよ！   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    眼鏡ﾊﾟｰﾝ!ﾌｧﾝﾌﾞﾙ!ﾌｧﾝﾌﾞﾙ!   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    誰も笑って流せねぇよ……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ファンブルのこと考えてなかったからファンブル出された時「アッ！w」ってなってました。可哀想な幸太郎。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    そして潮の目星80は強かった。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    で、今回の一番どうでもいい要素なんですけど。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    潮くんに任せてたら楽々とクリア出来たと思います……(あまりにも出目が悪い)   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    やたらと音を気にしてた潮くんがいたじゃないですか。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    あれなんですか？？   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    潮くん前回の卓の後遺症で四肢が金属なんですよね。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    そりゃ転けたらうるせえわけよ。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    な、なんだってー！？   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    可哀想   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    なんだってそんな事になっちまったんだ……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    なんか……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    変質した（？）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    DEXだって元々は70だったんだ……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    まあそりゃ言いたくないわなっていう。<br>こりんちゃんめちゃめちゃ食いついてきて笑っちゃった。（当たり前だろ）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    で、男女ペアのがよかったっていう理由だけど。<br>多分もうわかったよね？   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    ギャルのパンツ？   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    そうです。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    買いたくないよそりゃ   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    幸太郎でもね   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    男二人だとギャルのパンツを装着する以外選択がなくなります。放っておけば本当にギャルのパンツを穿くことになってしまったかもしれない……。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    それが男女ペアだとどうでしょう。<br>お互いに上着を交換するだけで難なく突破できます。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    音についてはガトリング砲の後に描写されたから関係あると思っちゃうよ   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    女二人の時はブリーフを剥けばいいしね。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ちゃんと潮くんが転けた時の描写にくっつけたもん！（わからん）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ちなみにあれは異性の服を身につけて通るのが正解なんですけど   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    本来ならあそこ潮くんも身につけてないといけなかったんだけどあの空気で一人蜂の巣にしたらちょっと進めにくいなって思ってやめました（）   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    パンツをもう一つ買わないといけなかったって！？   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ちなみにガトリング砲の餌食になった時のダメージは2d6+4です。まあクソ卓で死人出す訳にはいかないので、死んだら外で目を覚ますけど。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    いえ……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    一つのギャルのパンツを二人で持って通るとかでも可です……。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    やばい図だな   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    えぇーー絶対部屋関係あると思ってた……   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    男二人が服を弾き飛ばし、ギャルのパンツを装着して障害を突破し、最後には一緒に温泉に行って裸の付き合い……。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    クソみてえなシナリオだな。（真顔）   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    2d6+4 (2D6+4) ＞ 9[4,5]+4 ＞ 13  </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    普通に死んだわ   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    こりんちゃんが部屋との関係性を見出した時「あ、その発想もあるか！」って僕はｼﾏｯﾀ-！ってなってたよ。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    2d6+4 (2D6+4) ＞ 7[4,3]+4 ＞ 11  </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    ぴった死   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    シナリオ作者が考えてなかったことを見出してしまったようだ   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    最初の縄失敗して欲しかったなあ……。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    成功したら抜けられるし、失敗しても固定で縄が装備品判定で弾け飛ぶ仕組みでした。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    男はただ無駄にズルズルされるだけだった…   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    STRゴリラだから…   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    まあ縄が脆かったから仕方ない（）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    終わったらダイス結果も抽出する予定だけど成功した技能って多分目星だけよね。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    SAN回復はないけど成長はしていいからね。   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    たぶん   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    わーい   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    1d100 (1D100) ＞ 11  </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    だめでした   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    残念！   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    というわけでココフォリアおさわりシナリオでした。   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    トナリノはたぶるく開催になったけどゆずちさシナリオは多分……　多分、恐らく　きっと……　ココフォリア……　かと……　思われるので……（クソ悩んでる）   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    いい感じに感覚掴めてたらいいなって思います   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    以上！   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    長らくお付き合い頂きありがとう！<br>ここまでストレスフルなシナリオは今後ないから安心してね♡<br><br><br>多分   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>KP</dt><dd>    おつおつかいさん！   </dd></dl>
+<dl style="color:#673ab7" class="zatsudan"><dt>こりん</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>KP</dt><dd>    メモ：<br>書き出す際はエンディング描写の「室内」を「客室」に変更。露天風呂が室内にあるわけないだろ！<br>あと出来ればナインのモニター会話の「」を『』に変える。   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
