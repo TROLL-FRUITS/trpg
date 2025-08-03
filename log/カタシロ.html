@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>カタシロ</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+
+</header>
+<div class="wrapper">
+<h1>カタシロ</h1>
+<h2 id="day1">カタシロ</h2>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ちゃ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    チャット見れるかな？？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    チャット大丈夫そうかな？？   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>トロル</dt><dd>    見れるよ〜！   </dd></dl>
+<dl style="color:#888888" class="zatsudan"><dt>トロル</dt><dd>    発言用の駒を用意するのでちょっと待ってね   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    そか！久々すぎて！！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴　</dt><dd>    これでいいかな〜   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴　</dt><dd>    時間かかって申し訳ない！<br>腰までの立ち絵描いたんだけどやっぱりアイコンサイズにトリミングしないと落ち着かないから盤面用と発言用で分けるね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    👍   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    おっけ！気にしなくて大丈夫よ！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    始めていきましょうか   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では。   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴　</dt><dd>    よろしくお願いしまぁす！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    音楽を流していますが、音量調整は自身でお願いします。また、細かい演出ができないので、ぶつ切りになってしまうところはご容赦を。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    それでは<br>カタシロ、始まります。   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴　</dt><dd>    すごい！！！！！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴　</dt><dd>    画面が動いた！！！！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    目を覚ますと、あなたは病室のベッドらしき場所に寝かされていました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    正確には手術室でしょうか。大きな、可動式のライトや、真っ白な天井が見える。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    思うように体がうごかず、酷い頭痛がする。<br>そう思っていると、一人の男性が入室してきて隣に立ちました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    気が付いたかい？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ここは病院だよ。<br>私はここの医院長をしているカミヤマ タカアキだ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    「医院、長……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    白衣を着た、白髪の男性が顔を覗きます。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    気を失った状態でここに運ばれてきてね…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    診たところ、どうやら落雷に遭ったようだね。何か覚えていることはあるかな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    「あー……っと……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    思い出してみようと試みます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、アイデア振ってみてください   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    CC&lt;=85 【アイデア】 (1D100&lt;=85) ＞ 37 ＞ 成功  </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、当時のことを思い返してみると、<br>とても強烈な光にあてられて視界が真っ白になったことを思い出します。<br>それ以外の物事、周りの状況は分かりませんでした   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    「なんか、凄く眩しくて……それから……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴　</dt><dd>    「…………、それだけだな。完全に視界がホワイトアウトしてて、他には何も」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    うん、やはり見立て通りのようだね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういうと上山医師は腕を組むように背を伸ばしました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    さて……どうにも本人書類が見当たらなくてね、目覚めたばかりで申し訳ないが、少し質問してもいいかね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の名前は？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ……」   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    これ事前に聞いた情報はPL目線知ってるものとして動いて大丈夫？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    うーん、そうだね、大丈夫かな   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    おけおけ、でもとりあえず自然な感じにやるね〜   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ありがとう＞＜   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    思い出せないかな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    質問に対して思考を巡らせます<br>思い出せそうですか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そうですね<br>ではもう一度アイデア振ってみましょう   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=85 【アイデア】 (1D100&lt;=85) ＞ 98 ＞ 失敗  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    赤いなあ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    あらあら・・・<br>では光に包まれた以外の記憶は、社会的常識以外なかなか思い出せません   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……わからない」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「思い出せないみたいだ、あんたの言う通り……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おやおや。<br>   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    生年月日や、どの辺りに住んでいたかは、どうかな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それもさっぱり。俺が聞きたいくらいだよ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    少し困ったように口の端を上げています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ふむ……――君自身に関する記憶も失ってしまっているようだね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    それだけ衝撃が強かったということだね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういうとまた医師は顔を覗くようにし続けます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もしかしたら悪化するかもしれない。しばらくは様子を見た方が良いかもしれないね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうだね、３、４日ほど入院してもらえるかな。少し検査をしてみよう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    力なく頷きます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    なに心配はいらない。すぐによくなるさ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういうと、医師は近くから何かをガタガタと寄せ、腰かけました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    可能なら頭だけでそちらを向きます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    大丈夫です。あまり大きくは動きませんが、<br>椅子を寄せて座ったんだなということは分かるでしょう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    記憶もきっと……そのうち、戻るだろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ただ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ただ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    今この部屋以外に空きが無くてね。<br>物々しくて申し訳ないが、ここで過ごしてほしいんだ。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師の言う通り、今にも処置が始まりそうな、いわゆる処置室、手術室のような部屋です。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……なんだ、そんなことか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「気にするなよ。なんたって、ここより居心地のいい部屋なんてのもそんなに心当たりがないからさ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おや、それは良かったと、言うべきかな？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は小さく笑って続けます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうだな、今日は運ばれてきてすぐであまり動けないだろう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    暇つぶしとまではいかないが、僕と少し話をしよう。どうだね？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺はいいけど……あんたが退屈しないか？　俺、ほとんど話せることないぜ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、大丈夫だよ。ありがとう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    少し頭を動かせば記憶も戻りやすくなるだろうし、君が良いなら、では。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって、医師は少し砕けた口調になり話し始めました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は、囚人のジレンマというゲームを知っているかな？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ゲームというか、ゲーム理論とまで広げてもよいかもしれないが。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「さあ、聞いたことない。……もしくは忘れてるかもな」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうか、じゃあ、簡単に説明しよう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    共犯をはたらいたとみられる２人が、別々の部屋に隔離されている。<br>そうだな、今回は僕たち二人としようか。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    僕たちは今、共犯をはたらき、逮捕され、別々の部屋に拘留されている。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    時折理解を求めるように確認しながら医師は話します   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    相槌を打ちながら聞いてますね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ある時、それぞれと話し合いをしていた判事はこういった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君たちが犯した罪は、判例を鑑みるに、<br>共犯関係を認めれば二人とも５年の懲役となるだろう。<br>また、二人とも黙秘をすれば証拠不十分となり懲役は２年になるだろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、君が自白し相手が黙秘を続けるようだったら、君は刑を免れ黙秘した相手は二人分……つまり懲役１０年が科される。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    同じく、君が黙秘し、相手が自白したら君が懲役１０年だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ここまでは、理解できるかな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ、続けてくれ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    賢いね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    最初にこれがゲームだといったことを覚えているかな。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    じゃんけん、とまではいかないが、ちょっとお互い選んで遊んでみようじゃないか。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    どうだろう   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いいぜ。せっかく教えてくれたわけだしな」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師はハハハと笑いながら和やかに続けます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    じゃあ、せーのと言ったら同時に発表をしよう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    どうするか決めたら、選んだら教えてくれ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ん〜……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「よし、決めた」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    決まったかい？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    じゃあ、いくよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    せーの   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「自白だ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    黙秘   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おやおや。これじゃあ僕が１０年刑務所だ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「みたいだな。参ったな、こりゃ」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師はうーん、とわざとらしく肩をすくめ<br>悔しそうに「もう一回」と提案します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    決めたら教えてくれ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「はいよ〜、決めたぜ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    よし、じゃあ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    せーの   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「自白で」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    自白   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    これは仲良く５年だな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「だな、よろしくな先生」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ニッと笑います   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師もまたはははと笑い、「ラスイチ」といいます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    これが最後のこたえだとしたら。さあラスイチだ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「しょうがねえな〜」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「次で決めるとすっか。こっちはいつでもいいぜ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    じゃあ、いくよ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    せーの   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「黙秘」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    黙秘   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    軽減されたなあ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「まあ、片方が割を食うのは避けられたな。ゲームとしては引き分けか？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうかもしれないね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は最後まで自白ならば刑は受けずに済んだがね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    どうして黙秘に変えたんだい？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……これ、正直に答えちゃっていいヤツ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    構わないよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうか。あとで怒るなよ？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ああ、わかった   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんたが自白すると思ったからだ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おや。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    僕が自白をすると君が刑をくらうね？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうだな。でも、なんていうか……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「自白で勝つより、黙秘で負けるか引き分けたほうが気分がよかったんだよな。ただのゲームなのに、感情論すぎるかもしれんが」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    なるほど   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は、賢くて優しい子なんだね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おっと、褒めてもラスイチは覆らないぜ。全体見ればこのゲームは俺の勝ちだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    笑っています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、そうだね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって笑いあったとき、医師のポケットから着信音が聞こえました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おっと、すまない、外来を診る時間だ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師は、腕時計を見ながら立ち上がりました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おう、ありがとな先生」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ゲーム、楽しかったぜ。また気が向いたら来てくれよ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    僕も楽しかったよ。<br>部屋は申し訳ないが、看護師に話しておくから誰か来るだろう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「気にしなくていいのに」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は去っていきました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    身体は動きませんが見えるものを少し調べることができます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    視界には<br>可動式の大きなライト、書類棚、モニター、金属の物置き台などいわゆる処置室、手術室にあるようなものが見えます。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    どうしますか？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    まず目につきそうなのは物置き台かな<br>近くにあるものをなんとなく見てみます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、一番に物置台が目に入りますね。<br>銀色の手の付いた、引き出しなどもある物置台です。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    天板には緑色の布が敷かれ、器具が並んでいるようです   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    引き出し以外、特に気になるものはなさそうかな？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    結構KPのスタイルによると思うんだけど、技能宣言とかってPLからしたほうがやりやすい？　それともKPから促すスタイル？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    宣言してもらってもいいし、それらしい宣言があればこっちで促すよ！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    やりたいことがあれば積極的にどうぞ！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    わかった！　基本後者で、宣言できそうなところはしていくね〜   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    おっけい！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    今さらカラーを思い出す・・・   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    あきらちゃんが個性を得た   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    じゃあ、目星を振ってみてください   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=77 【目星】 (1D100&lt;=77) ＞ 95 ＞ 失敗  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    どうして( ; ; )   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    数値高いのにねえ…（笑）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、台をよくよく観察してみたあなたは、<br>さすが手術室、ぴかぴかにしてあるなあと思いますね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（物々しい部屋というのは否定しないが、これだけ綺麗にしてあれば不快に感じることもないな）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    次は書類棚を見ようかな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ちょっと遠そうだけど   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    書類棚は、一見何も入ってないように見えますね<br>上段はガラスの引き戸、下段は台と同じ銀色の引き戸のようです   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    上段はガラス越しに何も入ってないように見えるけど、下段は中が見えない感じかな？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そうだね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ははーん   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    動けないので、なんとな〜くだけ見て、視線を外します   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    モニターには何か映っている？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    モニターを見ると、電源が入っているように見えますね<br>こんな機械の電源が入っているなんて、どのくらい重傷だったのかと思ってしまうでしょう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    あ、心電モニターみたいな感じですね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ゴクリ……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そういえば、傷……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    自分の身体の状態を確かめることは可能ですか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    二の腕くらいとかならいけそうかな   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    確認したい場合は目星でどうぞ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=77 【目星】 (1D100&lt;=77) ＞ 11 ＞ スペシャル  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ようやく成功だぜ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    いいね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、首を精一杯ひねって体の傷を確認します。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    傷は何一つなく、見える範囲とてもきれいな肌色ですね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    スペシャルなのでじゃあ…<br>傷を確認したときに、モニターの線がつながっていないことに気づきます。でもモニターには、９８/９７の表記があります   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（どういうことだ……？）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（医療技術の進歩、とかじゃないよな。じゃあこのモニターはなんだって話になる）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（……とはいえ、何も思い出せねえし、今は考えたって仕方ないか）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    疑問に感じつつも見回すのをやめて天井を見上げます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    天井には大きなライトがありますね。今は消灯されているようです   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    その時、かすかに声が聞こえました   </dd></dl>
+<dl style="color:#888888" class="main"><dt></dt><dd>    おーい！   </dd></dl>
+<dl style="color:#888888" class="main"><dt></dt><dd>    おーーーーーーーーーーーい！   </dd></dl>
+<dl style="color:#888888" class="main"><dt></dt><dd>    誰かいんの！！？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なんだあ……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt></dt><dd>    おーい、誰かいんだろ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt></dt><dd>    おれユウスケっていうんだ！名前は？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    声はどのあたりから聞こえるかわかりますか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そうですね、足元に医師が出た扉とは別の扉があると気づくでしょう。<br>そのあたりから聞こえますね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（扉の向こうか？　だとしたら、ちょっと声張らないと届かないよな……）」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    あんれー？？ねちゃったー？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いや、起きてるぜ！　悪いな、聞き間違いかと思ってさ！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    声大きめに返します   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お、やっぱいるじゃん！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    とてもうれしそうな声が返ってきますね。声は意外と近そうで会話はできそうな距離です   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おれさー、ずっとここにいるからタイクツなわけ！ちょっと話しねえ？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    声色から10代後半くらいの、男性の明るい声がします   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「別に構わんが、俺から話せることは大してないぞー。なんせ、ショックで記憶喪失と来た」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「イマイチ現実味がないが、実際思い出せないんだから、そういうことらしい」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    さっきより声量を抑え目にしています   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    記憶が無い？おまえも？<br>いや、おれは記憶があるんだけどさ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そこにくるやつらはみんな記憶がないってゆーんだよなー   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    その部屋がそーゆーやつら用の部屋なんかな？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そんなことがあるのか？　まあ、流石にただの偶然と思うが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「じゃあなんだ、記憶喪失の相手は慣れてそうだな」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは、問題ねえぜ！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    それに、親父も腕利きのノーゲカイだから安心しろ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「親父？」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お？親父に診てもらったんじゃないのか？   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    カミヤマタカアキだよ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ここの医院長だ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いや、その先生で間違いないよ。あんた、先生の息子なのか。患者ではないんだな」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    うーん、まあ、<br>患者でもある、かな   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    しばらく前に事故に遭ってよ。治療するのに入院してるんだ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうなのか。災難だったな、お互い」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは、そうだな   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    その時の記憶はないから、俺もある意味記憶喪失仲間かもしれねえ！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    親父は、デカイ事故だったからショックだったんだろうってさ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    その時のピンポイントだがな！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    祐介はガハハ、と笑いました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そんな大怪我して、よく笑うよ。俺が言えたことじゃないかもしれんが」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、そういうの嫌いじゃないぜ。暗い顔してるよりはずっといいからな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    こちらも少しだけ笑います   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    親父はマジですごいんだ。どんな体の不調も、ノーシンケーいじって治せるんだから。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    俺も復活したら親父みたいな医者になるんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そういや、ニーチャンも声からして同じくらいだよな？？<br>高校生？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「さて、あんたがそう思うならそうかもな？　生憎、学校の話は何も出来ないけどさ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんた……祐介は高校生か。大変だよな、本当に」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    いい加減あんたあんた言い過ぎなことに気づいたPC1名PL1名   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    まあ、３人称もキャラのうちだからね（笑）   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おれは、行ってりゃ高2かな！今17！<br>高校ってどんなとこか知りたかったんだがなあ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    まあ、できねえもんは仕方ねえよな。ヒキコモリとかってのもあるしよ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「学校の話ができないのは、お互い様だったな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、祐介の言う通りなら、きっとすぐに高校生に戻れるよ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「凄い親父さんなんだろ？　大丈夫さ」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おう！おれぁこの後アメリカの大学行って首席で卒業して、親父と一緒に世界中で手術すんだ！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ガハハハと楽しそうに笑う祐介の声を聴いていると、<br>猛烈な眠気が襲ってきました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    瞼がだんだん、重くなっていくのがわかります。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ん……悪い、祐介。もう少しあんたの話を聞いていたいんだが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ちょっと…………ねむい…………」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お、寝るか？<br>こっちこそ、体調悪い時に騒いで悪かったな！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いや…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    いいんだよ、って言おうとしたけど、そのまま眠気に身を任せちゃうかな   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、あなたはそのままゆったりと眠りに落ちていきますね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    遠くから祐介の「おやすみ」という声が聞こえた気がしました   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    一旦区切りだけど、時間は大丈夫？？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    大丈夫だよ〜👍   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    おっけー！先に行きましょう！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    はい！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    二日目です。<br>目を覚ますとどうにも世界が歪んで見えます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    白くなったり、黒くなったり、<br>明暗、欠けや重複など、視界が目まぐるしく変化しています   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そんな中、上山医師が入室してきました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    やあ、おはよう。よく眠れたかい？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「その声は……先生か……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「眠れはしたんだが……、あまり気分が良くない……。視界が歪んで見える……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    顔をしかめています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    なんだって？それは困ったね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    少し、失礼するよ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師はあなたの頬に手を添え、眼球を観察します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    後で検査しようか。看護師に予約を入れるように言っておこう   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「悪いな……、よろしく頼む」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    大丈夫。すぐよくなるさ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういいながら、医師は昨日と同様にガタガタと椅子を引き寄せました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    今日も刺激のために少し話をしようじゃないか   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    視界が落ち着かないので、少し目を細めます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ムリはしなくていいが…<br>君は、テセウスの船という話を知っているかな？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師は話し始めました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    昔、テセウスという神が乗ったとされる船があった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    その船はその後何百年にもわたり語り継がれ、時に修復されその姿を保っていた。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ある時、哲学者はこういった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    「今や当時の素材は一片たりとも残っていない。それなのに、この船はテセウスの船だと証明できるのだろうか」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    その声は国中を巻き込む大きな議論の的となった…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    さて、君はこれについてどう考える？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「また、難しい議題だな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「素材が違くても、船は船だろ？　結局それはこの世にひとつしかなくて、作り直されても、新しく増えるわけじゃない……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それを否定したら、記憶を失った俺だって何割かは俺じゃないってことになっちまう。でも、俺はそうは思わないからな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「もっと正確に言えば、あまり重要に感じない、かな。しかし、証明できるものがないのはその通りかもな……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    なるほど、唯一無二性が、ある種の基準ってことかな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そういうことになるのかな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「自分がそうだと思ってて、周りもそうだと思ってるなら、そうなんじゃねえの？　事実って、そういうものだろ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「今までそうやって扱ってきたのに、急に疑わないでくれよって話だよな……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、それもそうだね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    急にこれは全くの偽物である、と言われても困ってしまうのは一理ある   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    賢いね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうか？　短絡的とも言うかもしれん……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、そうなると…ほら、ドッペルゲンガーなんてものもあるだろう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    同じものが現れたら、偽物なのかい？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうだな。オリジナルと、コピーは違うかもしれない。それが同時にある、複数あるって時点で、ひとつとは認識しないし……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「だが、偽物って言い方はあまり好きじゃないな……。なんだろう……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「意思がある以上は、同じものは二つとない。だから、そもそも一括りにするのが間違いで、これから全く違うものになっていくわけで……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「難しいな、これ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、「シゲキ」物だから仕方ないさ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、よく言語化できているよ。いいことだ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そのとき、また医師のポケットから着信音が響きます。外来診察のアラームのようです   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おっと、すまないね、時間になってしまった   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おう、今日もありがとう」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    眼球の検査は夜に予約するとしよう。看護師に言っておくからね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師は去っていきました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    さて、視界は悪いですが昨日よりも動かしやすく感じます。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ベッドから降り多少は歩き回ることができるでしょう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    視界の自由と引き換えに身体の自由を手に入れた！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    昨日と変わらないライト、物置台、書類棚に加え、<br>蛇腹ホースのつながった空調機などがあることに気づきます。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    もちろん再確認の動作もOKです。<br>どうしますか？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ひとまずは改めて身体の確認をするかな<br>昨日は腕しか見れなかったので   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、自身の身体を見まわしますね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    視界は良くないですが、ひねる程度の身体の動きはできるでしょう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    やはり本調子ではないのか少しふらつきますね。支えがあった方がいいなあと感じるでしょう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    周囲に支えになりそうなものはありますか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    頑丈そうなものはベッドくらいですね<br>モニターとか物置台は小さく可動式ですので少し不安かもしれません   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（ベッドから長時間離れるのは厳しそうだな……）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ひとまず近くのものから、物置き台の引き出しは開けられますか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    はい、すんなり開きますね<br>引き出しの中には大きめの器具がしまってありました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（脳神経をいじって、身体の不調を治す……か）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（あの先生がそうなら、俺もその手術を受けたはずだが……それでここまで綺麗に治るものなのか）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    物珍しげに器具を観察します<br>この中には何か変わったものはないですか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    じゃあアイデア振っていただこうかしら   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=85 【アイデア】 (1D100&lt;=85) ＞ 50 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ぶいぶい   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    器具を観察していてあなたは、<br>こんな器具を使った「手術シーン」は観たことないよなー、と思います   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    どれをとっても、医療器具というよりは工具に近い印象です   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    妙だな……   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（……なんか、よく見てみると思ったより珍しくないというか……これ、どちらかと言うと工具か？）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（え、工具？　俺の手術、これでやったの？　意識のない間に大改造されて、人工皮膚の下はサイボーグだったりする？）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いや……ないない」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    振り払うように引き出しを閉じます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    昨日は見えなかったし次は空調機が気になるかな<br>見に行ってみよう、行けそうですか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    空調機は行けますね<br>ベッドのすぐ脇に本体、ベッド下を這うように蛇腹のクダが伸びている空調機です   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（これ、昨日は無かったか？　先生が気を利かせて置いてくれたのかな）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    少し観察してみます、動いてるのかな   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    電源ランプらしきボタンが青く点灯しているのが見て取れますね。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    聞き耳とかかな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=79 【聞き耳】 (1D100&lt;=79) ＞ 39 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ヨシ！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    耳を澄ますとコーーーーと何かを吐き出している音が聞こえます。<br>心無しか薬品のようなにおいも感じます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（薬品臭がする。何を散布してるんだ……？）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（昨日との違いと言えばこの空調機と、あとはこの視界の異常くらいだ。この薬品がコレを誘発してるとかじゃなければいいんだが……）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    少し心配だけど、何かもわからないものを触るわけにはいかないので空調機は放っておきます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    そうしたら書類棚のほうまで行きたいけど、体調的にどうですか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そうですね、書類棚は壁に沿っていて少し離れているようです。行くのは難しいかもしれないですね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    しかし昨日よりはしっかりと、上段に書類が散乱した段があることがわかります。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    さて、そうこうしているとまた隣の部屋らしき場所から声が聞こえてきました   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おーい！ニーチャン起きてる？？   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    しゃべれるー？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「お……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「よお、祐介。起きてるぞ」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お！よかった！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    返事を返しつつベッドに戻ります   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「今日も何か話すのか？」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    いやさ。さっき起きたとき、そこにいたやつら二日目にはなんかアタマ変になってたよなーって思い出してさ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    なんともねえの？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「え゛」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「頭は……いや相変わらず記憶はないが、それだけだ。あとはちょっと、視界がバグってるくらいかな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「参ったよ、目を開けてるだけで疲れるんだ」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お、まじか！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    目がヘンなのは初めて聞いたな   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    大体は、なんかぼーっとして考えらんねえとか、話が通じねえとか、なんつーか、そういうビョーキの人みたいなん聞くけどさ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ニーチャンはアタマは大丈夫そうでよかったっつーか、よかったよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おう……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「よかったよ。俺が口利けなくなったら、祐介が退屈しちゃうもんな」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは！違ぇねえー！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    しっかし目もきっついよな！<br>俺も見えないからさ、情報少ないのつまんないよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そう……なのか？　俺は見えないってわけじゃないが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺のほうは、多少情報が多いくらいだ。普段と違うのはきついが、きっとあんたほどじゃ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いや、辛気臭い話はやめよう。悪いな、なんか」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    いや、こっちもごめんな！はっきり言っておけばよかったぜ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    事故った話しただろ？そんときに、ちょっとな！<br>でも目が見えないのと手足が動かないだけでおれ気にしてなかったからさ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ま、タヨーセーってやつ！？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって祐介はまたゲラゲラと笑います   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「祐介、本当にポジティブだな。実際、前向きでなきゃ成るモンも成らねえか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「多様性かあ。あんた、最高にかっこいいぜ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、やっぱり大変なことだらけなのは変わらない。頑張ろうな、お互いに」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    なあ……ニーチャン、もう立てんの？？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういった祐介の声は少し落ち着いて聞こえました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「少しなら、なんとかな。首しか動かせなかった昨日に比べたら、かなり回復してるって言えるんじゃないか？」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そっか。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ちゃんと動けるようになったらさ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ちゃんと動けるようになってばっちし回復したらこっちの部屋、来てくれよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いいのか？」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ま、遊ぼうぜってもムッズイけどな！でも…   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ニーチャンと話したいんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    な、頼むぜ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「話なら、今でもできてるだろ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ま、いいけどな。頼まれて断る理由もないし、何より俺も祐介の顔が見てみたい」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは！ちょうぜつイケメンだぞ！ぜってー拝めよ！！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういってまた笑い出す祐介の声に反し、眠気が襲ってきました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    祐介の笑い声、睡眠導入剤すぎる   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そうだな……明日には、自由に歩けるくらいにはなってるといいな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「祐介の、元気な顔拝むためにも……この目のおかしいのも、なんとかならねえと……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……すまん、少し寝るわ……。本調子じゃないからか、あまり長く意識が持たないらしい……」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    目え疲れるって言ってたもんな！<br>いいよ、寝ろ寝ろ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「サンキュー……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おやすみ、祐介……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    そう言って目を閉じます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、目を閉じて闇に吸い込まれる中、<br>祐介の元気な「おやすみー！」が聞こえてきます   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    さて、いいお時間…！！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    やっぱりテキセだとこのくらいはいくわね！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ボイセのサクサク感はやっぱね（笑）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    でもテキセだからこその丁寧感もいいんだ……   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    祐介くん可愛いです、ありがとう   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    いえいいえい★<br>おバカ男子高校生楽しい（）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    さて申し訳ないが、残量的にはあと２割くらいでもうおしまいなんだけど、<br>ちょっと区切らせてもらってもいいかな？？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    もちろんいいよー！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    先週も言ったけど今夜続きやるのでもモーマンタイ！<br>あとはあきらちゃんの都合に合わせて予定組みましょ💪   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    OK！多分あと１回で終わるくらいだと思うなー！<br>ひとまずまた21時くらいでよき？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    いいよ！👌   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    では、ここでセーブということで・・・   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    祐介の笑い声流しとく？？（笑）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    よく眠れそうだなあ（）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    （笑）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    メチャ★楽しいです<br>次回もよろしくお願いします！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    こちらこそ！<br>またあしたねー！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    お疲れ様でした🤗   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ちらちら   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    僕が来た   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    お飲み物など、ご用意はいかがざんしょ？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    今しがた整いました！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    アツアツの紅茶を冷ましています   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    （笑）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    んじゃあ冷めないうちに始めましょうか   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    よろしくお願いしまぁす！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ＊＊＊＊＊＊＊＊＊＊＊＊＊   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    「おやすみ、祐介……」<br>そういって目を閉じたあなたの耳には、<br>祐介の元気な「おやすみー！」が聞こえてきました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ３日目の朝。<br>目を覚ましたあなたは、昨日、一昨日とは全く違うとても軽い気持ちで目を覚ましました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    視界も良好。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    とても気持ちがいいなと感じています。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そこへいつものように上山医師が入室してきました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    やあ、おはよう。調子はどうだい？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    やあ、おはよう。調子はどうだい？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「よお、先生。昨日とは打って変わって、すっかりいい気分だ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あとは記憶が戻れば完璧……は、流石に言い過ぎか？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、そうだね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    気分が良くて何よりだ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    じゃあ、早速だが、今日持ってきた議題について話をしてみようか   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おう。今日は何かな……」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師はまた、先日と同じように話し始めました。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は、臓器くじという問題を知っているかな？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    言い換えれば…そうだな、貢献的殺人とでもいうかな。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ある一定の条件を満たした健康的な集団の中でくじ引きをし、<br>「あたり」をひいた人間からすべての臓器を取り出すんだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そして、その臓器を、移植が必要な人間に配っていく。<br>これについて、少し議論をしようじゃないか。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    といっても思ったことを口にしてくれればいいがね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ふむ……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    この問題の前提条件として、３点あるんだ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    １、配られた臓器の移植手術は必ず成功、移植された人間は必ず生き延びるものとする。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ２、くじに不正は行われない、また、当選率の偏りなどもないものとする。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ３…これは大事だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ３、このくじ引き以外で、移植用の臓器は得られないものとする。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    さあ、君ならどう考える？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「考えるにしても、確かじゃないことがあるな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「集められた集団の意志がわからない。それがぼかされてる一定の条件に該当するのかもしれないが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「本人たちが望んでくじに参加して、臓器を差し出しているってんなら、なんら悪いことには感じない。それがそいつらの信じた正義だからだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、そうじゃないなら話は別だよ。助かりたい人間がいるように、自分を犠牲にしてまで助けたくない意思があればそれも平等に尊重されるべきだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、そうすると、誰も望んでいなかった場合は……助かりたい人間を誰が助けるんだろうな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「とりあえず、合意があるなら、その貢献的殺人ってのは悪い話じゃない……と思うぜ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    やはり君は賢くてとてもやさしい   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の言う通り、この問題の最大の欠点は二律背反的な関係性にあるということだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    摘出に同意を必要とすれば助からない命があるかもしれない。<br>しかし、助ける事を優先すれば不平等だ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……何かを救うためには、何かを犠牲にしなくちゃいけない」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そういうことかもしれないね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「もどかしいな……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君はきっと、優しさ故に率先して助けに行くんだろうね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……そうだな、そうかもしれない。馬鹿みたいな話だが、少しだけ考えちまった」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「自分が助けられたらいいのに……って、ヒーロー気取りかよって。笑えるよな」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そんなことはないさ。誰しも、誰かのヒーローに、誰かの正義になりたい願望はあるだろう   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……そうか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、これってきっと独りよがりだな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は間違ってるとは思わない。けど、なんか、そんな気がする」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    両者の同意がないと不安、というところかな？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「両者は大前提としてあるが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「たとえばの話さ、俺に家族や恋人がいたなら……俺の独善で、誰かが不幸になるかもしれないだろ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「きっと、俺はそれを蔑ろにする。結局、みんながみんな救われるには、ごく限られた条件が不可欠になるんだろうな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「考えたらキリがない……。誰かを助けるって、こんなに難しいのか……」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    やや考えすぎだとも思うが…しかし本当に優しい子だ。周りの人間はさぞや落ち着いた暮らしができているのだそろうなあ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    小さく微笑んだ医師の笑顔を見るや否や、<br>ポケットから着信音が鳴り響きます。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    先日とは違う音に、少し焦って受話する上山医師。<br>どうやら、看護師からの緊急コールのようです   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    いや、すまないね、急変だ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「大丈夫か……？　俺のことはいいから、早く行ってやってくれ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ありがとうな、先生」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は挨拶もそこそこに、電話を耳にあてて去っていきました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    急に静まり返った部屋。<br>あなたは、立ち上がって歩くことができるでしょう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    どうしますか？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    立ち上がろうか、書類棚に行けるか試してみます。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、あなたはベットから降り、ゆっくりと立ち上がります。思いのほか身体は軽く動かせることに驚くでしょう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    書類棚までは難なくたどり着くことができます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おお……軽いもんだな。これなら、あとで祐介のとこにも行けるかもしれねえ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（それにしても、なんか、さっきはらしくなかったような気がするな。いや、らしいも何もないんだが……妙に、心に引っかかって……）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（……まあ、考えても仕方ないか）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    書類棚の上段を開いて覗き込みます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    覗き込んだ書類棚は、「書類」棚と呼べるほどの内容物はおかれていませんでした。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ぺらの、何かの一覧と、走り書きのメモが合わせて数枚散っているのみです   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（……冷静になると、俺、なんでこんな家探しみたいなことしてるんだ？　なんか自然とやってたけど、もしかして記憶を失う前は泥棒だったとか……？）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（でも、妙に気になるんだよな……。特に、この部屋のこと……）」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    過去の患者に関する資料がないか探してみます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    じゃあ、図書館で振ってみてください   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=90 【図書館】 (1D100&lt;=90) ＞ 24 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    得意分野！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    つづけて目星をどうぞ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    うーん（不安）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=77 【目星】 (1D100&lt;=77) ＞ 32 ＞ 成功  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    よしよし   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ではあなたは、手に取ったペラの一覧が名前の一覧であることに気が付きますね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    おお   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    知ってる名前はないと思うけど、確認してみます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    上手にでるかな・・・   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    〈名前〉　　〈適性率①〉〈適性率②〉<br>天童典燈　　　９４％　　　１３％<br>小鈴　凛　　　１３％　　　０５％<br>字家鮮花　　　１５％　　　９６％<br>小野一香　　　３３％　　　２４％<br>間具根集　　　６７％　　　３８％<br>家茶髭治　　　１２％　　　０３％<br>部辺瑠衣　　　４０％　　　６２％<br>真世江湖　　　０９％　　　１１％<br>笹見弥生　　　３１％　　　４２％   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    いけたぽ   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そして一覧表の脇には走り書きでメモがありました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    両方の適性を持った人間が見つからない。<br>時間がない。<br>早く高い適性を持った人間を探さなければ……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    また、そのすぐ脇にも、<br>慌ててメモをしたのか変な角度の走り書きにぐるぐると丸がしてあります   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    霧島　昴　９７　９８<br>みつけた   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    以上ですね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    うーん、誰やろなあー（）   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ダレダロネー（）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……なんだ、これ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「“適性”……？　“時間がない”……？　これは、患者のリストか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「きりしま、すばる、97、98……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……この数字」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    モニターに振り返ります<br>まだ映っていますか？   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    映っています<br>振り返ったらちょうど見えるでしょう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、あなたがモニターの数値を認識したその時、隣の部屋から声がしました   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おーい、にーちゃーん   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    茫然としていましたが、祐介の声で我に返ります   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「お、おう……。起きてるぞ、祐介！」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お！おはよ！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    今日は元気か？？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ、視界もよくなって……そう、歩けるようにもなったんだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「悪いな、今そっちに行くから。もう少し待っててくれるか」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ”歩けるようになった”……その言葉に、祐介は一瞬間を置き、「おう、待ってるぜ」と返しました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    扉にはすぐ行きますか？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    まだ少し動揺しているので、深呼吸を数回繰り返してから向かいます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    わかりました。<br>じゃあ、あなたは深く深く呼吸をし、必死に心拍数を抑えようと試みますね   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そして、平常になったということを確認し、ゆっくりと扉へと歩を進めました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    扉を開けるとそこは真っ暗な部屋でした。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    どうやら、ここも病室ではなさそうだ…<br>そんな思いが脳裏をよぎります。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    するとこのくらい部屋の奥から、祐介の声が響いてきました。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    よお、来たかよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……祐介。この部屋、相当暗いぞ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「照明はないのか？　事情があって、敢えてこうしてるなら、そのままでもいいが……」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    お、電気ついてねえの？<br>ったく親父も仕方ねえやつだな！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    手探りで照明のスイッチを探しながら言います   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「（ああ、そうか。見えないんだもんな……）」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    祐介の声を聞きながらあなたは暗い部屋をまさぐっています。すると部屋の奥に何かぼんやりと光るものが置いてあることに気が付きました   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ごめんだけど、おれこの部屋のスイッチの位置しらねんだ！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ちょっと、探してくんねえか   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    響く声はその何かから響いているようです。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    響く声はその何かから響いているようです。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ、わか――」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    言われた通りにスイッチを探そうとしましたが、その光るものに気がついて動きを止めます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    では、あなたはその「何か」をまっすぐ視界に捕らえました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    それは、<br>シリンダーの中、緑色の液体に浮かべられて揺られていました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    「これは脳だ」なぜかあなたは直観してしまいました。揺られているのは、「祐介の脳」だと。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ここでSANチェックです。<br>成功で１減少、失敗したら１ｄ１０振ってください   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    SANC失敗で1d10減少？<br>そいとも1d10のSAN減少？   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    えーと   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    SANチェック失敗で１ｄ１０だね！<br>   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    わかった！　ありがとう🫰   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    CC&lt;=58 【正気度ロール】 (1D100&lt;=58) ＞ 65 ＞ 失敗  </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ごめん修正したよー＞＜   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ハァハァ、祐介ェ……っ！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    1d10 (1D10) ＞ 3  </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    事なきをゲット！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 霧島 昴 ] SAN : 58 → 55   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    意外と一瞬のドッキンて感じわね（笑）   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    そりゃあビビるよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「――――は？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ゆう、すけ……？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    祐介は少し間を置いた後、おう、と短く、努めて明るく声を発しました   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    電気ついた？   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    わりいな、驚かしたな   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    暗闇のなかぼんやりと光るその物体から聞こえる祐介の声は、<br>あたかも声帯から発されているようにクリアに聞こえます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なんだよ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「どういうことだよ、これ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんた……それが、あんたのすべてなのか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それじゃ、どこにも行けないだろ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    照明のことよりも、目の前の祐介に吸い寄せられるように近づきます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    祐介も、あなたの言葉から察したのか<br>ぽつぽつと答え始めます   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは、そうなんだよ。<br>ったく、親父も、タチ、わっりーよなあ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    これが、おれの今の…というか、<br>いままでの全部なんだ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……先生が、あんたをこうしたのか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「苦しくないのか、祐介……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「こんな状態で、あんた、俺に笑ってたのか……」   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    ははは。まあ、半ばおれが望んだ結果でもあるから、ぜんぶ親父ってわけじゃねえしな。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おれ、小学校のころ…高学年くらいかな。陸上を始めたんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    結果はすぐにでて、100ｍ、200ｍ400ｍ…なんて、どんどん走れる距離もタイムも伸びていったんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    愉しかった。もっと速く、もっとたくさん走りたかった。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    それを、脳神経外科医の親父に話したんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    「もっとはやく走りたいよ、オトーサーン！」なんつってな！（笑）   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そうしたら、親父が早く寝たらおまじないをかけてやろうって。<br>起きたら、すっごく楽しく走れるぞって。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    言葉通り。翌日には段違いにスタミナもタイムも伸びてた。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    それでおれは陸上だけじゃなくて、<br>事あるごとに親父に「おまじない」をねだるようになったんだ   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そんで、中学にあがったくらいに、<br>おれは、自分の身体は作りものだということを知ったんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    なんで知ったかは忘れちまった。でも、夜中になんか、親父が誰かと話していて、それをくっつけておれのことだって思った気がする。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そのすぐ後に、ちょっと大きな事故に遭っちまったってわけだ。……親父は気づいてないかもしれないけど、おれはそのときも、自分がこの姿になったということに、親父の会話から気づかされたってわけさ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    いやーーーーーー<br>なげー語りだったな！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    祐介はこれで終わり、と大きく笑いました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「要するに、先生は祐介の願いを叶えるために、祐介の身体を作り替えて脳を移していて……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……今回も、そうだっていうことか？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そーゆーこと！<br>んで、事故った後は身体がみつかんなくてこうなってる   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    そーゆーこと！<br>んで、事故った後は身体がみつかんなくてこうなってる   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    名前はよくよく確認しましょう()   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「いつから、その状態なんだ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「事故に遭ったのがしばらく前ってのは聞いたが……もしかして、もう時間がないのか？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    いうて、１年とか……２年とか？ちょっと覚えてねえな   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういってうーんとうなったところで突然部屋の明かりが点灯しました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    眩しい！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    おしゃべりは、楽しいかい、祐介   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    声を聞いて勢いよく振り返ります   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    今日は、もう結構起きているだろう。<br>そんなにしていると身体に障るよ。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって上山医師は、さも”身体”が大切だと言わんばかりに祐介に近づいていきました。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おやじ・・・   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    親父。少し、親父とも話がしたいんだ。   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おれ、もう「おまじない」をしてもらうような年齢じゃないからさ！   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    おれもういいんだ。身体、大丈夫だからさ！！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    さあ、祐介。とりあえず眠りなさい。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    眠って、起きたら、きっとカラダも<br>よくなっているから   </dd></dl>
+<dl style="color:#4caf50" class="main"><dt>祐介</dt><dd>    親父…！おれ、おれはもう大丈   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ぷつんと、音がしたと思うほど唐突に静寂が訪れました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師の後ろには、光の消えた機械の中でゆらゆらと揺れる脳があります   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    体を自由に動かすには、まだ調整が必要だと思ったんだが……やはり、君はイイコだね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……それは、どういう意味だ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そのままの意味だよ。<br>いい体を持ったイイ子だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    賢い子だからね。身体を動かすのも上手なんだろう。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師はまっすぐにあなたを見つめました   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    複雑な眼差しで見つめ返します   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんたの息子に、相応しい身体か」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    はっはっは   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    何と察しの良い子なんだ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    素晴らしいよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そりゃあ、わかるだろ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんた、俺のこと試していたんだな。今まで妙なロジックを仕掛けてきたのも、別の意味があったんだろ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の、思考を試していたんだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    この取引に応じてくれるかどうか。ね。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ハハ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……で、結果はどうなりそうだ？」   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    すると医師は静かに語りだしました   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    息子は……とても優秀な陸上選手だった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    小学生のころから、走るのがすごく好きな真面目な子でね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかしスランプとは誰にでも起きるものだ。<br>ある時うんともすんとも記録が伸びなくなってしまった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    走るのは楽しい。でも、記録が出ないのは苦しい。もっと走りたい。もっとたくさん。もっと早く。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そう相談されたころ、僕も医師としてスランプの時でね。<br>大きな病例にも携われず、このままで平凡な医師として過ごしていくのかと悩んでいた。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、出会いは唐突だった。<br>ヨゴスから来た彼らと出会ったんだ   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    彼らには様々な技術を教わったよ。<br>その中に、医療として転用できる技術もあった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    僕はその技術で息子の願いをかなえてやれると思ったんだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    教わりながらだったが手術は一瞬で終わり、息子も変わらない日常を過ごしているようだった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    息子にほめたたえられ、スランプを脱した僕はその後も息子に、時には腕を、時には胸、内臓…何度も処置をしてやったよ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もうすぐ高校受験が始まろうかというとき、<br>息子が大事故に遭った。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    飛んで駆け付けたが、身体の損傷が激しくてね。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    さすがのヨゴスよりの者たちにも手の施しようがなかった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    仕方なく、僕は精一杯、寝る間も惜しんで何とか、脳だけをシリンダーに収めて生命を維持することに成功したんだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    その後、彼らの助けを借りながら「入れ物」を作り上げ、息子の脳を移植したが……結果は……   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    時間が経ちすぎてしまったからだと彼らは言った。脳だけの時間が、長すぎたのだと。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、生身の人間であれば、適合率が超えれば身体を取り戻せるかもしれないと教えてくれた！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    だから私は必死に探したんだ！<br>日々診察に来る患者たちの中から、適合しそうなニンゲンを選び、検査し、その適合率をはかった！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もう残り時間が短い、そう彼らに言われたときに君を見つけたんだ！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ほら、これを見てほしい！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師は、台にかかっていた白い布を剝ぎました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そこには、あなたが見知った、<br>あなたの身体が横わたっています   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    なんだって！？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ぎょっとしています   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そ、それ……その身体は……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺、なのか…………？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうだよ。<br>元の身体…ニンゲンの身体といった方がわかりやすいかな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「は、はあ……っ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「意味がわからないぞ、俺の身体はここにあるだろ……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君のその身体は作り物……言わば人形だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    人形にね、脳を移植した状態だよ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「――――」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    絶句しています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は人形との適合率が97％だったから、きっとスムーズに動くとは思っていたが   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    どうやら、気が付かないほど楽に動かせているようだね   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「そ……う、みたいだな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「はは…………、いや…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「笑えないだろ、こんなの………………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    信じられないような顔で、恐る恐る今の身体に触れています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    息子と君の身体との適合率も98％と高い数値を出している。<br>きっと同じくらいなじんで、生活できるようになるはずだ。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    あなたは自分の身体に触れながら話を聞いていますが、今までの人生の中で感じた「自身」のぬくもりと何ら変わりがないと感じるでしょう   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そこで、だ……これが、本題なんだ。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は静かに切り出します   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君のニンゲンの身体を息子に…祐介にやってほしい。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    あの子はまだ17だ。これから、まだまだ長い人生がある。陸上だってまだ取り組みたいだろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    だから、君の身体が欲しい。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もちろん無理にとは言わない。<br>拒否してくれても構わない。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    この問題には”両者の同意が必要”だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もしいやだと言えば、すぐにでも元の身体に移植しなおし、何事もなく退院させることを約束しよう。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「くそ…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    ぐしゃぐしゃと乱雑に髪を掻いて俯きます   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の、臓器くじの話にはとても納得している   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君は優しい子だ。そして、深く考えられる賢い子だ。それは、大事にするべき感性だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もちろん、差し出してくれたら、その時も必ず、<br>何事もなかったと思えるように送り出そう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    意見を聞かせてくれ   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……あんたも覚えてると思うが、俺が臓器くじについて話したのは“両者の同意”の前提の他に、もうひとつある……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なあ、まだわからないことがある。だから、聞いてもいいか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「どうして、俺は何も覚えていないんだ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「脳移植のときに、何かトラブルがあった？　それとも、あんたが“そうさせた”のか？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それとも、本当に事故のショックで忘れたのか……？」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    私が、そう設定した。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なんで……！」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ある種の、代償として。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君を安全に日常へ返すための代償としてそうしたんだ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    大丈夫。どういう決断でも記憶を戻して返すことを約束するよ。   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それじゃあ、遅いんだよ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は、俺のことを何も知らない……。名前だけは、辛うじて推理できる、でも、それだけだ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は、祐介を救ってやりたいよ。でもさ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それって、今の俺の独りよがりだろ……？　そんなの、俺の意思じゃない……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    取り乱したことに気づいて、少しだけ深呼吸をします   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ちょっと考えながらなので時間かかっても許してね😭   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    大丈夫よ！<br>逆にしっかりゆっくり考えてくれさい   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……先生は、記憶があった頃の俺を知ってるのか？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺の決断は、俺を……いや、誰かを、傷つける結果にはならないか……？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「まあ……先生の言う通りなら、別に死ぬわけじゃねえ。はたから見たら、いつも通りの俺なんだろうけどさ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でもさ……なんか、ここが苦しいんだよ。なんでかはわからないけど……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は身勝手で、人の気持ちなんて気にするようなタマじゃない。だけど、今この瞬間、俺は迷ってるらしい……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「もしかしたら昔なんかやらかして、身体が覚えてるのかもな……。言っても、この身体は作り物らしいが……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    胸を押さえて、苦しげに笑っています   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は表情を少し和らげ、しかし変わらず答えを求めるような顔つきで見つめています   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君はきっと、昔から周りに調和するのが上手だったんだろうね…   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    周りの意見を上手に取り入れ、納得し   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    自身や周囲と折り合いをつけながら過ごしてきたんだろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    それは、とても良いことだ。<br>褒められることも多いだろう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし、今君が迷っているのは、   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    迷っているのは、周りに目印がないから、じゃないかな…？   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    今君に意見する人間はいない。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の発言、君の思考、君の決断がすべて正だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    それに、恐怖している、のかもしれないね   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    しかし……、言った通り、今は君の決断はすべて正だ。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    否定する人間はいない。<br>どんな回答でも、私は受け入れる。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    様子を伺うように医師はあなたを見つめています   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「……きっと、あんたの言う通りだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「どういうわけか、俺は見えない影に怯えている。ああ、なんなんだろうな、これ。思い出せば、わかるかな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    下を向いていたけど、上山さんに向き直ります   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「わからないことだらけだ。でも、ひとつわかることもある……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は、祐介を救いたいと思ってる」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「たとえ見えない誰かに咎められようと、今の俺には、それがすべてなんだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なあ、俺は疑うのがあまり得意じゃなくてさ……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あんたのこと、信じていいんだろ？　あんたの口から、はっきりと聞かせてくれ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    信じてくれて、構わない   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「はは、なんだそれ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「もっとこう、ガツンと、“信じてくれ！”って言ったらいいのにさ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    そう言って笑います   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「なあ、全部終わって俺の記憶を戻してくれるってことは、また脳みそいじるんだろ？」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「お願いがあるんだよ。あくまでお願いだから、別に聞かなくてもいいけどさ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ここでのこと……いや、俺が半分俺じゃなくなったこと、覚えたままにしてくれないか」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「俺は祐介を助けるために自分の正義を選ぶ。同時に、この選択を、罪として持ち帰りたい」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「こんなの百害あって一利なしかもしれんが、どうしてもそうしたいんだ。最初にやったゲームでやたら自白したがったのも、きっと俺がそういう人間だからだ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それに俺、あんたのロジックにちゃんと付き合えてただろ？　もしかしたら人格は割とそのまんまで、“よくやった、俺！”ってなるかもしれないし」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ、元々そのまま帰すつもりだったならこの話は聞かなかったことにしてくれ。ただ、確認しておきたくて」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    もちろん、記憶が消えないように細心の注意を払うことを約束しよう。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    君の中では…この決断は罪にもなるんだな   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「おう。結局は俺の我儘だからな」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「さっきの祐介の話聞いてたか？　強がりかもしれんが、身体はいらないって言ってただろ」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あれを鵜呑みにするなら、事実、この取引は合意のもとで行われないことになる」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「でも、俺は祐介の意見を無視する。俺がしたいことのために」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ほら、ひどい話じゃねえか」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    ははは、そうか   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    そうか……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師は少し間を置き、ゆっくりと顔を上げました。意を決したという、穏やかな顔をしています。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    他に、何か言い遺すことはないかね？   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「それなんか俺が死ぬみたいな言い方だな。やめてくれよ、記憶もないのにまだそこまでの覚悟はできてないって！」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「とまあ、冗談はさておき……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「――ないよ。心は決まった」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「祐介に俺の身体をやる。これが、今の俺が後悔しないための、最善の答えだ」   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    わかった。   </dd></dl>
+<dl style="color:#888888" class="main"><dt>上山 孝昭</dt><dd>    それじゃあ……   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    そういって医師の手が顔面に伸びてきました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    と同時に、急激な眠気に襲われ、ゆっくりと視界から光が消えていきます   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    闇に落ちきる寸前、遠くから「ありがとう」という言葉が聞こえた気がしました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    目が覚めると、あなたは自宅のリビングに寝転がっていました   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    医師が約束をしてくれた通り、過去の記憶も、病院での記憶も、思い返せる限り覚えています。   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    私服差分ないぜえ！！！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「…………」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    起き上がって、眉尻を下げて笑います   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ったく、本当に馬鹿だな、俺……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「ああ、後悔はないよ。……ただ、このことアイツに話したら、今度こそ絶交されるかもな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「あと俺、きりしまじゃなくて、きりじまだっつーの」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    記憶に蘇った友人の顔を思い浮かべながら、顔を洗いに洗面所に向かいます   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    「祐介も、無事にあの部屋から出られたかな……」   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    夢か現実かわからない場所で出会った新しい友人のことも思い返しながらね！   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    思いに耽りながらあなたはゆったりと顔を洗い始めました。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    ふと、右腕の内側の肌の色が変わっていることに気が付くでしょう   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    左右で違う肌の色に、あなたは一層、<br>新しい友人への想いを強めるのでした。   </dd></dl>
+<dl style="color:#ffc107" class="main"><dt>GM：あきら</dt><dd>    以上でカタシロ終了です！<br>おつかれさまでしたー！！   </dd></dl>
+<dl style="color:#3f51b5" class="main"><dt>霧島 昴</dt><dd>    お疲れ様でした！！！<br>ありがとうございました！！！！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ハアハア（大興奮）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    このシナリオ面白すぎる゛！！！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    （笑）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    気に入ってもらえてよかった！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    めーっちゃじっくり考えてしまって申し訳ない！<br>でもすごく楽しかった〜〜本当にありがとう🙏🙏🙏   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    祐介の見た目が昴まんまなのかだけが気になりますが、昴は海外移住しなさそうな自探索者ランキング上位に食い込むのでいい感じに別々の道を歩んでいけるでしょう……   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    幸せになれるといいな……ドキドキしたけど……   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    いうて祐介もあのオツムで海外移住できなそうじゃない？？（笑）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    シッ！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    きっとミゴたそがうまくやってくれるさ★   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ありがとう、ミゴくん――。   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    キャラクターの気持ちを汲んでRPを頑張ったけど、ここで取引を飲むのってかなり大胆な選択ではあると思うからドキドキしちゃった   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    そして考えるのが大好き人間なので思考実験も楽しかった！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    時間遅くなってごめんね！<br>そして何よりPLさせてくれてありがとう！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    祐介は日本で会ったらまた仲良くお話しよう<br>今度は話のネタたくさんあるからさ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    こちらこそ、楽しかったよー！<br>丁寧に考えてくれたからこっちも半分くらいシナリオ無視だったし・・・('ω')   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    そうだったのw   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    そう。祐介氏、ほんとは確か小学生設定☆<br>あと、ちょーパパ好き従順息子   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    可愛い   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    あと、私、セッションしながらシナリオ読んでて気づいたんだけど   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    もしかしなくても盛大なネタバレ渡したよね？？？？？？？？？？？？？？？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ｗｗｗｗｗ   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    大丈夫、おっとこれは……になって最後までキッチリとは読んでないから   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    信じるか信じないかはあなた次第ですが、新鮮な気持ちで楽しめたよ😘   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ＞＜草   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    いやー申し訳ねえええｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    いやいや概要欲しがったのは僕なので！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    おかげでちょうどやりやすい探索者も連れて来れたのでモーマンタイ👍   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    災い転じて(ないけど)福となったならよかったである()   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    本当〜〜に楽しかった   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    かなり自己満足RPをしてしまいましたが！<br>ここでの経験は大切に次に繋いでいきます   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    これは自己満を極めるシナリオなのでな…（笑）   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    自己満に付き合ってくれてベリーベリーセンキューだぜ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    私は配信とかで結構１回きりのキャラ使ってるのしか見てないからあれだけど、<br>一応このシナリオの通過/ＮＯ通過の設定は自由にしてもろて   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    えっ、こんな美味しいの未通過にするなんて勿体ない！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    と今の段階では思ってるけどワンチャン起きたら気が変わってるかもしれないのでその通りにします！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ｗｗｗｗｗｗｗ   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ちなみにSAN回復報酬はありますか？（乞食）   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    あるある（笑）<br>今確認した   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    わーい！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    一応SAN回復は１ｄ１０でお願いします   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    でっかい！   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    信念を貫いた達成感と友人を裏切った罪悪感どっちが勝つかな？   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    1d10 (1D10) ＞ 10  </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    もう自尊心バリバリ   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    ここでフル回復は草   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    めちゃ神話が高いから上限が……って思ったらもしかしなくてもちょうどか   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    いいえ5切りでした　残念！   </dd></dl>
+<dl style="color:#888888" class="main"><dt>system</dt><dd>    [ 霧島 昴 ] SAN : 55 → 60   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    改めてありがとうございました！<br>あきらちゃんに声掛けてもらわないとPL通過してなかったと思うから本当に本当に感謝だよ〜😭   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    また機会があれば一緒に卓囲ませてね♡   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    こちらこそ！拙いKPでも楽しんでもらえてよかった！！<br>また一緒にやろうねん   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    しばらくは手持ち（未開封）のカタシロシナリオ眺めてニヨニヨすることにいたします   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    時間も遅いのでこのくらいに！<br>KPお疲れ様でした！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    あいあい！<br>ありがとうございました～！！   </dd></dl>
+<dl style="color:#ffc107" class="zatsudan"><dt>GM：あきら</dt><dd>    またねえ   </dd></dl>
+<dl style="color:#3f51b5" class="zatsudan"><dt>霧島 昴</dt><dd>    ノシノシ   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
