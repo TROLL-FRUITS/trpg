@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>とっておきコーヒー</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+
+</header>
+<div class="wrapper">
+<h1>とっておきコーヒー</h1>
+<h2 id="day1">とっておきコーヒー</h2>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    俺、参上   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ハロー   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    どうもどうも   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    というわけで今回はとっておきのコーヒーを飲んでもらおうな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    まだまだ眠れないぜ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    カフェイン、注入――。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    休日でも休まらないの可哀想   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さてゆるゆるはじめていこうと思いますが〜   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    かかってこい   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    急に腹が痛くなってきた   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ゆっくりはじめていきます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    気張れ（根性論）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ある日の昼下がり、あなたは行きつけの喫茶店へ行こうと住宅街を歩いています。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    すると、突然ブレーキ音が……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    今日は仕事は休みで、自宅でゆっくりするのもいいが、連日仕事詰めで疲れ切った心身を養うにやはりあの喫茶店に行くのが一番でした。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    また急ブレーキ展開の犠牲者が！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    喫茶店までの道のりをぼんやりと歩いていると、あなたの前に突如チラシが差し出されます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    突然のことに驚き、差し出された方を見ると、暖かい気候だというのに冬の季節にするような格好で、帽子を深く被った背の低い人物がいました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    身長は140cmギリギリ行くかくらい。帽子を深く被っているので顔はよく見えません。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな人物が無言であなたにチラシを差し出して……いや、押し付けてきます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「えっ、あの」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    戸惑いつつも受け取ります。<br>チラシを見てみよう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チラシを確認してみると、真ん中に大きく「とっておきのコーヒー、あります」と拙い字で書かれていました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チラシの右下あたりには小さくチヨカフェと書いてあります。店の名前でしょうね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    その店名に聞き覚えはありますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ないですね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「チヨカフェ……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いいですね。この辺りじゃ聞き覚えがないですけど……最近開いたんですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    まだ困惑が残りつつも笑顔で話しかけてみます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その人物はコクリと頷きます。<br>そして進行方向とは逆の方向を指差すでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    指差した方向を見てみます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    住宅街が広がっています。おそらく店はここよりもっと奥の方にあるのでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（どうしよう。このチラシ少し怪しいし、いつものところがいいけど。この子が見ている手前、逆方向にも行きづらい……）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    可哀想   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（行ったフリして、どこかで迂回できないかな）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「え、ええと。折角ですし、お店のほうに行ってみますね。ありがとうございます」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    にこやかにそう言って、足早にその場を後にします。とりあえず、チヨカフェなるものがある方向に転換しますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それを聞くとまたその人物は頷き、またチラシ配りに戻りますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたもその場から足早に去ることでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さてどうしましょう。このあたり道は大体把握しているので迂回しようと思えば簡単にできますが……   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    とりあえずお店までは行ってみます。<br>気になるには気になるので。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では方向転換して暫く歩いていくと、何やら目立つ建物が見えてきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目立つ、というよりこのあたりの景観を損なうような……怪しい店です。<br>看板を見てみれば、歪んだ字でチヨカフェと書いてありますね。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    こわい   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ニンダイの時間じゃ！<br>   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ニンダイいくぞ！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「わあ………………」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    中を窺えそうな窓などはありますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    窓自体はありますが、どの窓もカーテンを閉めきられていて中を見られませんね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    こんなところ入りたくないだろ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    周囲を見回します。<br>辺りに人影はありませんか？   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はい（はい）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あまり無いですが〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1人だけ、カフェに近づいていく男性がいます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    この店に客が！？   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    男性の動向を窺うことにします。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（お客さんかな……）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その男性はフラフラ歩きながら店に近づき、店の扉に手をかけますね。お客さんのようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（この外観で随分と躊躇なく入る……ということは、初めてではない？）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あの、すみません」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    店に入ろうとする男性を呼び止めます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    「はい……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    男は扉から手を離して振り返りますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ごめんなさい、急に声をかけて……。俺、初めてこのお店に来たんですけど。あなたはそうじゃないのかなって思ったんです」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それでその、ほら。このお店って少し……変わってるでしょう？　ちょっと入りにくくて……。もしあなたがここに来たことがあるのなら、お話を伺いたいと思ったんですけど……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「このお店、どんな感じですか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    「どんな感じって……普通ですけど……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    「ああ、でも確かに俺も初めて案内された時は外観に圧倒されてしまいましたね。雰囲気作りに拘っているみたいで……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    「何よりここのコーヒーが美味しいんですよ。やみつきになります」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    「注文とは別に必ず出してくれるんです。お通しみたいなものですね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    心理学を振ります。<br>男は正気ですか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>男</dt><dd>    心理学どうぞ！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=90 【心理学】 (1D100&lt;=90) ボーナス・ペナルティダイス[0] ＞ 11 ＞ 11 ＞ イクストリーム成功  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ちょっと覗かせてもらいますよ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    出目がちょっとどころじゃ無い   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうですね、そう楽しげに語る男の目はどこか虚ろで、何かに囚われているような気がしました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そ、そうなんですね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「気になりますし、俺も仕事帰りに寄ってみようと思います。それでは……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    男性から距離を取ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    距離と取れますね。男はニコォ……と笑ってから店の中に入っていきました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    よし、それでは迂回して行きつけの喫茶店に向かいます！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんに飲ませてあげよう♪   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    別の喫茶店に浮気しちゃうな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では先ほどのチラシを配っていた人物と遭遇すると気まずいので会わないであろうルートを使って迂回することができます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけで行きつけの喫茶店です。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店名は「翠」。これをスイと読むことを松葉くんは知っているでしょうね。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    僕は知らなかった   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    常連だからね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（やっぱり、変な冒険はしないに限る）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    今度は躊躇なく扉を開きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    カランカランカラ〜ン   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「いらっしゃい！　……ああ、松葉くんじゃないか、なんだか久しぶりだね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言ってマスターは嬉しそうに笑い、迎えてくれますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いつ来ても優しく温かみを感じる喫茶店だ。<br>マスターの声に反応して知り合いの常連さんもあなたに手を振って挨拶してくれるでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ご無沙汰してます、マスター。皆さんも」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    会釈しながら適当な席につきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    席に着くとすぐにお冷が運ばれてくるね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「いらっしゃい、松葉くん。また来てもらえて嬉しいわぁ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「すみません。本当はもう少し早く伺うつもりだったんですけど、仕事が立て込んでいて……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「マスター、ブレンドいただけますか？　ホットで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「はいよ〜。すぐ淹れるからね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言ってマスターはコーヒーの準備をし始めますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「お仕事いつも忙しそうよねぇ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「ちゃんと休めてる？　心配だわぁ……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ありがとうございます。こうして翠の皆さんとコーヒーをいただきながらのんびりお話するのも、俺にとっては休息の時間ですよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……そうだ。今日は、翠ちゃんは？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「翠ちゃんなら大学に行ってるわよぉ。でも今日は午前中だけって言ってたから、そろそろ帰って来ると思うけどぉ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「翠ちゃんったら最近あなたが来ないって気にしてばっかりだったのよぉ。　……ふふふ、喜ぶ顔が想像できちゃうわぁ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    それを聞いて少し困った顔で笑います。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうですか。じゃあ、顔を見せてあげないと」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と、そう言ったところで店の扉がカランカランといって開きます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    音に気づいて扉のほうを向きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では扉の方へ目を向けてみると、そこには噂の人物が立っていました。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「ただいま〜」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    かわいいねえ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながら店内を見渡す翠ですが、松葉くんの存在に気付いた瞬間目を丸くしてその場で固まります。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……え」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして一気に扉が閉められました。まだ翠は店内に入っていないのでセルフ閉め出しですね。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「あらぁ、噂をすれば……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あ、あれ……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「扉、閉まっちゃいましたね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    苦笑いで老婦人を見ています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「ほんとねぇ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふふふ、と楽しそうに笑っていますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それからほどなくしてまたゆっくりと扉が開かれていきます。<br>翠はその扉の隙間からこちらの様子を伺うように見ています。まるで、信じられないものを見ているかのような表情です。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    暫くその状態でいた翠ですが、見かねたマスターが早く入ってくるように手で招くとおずおずと翠が店内に入ってきます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「おかえりなさい、翠ちゃん。大学は楽しかったですか？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    そういえば今日は何時までにしましょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    にこやかに微笑みかけます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    任せるぜ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 56  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    あ、こりんちゃん3連休か<br>仕事あるから2時前には寝たい！   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「たっ、ただっ、たたたたただいま！　……です！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は顔を赤くしてこちらの席へと小走りでやって来ます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「だ、大学、大変楽しゅうございました！！　とても有意義な時間を過ごせたと思います！！」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃあ1時近くなったらRPの良いところで切りましょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って何故か敬礼をされます。どう見てもテンパっています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「よかったです。けど、落ち着いて……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「すみません、暫く足を運べなかったせいで心配させてしまったみたいで。翠ちゃんが元気そうで嬉しいです」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「そ、そんな、謝ることじゃないです！　お仕事がとってもお忙しいでしょうし……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……その、お店に来てくれてありがとうございます。すっごく嬉しいです」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……わ、私！　すぐ準備して来ますね！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言い残して店の奥へと駆けて行ってしまいますね。<br>マスターもおばあさんも店の常連も、皆そんな様子がおかしくて笑っています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「賑やかな子よねぇ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「騒がしくしてごめんなぁ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>       </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    マスターはそう言いながらカウンターにコーヒーを出し、おばあさんはそれを運んできてくれます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いえ、そんな。流石はこのお店の看板娘ですね。翠ちゃんがいるだけでお店の中がぐっと明るくなった気がします」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ありがとうございます、いただきます」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    熱いうちにいただきます！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんじゃなくてコーヒーをいただくんだよ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    美味しいブレンドコーヒーだ！！生き返る〜！！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ほっとするわね～。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>常連</dt><dd>    「翠ちゃんてば俺たちにゃ目もくれず、君のことしか見てなかったぜ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>常連</dt><dd>    「おいおい看板娘を独り占めしないでくれよ〜」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ひ、独り占めって」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    苦笑いをしています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>常連</dt><dd>    「ありゃあ、分かりやすすぎるよなぁ……」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんはみんなの翠ちゃんだからね！って思ったけど別にみんなの翠ちゃんではないか……（ご両親の翠ちゃんか……）になった   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>常連</dt><dd>    「翠ちゃんだけだな、気付かれてないと思ってるのは」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    心理学なんていらんかったか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ケラケラと笑い飛ばしていますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    翠ちゃんは分かりやす人間だから   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    あまり話題に触れないように、コーヒーを飲んでその場を切り抜けようとします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｽﾞｽﾞ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    コーヒーを飲んでいると、卓上にアイスクリームが置かれますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「これ、良かったら食べてねぇ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いいんですか？　ありがとうございます。やっぱり、コーヒーに合わせるのはこれが一番なんです」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    喜んでいただきます！<br>エスプレッソに比べると苦味が足りないかもだが、ブレンドちょっとかけてみるか。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    スプーンで掬ってね……。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「ふふ、好きかと思ってねぇ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    アイスクリームにブレンドコーヒーが垂らされますね。……美味しそう！！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    アフォガート、実は人生で一回しか食べた記憶がない。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    負けるか、僕は一度もない   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    オリジナルアフォガートをスプーンで掬って食べてみるとこれまた絶品ですね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「うん、美味しいです。やっぱりここのコーヒーは何にでも合う」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「今日もここに来て良かったです。実は道中、少し変わった喫茶店のチラシを貰いまして。お店まで行ってみて、結局ここに戻って来たんですけど……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「マスター、チヨカフェってご存知ですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    チラシを取り出して見せます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    RPの良いところを先延ばしにする能力の持ち主   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    カウンター内から出て来てチラシを見に来ますね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    こいつ草しか言ってないな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    久しぶりに除草機駆り出すか……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「ん〜〜…………？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「いやぁ、全然聞いたことのないお店だよ。この辺りなのかい？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ええ。方向は逆ですけど、そう遠くはないですよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「最近開いたと聞いたので、あまり知られていなくても無理はないと思います。こうしてチラシも配っているわけですし」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「とっておきのコーヒー、と言われると気になってしまうんですが……少し外観が怖くて。いずれ利用することもあるかもしれないですけど」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「既に利用された方に聞いたら、やっぱりコーヒーが絶品らしくて。やみつきになるって評判みたいです」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（あのお客さんは少し怖かったけど……）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「やみつきになるコーヒーかぁ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「ならこっちはそれ以上のコーヒーが淹れられるようにならないとなぁ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「松葉くん、もし今度行ったら感想を聞かせてくれないかな？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あ、はい。もちろん……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（しまったな。これは一度は行くしかないか……。まあ、興味はあるしな……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……でも、マスターのコーヒーだって絶品ですよ。苦味の中にも優しさのある味でとてもほっとするし、また来たくなるんです」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「ありがとう、そう言ってもらえるのが一番嬉しいよ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「あちらの喫茶店に君を取られないように頑張らないとね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あはは……そんなまさか」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もし本当に向こうの喫茶店が美味しくても、ここにはまた来ますよ。俺はこのお店が好きですから」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    そう言って美味しそうにアイスを食べる松葉くん。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「ありがとう」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    マスターは心から嬉しそうに笑います。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    一区切りついたので一旦終わるか。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はいな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    まだ翠ちゃんしか出てないが次回から多分誰かしら出るぜ！気長に待っててくれ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    楽しみにしてるぜ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんは何度苦笑いするかな？   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おい、マゾなら心から笑えよ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いつも苦笑いしてた小鞠くんが懐かしいな。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おい、マスターは心から嬉しそうに笑ってるぞ。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    PCだと心の声だだ漏れだから松葉くんがマゾじゃないのバレバレなんだよな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんもマスターには心から笑ってるよ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ほなまたな！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    除草機通ります   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつ！！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ぺんぺん草も残さない   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ハロー   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ｺﾆﾆﾁﾜ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ずっと座りながら作業していたので尻が痛いでーす   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今日はアメリカンチェリーを食べながらやります   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    尻を労ってあげて   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ﾖｽﾖｽ……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    準備できてたら再開するわよ〜   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    うぃす   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんなふうにマスターと話をしていると店の奥から翠が慌てて戻ってきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    制服の袴を見に纏い、眼鏡を外し髪をまとめていますね。見慣れた姿かもしれないですね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「戻りました……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は松葉くんの姿を確認すると、ホッと安心をしたような様子を見せます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    かわいいね　ちゅ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「おかえりなさい」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    笑顔で出迎えました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 5  </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「たっ、ただいまです！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    嬉しそうに笑っています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうだ、翠ちゃんは知ってますか？　最近この辺りにできた喫茶店」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そこでチラシを配っていたんですけど、会いませんでしたか？」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんに代わりに行って来てもらおう！w   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    酷くて草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    身代わりだ   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「喫茶店？　いえ、全然……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「チラシを配ってる人も特にお見かけしてないと思います」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    顎に指を当て、思い出しながら話していますね   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あれ、通り道じゃなかったのかな……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「本当に最近できたばかりなんでしょうね。あの外観なら話題になっててもおかしくないと思いますし……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「まさか、ライバル店ですか……！？」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「大変だ、近いうちに偵察に行かなきゃ……！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「松葉さん、そこは何というお店ですか……！？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「チヨカフェさんです。ほら」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    チラシを見せてあげます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「チヨカフェ……　とっておきのコーヒー……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠はチラシの隅から隅まで、隈なく見ていますね   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「お店の名前は端っこにちっちゃく書いてあるんですね……　凄くコーヒーを推していることは分かりました」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「でも、私のおじいちゃんだってとっておきのコーヒー淹れられます！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……そ、それに、私だって、これから淹れられるようになります！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チラシに対して闘志を燃やしているようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「はい。俺もそう思いますよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「翠ちゃんがとっておきのコーヒーを淹れられるようになるの、楽しみですね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    へにゃへにゃ笑顔で想いを馳せています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 42  </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「えへ、へへへ…………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    照れくさそうに笑っています   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「でもまずは翠ちゃん、ホールの方を完璧に出来るようになってももらわないと……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「いくら力持ちだからって、一気にたくさんのお料理を持っていくのは危ないからねぇ……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「ほら、前に転びそうになったことが……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「お、おばあちゃん！　そんな話しないでよ……！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうなんですか？　……翠ちゃん、気をつけないと。翠ちゃんが怪我をしたらマスターも奥さんも、お客さんも皆さん悲しみますよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もちろん、俺も」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    心配そうな顔で窘めます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では松葉くんがそう言うと翠はハッとした顔をしますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……やめます、一気にたくさん持つの」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「うん、いくら効率的だからって怪我したら良くないですよね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    先程までの慌てた様子から打って変わって(   ˙-˙   )ｽﾝｯと大人しくなりますね。<br>おばあちゃんはそんな様子に困ったように笑います。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「この子ったらもう……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「マスターにもお話しましたけど、俺はこれからもこのお店のお世話になるつもりですから……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「しかし、ライバル店であることは事実ですよね。既に熱狂的なリピーターもついているみたいですし、うかうかしていられないのかもしれません」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「何か俺にもできることがあれば協力させてくださいね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「あら、助かるわぁ。ねぇ、翠ちゃん」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「う、うん……！　松葉さんがうちに来てくれてるってだけでもう助かってるくらいですし……！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「とりあえず近いうちにチヨカフェさんに偵察に行ってくるので、その後の作戦会議にご協力をいただけると……！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「例えば新メニュー考案とか……！」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ちょっとお手洗い！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おぃす   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「新メニュー、いいですね。もちろんお手伝いさせてもらいます」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「俺もマスターに感想をと頼まれましたから、チヨカフェさんには行ってみようと思います。そのほうが参考になるアドバイスができるでしょうし」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「一緒に頑張りましょうね」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……はい！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と、そんな会話をしていると、カウンターからマスターの何やら困ったような声が聞こえてきます。<br>そしてこちらで話している翠に声をかけてきますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「翠、ちょっと買い出しに行ってきてくれないかな。生クリームが足りなくなりそうだ」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「えっ……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「そ、そっか。分かった……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は残念そうな顔をしますが、マスターから買い出しのメモを受け取ります。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「えっと、そういうわけなのでちょっと行ってきますね」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……あの、松葉さん。お店にはあとどのくらい居てくれますか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「今日は非番なので、時間に融通を利かせられますよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「何か用があるなら、まだまだここで待ってますから」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「い、いえ！　特段何か用があるというわけではないんですけど……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「ただちょっと気になっただけというか……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「と、とりあえず！　急いでお買い物に行ってきますね。お待たせするわけにはいかないので……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って駆け足で出入り口の方へ向かっていきます   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「行ってきます！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    手を振って見送ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は嬉しそうに微笑んでお店を出ていきます   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    マスターもおばあちゃんも仕事へ戻っていきますね   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……急がなくてもいいって言うのを忘れてしまった」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    転ばないといいな……と思いながら、少し冷めたコーヒーを飲みます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｽﾞｽﾞ……冷めても美味しい   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（マスターたちの仕事の妨げになってもいけないし、翠ちゃんが戻るまでは本でも読んでいよう）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    鞄から文庫本を取り出して読み始めます。<br>ブックカバーがついてますが、中身はハートフルアニマルストーリーです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    動物かわええ〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではそんな感じで時間を潰す感じでね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    時間を潰し始めてから少し経ったくらいですかね。また店の扉がカランカランと音を当てて開きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「いらっしゃいませ〜……って、あらあら。今日は久しぶりなお客さんがたくさんだわぁ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「いらっしゃい、紘ちゃん」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    キャー！　紘ちゃーん！！   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「どーも、お久しぶりです」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……あれ、翠は？　もう居るかと思ってたんだけど……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「ああ、ごめんねぇ。翠ちゃんはついさっき買い出しに行っちゃったのよぉ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「もしかして会う約束してたかしら……？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「いや、特には。私が勝手に来ただけなんで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「そう……。でもごめんねぇ、多分すぐ帰ってくると思うから……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「全然平気ですよ。仕事休みだし、ずっと暇だから」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「そうなのねぇ。じゃあお店でゆっくりしててねぇ……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「うぃっす。あ、アイスコーヒーもお願いします」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「はぁ〜い」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やっと2人目でたな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘と呼ばれた女性は慣れた様子で席に座り、注文をしますね。<br>外が暑かったようで、帽子とマスクを外し、顔を帽子で仰いでますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    本を読むフリをして二人の会話に聞き耳を立てていました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（翠ちゃんの友達かな。初めて会った気がする）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その後は特に会話はなかったのですが、紘が注文したコーヒーが運ばれていくのをなんとなく横目で見てしまうでしょう。翠の知り合いということで、なんとなく気になりました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてすぐにまた読書に戻ろうと本に向き直りますが、こちらに向かってくる足音が聞こえてくるでしょう。<br>誰かと後方を確認すれば、紘が立っていましたね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    後ろにﾇｯ……っと立ってるのは軽くホラーなんよ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……！？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ぎょっと目を見開きますが、慌てて笑顔を作ります。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ええと、何かご用ですか？」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    POW80じゃなかったら叫んでた   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ああ、いや」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って席の前の方に回り込み、床から何かを拾いますね。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「これ、落ちてたのが気になったんで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って差し出したのはチヨカフェのチラシでした。本の方に注意が向いて落ちてしまっていたことに気が付かなかったのでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あ……ああ！　落としちゃってたんですね、気がつきませんでした」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ご親切にありがとうございます」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    笑顔で受け取りました。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「いえ、全然……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チラシを受け取ることができます。<br>彼女も席に戻ろうとするのですが、すぐに足を止めます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    足を止めるなり松葉くんをジーーッと見始めます。<br>これは、観察されている……！？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目つきがあまり良くないので睨まれている！？とも思うかもしれない。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（み、見られている。間違いなく……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    松葉くんは視線が苦手なため、とてもそわそわしています。これじゃあ読書もできない！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（落ち着け、相手は翠ちゃんの友達だ。見られているからって何かされるわけじゃない）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（と言っても、睨まれているような気がするのは俺だけ……？）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    勇気を振り絞り、ぎこちない笑顔で紘ちゃんを見ます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あの、まだ何か……？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……なんか、知ってる人のような気がして」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「友達から散々聞かされた人の特徴に当てはまる気がするなーって」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「お兄さん、松葉さんって人？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    表情は変えず真顔のまま尋ねてきますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「えっ……ええ、まあ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「神代 松葉です。よろしくお願いしますね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ニコニコ……   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「おお、やっぱりそうなんだ……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「私は霧間 紘って言います。翠がお世話になってるとかなんとか。まあ色々聞いてます」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ガン見しちゃってすみません。どうしても気になったもんで」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いえ、確かにびっくりしましたけど。事情もわかったので……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「翠ちゃんのお友達にこうして挨拶できてよかったです。声を掛けてくれてありがとう」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「いやぁ……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……ふふ、そうか。なるほどね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言うなり紘は俯いて肩を微かに震わせます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうしたかと思えば笑いを堪えてるようでした。何かをブツブツと呟いています。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    どう見ても失礼な行動で笑っちゃうな   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    呟きの内容は聞き取れますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    笑いながらなんか言ってるのでちゃんと聞き取れるかの聞き耳かな。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=70 【聞き耳】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 80 ＞ 80 ＞ 失敗  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    なんてぇ～？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    な〜にいってんだかわからん！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「俺、何か面白いこと言いました……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    心配になってきました。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「いやっ、なにも……？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ちょっと思い出し笑いです。友達が面白いこと言ってたんで」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    顔を上げながらそう言いますね。顔がまだ若干のニヤけてます。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「断じて松葉さんを笑ってるわけじゃないんで。そこは信用してください」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そ、そうですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（女の子たちって一体どんな話をしてるんだろう……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    聞きたいけど聞きたくないような微妙な気持ちになっています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ええと……紘ちゃんも、翠ちゃんを待つんですか？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「まあ、はい。会おうと思って来たんで」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    最近RPに2分も3分もかかる理由がわかった<br>パソコンだからや   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「夕方くらいには帰りますけど……流石にそれまでには戻ってくるだろうし」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「てか、松葉さんも翠を待ってんの？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    実はパソコンってスマホより文字打つのが手間でぇ……   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「はい。今日は仕事もないので、いつもよりゆっくりして行こうかと思って」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ふぅん……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「じゃあ翠を待つもの同士ですし、ちょっと話しません？　良いネタがあるんですよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうですね、そうしましょう」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それで、良いネタというのは？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんの返答を聞くと紘は満足げに口角上げ、対面の席にどっかり座ります。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「子供の頃の翠の話」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    というところで今日は切るぜ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃん他人に色々バラされてて笑う   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    幼少期までバラされるのか   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ばあちゃんも紘ちゃんも口軽いからなんでもバラされる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    可哀想（可哀想）   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おじさんが忘れないようにメモしてあげるからね☺   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    というわけでおつおつだ！<br>次回は子供の頃の翠ちゃんの情報垂れ流し回です。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おっさんした！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    どもども   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    色々流してたら時間になってた   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うす   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はぁはぁ、やっぱりスマホだと毎回部屋入り直さないとチャットが表示されない   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    キャッシュの問題じゃないっぽいな、諦めよう（潔）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やはりPCか   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    今のは表示されたから、さっき僕が部屋出たタイミングでこりんちゃんが発言した可能性は微レ存   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    あまりにもスマホでやりたいため、内心諦めつつもスマホで続行しようと試みています   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    まあ様子見つつやっていきましょ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はーい   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「え、そんな……プライベートなことを本人のいないところで聞いちゃっていいんですかね？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「いいでしょ。減るもんじゃないし」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうですか……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（俺だったらちょっと恥ずかしいけどな……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    と思いつつも、聞く姿勢になります。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「本人に知られなければなんも問題ないっしょ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ああ、なるほど……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「よし、それじゃまずは……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘は頬杖をつき、話し始めます。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「確か、小学3年生くらいの時だったかな……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「男子が気になる女子にちょっかいをかける話とかよくあると思うんだけど、私らのクラスにもそういうのがあったんすよ」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ちょっかいをかけられてたのは文学少女的な、大人しい子。あれは可愛らしい子だったな〜」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でも嫌なことをはっきり言えないタイプだったから、その子の代わりに翠がやめるように言ってたんだよね」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でも、ある時その子が泣き出しちゃうくらいのことを男の子がしでかしたちゃってさ。流石にやばいって謝ろうと思ってたっぽいんだけど……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「その場に駆けつけた翠がさ、男の子のことを背負い投げしちゃったんだよ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「せ、背負い……！？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「翠ちゃん、幼い頃からそんな力が……？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「うん、あの子は昔からそう」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「腕相撲なら負けなし……だったと思う」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……あ、その後の話だけど。男の子は怪我はしてなかったし、ちゃんと解決したから心配しないで」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それを聞いて安心しました。怪我させたとなれば、相手の子もそうですけど、翠ちゃんも傷ついただろうから……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（しかし、その子も結構丈夫だな。少し親近感……）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「今でこそ大人しいけど、怒らせるとどうだか……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「眠れる獅子、覚醒……的な」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なんてね、って冗談っぽく笑っています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あ、あはは……怒らせないように気をつけないと」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そう言う紘ちゃんは、翠ちゃんと喧嘩したりしなかったんですか？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「あんま無かったと思うけど……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……喧嘩というより、私が一方的に怒られてた、か？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「なんか想像できます。翠ちゃんに心配かけてしまったんじゃないですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それか、翠ちゃんをからかったとか……」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    若干紘ちゃんへの心象悪くて笑ってる   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……まあ、どっちも心当たりあるな」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ファーストコンタクトがあれだったから……   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でもほら、あの子って1回突けば3倍になって返ってくるところあるから面白くて」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「面白いかはさておき、確かにそういうところはあるかも……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「感情豊かで、翠ちゃんの美徳ですよね」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「そそ、可愛らしいところでもある。私は翠のそういうところ好き」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でも、たまに心配になるんだよな。変な奴に付き纏われるんじゃないかって」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「松葉さん、ここの常連なんだよね。翠がお客さんに絡まれてる事とか無かった？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「無いならそれで良いんだけど……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    記憶を辿ってみます。心当たりはありますか？   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    もしあったとしても、松葉くんの性質的に止めに入らないのが確定しておりマイナスイベントにしかならないの笑いますよね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お客さんに話しかけられてるところはよく見かけていましたが、変に絡まれたりはしていなかったと思いますね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あっても翠ちゃん1人でどうにか出来る&amp;じいちゃんばあちゃん居るから何ら問題ないのである（）   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「うーん。ここの人たちは皆さん純粋な気持ちで翠ちゃんと接している気がします。俺もそういうトラブルが起きている場面に居合わせたことはないかも？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「そ。なら良かった」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でも、万が一何かあったらよろしくね。松葉さん」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「が、頑張ります」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（翠ちゃんなら俺がいなくても大丈夫なんじゃ……？　でも、それでも女の子だしな……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    どこか頼りなさそうな松葉くんです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    クスクス笑われますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さて、話し始めてからしばらく経ちますが、まだ翠が帰ってくる気配はないですね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘も思うことがあったのか、携帯の時計を確認しています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてあなたに何か言おうと口を開きかけたとき、店の扉が勢いよく開け放たれます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    驚いて扉のほうを向きます。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>声が大きい女</dt><dd>    「たのもーーーーう！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そちらの方を見ると、ひとりの女性が立っていましたね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    とは言っても身長は低く、その堂々とした表情に幼さを感じさせます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その女性は店内にずんずん侵入してきます。そして空いてるカウンター席に腰掛けるでしょう。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>声が大きい女</dt><dd>    「よっこいしょ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あんな風に入ってきたものですから、客の視線は彼女に集まってしまっています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    だというのに彼女は何も気にすることなく、上機嫌で足をプラプラと動かしながらメニュー表を見ています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（子供……？　いや、背が低いだけでちゃんと大人の女性か）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    それにしても元気だな……と少し気になっています。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    一体どこを見て大人だと判断したんですか？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    どことは言えないよなあ！   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「......なんか、すごい人来たな」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ぼそっと言います。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「喫茶店には色々な人が来ますよね。俺もちょっと驚いてます……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ヒソヒソ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気になるな～と思って様子を見ていると、女性の手にくしゃくしゃになった紙が握られていることに気が付きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目を凝らして見てみると、それがあなたも貰ったチヨカフェのチラシだということが分かります。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（チラシ、あの人ももらったんだ。ということはまだこの辺りで配っているのかな）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（……握り潰されてるけど）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    スルーしてこっち来たんだろうなあ......って感じですね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    女性は注文を決めたようで、手をピンと上げおばあちゃんを呼びつけますね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>おばあちゃん</dt><dd>    「はいはい、ご注文はぁ……？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>声が大きい女</dt><dd>    「アイスコーヒーとプリンアラモード！　ブラックコーヒーは苦くて飲めないのでミルクはたくさんつけて欲しいのじゃ！」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    のじゃ！   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>声が大きい女</dt><dd>    「ふふふ〜……　今日は小遣いをもらったから贅沢をしちゃうのじゃ〜」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    と、そんな感じで注文を終えますね。<br>口調に特徴があるなこの人……って思います。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    のじゃ！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（やっぱり子供か……？）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「なんか、すごく楽しそうですね。翠ちゃんにも負けないくらいの元気です」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんにヒソヒソ……   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「まあ子供って元気なもんだろうし……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ヒソヒソ……   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あ、やっぱり子供なんでしょうか？　ひとりで来て大丈夫なのかな……」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    子供になっちゃった   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「問題なく注文できてるし、平気なんじゃない？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    子供（）は手持ち無沙汰になったのか、くしゃくしゃになった紙を広げて折り紙を始めます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（自由だな……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    読書という気分でもないので、子供（）を観察することにします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はいｗ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    子供（）はルンルンで紙を折っていきます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（何ができるんだろう）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして出来上がったのは紙飛行機。完成品を頭上に掲げています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    出来に満足いったのか、それを携帯で撮っています。ポチ......ポチ......とゆっくりな操作をしています。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    チヨカフェの食べログに投稿しよう   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ここのチラシは上等な紙飛行機が折れて最高なのじゃ😁   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてその紙飛行機と一緒に自撮りをし始めます。向かいの席からは笑いをこらえているような声が聞こえました。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    角度調整をしたいのか、子供（）はカウンター椅子ごとクルクル回り始めます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    様子を見ていた松葉くん、ここでばっちり目が合ってしまいます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    そーっと目を逸らします。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ↑のおもろくてずっと笑ってる   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>声が大きい女</dt><dd>    「……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紙飛行機がヨロヨロと松葉くんたちの席めがけて飛んできますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「うわっ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    キャッチしようとします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    簡単にキャッチすることができました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それを見て子供は嬉しそうな反応をしています。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「うおお〜〜！　ナイスキャッチ、なのじゃ！」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    オリエッティ〜！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｷｬｯｷｬｯ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ようやくの登場である   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「えっ。あ、あはは……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（コーヒーに落ちたらまずいからキャッチしてみたけど、喜んでくれたみたいだ）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    返してあげようと思ったところで、折角なので投げて返すことにします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ピュ〜……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    投げた紙飛行機は子供にキャッチされましたね   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「む。これが欲しかったんじゃないのか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    不思議そうに首を傾げます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いえ、そういうわけでは……。ただちょっと気になって」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「すみま……ごめんね、ジロジロ見ちゃって」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    子供向けに態度を緩めました。ニコニコ……   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「なんじゃ、そういうことか〜」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「折り紙は良いぞ〜。特にこの紙は折りごこちが良いからおすすめじゃ！　お前さんらの机にもあるじゃろ？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    雑談から輸入しました   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうなんだ……。ええと、でもお兄さんはあまり折り紙が得意じゃないんだよね。もし良かったら、こっちのチラシも君にあげようか？」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    チヨカフェ「ひどない？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「よ、よいのか！？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「うん、いいよ。ほら……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    席を立ってチラシを渡しに行きます。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「わーい！　やったのじゃー！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    子供は喜んで受け取りますね。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「帰ったら珠森に自慢するのじゃ〜」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（友達かな……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「次は何を折るの？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ちょっと〜チヨカフェくん泣いてるじゃん〜   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「そうじゃなぁ……」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「……ゴブリンとかか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そんなものまで折れるの……！？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「いや、折ったことないから分からんが……　さっきゴブリンみたいにちっこいのが居たから思いついただけじゃ」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    大分失礼で笑う   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そ、そっか……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ええと、その折り紙。珠森っていう子も喜ぶといいね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    当たり障りないことを言って席まで後退していく松葉くんであった。   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「うむ。珠森は絶対に喜ぶとして……」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「お前さん、こちの話を信じておらんな？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「本当に居たんじゃぞ！　ゴブリンみたいにちっちゃくて、顔色が悪くて、鼻が高いの！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「え、単に背が低いだけじゃなくて？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「そうじゃ！　まさに、このチラシを配ってきたやつこそがゴブリンじゃった！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って先ほど渡したチヨカフェのチラシを指します。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……確かに、やけに小さくて厚着だったことは覚えてるけど。君、顔を見たの？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「普通に見えたぞ？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「俺は全然見てなかったな……」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    探偵、大丈夫か？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    試しにアイデア振ってみてくれ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=65 【アイデア】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 17 ＞ 17 ＞ ハード成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    この子供とチラシを配っていた人物、目線が近かったから見えたのでは？と考えました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（ああ、そうか……）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今日はオフですからね   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「お兄さん、屈まないと見えなかったのかも。今更だけどちゃんと目線を合わせてあげたらよかったな……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ゴブリンが怖くて、チラシのお店には行かなかったの？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「んーや、全然そんなことないのじゃ？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「本当は気になって行こうと思ったんじゃが、そのゴブリンが別の娘を案内しててな？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「その娘は本当はこっちに来たそうにしてたんじゃが、向こうに行ってしまったからこちが代わりにこっちに来たのじゃ」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    こちがこっちにね   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    織江ちゃんの一人称ずっとワシだと思ってたにわか   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「なるほど……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最初はわしにしようかと思ったけど捻りを入れたかった   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（まさかとは思うけど、翠ちゃんじゃないよな？）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……ねえ、その案内されていた人ってどんな感じの人だったか覚えてる？」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「もちろん覚えておるぞ。店に入るすぐ前のことじゃからの」   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「こう、髪を纏めてな、和装を着ておった」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんじゃー！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そ、それって……！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんのほうを見ます。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……翠じゃん、それ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「じゃあ、翠ちゃんは今チヨカフェに……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「だ、大丈夫でしょうか。そんな怪しい人が宣伝しているお店に翠ちゃんひとりで……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「というか、買い出しが……ねえ？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんを見てオロオロ、マスターたちを見てオロオロ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    マスターたちもオロオロしていますが、紘は席を立ちます。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「私、そのカフェに行ってくる」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    男たち頼りなさすぎて笑う   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って直ぐに座席に置いていた荷物を取りに行きますね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    しゃんとしろ！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あっ……ま、待ってください紘ちゃん！　俺も行きます……！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「俺がチヨカフェさんの話を翠ちゃんにしたから……もしかしたら、それで視察に行ってしまったのかもしれませんし」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「その……俺も、いつかは行こうと思っていたので」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……わかった」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「まあ買い出しすっぽかして視察に行ってたんなら翠が悪いし、そん時はお説教しましょ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうですね。まずは翠ちゃんの無事だけでも確かめに行かないと……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「大方、そういうコンセプトなだけだろうとは思いますけど……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    松葉も荷物を持って店を出る準備をします。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ああ、その前にお会計は済ませておかないと。マスター、いいですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「彼女の分も一緒に払います」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    しれっと紘ちゃんのアイスコーヒー分を奢ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘は別に良いのに……と言いつつも頭を下げます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「あ、ああ……うん。後でも良かったんだけどね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>マスター</dt><dd>    「翠のことも任せることになってしまって悪いね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「気にしないでください。マスターにはお店がありますから」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（これから厄介事が起きるかもしれない、けど……ここは腹を括らないとな）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……よし、行きましょう」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんに目配せして、チヨカフェに向かいます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い。<br>ではお店を出てチヨカフェへと……   </dd></dl>
+<dl style="color:#7d415e" class="main"><dt>老人口調の女</dt><dd>    「なんだか知らんが気をつけて行ってくるのじゃぞ〜」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    というところで終わります   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はーい   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    事なかれ主義とはあるけど、なんだかんだ頼まれごとやその場の流れには逆らえない松葉くんであった。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    せっかくの休日なのに巻き込まれて、探索者って可哀想だな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    失った休日、カフェインで取り戻すぞ💪😁   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おつかれさんした！　またな！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつ！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    はろはろ〜ん   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    【朗報】肩の痛みが激痛から痛くらいになった   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ばんわ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    えがっだ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今回で終わりかな～って感じ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    本当にそう思いますか？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    一人出せなさそうなNPCいるけど、まあそれは今度というわけで   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    終わるやろ！ｗ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    打ち切り漫画の最終回みたいに怒涛の登場しろ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    再開するか～！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    かかってきなさい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけで現在は喫茶店の入り口前です。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「俺もここに来る前に少しチヨカフェさんに寄ったんです。案内しますね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんをチヨカフェまで先導しますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では紘を連れてチヨカフェへと向かいます。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>     間違ってPCの電源消しちゃって戸惑ってました（謎報告）   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おっちょこりん   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    周囲を少し気にしつつ向かいますが、翠（スイ）に向かう途中に会ったあのビラ配りの人物は近くには居ないようでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    で　す　が   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チヨカフェ到着まで半分をきったところで、先ほど遭遇した人物とは別の厚着をした人物がいますね。それも女性にチラシを押し付けてるところでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    遠目から見ても嫌がってんな〜ってのが分かります。なかなか悪質ですね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな場面を横目にするかもしれませんが、女性の小さな悲鳴が聞こえてきます。<br>腕を掴まれ、チヨカフェがある方向へとぐいぐい引っ張っていますね。   </dd></dl>
+<dl style="color:#55bbcc" class="main"><dt>声の小さい女</dt><dd>    「そ、そんなどう見ても怪しいところ行きたくないですから……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言って抵抗しています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    さてどうしましょう。<br>後ろに居る紘は今にも動き出しそうですが……   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんを片手で制して自分が前に出ます。<br>揉めている二人の間に入りますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あの、すみません。お店に行くの俺たちじゃダメですか？　その人は別に用事があるみたいですし……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（丁度行こうと思っていたから、減るものはないしね……）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。ではそのようにするとその人物は簡単に引き下がりますね。腕も離されました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 20  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして何も言わずにその場を離れていきます。<br>この周辺でビラ配りを続けつつ、あなたたちの様子を見ています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あれ、引きずって連れて行かれるかと思ったけど……。意外と放任されてますね……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「でも見られてる。ここで逆方向行ったら引きずってかれるんじゃない？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「翠も今みたいにされてたのかな……　あんなちっこいなら振り切れそうだけど」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんに合流しながら言いますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「小さいから、気が引けたのかも」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    連れて行かれそうになっていた女性はまだいますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いますね。こちらを見ていますが、少し顔色が悪い気がします。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ええと、大丈夫でしたか？　顔色が優れないように見えますけど……」   </dd></dl>
+<dl style="color:#55bbcc" class="main"><dt>声の小さい女</dt><dd>    「い、いえ......　お気になさらず......」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気まずそうに目を逸らされました。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    瑞葉ちゃん☺️   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    女性に心理学を試みます。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    とうとう遭遇したな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どぞ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=90 【心理学】 (1D100&lt;=90) ボーナス・ペナルティダイス[0] ＞ 12 ＞ 12 ＞ イクストリーム成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ちょっと覗かせてもらいますよ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    やっべーー出先で顔見知りに会っちまった......　という心情っぽいです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    イクスだからね......   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    詳細で笑う　心を読んでるやん   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんと女性を交互に見ています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もしかしてお知り合いとか？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さっきアイデア成功してたから顔覚えてました、この子。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「全然」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あれ、勘が外れたかな……」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんもアイデアチャレンジしてみようかな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんがそう言うと、女性はあからさまに安心した様子を見せました。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いいねぇ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ですが相手が瑞葉ちゃんなのでペナルティを課します   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    安心したところをどん底に突き落としてやろうぜ   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC-1&lt;=65 【アイデア】 (1D100&lt;=65) ボーナス・ペナルティダイス[-1] ＞ 19, 89 ＞ 89 ＞ 失敗  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いよーん   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ごめん覚えてなくて😭   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    やっぱり知らない人だよな......？   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（気のせいか……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうだ。ここを少し進んだところに別の喫茶店があるんですが、俺のおすすめなので良ければ行ってみてください。居心地がいいこと請け合いです」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それじゃあ、俺たちはチヨカフェさんのほうに伺いますので」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    女性に会釈します。   </dd></dl>
+<dl style="color:#55bbcc" class="main"><dt>声の小さい女</dt><dd>    「ああ......えっと......」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    なんでさぁ、織江ちゃんは子供扱いなのに瑞葉ちゃんは大人扱いなの？   </dd></dl>
+<dl style="color:#55bbcc" class="main"><dt>声の小さい女</dt><dd>    「......分かりました。すみません、ありがとうございました」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    雰囲気か？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    控えめに頭を下げますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    微笑んでからチヨカフェの方向へ曲がります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は～い。女性は逆方向へ歩いていきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気を取り直してチヨカフェへと向かい始めてから数分、目的地へ到着します。相変わらず怪しい店だなあ......   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ここです。びっくりするでしょう？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    苦笑いで紘ちゃんに振り返ります。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「すっごい店だな......」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    引き気味です。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……入りましょうか。翠ちゃんを迎えに行ってあげないと」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    恐る恐る扉を開けます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店の扉を開けると、薄暗い店内があなたたちを迎え入れます。どうやら裸電球が吊るされているだけのようです。<br>店内は異様に静かで、ここだけ外から切り離されたかのようでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    外観と同様に怪しさ満点な店内だと言うのに、客は割と居るようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠はいるだろうか？と店内に足を踏み入れた瞬間、聞き覚えのある声が響きます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「やっぱりまた今度にするので！！　今日のところは帰らせて下さい！！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「早く帰らないと松葉さんが帰っちゃうんだってばー！！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな声が店全体に響き渡ります。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……翠ちゃん！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    声を聞いて、翠ちゃんの姿を探します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目星をどうぞ〜   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=70 【目星】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 70 ＞ 70 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では店の奥の方に数人の店員が集まって見えるのですが、その隙間から緑色の着物がかすかに見えました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「いた！　奥のほうに……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    店の奥までズンズン進んで行きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。では奥の方へと……<br>紘も付いてきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    奥まで行くと小さなテーブル席の前で、三人の店員に囲まれた翠を発見できます。<br>そしてそのテーブルにはコーヒーらしきものが置かれていますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員は例に漏れずみんな小柄で、厚着をしています。店内にも関わらず帽子もかぶっています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「こ、これは……一体どういう状況ですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    困惑の声を上げます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その声に反応して翠が松葉くんの方へと目を向けると、顔を明るくさせますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「松葉さん……！　それに、紘ちゃんまで！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「どうしてここが分かったのか気になりますけど、あの、えっとですね……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「こ、コーヒーを飲むまで帰さないぞ！って言われちゃって、この状況に至ります！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「は、はあ……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    困った顔のまま店員たちに視線をやります。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あの……、彼女はまだ仕事中でして。今回のところは解放してあげてくれませんか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あなたたちもここで働いているなら、彼女の立場も理解していただけるんじゃないかと思うんですが……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それを聞いて店員たちは顔を見合わせますが、みんな首を横に振ります。要求を聞く気はないようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……それが、あなたたちのおもてなしですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「嫌がる相手に無理矢理コーヒーを飲ませることが、このお店のおもてなしなんですか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員たちは何も言いませんね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「よかったですね、翠ちゃん。どうやらチヨカフェさんと翠は比べるまでもないみたいです……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「コーヒーは美味しいのかもしれませんが、このお店には大切なものが欠けています。二度目もこのお店を訪れるのは、重度のカフェイン依存者くらいでしょう」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    気まずそうに目を逸らしていましたが、翠ちゃんに微笑みかけます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……だから、俺が飲みますよ。それならどうですか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。ではそう言うと店員たちは納得したようで、翠に道を開けます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    当の翠はポカーンとしていますね。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「え、本気？　飲むの？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「それしかないかなって……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「翠ちゃんはお仕事中ですから。だったら俺が代わりに飲めば解決じゃないですか？　大丈夫ですよ、俺コーヒー大好きですし」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「はあ……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「まあ松葉さんはそれで良くて、この場が収まるなら」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「では、そういうことで……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「翠ちゃん。紘ちゃんと一緒にマスターたちのところに帰ってあげてください」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「え、えっと……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……嫌かも、です」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「えっ」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「で、でもそれじゃあ、帰れないですよ？　マスターたちも心配していますし……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「それはそうですし、本当に申し訳ないことをしてしまったんですけど……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チラリと翠はコーヒーを見ますね。何か気になることがあるようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……やっぱりコーヒーの味が気になるんですか？」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「そうじゃなくって……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    しばらく悩んだ様子を見せた翠ですが、ゆっくり口を開きますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「お店の人の前でこう言ってしまうのは良くないかと思って迷ってたんですけど……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「さっき見ちゃったんです。コーヒーじゃない黒いものを入れてたのを……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「だからなのかわからないですけど、凄く独特な匂いがするんです。コーヒーの匂いじゃないなって……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「黒いもの……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    翠ちゃんの席に近づきます。<br>コーヒーの近くであおぐように香りを嗅いでみます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠の言ってた通りコーヒーの香りじゃないな……と思います。外に群生してそうな花の匂いっぽいです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……なんでしょう。野草のようなにおいがします」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あの、一体何を入れたんですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    店員たちに尋ねます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    相変わらず何も言いませんね。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……この人たち、口ないの？」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「やっぱこんな信用できない店のコーヒーなんか飲むべきじゃないと思うけど」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員の態度にいい加減我慢ならなかったのか、声色から怒りが伝わってきます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「ですけど、穏便に解決するにはやっぱり一口でも飲むしかないんじゃ……？」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    翠ちゃんが店員全員ぶっ倒せばええんやないか？   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……じゃあ」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「飲めなくすれば良くない？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘がそう言うと松葉くんのも店員も押しのけて、テーブルに置かれたコーヒーに手を突っ込みます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「ひ、紘ちゃん！？　お行儀が悪いよ！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それからすぐに紘の手はコーヒーの中から出されますが、その手には何か黒いものが握られてました。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「本当になんか入ってんじゃん」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    そうかも   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    それが何かは見てわかりますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    知識どうぞ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ちしきって打って確かって出る予測変換何？   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=70 【知識】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 88 ＞ 88 ＞ 失敗  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    あ〜〜ん？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    種類までは分かりませんが、黒い花であることは分かりますね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「黒い、花……？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「これは、一体どういうことですか？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    やはり店員は口を割りませんか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうですね。ですが、動きはあります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その場にいた店員全員が衣服の中をゴソゴソと漁りはじめます。<br>自然とその様子を見ていた松葉くんですが、店員の手にはキラリと光るものが握られているのを確認します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    サバイバルナイフですね。全員が同じものを持っています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……っ、いけない……！　翠ちゃん、紘ちゃん、逃げて！！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    二人を庇うために前に出ようとします。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    今からこのサバイバルナイフでこちらの黒い花調理していこうと思います🔪😁✌️   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1人の店員によって行く手を阻まれますね。<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    現在の状況ですが、完全に分断されています。<br><br>松　店員A     店員B　翠<br>　　　　　　店員C　紘<br><br>こんなイメージです。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんを押し退けた紘ちゃん戦犯やんけ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員からは明確な殺意を感じます。<br>秘密を知られたからには返すわけには……といったかんじでしょうか。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけでここからは戦闘に入ります。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    終わらないねえ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今日はここで終わるが、終わらなかったぜ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    私「戦闘入れるつもりなかったけどこの流れは間違いなく戦闘入るだろ」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんの使い道はタンクしかないため、次回は紘ちゃんと翠ちゃんの戦闘回になります<br>両者頑張ってください   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    出目に期待ですねぇ…   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ちなみに明日休みなので全然続けられますが   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あ〜〜〜〜〜〜〜〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃあ1時までやっちゃうか   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    頑張れ！　俺は見てるぜ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d3 (1D3) ＞ 1  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d2 (1D2) ＞ 2  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    行動順<br><br>店員A→紘→翠→松葉→店員B→店員C   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    バカ速いやつとバカ遅いやつらがいるな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員Aの行動からです。<br>こいつは松葉くんと対峙してる奴です。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんに向けてナイフを振りあげます。<br>行動はどうされますか？   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    回避します！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 68  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=20 【回避】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 80 ＞ 80 ＞ 失敗  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    怖いか？　この出目が   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    しかしナイフが当たることはないですね。宙を切るだけです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「あっぶな……正気ですか！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてナイフを振った勢いで店員の帽子が脱げるのですが、その姿に驚くかもしれませんね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    先ほどの翠で出会った子供が言っていたように鼻は高く、肌の色は暗い土色をしています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    異様に小さく引っ込んだ目もまた特徴的です。<br>この人は本当に自分たちと同じ人間だろうか……？と思うことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    SANチェックはありません。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（人間じゃない……？　いや、まさか。そんな、非現実的なことがあるわけ……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（だけど、危ない人たちだってことは間違いない……。このままじゃ二人も怪我をしてしまう。最悪、怪我じゃ済まないかも……！）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘のターンに移ります   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「こいつら、まじ……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 100  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    最近の日本は治安悪いな<br>ナイフは出るしキス魔もいるし   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 92  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ほんまやで   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    え〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘はBを蹴り上げようとしますが、勢い余って転倒します。<br>その隙をついてBはナイフを振りかぶりますが、それもまた命中することはないでしょう。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ぎゃっ！？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    次のターン紘は行動できません。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠のターンで〜す……   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「紘ちゃん！？」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「よくも、よくも紘ちゃんを転ばせましたね……！　許せません！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 36  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 84  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d3 (1D3) ＞ 3  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d4 (1D4) ＞ 3  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ダイスが多い！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    7版も普通にショックロールとかあったっけ（ド忘れ）   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    HP半分以上のダメージ負ったら重傷になってCONロール、失敗したら気絶   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さんくす   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 79  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠の拳がBの腹に入ります。<br>重い一撃を貰い、鈍い音と共に店員Bが倒れます。どうやら気絶をしたようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんのターンです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    まずはアイデアを振って下さいな   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=65 【アイデア】 (1D100&lt;=65) ボーナス・ペナルティダイス[0] ＞ 60 ＞ 60 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    描写がないから翠ちゃんが気だけで敵を倒したみたいになってるぞ（シークレットダイスの弊害）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    騒ぎを大きくしすぎたら増援を呼ばれるのでは……？と考えます。<br>店に来る直前に出会った人もいるし、まだまだ店員はいるかもしれません。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どこかのタイミングで引き上げて警察を呼ぶのがいいのかもしれません。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    今やろうと思ってたのに！（小学校低学年並感）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（食品衛生法違反、銃刀法違反、何にしても無闇に手を出すよりまずは通報しないと……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（翠ちゃんと紘ちゃんのことは心配だけど、完全に行く手を阻まれてしまっている。こうなったら仕方ない……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    通報するべく戦線離脱します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    DEX対抗かな〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うわ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    全部投稿されてないやんけ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員Aは松葉くんを逃すつもりはないようです。<br>戦線離脱するにはDEX対抗に勝利する必要があります。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ではこの場で通報します。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    大丈夫！　人間じゃないから通報なんてわからないさ！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    通報には何ターンか必要になります。<br>今回は電話をかけるところまでって感じですね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    電話をかける前に大まかな位置情報を調べておきます。<br>新しい店なのでもしかしたらマップに載っていないので。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    なるほど。<br>ではマップでチヨカフェを調べても出てこないですね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    いえ、そうでなく。<br>自分の位置情報を調べます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    何丁目あたりとかなら出ると思うので！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あ、それなら出ますね！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    大まかな位置を掴めるでしょう。通報した時に場所は伝えられそうです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    電話は次ターンですか？<br>調べてからコールまでいけます？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    電話をかけるのに1ターン、内容を伝えるのに1ターンかな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    調べてからコールはいけます   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    じゃあ電話かけるところまでお願いします！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ﾌﾟﾙﾙﾙ……ﾌﾟﾙﾙﾙ……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Bは気絶したのでCのターンです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 75  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 72  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Cは翠に向かってナイフを振りますが、それが当たることはありませんでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ターンが一巡しま〜す   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    すみませんなんかものすごくココフォリアの調子が不安定なので中途半端だけど一旦切ってもいいすか？   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    いいすよ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    数的不利の説明準備してたけどいい感じに攻撃が分散したわね   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    続き今日できます？1日空ける？   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    今日でもいいよ〜<br>日を開けたあとの己の記憶力に自信がないので   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    紘ちゃんが転倒してること覚えてられる自信がない（と投稿することで覚えていられる作戦）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    なんで自陣に不利な情報覚えようとしてるんすか？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    じゃあ今日こそ最終回です   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今日はおつです！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おつん！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ちすちす   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最終回です   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ほんとかな？（ほんとかな？）   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    本当にそうかな？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    何が何でもそうします…   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    別に終わらなくてもいいので好きにやろうぜ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やるか〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    戦闘の続きからいくぜ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    かかってきな   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店員Aからの行動です。<br>Aは松葉くんの行動に気づき、それを阻止しようとしますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    マニューバで組み付きです。どうしましょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    回避します   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 64  </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=20 【回避】 (1D100&lt;=20) ボーナス・ペナルティダイス[0] ＞ 21 ＞ 21 ＞ 失敗  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    そんなことある？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    惜しいなあ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    回避が謎に重複してるけど編集したらダイス結果消えるかもしれないのでこのままで   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では店員Aはその小さい体で飛びかかってきますが、あなたは寸前で身を捻り、危機を免れるでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（わかり切っていたことだけど、この人たちには常識は通用しない。こんな人たちと話し合いで解決できるわけがない……！）」   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    編集しても大丈夫なことを確認して来た   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（幸いまだ、紘ちゃんが転んだくらいで目立った怪我はない……だけど、それもいつまで持つか）」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘のターンですが、転倒状態から復帰します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ばつが悪そうな表情をしていました（100ファン）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠の行動です。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 79  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 98  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    何も見えてないと思うんですけど、ずっと出目がおもろいことになってるから楽しみにしててほしい   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    楽しみすぎる   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠はCを取り押さえようと飛びかかりますが、Cは後退してそれをよけます。が、足を滑らせて後ろに転倒します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Cは行動不可！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    松葉くんのターンです。<br>ﾌﾟﾙﾙﾙ……ﾌﾟﾙﾙﾙ……繋がった！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……もしもし！　すみません、事件です！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    自分の現在地と現場の状況を電話相手に簡潔に伝えます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「急いで来てください、お願いします。怪我人が出るかもしれませんから……！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではそのように内容を伝え、無事に受理されます。<br>5〜10分ほどで到着するので出来れば安全なところに避難しておいてほしい、と警察から伝えられます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    通報完了！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（安全なところって言ったって……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    逃げたいのは山々だが……という気持ち。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Bは気絶！Cは転倒！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    無能しかおらん！<br>再びAのターンです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Aですが〜そうだな〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ここでAは出口の方へと走っていきます。<br>どうやら逃げようとしているようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    阻止しようとするなどの宣言がなければこのままAは店の外へ逃げ出します。<br>いかがいたしましょう。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「なっ……待ってください！」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（……追わないほうがいい。そのほうが絶対安全だ、俺たちにとっては）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（だけど、ナイフを持っている。外にいる何の関係もない人たちが襲われないとも限らない）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「（関わっていなければきっと見過ごしていた。だけど、関わってしまったなら……）」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    思い切って阻止します。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    PC的には逃がしそうなんだけどPLは逃がしたくないので意に沿ってもらいます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい！ではDEXの判定ですね。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    任せなさい。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=40 【DEX】 (1D100&lt;=40) ボーナス・ペナルティダイス[0] ＞ 81 ＞ 81 ＞ 失敗  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>     PC、 PLの言う事を聞け   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    この通り。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 72  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    もうファンブルでも出してもらわないと勝てない(´；ω；｀)   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    これ普通に失敗してるんだけどさ（草）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    並走してんのかな？（意訳：処理困ってます）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ルルブを見ます   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    すみません更新されてなかったので今見ました   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    両者失敗した場合は技能値の高いほうが勝ちです。なので店員の勝ちです。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    タスカル   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    テストに出るから覚えておこう！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Aは逃走に手こずりますが、松葉くんの横を通り抜けて店の外へと逃げ出します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Aは戦線離脱。同ターン内に戦線離脱して追いかければまだ間に合うかもしれませんね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    戦闘学習卓、誰かやってくれ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘のターンです。<br>店のドアとCを交互に見て迷っているような様子を見せます。<br>何か希望があれば指示が出せますが……   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ネットで配布されてる新クトゥルフ神話クイックスタート・ルール2020.2.28版を読むことをオヌヌメする   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    チェックします   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    松葉くんから女の子たちに危ないことはさせたくないので指示はしません！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い。では紘はCに対して近接格闘を仕掛けます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 15  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 51  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d3 (1D3) ＞ 2  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d4 (1D4) ＞ 2  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いやええか   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘の回し蹴りがCの脇腹にヒットします。<br>苦痛に表情を歪ませますが、まだ立っています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    続いて翠のターンです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 22  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d100 (1D100) ＞ 39  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d3 (1D3) ＞ 3  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    s1d4 (1D4) ＞ 2  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠がトドメのビンタをして、Cはバタァ！と倒れます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    敵意を持つ者がいなくなりましたので、ここで戦闘終了です。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    おなごがつよい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    戦闘は終わりましたが、まだ追いかけることはできます。追いかけますか？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    2人とも戦闘技能ダメボ持ちだから……（）   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    追いかけます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い。<br>あなたは店を飛び出します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    現在は店の外。あまり人通りはないですね。<br>ここで目星をどうぞ。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    CC&lt;=70 【目星】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 42 ＞ 42 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではAの追うため、どちらに行ったか周辺を見回して探していると、偶然にも店の裏に隠れている人物を発見します。<br>こちらに背を向けて隠れているようですが、衣服が隠れきっていなかったようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……そこですか！？」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    駆け寄り、逃げられないように服を引っ掴みます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その人物は声に反応して咄嗟に逃げ出そうとしますが、先に掴まれていたため逃げ出そうと暴れますね。思ってた通り、先ほど逃げ出したAのようです。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「捕まえました。暴れても無駄ですよ……！　俺はナイフで掠られたくらいじゃこの手を離しません、多分……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もう同じようなことが起きないように、このまま大人しくお縄にかかるのを待ってくださいね……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    Aは逃げようと暫くジタバタと暴れますが、逃げられないと諦めたのか、やがて大人しくなります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけで確保！<br>その頃には警察官が駆けつけていることでしょう。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    警察密着24時じゃん！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その後、転がっていたBとCを含め店内にいた店員は全員身柄を確保されます。<br>あの三人と同様、最初は抵抗されたものの武力にやってあっという間に制圧されます。<br>松葉くんもAの身柄を渡すことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店内にいた客は全員保護され、精神状態に異常がある可能性が高いとのことで病院に搬送されるようでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたたちも事情聴取などで暫くの間時間を拘束されてしまいますが、次第に解放されていきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    警察が来たことで現場は騒然とし、あなたたちも注目を浴びてしまうでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてその視線から逃げるように翠へと再び足を運ぶでしょう……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    現在、翠の前ですね。<br>後方には疲れ切った翠と紘がいます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「これでやっと一段落、ですね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「一時はどうなることかと思いましたが、二人とも大きな怪我がなくてよかったです」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    ふにゃ〜と笑ってます。すっかり緊張感がなくなってますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「こ、この度は本当に申し訳ないことを……すみませんでした……」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「本当。学び直してきたら？　いかのおすしってやつ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は肩を落としていますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「だって、評判のいいコーヒーがあるなら大丈夫かかなって……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ｳｼﾞｳｼﾞ……   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「無理矢理連れて行かれたんじゃないんですか？」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……自分からです。偵察にいかないと、って……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「最初は断ってたんですけど……結局……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうだったんですね……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    胸の前で腕を組んでうーんと唸っています。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……やっぱり、俺から翠ちゃんを責めるなんてできません。元はと言えば、あのお店のことを俺が翠ちゃんに話したことがきっかけですし」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「だから、一緒に怒られましょう。俺は翠ちゃんを危ない目に遭わせてしまったこと、翠ちゃんはマスターたちに心配をかけてしまったことを一緒に謝りに行きましょうか」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……はい」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠はしゅん……としています。<br>その隣で紘はなんだか納得いってないような顔をしていました。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……というわけで、すみません。紘ちゃんまで巻き込んでしまって」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    紘ちゃんの顔色を見て気まずそうに謝ります。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……え、いや別にそれは良いんだけど。てか自分から行くって言ったんだし」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「私には謝る必要ない。俺が話したから〜って責任感じてるようだけど、話を聞いてなくても翠は行ってた可能性あると思うよ」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「だから翠は反省して。もう怪しいところには行くな」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そのように厳しく言います。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    反論しようにもこの場の空気に耐えられず、黙る男。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「……あ」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「そういえばさっき、小さい頃は翠に怒られることが多かったとか行ってたけど」   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ふふっ、今はまるで逆じゃん。私の方がしっかりしてんじゃないの？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘はこの空気を全く気にせず、翠を小突いてます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「ひ、紘ちゃん……やめてよぉ……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は小突きから身を守ろうと手でガードしています。<br>どうやら2人からすればいつも通りだったのかもしれないな〜ってその様子から少し思いますね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    お散歩シナリオで重くなってたまるかっ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    紘、マジレスするな   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    それを見てほっと息をつきます。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「でも、やっぱり翠ちゃんひとりが怒られるのは可哀想ですし……俺も一緒に行かせてください」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「大丈夫ですよ！　実は怒られ慣れているので……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    笑っています。さっき気まずそうにしていたのに。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    怒られ慣れているのは事実だが、大丈夫は嘘！   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「それもそれでどうなの……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ちょっと引かれました。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    嘘をつくなああああ！！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    心理学持ちはいません。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    トホホ   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「そんじゃ、行ってきな。私はここで帰るから、お説教見られないのが残念だけど」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「はい。今日はお疲れ様でした。またいつかお会いしましょうね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    笑顔で小さく手を振ります。   </dd></dl>
+<dl style="color:#ec6d71" class="main"><dt>紘</dt><dd>    「ん。今度はチビたち同伴かもしれないけど」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    紘もまた手を振りますね。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「次はゆっくりお話できるように待ってるから！　その時は美味しいスイーツご馳走するよ！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は元気よく手を振って紘を見送ります。<br>それにケラケラ笑いながら、紘は去っていくことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    というわけで店の前に2人です。   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「本当に仲良しなんですね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もしかして喧嘩になるかも……って少し身構えましたが、杞憂だったみたいです」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……はい。紘ちゃんとは昔からの親友です。私が転校した後もずっと、連絡をくれていました」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「まだ子供だった頃は1年に数回くらいしか会えなかったんですけど、こっちに来てからはたくさん会えてとっても嬉しいなあって思います」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「その気持ち、わかります。俺も遠く離れた……友達がいるんですけど、大人になれば自分の足で会いに行ける。それって素晴らしいことですよね」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「紘ちゃんといつまでも仲良くいてくださいね。翠ちゃんの危機にいち早く駆けつけようとする、素敵なお友達ですから」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「もちろんです！　……えへへ、松葉さんにも紘ちゃんのこと知ってもらえて嬉しいです！」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「でも、松葉さんも同じです。一緒に駆けつけてきてくれた……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……あの、おじいちゃんたちのお説教のあと、まだ少しいてもらう事って出来ますか？」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「お礼とは言えないかもしれないですけど、飲んで欲しいものがあって……コーヒーではないんですけど……」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「もちろん。翠ちゃんが作ってくれるなら、安全でしょうから」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    そう言って微笑みます。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんも度々疑心暗鬼になりそうだから、翠の人たちは疑わなくていいという点でも安心できるのでしょうね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それを聞くと翠は顔を輝かせます。   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「ありがとうございます！　でも、そんなに特別なものではないかもですけど……」   </dd></dl>
+<dl style="color:#3eb370" class="main"><dt>翠</dt><dd>    「……とりあえず、お店入りましょっか」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    「そうですね。マスターたちも首を長くして待っているはず」   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    翠ちゃんに目配せをして、翠の扉を開けます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い<br>ではエンディングで〜す   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    安心出来る場所があって良かったでほんまに   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    こいこいこい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    店の扉を開けると、一気に視線が集まってきました。<br>マスター達以外にも、常連さんもずっと心配でそわそわしていたようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その後マスター達からのお説教というお説教は無く、無事で良かったと笑っていました。<br>ただし翠が買い出し途中に寄り道をした点についてはみっちり怒られていました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    翠は少ししょぼくれながらも店の外で約束していたものをせっせと作りあげ、松葉くんのテーブルにカップを置きます。見てみればそれはホットミルクのようでした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    練乳とシナモンパウダー入りの特製ホットミルク。<br>翠曰く、今の松葉さんにはカフェインよりもホッと出来るものが必要！とのこと。リラックスして休んでくださいねと一言も添えられました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたはたまにはホットミルクも良いかな、と思いつつマグカップを口に運ぶのでした。<br><br>……まだ店に居たあの子供が、こちにも同じ物をくれと騒ぎ始めるのはまた別の話。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    めでたしめでたし。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    とっておきコーヒー　これにておしまい！<br>飲んだのはとっておきホットミルクでした！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おつかれ！   </dd></dl>
+<dl style="color:#fcd900" class="main"><dt>神代 松葉</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    これで今夜はぐっすりやね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    成長しといてね！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ぐっすり休め   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    成長こっちでやるか、ログの美しさ的に   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    CC&lt;=90 【心理学】 (1D100&lt;=90) ボーナス・ペナルティダイス[0] ＞ 37 ＞ 37 ＞ ハード成功  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    CC&lt;=70 【目星】 (1D100&lt;=70) ボーナス・ペナルティダイス[0] ＞ 48 ＞ 48 ＞ レギュラー成功  </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    つーわけでね   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    軽い説明。<br>チヨカフェの店員チョー・チョー人。<br>こいつらは黒い蓮でなんやかんやするのを好みます。花の正体はこれです。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    黒い蓮は麻薬のようなものなので依存性中毒性があります。<br>これを混ぜたコーヒーを人間に飲ませておかしくさせて、チャウグナーの信者を増やすぜ！って考えてカフェを作りました。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    チヨカフェの名前も安直ですがチョー・チョー人から来てます。以上！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ちゃんとCoCシナリオだった<br>誰だよゆる卓だって言ったの！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ゆる卓とは言ってないか……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ゆるい卓だったよ（戦闘技能失敗三昧）   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    警察に連行されるチョー・チョー人、面白いですよね<br>警察びっくりするだろうな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うおなんだこいつらってなる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんか使いやすそうだったから使ってみよ〜ってなった。黒い蓮が良いですね。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    もっと隠しなさい、もっと<br>そのまま入れるんじゃありません   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    本当だよ   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    松葉くんは翠ちゃんのこと好意的に思ってるけど、一族のことがあるからやっぱり一線引いてるんだろうなって感じでした   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    瑞葉ちゃん、次に会合で会うのが楽しみだね♡   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    滝汗かいてますよ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あからさますぎる、翠。<br>そらあんな態度とってたら気持ちばれるだろ。   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    好意は嬉しいんですよ、どうにもできないだけで……！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    いつか松葉くんと翠ちゃんの喧嘩回見たいな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    自分のせいで……って言いがちな松葉くんに怒りたいよね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やっぱ一族ぶっ飛ばすしかないな。<br>とっておきコーヒー飲ませてみんな中毒で苦しませよう（クソ）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    天狐はロードローラーで、翠は物理で、あと他は……   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    自分のせいで……って言うのは本当に思い詰めてるわけじゃなくて割と軽々しく言ってるところありますけどね<br>今回は翠ちゃんと痛み分けしたかっただけかな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    でも自分のせいで一族に巻き込んじゃいけないとは思ってるからそうでもないか？<br>一族に関する外部への責任感はありそう<br>一族への責任感はあんまない（草）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    千聖ちゃんは愛嬌でよろしくお願いします   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    そういえば天狐出せませんでした。<br>事前アンケート（？）とってたのにすまんな！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    うえええええええええええん😭   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    愛嬌で内側から崩していくか   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    また今度近いうちに会いましょ😘   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    次はリンネシナリオだから出ないことが確定していますが   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    じゃ、リンネシリーズで会うかって言おうとしたら先手打たれた   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    殺すな   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    ｗｗｗｗｗ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    質問等なかったらこれで解散するぜ！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    また気になることができたら聞きま〜す<br>とりあえず今日はこれで！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はい！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつかれさんした！<br>お付き合いありがとう！   </dd></dl>
+<dl style="color:#fcd900" class="zatsudan"><dt>神代 松葉</dt><dd>    お疲れ様でした！<br>楽しかった〜ん   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
