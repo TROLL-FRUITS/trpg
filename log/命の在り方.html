@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>命の在り方</title>
+<style>
+*{margin:0;padding: 0;font-size: 14px;font-family : 'メイリオ',Meiryo,Osaka,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+body{width: 100%;margin: 0;padding: 0;background-color: #f7f7f7;position: relative;}
+a{color: #666666;}
+a:hover{color: #CD0000;}
+h1{font-size: 21px;color: #666666;margin: 0px;padding: 0px;border-bottom: 1px solid #CCCCCC;}
+h2{font-size: 16px;color: #666666;margin: 5px;padding: 50px 0 0 0;border-bottom: 1px dotted #CCCCCC;}
+label{transition: all 0.2s;}
+#toggle{display: none;}
+#label_toggle{display: block;width: 100px;text-align: center;padding: 0;border: 2px solid #CD0000;background-color: #FFFFFF;color: #CD0000;border-radius: 15px;position: fixed;top: 10px;right: 10px;z-index: 1005;}
+#label_toggle:hover{background-color:#CD0000;color:#FFFFFF;}
+header{display: block;width: 0px;height: 100%;position: fixed;background-color: #FFFFFF;border-left: 1px solid #CCCCCC;z-index: 2;top: 0;right: 0;overflow-y: auto;overflow-x: hidden;transition: all 0.2s;padding: 50px 0 0 0;box-sizing: border-box;}
+#toggle:checked + header{width: 200px;}
+header label{display: block;width: 180px;margin:0 5px;padding: 5px;border-bottom: 1px dotted #EFEFEF;}
+header label input[type="checkbox"]{margin-right: 5px;}
+label:hover{cursor:pointer;background-color: #EFEFEF;}
+.wrapper{display: block;width: calc(100% - 30px);max-width: 1100px;padding: 30px 15px 100px 15px;margin: 0 AUTO;overflow: hidden;position: relative;background-color: #FFFFFF;}
+/* ログ部分 */
+dl{display: block;margin: 0;padding: 3px;box-sizing: border-box;}
+dl::after{display: block;content: "";clear: both;}
+dt{display: block;font-size: 0.8em;font-weight: bold;float: left;width: 100px;margin: 0;padding: 5px 5px;text-align: right;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+dd{display: block;width: calc(100% - 120px);margin: 0;padding: 2px;float: right;line-height: 1.8em;}
+.zatsudan{width: 95%;margin: 0 0 0 AUTO;background:#f7f7f7;border-left:1px solid #CCCCCC;}
+.other{background-color:#fff7ef;}
+.secret{width: 98%;margin: 0 0 0 AUTO;border-left:3px solid #CCCCCC;}
+.group{background:#f9f9f9;border-left:1px solid #CCCCCC;}
+@media (max-width:480px){
+  dt{display: inline-block;float: none;width: calc(100% - 6px);margin: 0;padding: 3px 0 0 3px;text-align: left;}
+  dd{display: inline-block;width: calc(100% - 6px);padding: 3px;float: none;}
+}
+</style>
+<style>
+
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head>
+<body>
+<label for="toggle" id="label_toggle">表示/非表示</label>
+<input type="checkbox" name="toggle" id="toggle">
+<header>
+<label>▽ 非表示にするタブ</label>
+<label for="main"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="main">メイン</label>
+<label for="zatsudan"><input type="checkbox" onClick="Hide(this)" class="checkbox" id="zatsudan">雑談</label>
+
+</header>
+<div class="wrapper">
+<h1>命の在り方</h1>
+<h2 id="day1">命の在り方</h2>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    間に合ったセーーーフ！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ということでね   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    こんにちは、時間配分が下手すぎて復習の復習をしてる時間がなかった   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    もしかしたら今回は2日かかるかもしれん。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    もしかしたらね   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    まかせろ　3日かけてやる――。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    さ、やるか…………<br>私は復習しながら卓を回します   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    恒例の導入から行きますわよ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    マルチタスクマンだ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    かかってこい   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ​──魂、それは輪廻転生を繰り返す   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    一生を終え、アートマンは天へ。<br>そして輪廻転生へと。長い、長い時間をかけて。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして、また別の何かへと生まれ変わり、別のモノとして新しい一生を迎える。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それを、何度も繰り返す​──   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ＊　＊　＊   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    チリン、チリンという音であなたは目を覚ます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    薄暗く、不気味な空間。<br>辺りを見回すと、白くぼんやりと光っている何かがいくつも浮いている。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    4回目。ここも見慣れたものですね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    探索開始です。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    ココフォリアの更新されない不具合治ったっぽいな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    助かる〜   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    すぐに状況を理解し、鈴の音を辿るために耳を澄ませます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    聞き耳どうぞ！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    はぁはぁ、云年ぶりの緋室柚葉のダイスロールだ   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 32 ＞ 32 ＞ ハード成功  </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    ちょっとだけ失敗を期待してた   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    背景の雰囲気がええ<br>人が薄暗い場所にいるだけで気分が上がるため   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    遠くでチリン、と鈴の音が聞こえます。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    AIくんに作ってもらった   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    音のするほうへ歩いていきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。ではその鈴の音を頼りに歩いていきます。<br>すっかり見慣れたこの空間。前回は道中に風野 成がいましたが、今回は誰もいないようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そのまま奥まで進んでいくと、無数の瓶が管理されている広い空間に辿り着くことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そしてそこにはリンネの姿もあります。<br>仕事をしているのか、持っているランタンを瓶にかざしています。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    リンネちゃんの姿を認めたら一度足を止めます。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    少し頭の中を整理してから、改めてリンネちゃんに歩み寄りますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……やあ、リンネ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その声に反応してリンネは振り返ります。<br>あなたの姿を視認すると、少し驚いたような表情を浮かべながらこちらに近づいてくるでしょう。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「また、来てしまったようですね」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「こんにちは。緋室 柚葉様」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言い、柔らかく微笑みます。<br>眼帯も変わらず付けているようです。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「どうも。君と会うのは、あの妙な花畑以来か」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「あれは……夢じゃないんだよな？　君は覚えてる？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい。覚えております」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「そう……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    少しばつの悪そうな顔をしています。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「どうしてこう何度も俺がここに来るのかはわからないけどね。正直、ここでなくとも近いうちに君に会えたらと思っていた」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ほら……謝罪くらいはしないと、不義理だろ」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「謝罪……でございますか？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はて、なんのことやらといった感じです。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……花畑でのことだよ。言っただろ、君にその……色々」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「悪かったよ。あのときは、俺も少し気が立っていた……かもしれない」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    気まずそうに頭を搔いて言います。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「ああ……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「気にしておりませんよ。仕事柄、慣れておりますので」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ああそう……。それなら、尚更自省しておく」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（でも、また同じような出来事に直面して自制できるかと問うと……難しいかもな）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    悶々としています。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……あの状況で、緋室様が私を警戒するのは仕方のないことです」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「実際、あの場で彼女が命を落としていたら私は魂を回収しておりました。それが仕事ですので」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「私たちは生者の魂には干渉出来ません。禁じられていることですから」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……ですが、我が神は理不尽に命を奪うものを許しません。だから、あの時は悪しき神を罰したのでしょうね」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「私は人に言えたことではございませんがね」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「そういうことなら、道理だな。君の状況を鑑みても辻褄が合う」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……そのくらい、冷静に考えればわかったかもしれない。やっぱり、俺はまだまだ未熟らしい」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「結果的に、俺たちはその君の神に助けられたんだ。敵味方の区別を誤ったのは事実だからね」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……だから少し、もう少し、君のことを信用するべきだったって思っただけさ」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……そうでございますか」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    少し驚いているようです。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「なんだよ、何か変なことでも言った？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「いえ……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「信用という言葉に縁がなかったものですから……少々……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「信用するべきだった……その言葉に驚いてしまいました」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ふぅん……。まあ、君の境遇を考えると無理もないか」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「生前の君は知らないけどね。少なくとも今の君は一定の公平性に従って動いている。拘束されている、とも言えるだろうけど」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「たとえば君が誰かを本心では殺したいと願っていても。君はそれをしない、できない。君はそういうものだから……そうでしょ？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「それは事実なんだから、俺はそれを信用すべきだったんだ」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……なるほど」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    腹いてぇからちょっとまって   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最近卓中に腹が痛くなるのなに？   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    それは緊張だよ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    ちょっと話進めちゃおっと！   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「とは言っても、これは油断でもある。だから、俺が君を疑ったこと自体を間違いだとは俺も思ってない」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いけいけ〜   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「要するに結果論だね。だから、あまり意味がないと言えばそうだ。反省なんてすることより、大事なのは次なんだから」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「だけど、あれだけの態度を取っておいて何も言わないのは……また別の、人としての問題が出てくるんじゃないかと思って……」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    柚葉くん丸くなったな……（しみじみ）   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「はあ、なんだ？　俺は何を長々と同じようなことばっか論じてるんだ。やめだ、やめ！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    恥ずかしくなって雑に切り上げた模様。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「あら……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    少し笑われてしまいます。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    あのときのリンネちゃんが敵だった可能性がゼロではない以上疑ったこと自体は悪くはないけどでもやっぱりそれなりの付き合いがあって立場も知ってるんだから最初っからあんなに疑って噛みつくことなかったしそもそも信用に足るかどうかを冷静に判断するべきだったよねごめんね、ということです（クソ長解説）   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    柚葉くん気持ち伝えるの下手すぎて可愛いね   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「緋室様、以前より少し変わられたように見受けられます」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「何が出会いがあったか、それとも重大な出来事があったか……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「何にせよ、それはきっと緋室様にとって良いことだったのでしょう」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは嬉しそうに微笑みます。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……そうかもね」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「世の中、思った以上にまだまだ知らないことだらけで驚かされるよ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「それで、そう言う君はどうなのさ。あれから何か変わりはあった？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「少々仕事が増えただけで、私自身の方には変わりはございません」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いながらリンネは手に持っているランタンの方に目を向けます。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「仕事が増えた、というのは？　単純に君が管理しなくちゃいけない魂の数が増えたのか、それとも新しい仕事でも任されたの？」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    柚葉くんあんまり雑談とかする間柄の人間がいないんですがリンネちゃんに会うと当然のように会話を始めるから、これが柚葉くんにとっての友人付き合いなのかもしれない   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい。新しい仕事を任されました」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    柚葉くん、千聖を見習ってドストレートに気持ちを伝えろ（無茶言うな）   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「いいじゃないか。君の普段の功労を買ってのことじゃないの？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    結構心開いてくれててリンネもニッコリですよ   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……っていうのは、流石に自分の物差しで考え過ぎか？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「どうでしょう。ただその仕事が必要だったから、それだけかもしれません」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……見ていただいた方が分かりやすいかもしれませんね。私についてきていただいてもよろしいですか？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「まあ、いいけど。俺も気になるしね」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「ありがとうございます」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネはあなたに背を向けて奥の方へと歩き出します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして1つの棚の前で足を止め、その棚に置かれていた瓶を手に取ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その瓶の中には白くぼんやりと光っているものが入っているのですが、棚に置かれている他の瓶の中身と比べると、その瓶の光だけ弱々しいことが分かります。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「随分と……小さな光だね」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    リンネちゃんに続き、彼女の手元を目で追っています。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい。この光が弱いと困るのです」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「このまま輪廻転生へと向かってしまうとこの光は……魂は潰えてしまいます」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「私の新しい仕事はこの光をより強くすることでございます」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……どうやって？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「こちらのランタンを使うのです」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言いランタンをあなたの前に差し出しますね。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「このランタンは正しき道を導いてくれるものです」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「光が弱い原因、それは魂を汚されてしまっているからです。そうなってしまう理由は人によっては違いますが……殆どは悪き存在からの干渉を受けています」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「緋室様も遭遇することが多いのではないでしょうか。現実に存在しているとは信じがたいものに」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「それは、君たちの存在だって同じようなものだけどね……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「だけど穏健な君とは違って、確かに敵意のあるものにも出会ったことはあるよ。君と一緒に見た黒い手だってそうだ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「そいつらみたいなのが、魂を汚しているって？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    不具合治ったと思ったら治ってなかった<br>クソ、パソコンの前に戻るぜ……   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「そういった存在に目をつけられれば、普通では考えられない命の落とし方をします」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……私も同じ。いくら年月経とうともあの瞬間を忘れることはありません」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「つまり、君の魂も汚れているの？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「君が輪廻転生の輪に入れないのは、生前の罪が原因で例の神に縛られているからだと思っていたけど……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい。その認識に間違いはございません」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「私の魂が汚れているかは……確認しようがないので分かりませんが、ここに来たばかりの時は間違いなくそうだったのでしょう」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ｵﾆｮｰ   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「まあ、そのランタンでどうにかできるなら、憂慮の必要はないか」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「はい。ですのでこのように……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは手に持った瓶にランタンをかざします。<br>すると、瓶の中の光が僅かに増しますね。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「少しずつにはなってしまいますが、このように光を取り戻していく。それが仕事です」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「植物でも育てているみたいだな」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「ふふ。そうかもしれませんね」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……全てが今のように光を取り戻してくだされば良いのですがね。そうもいかないのが厳しいところです」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ん……そうか、万事解決ってわけじゃないのか。俺としたことが、てっきりすべて助かるんだろうって楽観的なことを考えていたみたいだ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（やっぱり、腑抜けたよな……）」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「緋室様、少々手伝っていただきたいことがあります」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「は？　手伝い？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「いや、いいけど。君の仕事に生者である俺が関わっていいの？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「問題ございません。少し見ていただきたい場所があるだけですので」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「その場所で何かして欲しいわけではありません。ただ見るだけで良いのです」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「聞くだけじゃ何の意味があるのかわからないけど……わかったよ。どうせ帰りは君の手を煩わせるんだから、少しくらい手伝ったほうが対等だろうしね」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「ありがとうございます。では、こちらへ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネはそれ言ってまた別の棚の元に移動していきますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    ついて行きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではついて行くと、リンネはまたそこで1つの瓶を手に取りますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その瓶の光は、先ほど見たものよりもひどく弱々しいです。今にも消えてしまいそうなほどに。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……これは、また随分だな」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネはその瓶にもランタンをかざしますが、先ほどのような変化は見られません。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……はい。大変困っています」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「この方に何があったのか、それを知ろうにも私のような存在は拒まれてしまっているようで、手の打ちようがないのです」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「そこで、生きている無害な人間ならどうかと思ったのです」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    無害……？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    無害（自分達に比べると）   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「はあ……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「でも、どうやって」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「俺に人の心や魂を覗き見るような力はないよ」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「簡単なことです。今、この状態の瓶に触るだけ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは瓶にランタンをかざした状態のまま、あなたに一歩寄りますね。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    急な接近にえ！？（ドキドキ）になってる（PLが）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「触るだけ、ね……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    半信半疑ですが、瓶に手を伸ばします。<br>指先で少し触れてみますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    瓶に触れてみると、突如として視界が暗転します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    何が起こったのか、それを考える間もなくすぐに視界は回復するのですが〜   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そこは先ほどまでいた場所ではなく、どこかの知らない建物の中でした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    しかし、どこか見覚えがある気がしました。<br>ここでアイデアをどうぞ。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    CC&lt;=90 【アイデア】 (1D100&lt;=90) ボーナス・ペナルティダイス[0] ＞ 26 ＞ 26 ＞ ハード成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではあなたはこの場所を覚えていました。<br>以前迷い込んだ、時計塔のような場所……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    猫のような、大きな影に追われた場所だと分かります。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    後半入ったのでこのあたりで切ろうかな！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    RPが終わったらね！   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ここ、は……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（知らない場所？　いや、俺は知っている。ここを、知っている）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（随分と昔のことのようにも感じる。それでもこうやって記憶に蘇るくらいには鮮明で、鮮烈な――）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……まさか、俺の記憶を立ち返ったわけじゃあるまいし。一体何が起きているんだ……？」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    これで終わりとします   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    は〜〜い   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    流石に云年ぶりのRPは難しかったぜ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    久しぶりな気がしないけど久しぶりだもんなあ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    やっぱり2回で終わりそうだな〜って感じ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    次は24時までかもしれないが、本当にそう思うかね？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    多分いける（フラグ）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    まあ急ぎじゃないから3回になってもね、問題ないんですけどね   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    まあね！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    では今回はこれにて解散！おつ！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    おつかれ〜   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    こんばんはー   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ばんわ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    遅めの夕飯を貪り食いながら参加させていただきますよ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    うぃうぃ   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    今日も今日とてログを見ながらやります   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    今日もココフォリアくんは更新ラグです、対戦よろしくお願いします   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    スマホとパソコンの両刀使いに俺はなる<br>夕飯も含めれば三刀流や   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    可哀想に……   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    卓を食べながら夕飯を読むんだよ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    この卓今日中に食べ終わるかは僕次第ってわけね   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    はい   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    いただきます！（準備ok）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    せっかくなので僕も過去ログを用意するか   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    特にイベントなければ行動からでいい？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    しばし待ってくれ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    待つぜ   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたが今いる場所には大量の本棚が並んでいる。<br>しかしどれも歪んだ形をしていて、どこか不安になるようなデザインだ。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    本棚には図書館が振れます。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    危ない、森スタートだと思ってたからKPと食い違うところだった   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    あぶねえあぶねえ   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（悪趣味……。以前の俺はここも調べたんだっけ？　流石の俺でも細部までは覚えていないな）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    朧気な記憶を探るように、本棚を調べます。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    CC&lt;=80 【図書館】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 96 ＞ 96 ＞ 失敗  </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    どれどれ……（）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    この時計塔が厄いのでは？（）   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではその本棚の形状が悪く使いづらく、特に気になる本も見つけることはできませんでした。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（ふむ。ここで何か気になる文献を見つけたような気がするけど……あれは俺じゃなかったか？）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（もしこれが俺の記憶だとしたら、何も見つからないのは無理もないけど……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    諦めて、周囲を見回します。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    もう適度に順応してる、神話技能40％持ち   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。<br>この場所は本棚の他に小さな小窓らしきものと、下りの螺旋階段があるのみですね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（あの小窓、なんか忌々しいな……）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（階段がある。そもそもここは何階だった？　手っ取り早く確かめるには……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    あれしかないか……と小窓に近寄ります。<br>見える景色の高さからおおよその階数を予想することはできますか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    おそらく3階であることが予想できます。この場所が記憶にあることも関係しているかもしれないですね。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    今パソコン見ながらスマホで卓しながら夕飯食いながら親友ちゃんからのLINEを返しており、三刀流から四刀流になった   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（この高さなら、大体3階くらいか。そういえば、そのくらいだったような気がする）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（……待て。ここには怪物がいたはずだ。俺たちはそいつと戦って……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    持ち物はありますか？　確認します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    持っているのはリンネから貰った鈴だけですね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（丸腰か。肉弾戦でどうにかなる相手だったか？）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    夕飯進まなそう   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（いや、まさかね。もしまた怪物から逃げ惑うことになったら、リンネに言った言葉はすべて撤回させてもらおう）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    螺旋階段のほうまで行きます。<br>階下に聞き耳をしても？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    どうぞ！   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 17 ＞ 17 ＞ ハード成功  </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    何も聞こえないですね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（今のところ気配はない。でも油断はするな、俺。特にこういう何が起こるかわからない場所では傍に千聖や所長がいると想像して……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    警戒心を強めて、螺旋階段を降りることにします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。では螺旋階段を降りていくのですが……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    正面から階段を駆け上がって行く存在がいました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ぶつかってしまう。そう思い、あなたは反射的に目を瞑ることでしょう。<br>ですが、それはあなたにぶつかることもなく、あなたの体を通り抜けて行った。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「えっ？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    想定外のことに驚いて振り返ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そこにはもう誰もいませんね。3階まで登って行ったのでしょう。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（気配がなかった。そして、すり抜けた？　まさか……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    追いかけるように引き返します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    引き返せますね。<br>そして先ほどあなたを通り抜けて行ったものたちがいる。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    1人は眼鏡をかけた女性で、もう1人は自分自身ですね。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    このタイミングでは蓮司さんいないのか   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（あれは、俺と……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（……そうだ。彼女だ。俺が、こんな記憶を覚えていたのは……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（もう少し近づこう。さっきの様子だと、彼女たちに俺の姿は見えていないはずだ）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    二人に近づきます。<br>念の為、できるだけ静かに。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    簡単に近づくことができますね。<br>やはりこちらの姿が見えていないようです。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    2人はここで調べ物をしているようです。<br>女性は本棚から本を一冊抜き取り、あなたの方はこの辺りを調べているようで、窓の方に向かっていきます。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    やめろ！　早まるなー！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    早まったのは僕のほうだったらしい（編集）   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（おい待て。思い出してきた。今は俺のことなんて無視して彼女の様子を見ていよう）」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（やっぱり、本棚を調べていたのは彼女のほうだった。道理で、俺だと何も見つけられないわけだ）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    過去の自分は素通りして女性に歩み寄ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    女性は本を読もうとしていますね。<br>ですが、後ろからなにやら黒い影が現れ、それは小窓の方に向かって行く。女性の視線もそちらの方に向き、何かを叫んでいました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    女性につられてあなたもそちらを見てしまうのですが、そこでは過去のあなたが黒い影に襲われていることでしょう。<br>そしてその直後に背後の螺旋階段からまた1人男が現れました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして、そこまで見たところで突如全員の姿が消えてしまいますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……？　消えた……？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（やっぱり、あれは俺の記憶を再現した幻か？　消えた理由は、場面の遷移……？）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    考えながら周囲を見回しています。<br>黒い影の姿ももうありませんか？   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ありませんね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（記憶を辿ってみよう。俺たちは3階で影に襲われて……この先には逃げ場がないから、階下へ降りたんだ）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（……そうだよな？）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    改めて螺旋階段を降りることにしますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    では改めて2階に降りるのですが、そこには黒い影と対峙するあなたたち3人がいました。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして過去のあなたが黒い影を避けてまた下の階へと向かって行くところも見えますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「逃げ足の速いやつ……」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    なおDEXは   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    最　低　値   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    自分の背中を見送ってから、2階に残った二人の様子を見ます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。では様子を見ていると、男の方がぐったりしていることに気がつけます。そのせいか、襲いかかってくる黒い影に対応も出来ずにいたのですが……   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    横にいた女性が男性を押し退け、身を呈して庇いますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（おかしい。どうしてまだ動いてるんだ。俺の観測していない出来事を、どうして俺は見ているんだ）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（……違う。これは俺の記憶じゃない。補完？　捏造？　精神だけが時間を遡行した？　それとも……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（この二人のどちらか……死者の、つまり、これは彼女の……？）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    頭の中をいくつかの仮説が過ぎりながら、二人から目を離せずにいます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    はい。ではその一連の流れをあなたは見ることになるでしょう。<br>女性に庇われた男性はフラフラになりながらも下の階へと降りていき、逃げ遅れた女性が黒い影に襲われているところも。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    黒い影からは一本の鋭い棘のようなものが伸び、女性の体を貫く。<br>彼女は床にバタリと倒れ、黒い影もどこかに消えていきます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そこに残されたのはあなたと、仰向けに倒れた女性だけですね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    何も言わず、横たわる彼女の傍に歩み寄ります。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    歩み寄れますね。<br>瞼を閉じ、その場に倒れたままピクリとも動きません。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（俺は、彼女の名前を知らない）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……これは、君の記憶？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    女性の傍らに屈んで、問いかけるように呟きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではあなたがそう問いかけた瞬間、再び視界が暗転します。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    場面切り替えのような、そんな現象。<br>再び見えるようになった頃には、先ほどの場所とは全く違う、神殿のような場所にいた。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    まるで最後の晩餐のような豪華な食卓。<br>真ん中の席に座っている誰かは、黒く塗りつぶされているように姿が確認できない。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    周りを見れば先ほどの女性と、見知らぬ男女が3人。そして真ん中の席に座る人物とは別に黒く塗りつぶされた人物が1人いた。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（ここでの俺の役割がなんとなくわかったような気がする。リンネも言っていた、見るだけでいいと）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（その言葉を信じるなら、俺はこの記憶を観測しないといけない。そういうことなんだろう）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「（ここは俺の知らない場所。動かなくてもいい状況で無闇に動いて道に迷いでもしたらとんだ阿呆だ。迷子にはもう懲りているからね……）」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    その場にとどまって、成り行きを見守ることにします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    は〜い   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ではこの成り行きを見守ることにしたあなた。<br>その場の人物が何か言葉を交わしたりをしてるのは分かるものの、こちらに一切聞こえてこない。<br>   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    いったい何を話しているのだろうか？<br>それが気になり出し始めたところで、暗く塗りつぶされた人物が黒い『何か』を手にします。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    それは不定形な形から、まるで死神が持つ大鎌のような形に変化する。<br>そんな恐ろしいものを持つ存在に、あの女性は臆することなく言葉をかける。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ほんの一瞬だけ大鎌を持ったその人物が俯いた気がした。<br>しかし、決して止まることはなく、その大鎌は彼女や他の男女3人に巻き込んで大きく横に薙ぎ払われた。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    視界が暗転し、再び場面が切り替わる。<br>白い部屋と、大きな機械。ベッドで眠るあの女性。<br>病室だということが分かりますね。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    グロすぎる場面　俺じゃなきゃ耐えられなかったね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そして、そのベッドで眠る女性に近づく人物もいた。<br>その人物も黒く塗りつぶされているが、つい先ほど大鎌を持った人物と背丈が殆ど同じように見える。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そんな人物が彼女の細い首に手をかけ、そのまま​​───   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    その瞬間、あなたはそこから弾き出されるようにして元の場所に戻ってくるでしょう。<br>目の前にはリンネ、そして見知らぬ少女がいた。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    少女はあなたと目を合うなりニッコリと笑った。そして、その少女も瓶を触っていましたね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    驚いて身構えます。<br>瓶から手を離して一歩退きますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……誰だ？」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    急に緊張してきたな   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>少女</dt><dd>    「はじめまして！　おにーさん！」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    うわー！　ここ殺人犯しかいません！　誰かー！   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ニッコリと笑うその少女は顔立ちからして外国人だと分かります。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>少女</dt><dd>    「わたし、シャーロット！　以後お見知り置きを！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……リンネ。これはどういう状況か説明してくれる？」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……私にも、分からないのです」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「緋室様の意識がこちらに戻ってくる直前に現れて……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「いえ、彼女が瓶に触ったからこそ緋室様は強制的にこちらに戻されたのかもしれません」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そう言うリンネはシャーロットと名乗るその少女から距離を取ります。警戒をしているようですね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「君、なんのつもり？　俺は仕事の邪魔をされて頗る気分が悪いんだけど」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    シャーロットと名乗った少女を睨みつけています。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「えぇ〜？　そんな怒らないでよぉ〜。怒ってばっかじゃシワが増えちゃう！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「あぁ！？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    シワが増えました。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「あっはは！　このままじゃツノまで生えちゃうそう！」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「おにーさんさぁ、お仕事って言ったたけど……人の記憶を盗み見るなんて良くないよ〜」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「わたしも見たいなぁって思ってたけどね！　触ったら嫌！って言われちゃったみたい」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「はあ、どこから怒ったらいいんだ俺は？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「君の倫理的批判を否定するつもりはないけど、問題はその後だ後。要するに君は単なる好奇心で円滑に進んでいたはずの俺の仕事を頓挫させたわけだ。これが怒らずにいられる？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「君が手を出さなければ！　失敗しなかったはずなのに！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    彼は今、シャーロットのすべてにキレています。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    全ギレじゃないすか   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シャーロットはきょとんとした顔であなたを見ていますね。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「失敗ってなぁに？　記憶の中で、あなたが何かできたって言うの？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「……ああ、見るのを邪魔されたから怒ってるのね！　映画を見るのを邪魔されたら嫌だもんねぇ……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「ごめんね、おにーさん」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「謝罪はいい。それよりも本当の目的を話しなよ。本当にただの好奇心だって言うならそれでもいいけどね。ここに現れたことには相応の理由があるだろ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「ここの管理者であるリンネですらわからない、君は何者なんだ？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「何者〜って言われてもなぁ。ん〜……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「正直あんまり覚えてないんだぁ。でも、昔はわたしもそこのおねーさんに管理されてたんだよ」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    名前見たけど流石に覚えていなかったらしい、柚葉くん   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「けどいつのまにか外に出ててさ、誰かにお願い事された気がするんだぁ」   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    流石にね   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「そのお願い事がここに関係することだった気がしたから、ここに来た！　というより、わたしも死んじゃってるから戻ってきた〜って言うのが正しいの？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    うーん……と悩んでいます。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「要領を得ないね。悪いけど、こちらから君の事情を察してあげることはできないよ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「よって、君に構っている時間はない。……リンネ、俺は今見てきたものを君に報告すればいいの？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    くるりとリンネちゃんのほうへ体を向けます。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「そっかぁ」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シャーロットはそれだけ言い、何か考え事を始めたようです。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……はい。そうですね」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは少し戸惑っているようですが、報告を聞こうとあなたを見ますね。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「予定にないエキストラがいるけど……まあいいか」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「あの魂の主は、俺の知っている人間だった。俺が拒絶されなかったのは、微細ながらも彼女と縁があったからなのかもね」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「俺の知るところでは、彼女を襲ったのは魂を狩り取る怪物だ。彼女はその怪物に殺され、魂は汚された……これだけでも充分、辻褄が合うけど」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「どうやら、その後も色々あったみたいだね。もしかすると彼女は理不尽に殺されただけでなく、死後もその魂を冒涜されていたのかもしれない」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「わかるならでいい、聞きたいんだけど。彼女の魂は死んですぐにここに辿り着けたの？」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    柚葉くんやっぱり死後はここに就職したほうがいいと思うんだよね<br>4回目ともなると適応力が凄いので   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「いえ」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「彼女がここに辿り着いたのは、亡くなってから随分時間が経過してから」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「それどころか、彼女の魂は一度は消失していた。……しかし、何者かに再構築されたようです」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「そのあたりの仕組みはわからないけどね。そう繰り返していれば魂だって劣化するでしょ」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「俺の見た記憶の中では、彼女は二度は確実に殺されていた。あとはそこにいる馬鹿に邪魔されたおかげで観測できなかったけど。……もしかすると、三度」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「……俺から言えるのはそこまでだよ。リンネ、この情報で何ができる？　癪だけどね、そこの阿呆の言う通り、俺は俺にこれ以上できることがあるとは思えない」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……はい。二度死を経験してるところまでは把握しておりましたが、三度……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは暫し考え込みます。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「……魂が、転生拒んでいるのかもしれませんね。そこまでのことを魂に刻み込まれれば、可能性としては……」   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「やはり、出来ることは……」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    リンネは俯いてしまいますね。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    手のうちようはない、あなたも少し無力感を感じるかもしれない。<br>……と、そんなところで、後ろにいたシャーロットがひょこっと顔を出します。   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「ねーねー、どうしてそんなに悩んでいるの？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたを顔を見ながら言います。   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「君にとっては他人事だろ。俺たちにとってはそうじゃないってだけだ。邪魔だからあっち行け」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    本当に丸くなったか？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    こいつは友達じゃないから（？）   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「仲間はずれしないでよ〜。寂しいよ？」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「2人とも、転生させてあげられないから困っているの？」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「そうだよ。それだとリンネの仕事が全うできない」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「仕事ができないのは、問題だ……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「ふーん……」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「転生出来ないなら、転生させなくてもいいじゃない」   </dd></dl>
+<dl style="color:#e91e63" class="main"><dt>シャーロット</dt><dd>    「転生させないまま現世に戻してしまえばいいだけの話でしょ？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シャーロットはそう言うと、リンネの持つ瓶を奪い取ります。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「なっ……」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    「おい、馬鹿……！」   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    距離はありますが、取り返そうと体は動きます。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ふむ。では取り返そうと咄嗟に体は動きますが、それは一瞬の出来事でした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    シャーロットは瓶を奪い取ったその手で簡単に砕いてしまいます。   </dd></dl>
+<dl style="color:#78cdd1" class="main"><dt>リンネ</dt><dd>    「なんてことを…………！」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    瓶の中にあったその光は、魂は瞬時に形成を始める。<br>それはものの数秒で人の形になることでしょう。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    はわわわわわ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    ていうか動揺リンネちゃん可愛いね   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    そうして、その人物はゆっくりと目を開いた。<br>そして、喜ぶわけでもなく戸惑うわけでもなく、ただ絶望していた。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    可哀想だ😢   </dd></dl>
+<dl style="color:#009688" class="main"><dt>女性</dt><dd>    「ああ、あああああぁぁぁ…………」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>女性</dt><dd>    「どうして、なんで…………」   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    すみません、大事なシーンなんですがちょっと可愛すぎます   </dd></dl>
+<dl style="color:#009688" class="main"><dt>女性</dt><dd>    「わたし、は…………」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    彼女はふいにあなたに視線を向けますね。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    柚葉は目の前の出来事に瞠目していますが、表情には困惑の色も浮かんでいます。   </dd></dl>
+<dl style="color:#009688" class="main"><dt>女性</dt><dd>    「…………私が……」   </dd></dl>
+<dl style="color:#009688" class="main"><dt>女性</dt><dd>    「私が、何をしたって言うの……？」   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    女性はあなたにそう問いかける。しかし、その返答をする間も無く、突如としてこの空間全体が白い光に包まれる。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    目を開けられないほどの強い光に包まれ、あなたの意識は次第に遠のいでいく。<br>遠のいでいく意識の中で最後に見たのは、涙を流す女性の姿でした。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ＊　＊　＊   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あなたは自室のベッドで目を覚ます。<br>目覚めは、あまり良くなかった。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あの空間でのことはしっかり覚えている。<br>一瞬だけ夢を疑ったが、手にはいつの間にか鈴が握られていた。おそらく、強制的にあの空間から帰還させられたのだろう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    あの後どうなったのか、あなたはそれを知る由もない。<br>リンネの場所に行けば分かるかもしれないが、それがいつになるかも分からない。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    気になるが、どうしようもない。あなたはしぶしぶ日常に戻って行くことでしょう。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    ……だけど、最後に見た彼女のことだけは、頭に焼き付いて離れなかった。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    命の在り方<br><br>これにて閉幕です。   </dd></dl>
+<dl style="color:#607d8b" class="main"><dt>KP</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おしま〜い   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんだこの時間   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    お疲れ様でした！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    スマホから見てたせいで全然リアルタイムで見れてなくてキレてたところ、今   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    草   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    え〜〜ん続き気になるよ〜〜   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    とりあえずシャーロットちゃんに対する柚葉くんの感情はキレの二文字です   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    シャーロット、弔いの花嫁に行ってましたが設定にちょっと改変を入れさせてもらってます。   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    リンネやゆきの周辺のシナリオは、どっかで複数人卓になる予定なんですが〜   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    八雲くんいて欲しいんだよね（なおロストしている）   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    なんとか引っ張ってこれないかな〜   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    死人に混ざる生者になるか   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    最終的には死人の仲間入りするかもしれない   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    まあ設定の改変については責任者に確認する術が絶たれているのでPL側の了承があれば自由にやっていいんでないかな！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    というわけで導入卓でした。柚葉くんにはまだまだ付き合って貰うぞ。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    柚葉くん、思ったよりゆきのちゃんへの同情の念が強い   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    やっぱり柚葉くんって優しいのかもな   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    友達じゃない相手には平気で邪魔って言うけどね   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    態度の差が激しい　それが緋室柚葉   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    柚葉くんのゴールはゆきのちゃんの名前を聞くところです<br>聞けたらいいな、いつか   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    名前は見てるんだけどね、また結びついてない   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    それで多分その名前も覚えてない   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ガハハ   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    ゆきのちゃんのこと忘れられないだろうな〜<br>しばらく千聖ちゃん以外の女のことを考える柚葉くんになる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    鈴の音を辿ってでゆきのの事情をちょい出しした時点でやりたいな〜って思ったことを展開できてハッピーです。シャーロットは計画になかったけども   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    浮気かな？   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    メインのほうでも挨拶しておくか   </dd></dl>
+<dl style="color:#ad002d" class="main"><dt>緋室 柚葉</dt><dd>    お疲れ様でした〜！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    いーん( ; ; )   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    ちゅーわけでリンネシリーズ開幕です。<br>よろしくお願いいたします。   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    は〜〜楽しみすぎる   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    色々話したいけど今日のところは解散！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    はーい　成長だけしていい？   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    おつおつ！<br>お付き合いありがとう！   </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    いいよ！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    CC&lt;=80 【聞き耳】 (1D100&lt;=80) ボーナス・ペナルティダイス[0] ＞ 90 ＞ 90 ＞ 失敗  </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    すごいじゃろ？   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    1d10 (1D10) ＞ 7  </dd></dl>
+<dl style="color:#607d8b" class="zatsudan"><dt>KP</dt><dd>    すごい！耳がいい！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    お疲れ様でした〜ん　バイバイ！   </dd></dl>
+<dl style="color:#ad002d" class="zatsudan"><dt>緋室 柚葉</dt><dd>    これが地獄耳ってやつ   </dd></dl>
+
+</div>
+<footer></footer>
+
+<script>
+const Hide = (checkbox) => {
+  const elmntTarget = document.getElementsByClassName(checkbox.id)
+  for (let intCount = 0; intCount < elmntTarget.length; intCount++) {
+    const message = elmntTarget[intCount]
+    const contexts = message.className.split(' ')
+    let elmntChecked = checkbox.checked
+    contexts.forEach((context) => {
+      const contextCheckbox = document.getElementById(context)
+      if (contextCheckbox) {
+        elmntChecked &= contextCheckbox.checked
+      }
+    })
+    message.style.display = elmntChecked ? 'none' : ''
+  }
+}
+</script>
+</body>
+</html>
